@@ -3,6 +3,7 @@ import Index from './pages/Index';
 import ToyCatalog from './pages/ToyCatalog';
 import Parent from './pages/Parent';
 import { Route, Routes } from 'react-router-dom';
+import NavBar from './components/Navbar';
 
 type RouteData = {
   path: string;
@@ -18,6 +19,7 @@ function App() : JSX.Element {
   ];
   return (
     <div id="container">
+      <NavBar/>
       <Routes>
           { routes.map((route, i) => {
             return <Route key={i} path={route.path} element={route.element} />
