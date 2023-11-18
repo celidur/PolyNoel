@@ -54,7 +54,7 @@ export default function ParentTaskPage() : JSX.Element {
         <div className={TaskPageCSS.container}>
             <div className={TaskPageCSS.task_container}>
                 <div className={TaskPageCSS.task_block}>
-                    <TaskList taskNames={dailyTasks} title="Daily Tasks" onTaskClick={removeDailyTask} isParent={true}></TaskList>
+                    <TaskList taskNames={dailyTasks} title="Daily Tasks" onTaskClick={removeDailyTask} taskType={"edit-task"}></TaskList>
                     <div className={TaskPageCSS.add_task}>
                         <input className={TaskPageCSS.input} placeholder="New Daily" type="text" onChange={(e) => setDailyInput(e.target.value)}></input>                        
                         <button className={TaskPageCSS.add_task_button} 
@@ -64,7 +64,7 @@ export default function ParentTaskPage() : JSX.Element {
                     </div>
                 </div>
                 <div className={TaskPageCSS.task_block}>
-                    <TaskList taskNames={generalTasks} title="General Tasks" onTaskClick={removeGeneralTask} isParent={true}></TaskList>
+                    <TaskList taskNames={generalTasks} title="General Tasks" onTaskClick={removeGeneralTask} taskType={"edit-task"}></TaskList>
                     <div className={TaskPageCSS.add_task}>
                         <input className={TaskPageCSS.input} placeholder="New General" type="text" onChange={(e) => setGeneralInput(e.target.value)}></input>
                         <button className={TaskPageCSS.add_task_button} 
@@ -75,7 +75,7 @@ export default function ParentTaskPage() : JSX.Element {
                 </div>
 
                 <div className={TaskPageCSS.task_block}>
-                    <TaskList taskNames={doneTasks} title="Done Tasks" onTaskClick={removeDoneTask} isParent={true}></TaskList>                    
+                    <TaskList taskNames={doneTasks} title="Done Tasks" onTaskClick={removeDoneTask} taskType={"approve-task"}></TaskList>                    
                 </div>
             </div>
         </div>
