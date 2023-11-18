@@ -1,31 +1,15 @@
 use aide::{
-    axum::{
-        routing::{get, post},
-        ApiRouter, IntoApiResponse,
-    },
+    axum::{routing::get, ApiRouter, IntoApiResponse},
     openapi::{Info, OpenApi},
     redoc::Redoc,
 };
-use axum::{
-    body::{Body, Bytes},
-    extract::MatchedPath,
-    http::{HeaderMap, Request, Response},
-    Extension, Json,
-};
-use child_labor::tasks::{add_task, Tasks};
-use schemars::JsonSchema;
-use serde::Deserialize;
-use std::{convert::Infallible, time::Duration};
-use tower_http::{
-    classify::ServerErrorsFailureClass,
-    trace::{DefaultMakeSpan, DefaultOnRequest, DefaultOnResponse, TraceLayer},
-    LatencyUnit,
-};
-use tracing::{debug_span, info_span, Level, Span};
-use tracing_subscriber::{layer::SubscriberExt, util::SubscriberInitExt};
+use axum::{http::Request, Extension, Json};
+use tower_http::trace::TraceLayer;
+use tracing::Span;
 
 mod child_labor;
 mod santapass;
+mod state;
 mod toy_catalog;
 
 // Note that this clones the document on each request.
@@ -40,7 +24,9 @@ async fn main() {
     tracing_subscriber::fmt::init();
 
     let app = ApiRouter::new()
-        .api_route("/child_labor/add_task", post(add_task))
+        .merge(child_labor::routes::routes())
+        .merge(santapass::routes::routes())
+        .merge(toy_catalog::routes::routes())
         .route("/api.json", get(serve_api))
         .route("/doc", Redoc::new("/api.json").axum_route())
         .layer(
