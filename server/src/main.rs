@@ -12,6 +12,8 @@ use axum::{
 };
 use serde::{Deserialize, Serialize};
 
+mod child_labor;
+
 #[tokio::main]
 async fn main() {
     // initialize tracing
@@ -25,11 +27,7 @@ async fn main() {
         .route("/users", post(create_user));
 
     // run our app with hyper
-    let listener = tokio::net::TcpListener::bind("127.0.0.1:3000")
-        .await
-        .unwrap();
-    tracing::debug!("listening on {}", listener.local_addr().unwrap());
-    axum::Server::bind(&"0.0.0.0:4269".parse().unwrap())
+    axum::Server::bind(&"0.0.0.0:3000".parse().unwrap())
         .serve(app.into_make_service())
         .await
         .unwrap();
