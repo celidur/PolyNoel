@@ -1,0 +1,12 @@
+:root {
+    --main-color: white;
+    --text-color: black;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+#container {
+    margin: 0;
+}
