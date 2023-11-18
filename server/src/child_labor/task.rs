@@ -1,10 +1,13 @@
-use chrono::{DateTime, Duration, Local};
+use schemars::JsonSchema;
 use serde::{Deserialize, Serialize};
 
-#[derive(Serialize, Deserialize)]
-struct Task {
+type Day = u16;
+
+#[derive(Serialize, Deserialize, JsonSchema)]
+pub struct Task {
     name: String,
     recurrent: bool,
-    deadline: DateTime<Local>,
-    // recurrent_interval: Duration,
+    /// This is a string representing a date
+    deadline: String,
+    recurrent_interval: Option<Day>,
 }
