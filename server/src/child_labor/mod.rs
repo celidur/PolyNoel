@@ -1,3 +1,3 @@
 pub mod routes;
 mod task;
-mod tasks;
+pub mod tasks;

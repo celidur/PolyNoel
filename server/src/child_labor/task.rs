@@ -3,7 +3,7 @@ use serde::{Deserialize, Serialize};
 
 type Day = u16;
 
-#[derive(Serialize, Deserialize, JsonSchema)]
+#[derive(Serialize, Deserialize, JsonSchema, Debug, Default)]
 pub struct Task {
     name: String,
     recurrent: bool,

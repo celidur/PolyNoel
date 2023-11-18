@@ -4,12 +4,13 @@ use aide::{
     redoc::Redoc,
 };
 use axum::{http::Request, Extension, Json};
+use common::state::App;
 use tower_http::trace::TraceLayer;
 use tracing::Span;
 
 mod child_labor;
+mod common;
 mod santapass;
-mod state;
 mod toy_catalog;
 
 // Note that this clones the document on each request.
@@ -23,17 +24,20 @@ async fn serve_api(Extension(api): Extension<OpenApi>) -> impl IntoApiResponse {
 async fn main() {
     tracing_subscriber::fmt::init();
 
+    let state = App::new();
+
     let app = ApiRouter::new()
-        .merge(child_labor::routes::routes())
-        .merge(santapass::routes::routes())
-        .merge(toy_catalog::routes::routes())
+        .nest("/child_labor", child_labor::routes::routes())
+        .nest("/santapass", santapass::routes::routes())
+        .nest("/toy_catalog", toy_catalog::routes::routes())
         .route("/api.json", get(serve_api))
         .route("/doc", Redoc::new("/api.json").axum_route())
         .layer(
             TraceLayer::new_for_http().on_request(|request: &Request<_>, _span: &Span| {
                 println!("{:?} {}", request.method(), request.uri());
             }),
-        );
+        )
+        .with_state(state);
 
     let mut api = OpenApi {
         info: Info {
@@ -44,7 +48,7 @@ async fn main() {
         ..OpenApi::default()
     };
 
-    axum::Server::bind(&"0.0.0.0:3000".parse().unwrap())
+    axum::Server::bind(&"0.0.0.0:6969".parse().unwrap())
         .serve(
             app
                 // Generate the documentation.
