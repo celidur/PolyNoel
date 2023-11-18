@@ -4,6 +4,7 @@ import ToyCatalog from './pages/ToyCatalog';
 import Parent from './pages/Parent';
 import { Route, Routes } from 'react-router-dom';
 import NavBar from './components/Navbar';
+import './assets/css/styles.css'
 
 type RouteData = {
   path: string;

@@ -1,9 +1,7 @@
-import React from "react";
-import '../assets/css/styles.css'
 import Logo from '../assets/img/test-logo.png'
 import { NavLink } from "react-router-dom";
 
-export default function NavBar() {
+export default function NavBar() : JSX.Element {
   return (
     <header>
         <div>
