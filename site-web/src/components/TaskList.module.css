@@ -1,0 +1,17 @@
+.container {
+    width: 400px;
+    height: 800px;
+}
+.tasklist {
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+
+}
+
+.title {
+    font-size:30px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 10px;
+}
