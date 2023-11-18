@@ -1,0 +1,34 @@
+.container {
+    display: flex;
+    justify-content: center;    
+    padding-top:3%;
+}
+
+.task_container {
+    display:flex;
+    flex-direction: row;    
+    gap : 10px;
+}
+
+.task_block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;            
+}
+
+.add_task {
+    width:400px;
+    display: flex;
+}
+
+.add_task > * {
+    font-size: 24px;    
+}
+
+.add_task_button {            
+    /* font-size:16px; */
+}
+
+.input {
+    flex: 1 1;
+}

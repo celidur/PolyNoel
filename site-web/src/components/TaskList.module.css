@@ -1,6 +1,5 @@
 .container {
     width: 400px;
-    height: 800px;
 }
 .tasklist {
     display:flex;
