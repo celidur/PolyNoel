@@ -1,6 +1,7 @@
 :root {
     --main-color: white;
-    --text-color: black;
+    --text-color: black;    
+    --nav-bar-color: #d00505;
 }
 
 * {

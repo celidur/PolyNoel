@@ -1,68 +1,71 @@
-//! Run with
-//!
-//! ```not_rust
-//! cargo run -p example-readme
-//! ```
-
-use axum::{
-    http::StatusCode,
-    response::IntoResponse,
-    routing::{get, post},
-    Json, Router,
+use aide::{
+    axum::{
+        routing::{get, post},
+        ApiRouter, IntoApiResponse,
+    },
+    openapi::{Info, OpenApi},
+    redoc::Redoc,
 };
-use serde::{Deserialize, Serialize};
+use axum::{
+    body::{Body, Bytes},
+    extract::MatchedPath,
+    http::{HeaderMap, Request, Response},
+    Extension, Json,
+};
+use child_labor::tasks::{add_task, Tasks};
+use schemars::JsonSchema;
+use serde::Deserialize;
+use std::{convert::Infallible, time::Duration};
+use tower_http::{
+    classify::ServerErrorsFailureClass,
+    trace::{DefaultMakeSpan, DefaultOnRequest, DefaultOnResponse, TraceLayer},
+    LatencyUnit,
+};
+use tracing::{debug_span, info_span, Level, Span};
+use tracing_subscriber::{layer::SubscriberExt, util::SubscriberInitExt};
 
 mod child_labor;
+mod santapass;
+mod toy_catalog;
+
+// Note that this clones the document on each request.
+// To be more efficient, we could wrap it into an Arc,
+// or even store it as a serialized string.
+async fn serve_api(Extension(api): Extension<OpenApi>) -> impl IntoApiResponse {
+    Json(api)
+}
 
 #[tokio::main]
 async fn main() {
-    // initialize tracing
     tracing_subscriber::fmt::init();
 
-    // build our application with a route
-    let app = Router::new()
-        // `GET /` goes to `root`
-        .route("/", get(root))
-        // `POST /users` goes to `create_user`
-        .route("/users", post(create_user));
+    let app = ApiRouter::new()
+        .api_route("/child_labor/add_task", post(add_task))
+        .route("/api.json", get(serve_api))
+        .route("/doc", Redoc::new("/api.json").axum_route())
+        .layer(
+            TraceLayer::new_for_http().on_request(|request: &Request<_>, _span: &Span| {
+                println!("{:?} {}", request.method(), request.uri());
+            }),
+        );
 
-    // run our app with hyper
-    axum::Server::bind(&"0.0.0.0:3000".parse().unwrap())
-        .serve(app.into_make_service())
-        .await
-        .unwrap();
-}
-
-// basic handler that responds with a static string
-async fn root() -> &'static str {
-    "Hello, World!"
-}
-
-async fn create_user(
-    // this argument tells axum to parse the request body
-    // as JSON into a `CreateUser` type
-    Json(payload): Json<CreateUser>,
-) -> impl IntoResponse {
-    // insert your application logic here
-    let user = User {
-        id: 1337,
-        username: payload.username,
+    let mut api = OpenApi {
+        info: Info {
+            title: "PolyNoel".to_string(),
+            summary: Some("Une liste de Noel".to_string()),
+            ..Info::default()
+        },
+        ..OpenApi::default()
     };
 
-    // this will be converted into a JSON response
-    // with a status code of `201 Created`
-    (StatusCode::CREATED, Json(user))
-}
-
-// the input to our `create_user` handler
-#[derive(Deserialize)]
-struct CreateUser {
-    username: String,
-}
-
-// the output to our `create_user` handler
-#[derive(Serialize)]
-struct User {
-    id: u64,
-    username: String,
+    axum::Server::bind(&"0.0.0.0:3000".parse().unwrap())
+        .serve(
+            app
+                // Generate the documentation.
+                .finish_api(&mut api)
+                .layer(Extension(api))
+                .into_make_service(),
+        )
+        .await
+        .unwrap();
 }
