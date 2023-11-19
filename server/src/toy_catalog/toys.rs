@@ -1,4 +1,5 @@
 use std::collections::HashMap;
+use std::ops::Deref;
 
 use super::toy::Toy;
 
@@ -8,6 +9,14 @@ use std::path::Path;
 #[derive(Default, Debug)]
 pub struct Toys {
     pub toys: HashMap<String, Toy>,
+}
+
+impl Deref for Toys {
+    type Target = HashMap<String, Toy>;
+
+    fn deref(&self) -> &Self::Target {
+        &self.toys
+    }
 }
 
 impl Toys {

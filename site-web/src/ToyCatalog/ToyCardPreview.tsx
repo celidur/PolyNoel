@@ -23,7 +23,6 @@ interface BoxDragPreviewProps {
     currentOffset: XYCoord | null;
 }
 export default function BoxDragPreview({props, initialOffset, currentOffset}: BoxDragPreviewProps) : JSX.Element  {
-    console.log(props);
     return (
       <div className={styles.cardStack} style={getStyles(initialOffset, currentOffset)}>
         <ToyCard {...props} preview/>

@@ -2,6 +2,7 @@ use crate::child_labor::tasks::Tasks;
 use crate::toy_catalog::algorithm::analytics::Analytics;
 use crate::toy_catalog::algorithm::categories::Categories;
 use crate::toy_catalog::algorithm::category::Category;
+use crate::toy_catalog::toys::Toys;
 use std::collections::HashSet;
 use std::ops::Range;
 
@@ -24,8 +25,14 @@ impl User {
         }
     }
 
-    pub fn add_category(&mut self, category: Category) {
-        // TODO: add item only respect privce and does not exist in selected_item and disliked_item
+    pub fn add_category(&mut self, mut category: Category, toys: &Toys) {
+        category.items.retain(|item| {
+            !self.selected_item.contains(item.as_str())
+                && !self.disliked_item.contains(item.as_str())
+                && self
+                    .price_born
+                    .contains(&toys.get(item.as_str()).unwrap().price)
+        });
         self.analytics.add_category(category);
     }
 
@@ -33,8 +40,14 @@ impl User {
         self.analytics.remove_category(category);
     }
 
-    pub fn modify_price_born(&mut self, price_born: Range<u32>) {
-        // TODO: modify item in analytics to respect price_born
+    pub fn modify_price_born(
+        &mut self,
+        all_categories: &Categories,
+        price_born: Range<u32>,
+        toys: &Toys,
+    ) {
+        self.analytics
+            .limit_prices(all_categories, &self.price_born, &price_born, toys);
         self.price_born = price_born;
     }
 }

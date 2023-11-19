@@ -1,7 +1,7 @@
 import { SERVER_URL } from "./consts.js";
 
 export const HTTPInterface = {
-  SERVER_URL: `${SERVER_URL}`,
+  SERVER_URL: SERVER_URL,
 
   GET: async function<T>(endpoint : string) : Promise<T> {
     const response = await fetch(`${this.SERVER_URL}/${endpoint}`);

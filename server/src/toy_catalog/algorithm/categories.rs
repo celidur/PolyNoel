@@ -1,12 +1,22 @@
 use super::category::Category;
+use serde::Deserialize;
+use serde::Serialize;
 use std::fs;
 use std::ops::Deref;
 use std::ops::DerefMut;
 use std::path::Path;
+use utoipa::ToSchema;
 
 #[derive(Default, Debug, Clone)]
 pub struct Categories {
     pub categories: Vec<Category>,
+}
+
+#[derive(Default, Debug, Clone, Serialize, Deserialize, ToSchema)]
+pub struct SimpleCategory {
+    pub id: String,
+    pub name: String,
+    pub is_selected: bool,
 }
 
 impl DerefMut for Categories {
@@ -38,5 +48,10 @@ impl Categories {
         }
 
         Self { categories }
+    }
+
+    /// This only get existing category
+    pub fn get(&self, id: &str) -> &Category {
+        self.categories.iter().find(|c| c.id == id).unwrap()
     }
 }

@@ -117,7 +117,7 @@ pub async fn add_category(
 ) -> impl IntoResponse {
     let mut user = app.users.lock().await;
     let category = app.categories.categories.iter().filter(|c| c.id == id).next().unwrap().clone();
-    user.add_category(category);
+    user.add_category(category, &app.toys);
     StatusCode::CREATED
 }
 
@@ -149,6 +149,7 @@ pub async fn delete_category(
 )]
 pub async fn get_categories(State(app): State<App>) -> impl IntoResponse {
     // give the possibility categories of user
+    // app.categories
     todo!()
 }
 
@@ -174,6 +175,6 @@ pub async fn modify_price_born(
 ) -> impl IntoResponse {
     let mut user = app.users.lock().await;
     let price_born = price_born.inferior..price_born.superior;
-    user.modify_price_born(price_born);
+    user.modify_price_born(&app.categories, price_born, &app.toys);
     StatusCode::OK
 }
