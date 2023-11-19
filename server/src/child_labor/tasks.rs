@@ -1,8 +1,11 @@
 use super::task::{CreateTask, Task};
 use crate::common::state::App;
-use aide::axum::IntoApiResponse;
-use axum::{extract::State, http::StatusCode};
-use axum_jsonschema::Json;
+use axum::{
+    extract::{Path, State},
+    http::StatusCode,
+    response::IntoResponse,
+    Json,
+};
 
 #[derive(Debug, Default)]
 pub struct Tasks {
@@ -32,32 +35,62 @@ impl Tasks {
     }
 }
 
-/// Return the id of the added task
-pub async fn add_task(
-    State(app): State<App>,
-    Json(task): Json<CreateTask>,
-) -> impl IntoApiResponse {
+#[utoipa::path(
+    post,
+    path = "/child_labor/",
+    request_body = CreateTask,
+    responses(
+        (status = 201, description = "Task created successfully", body = String),
+    )
+)]
+pub async fn add_task(State(app): State<App>, Json(task): Json<CreateTask>) -> impl IntoResponse {
     let id = app.users.lock().await.tasks.push(task).id.clone();
 
     (StatusCode::CREATED, Json(id))
 }
 
-pub async fn remove_task(State(app): State<App>, Json(id): Json<String>) -> impl IntoApiResponse {
+#[utoipa::path(
+    delete,
+    path = "/child_labor/{id}",
+    responses(
+        (status = 200, description = "Task deleted successfully"),
+        (status = 404, description = "Task not found")
+    ),
+    params(
+        ("id" = i32, Path, description = "Task id")
+    ),
+)]
+pub async fn remove_task(State(app): State<App>, Path(id): Path<String>) -> impl IntoResponse {
     match app.users.lock().await.tasks.remove(&id) {
         true => StatusCode::OK,
         false => StatusCode::NOT_FOUND,
     }
 }
 
-pub async fn get_tasks(State(app): State<App>) -> impl IntoApiResponse {
+#[utoipa::path(
+    get,
+    path = "/child_labor/",
+    responses(
+        (status = 200, description = "List of tasks", body = Vec<Task>),
+    ),
+)]
+pub async fn get_tasks(State(app): State<App>) -> impl IntoResponse {
     let tasks = app.users.lock().await.tasks.tasks.clone();
     (StatusCode::OK, Json(tasks))
 }
 
-pub async fn mark_task_done(
-    State(app): State<App>,
-    Json(id): Json<String>,
-) -> impl IntoApiResponse {
+#[utoipa::path(
+    patch,
+    path = "/child_labor/{id}",
+    responses(
+        (status = 200, description = "Task updated successfully"),
+        (status = 404, description = "Task not found")
+    ),
+    params(
+        ("id" = i32, Path, description = "Task id")
+    ),
+)]
+pub async fn mark_task_done(State(app): State<App>, Path(id): Path<String>) -> impl IntoResponse {
     match app.users.lock().await.tasks.mark_done(&id) {
         true => StatusCode::OK,
         false => StatusCode::NOT_FOUND,
