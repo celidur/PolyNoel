@@ -1,0 +1,116 @@
+:root {
+    /* TODO: configuration des couleurs des taches */
+    --task-color: #ffebeb; 
+    --unchecked-color: #000000;
+    --checked-color: #f1faee;
+
+    --task-font-size: 24px;
+    --task-font-weight: 500;
+    --task-border-radius: 20px;
+}
+
+/* NOMRAL TASK */
+
+.task {
+    display:flex;
+    gap: 10px;
+    
+    padding:10px;
+    border-radius: var(--task-border-radius);
+    background-color: var(--task-color);
+
+    font-size: var(--task-font-size);
+    font-weight: var(--task-font-weight)
+}
+
+  .task .task__label {
+    display: flex;
+    align-items: center;
+    margin: 0px 0;
+    cursor: pointer;    
+        
+    font-size: var(--task-font-size);
+    color: var(--unchecked-color);
+  }
+  
+  .task .task__label input[type=checkbox] {
+    opacity: 0;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;          
+    
+  }
+  .task .task__label input[type=checkbox] + .check {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border: 2px solid var(--unchecked-color);
+    transition: 0.2s;
+  }
+  .task .task__label input[type=checkbox]:checked + .check {
+    width: 25px;
+    height: 15px;
+    border-color: var(--checked-color);
+    border-top: transparent;
+    border-right: transparent;
+    transform: rotate(-45deg);    
+  }
+  .task .task__label input[type=checkbox] ~ span {
+    position: relative;
+    left: 40px;
+    white-space: nowrap;
+    transition: 0.5s;
+  }
+  
+  .task .task__label input[type=checkbox] ~ span::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--checked-color);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+  }
+  .task .task__label input[type=checkbox]:checked ~ span {
+    color: var(--checked-color);
+  }
+  .task .task__label input[type=checkbox]:checked ~ span::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  /* TASK MANAGED BY PARENTS */
+
+  .task_manage {
+    display:flex;    
+    align-items: center;
+    justify-content: space-between;    
+    gap: 10px;
+    
+    padding:10px;
+    border-radius: var(--task-border-radius);
+    margin: 0px 0;
+    background-color: var(--task-color);
+    user-select: text;
+    /* cursor: pointer; */
+    
+    font-size: var(--task-font-size);
+    font-weight: var(--task-font-weight);
+    color: var(--unchecked-color);
+}
+
+.img {
+  height: 20px;
+  width: 20px;    
+  cursor:pointer;  
+}
+
+.approved_task {    
+  padding:5px;
+  font-size:18px;
+  font-weight: bold;
+  cursor: pointer;
+}

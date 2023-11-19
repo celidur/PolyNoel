@@ -1,6 +1,7 @@
 :root {
     --main-color: white;
-    --text-color: black;
+    --text-color: black;    
+    --nav-bar-color: #d00505;
 }
 
 * {
@@ -39,4 +40,28 @@ header button {
     color:#d00505;
     cursor: pointer;
     transition: all 0.3 ease 0s;
+}
+
+#battleBarContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7%;
+    margin: auto;
+}
+
+#battleBarContainer>span {
+    font-size: 160%;
+    margin: auto;
+}
+
+.battleBar {
+    display: inline-block;
+    height: 50px;
+    width: 700px;
+    background-color: rgb(57, 93, 63);
+    margin: auto 50px;
+    border-radius: 25px;
 }

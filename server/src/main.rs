@@ -1,68 +1,37 @@
-//! Run with
-//!
-//! ```not_rust
-//! cargo run -p example-readme
-//! ```
+use api_doc::ApiDoc;
+use axum::{http::Request, Router};
+use common::state::App;
+use tower_http::trace::TraceLayer;
+use tracing::Span;
+use utoipa::OpenApi;
+use utoipa_swagger_ui::SwaggerUi;
 
-use axum::{
-    http::StatusCode,
-    response::IntoResponse,
-    routing::{get, post},
-    Json, Router,
-};
-use serde::{Deserialize, Serialize};
-
+mod api_doc;
 mod child_labor;
+mod common;
+mod santapass;
+mod toy_catalog;
 
 #[tokio::main]
 async fn main() {
-    // initialize tracing
     tracing_subscriber::fmt::init();
 
-    // build our application with a route
-    let app = Router::new()
-        // `GET /` goes to `root`
-        .route("/", get(root))
-        // `POST /users` goes to `create_user`
-        .route("/users", post(create_user));
+    let state = App::new();
 
-    // run our app with hyper
-    axum::Server::bind(&"0.0.0.0:3000".parse().unwrap())
+    let app = Router::new()
+        .nest("/child_labor/", child_labor::routes::routes())
+        .nest("/santapass/", santapass::routes::routes())
+        .nest("/toy_catalog/", toy_catalog::routes::routes())
+        .merge(SwaggerUi::new("/doc").url("/api-docs/openapi.json", ApiDoc::openapi()))
+        .layer(
+            TraceLayer::new_for_http().on_request(|request: &Request<_>, _span: &Span| {
+                println!("{:?} {}", request.method(), request.uri());
+            }),
+        )
+        .with_state(state);
+
+    axum::Server::bind(&"0.0.0.0:6969".parse().unwrap())
         .serve(app.into_make_service())
         .await
         .unwrap();
-}
-
-// basic handler that responds with a static string
-async fn root() -> &'static str {
-    "Hello, World!"
-}
-
-async fn create_user(
-    // this argument tells axum to parse the request body
-    // as JSON into a `CreateUser` type
-    Json(payload): Json<CreateUser>,
-) -> impl IntoResponse {
-    // insert your application logic here
-    let user = User {
-        id: 1337,
-        username: payload.username,
-    };
-
-    // this will be converted into a JSON response
-    // with a status code of `201 Created`
-    (StatusCode::CREATED, Json(user))
-}
-
-// the input to our `create_user` handler
-#[derive(Deserialize)]
-struct CreateUser {
-    username: String,
-}
-
-// the output to our `create_user` handler
-#[derive(Serialize)]
-struct User {
-    id: u64,
-    username: String,
 }

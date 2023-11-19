@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+    padding-top: 20px;
+}
+
+.feature {
+    padding: 10px;    
+    border-radius: 20px;
+    background-color:var(--nav-bar-color); /* TODO: change Color */
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;        
+    width:200px;
+    text-align: center;
+}

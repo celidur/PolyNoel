@@ -1,0 +1,17 @@
+.container {
+    width: 360px;
+    caret-color: transparent;
+}
+.tasklist {
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    caret-color: transparent;
+}
+
+.title {
+    font-size:30px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 10px;
+}
