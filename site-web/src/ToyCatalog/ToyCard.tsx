@@ -1,7 +1,4 @@
-import React, { useState } from "react"
 import styles from "../assets/css/ToyCatalog.module.css"
-import { useDrag } from "react-dnd";
-import { ItemTypes } from "../Constants";
 
 
 export interface ToyCardProps {
@@ -14,7 +11,9 @@ export default function ToyCard({id, title, imgSrc, difficulty, preview} : any) 
     return(
         <div className={styles.toyCard} role={preview ? 'ToyCardPreview' : 'ToyCard'}>
             <h1>{title}</h1>
-            <img src={imgSrc} alt={title}></img>
+            <div className={styles.imageContainer}>
+                <img src={imgSrc} alt={title}></img>
+            </div>
             <DifficultySlider level={difficulty}/>
         </div>
     );
@@ -26,7 +25,7 @@ interface DifficultySliderProps {
 function DifficultySlider({level}: DifficultySliderProps) : JSX.Element {
     return (
         <div className={styles.difficultySlider}>
-
+            <p/>
         </div>
     )
 }
