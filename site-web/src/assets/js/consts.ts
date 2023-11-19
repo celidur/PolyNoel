@@ -1,1 +1,0 @@
-export const SERVER_URL : string = "https://polynoel.polyorbite.com/";
