@@ -19,7 +19,7 @@ pub fn routes() -> Router<App> {
 
 #[utoipa::path(
     get,
-    path = "/swip/",
+    path = "/toy_catalog/swip",
     responses(
         (status = 200, description = "Get new swip item", body = Toy),
     )
@@ -39,7 +39,7 @@ pub struct LikeToy {
 
 #[utoipa::path(
     patch,
-    path = "/swip/",
+    path = "/toy_catalog/swip",
     responses(
         (status = 200, description = "Item modify"),
         (status = 404, description = "Item not found")
@@ -68,13 +68,13 @@ pub async fn update_item(
 
 #[utoipa::path(
     get,
-    path = "/toy/:id",
+    path = "/toy_catalog/toy/:id",
     responses(
         (status = 200, description = "Get item", body = Toy),
         (status = 404, description = "Item not found")
     ),
     params(
-        ("id" = i32, Path, description = "id of toy")
+        ("id" = String, Path, description = "id of toy")
     ), 
 )]
 pub async fn get_item(State(app): State<App>, Path(id): Path<String>) -> Result<impl IntoResponse, impl IntoResponse> {
@@ -88,7 +88,7 @@ pub async fn get_item(State(app): State<App>, Path(id): Path<String>) -> Result<
 
 #[utoipa::path(
     get,
-    path = "/toys/",
+    path = "/toy_catalog/toys",
     responses(
         (status = 200, description = "Get all items", body = Vec<Toy>),
     ),
@@ -101,12 +101,12 @@ pub async fn get_all_items(State(app): State<App>) -> impl IntoResponse {
 
 #[utoipa::path(
     post,
-    path = "/category/",
+    path = "/toy_catalog/category",
     responses(
         (status = 201, description = "Category created successfully", body = String),
     ),
     params(
-        ("id" = i32, Path, description = "id of toy")
+        ("id" = String, Path, description = "id of toy")
     ), 
 )]
 pub async fn add_category(
@@ -121,7 +121,7 @@ pub async fn add_category(
 
 #[utoipa::path(
     delete,
-    path = "/category/",
+    path = "/toy_catalog/category",
     responses(
         (status = 200, description = "Category deleted successfully"),
     ),
