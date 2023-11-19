@@ -1,14 +1,29 @@
-use super::task::Task;
+use super::task::{CreateTask, Task};
 
-use aide::axum::IntoApiResponse;
-use axum::http::StatusCode;
-use axum_jsonschema::Json;
-
+#[derive(Debug, Default)]
 pub struct Tasks {
-    tasks: Vec<Task>,
+    pub tasks: Vec<Task>,
 }
 
-pub async fn add_task(Json(payload): Json<Task>) -> impl IntoApiResponse {
-    // self.tasks.push(payload);
-    StatusCode::CREATED
+impl Tasks {
+    pub fn push(&mut self, task: CreateTask) -> &Task {
+        self.tasks.push(task.build());
+        self.tasks.last().unwrap()
+    }
+    pub fn remove(&mut self, id: &str) -> bool {
+        if let Some(i) = self.tasks.iter().position(|t| t.id == id) {
+            self.tasks.remove(i);
+            true
+        } else {
+            false
+        }
+    }
+    pub fn mark_done(&mut self, id: &str) -> bool {
+        if let Some(task) = self.tasks.iter_mut().find(|t| t.id == id) {
+            task.need_review = true;
+            true
+        } else {
+            false
+        }
+    }
 }

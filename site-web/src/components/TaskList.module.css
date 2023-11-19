@@ -1,12 +1,12 @@
 .container {
-    width: 400px;
-    height: 800px;
+    width: 360px;
+    caret-color: transparent;
 }
 .tasklist {
     display:flex;
     flex-direction: column;
     gap:10px;
-
+    caret-color: transparent;
 }
 
 .title {
