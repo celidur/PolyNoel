@@ -1,15 +1,19 @@
 import React, { useEffect, useState } from "react"
 import { DndProvider, useDrop } from 'react-dnd'
 import { HTML5Backend } from "react-dnd-html5-backend";
+import { TouchBackend } from "react-dnd-touch-backend";
+import { isMobile } from "react-device-detect";
 import { ItemTypes } from "../Constants";
 import styles from "../assets/css/ToyCatalog.module.css"
-import ToyCard, { ToyCardProps } from "../ToyCatalog/ToyCard";
+import { ToyCardProps } from "../ToyCatalog/ToyCard";
+import DraggableToyCard from "../ToyCatalog/DraggableToyCard";
+import CustomDragLayer from "../ToyCatalog/CustomDragLayer";
 
 import image1 from "../assets/placeholder/toy1.webp"
 
 export default function ToyCatalog() : JSX.Element {
     return (
-        <DndProvider backend={HTML5Backend}>
+        <DndProvider backend={isMobile ? TouchBackend : HTML5Backend}>
             <TinderGame/>
         </DndProvider>
     );
@@ -43,10 +47,11 @@ function TinderGame() : JSX.Element {
     return (
         <>
             <div className={styles.cardDragContainer}>
+                <CustomDragLayer/>
                 <RefuseSquare callback={setSwitchFlag} cards={cards}/>
                 <div className={styles.cardStack}>
-                    <ToyCard {...cards[1]}/>
-                    <ToyCard {...cards[0]}/>
+                    <DraggableToyCard {...cards[1]}/>
+                    <DraggableToyCard {...cards[0]}/>
                 </div>
                 <AcceptSquare callback={setSwitchFlag} cards={cards}/>
             </div>

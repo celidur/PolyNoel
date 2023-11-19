@@ -10,18 +10,11 @@ export interface ToyCardProps {
     imgSrc: string;
     difficulty: number;
 }
-export default function ToyCard({id, title, imgSrc, difficulty} : ToyCardProps) : JSX.Element {
-    const [{isDragging}, drag] = useDrag(() => ({
-        type: ItemTypes.TOYCARD,
-        item: {id, title, imgSrc, difficulty},
-        collect: (monitor) => ({
-            isDragging: !!monitor.isDragging()
-        })
-    }))
+export default function ToyCard({id, title, imgSrc, difficulty, preview} : any) : JSX.Element {
     return(
-        <div ref={drag} className={styles.toyCard} style={{opacity: isDragging? "0": "1",}}>
+        <div className={styles.toyCard} role={preview ? 'ToyCardPreview' : 'ToyCard'}>
             <h1>{title}</h1>
-            <img src={imgSrc} alt="test"></img>
+            <img src={imgSrc} alt={title}></img>
             <DifficultySlider level={difficulty}/>
         </div>
     );
