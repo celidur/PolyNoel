@@ -35,7 +35,7 @@ impl Analytics {
     pub fn add_review(&mut self, item_id: &str, categories: &Vec<String>, liked: bool) -> bool {
         let factor = if liked { 2.0 } else { 0.5 };
         let factor = factor / categories.len() as f32;
-        if self.categories.iter().all(|c| c.items.contains(item_id)) {
+        if self.categories.iter().all(|c| !c.items.contains(item_id)) {
             return false;
         }
         for Category { score, .. } in self
