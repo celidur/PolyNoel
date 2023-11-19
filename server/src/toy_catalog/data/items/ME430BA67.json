@@ -1,8 +1,13 @@
 {
     "id": "ME430BA67",
     "name": "Chaussure athlétique Cocomelon, bleu et rouge",
-    "price": "34,99$",
+    "price": "3499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dweaf7fbaf/images/E430BA67_1.jpg",
     "description": "Chaussure athlétique Cocomelon, bleu et rouge",
-    "url": "https://www.toysrus.ca/fr/Chaussure-athletique-Cocomelon--bleu-et-rouge/ME430BA67.html"
+    "url": "https://www.toysrus.ca/fr/Chaussure-athletique-Cocomelon--bleu-et-rouge/ME430BA67.html",
+    "categories": [
+        "596c8d6d-31d5-49cb-81c8-68733a3eedd9",
+        "67271392-b424-4251-998a-20030a28dcd4",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

@@ -1,8 +1,16 @@
 {
     "id": "D4C2E996",
     "name": "Seau de Batman",
-    "price": "7,99$",
+    "price": "799",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwe5918320/images/D4C2E996_1.jpg",
     "description": "Seau de Batman",
-    "url": "https://www.toysrus.ca/fr/Seau-de-Batman/D4C2E996.html"
+    "url": "https://www.toysrus.ca/fr/Seau-de-Batman/D4C2E996.html",
+    "categories": [
+        "psgy3esBSJubwV3AY-AYnw",
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "Ek5AfUwASGWAcmFz9SzzoQ",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

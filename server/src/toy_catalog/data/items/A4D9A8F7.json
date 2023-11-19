@@ -1,8 +1,16 @@
 {
     "id": "A4D9A8F7",
     "name": "ALEX - Blobbies",
-    "price": "4,99$",
+    "price": "499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw19b5aa52/images/A4D9A8F7_1.jpg",
     "description": "ALEX - Blobbies",
-    "url": "https://www.toysrus.ca/fr/ALEX---Blobbies/A4D9A8F7.html"
+    "url": "https://www.toysrus.ca/fr/ALEX---Blobbies/A4D9A8F7.html",
+    "categories": [
+        "sN2YvkIGQD6se-yEmmb3Dw",
+        "hFPgaxjyTS-09FMgOvQS9g",
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "SoeT2PFORRuHrUwzGVMbug",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

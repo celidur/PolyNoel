@@ -1,8 +1,15 @@
 {
     "id": "14ED4A6C",
     "name": "Heys - TMNT Backpack",
-    "price": "26,99$",
+    "price": "2699",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw8dafb94b/images/14ED4A6C_1.jpg",
     "description": "Heys - TMNT Backpack",
-    "url": "https://www.toysrus.ca/fr/Heys---TMNT-Backpack/14ED4A6C.html"
+    "url": "https://www.toysrus.ca/fr/Heys---TMNT-Backpack/14ED4A6C.html",
+    "categories": [
+        "6e8cbcee-00a6-4f45-a193-cfa833242a98",
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "02f05a42-3c06-4b2b-976b-f683e4c933fe",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

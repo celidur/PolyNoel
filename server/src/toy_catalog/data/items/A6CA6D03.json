@@ -1,8 +1,14 @@
 {
     "id": "A6CA6D03",
     "name": "Fisher-Price - Trousse médicale",
-    "price": "29,99$",
+    "price": "2999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwe78baa2e/images/A6CA6D03_1.jpg",
     "description": "Fisher-Price - Trousse médicale",
-    "url": "https://www.toysrus.ca/fr/Fisher-Price---Trousse-medicale/A6CA6D03.html"
+    "url": "https://www.toysrus.ca/fr/Fisher-Price---Trousse-medicale/A6CA6D03.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "nLE2pK09RWWGiTrGV-IhRw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

@@ -1,8 +1,15 @@
 {
     "id": "648558F4",
     "name": "Joyeux saumon",
-    "price": "19,99$",
+    "price": "1999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw729c8c04/images/648558F4_1.jpg",
     "description": "Joyeux saumon",
-    "url": "https://www.toysrus.ca/fr/Joyeux-saumon/648558F4.html"
+    "url": "https://www.toysrus.ca/fr/Joyeux-saumon/648558F4.html",
+    "categories": [
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "H_wmbx3lSDmpJYqSeU4WRA",
+        "V8SwQvVESCO7wX8XxLoZEA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

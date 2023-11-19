@@ -1,8 +1,16 @@
 {
     "id": "441B7980",
     "name": "Mini-pelleteuse et chantier",
-    "price": "23,99$",
+    "price": "2399",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwa9b1dc53/images/441B7980_1.jpg",
     "description": "Mini-pelleteuse et chantier",
-    "url": "https://www.toysrus.ca/fr/Mini-pelleteuse-et-chantier/441B7980.html"
+    "url": "https://www.toysrus.ca/fr/Mini-pelleteuse-et-chantier/441B7980.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "SqNRVU9HTHuhIqHxOJaN8w",
+        "bliwe_2LQZyAE9I_DhqDYQ",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

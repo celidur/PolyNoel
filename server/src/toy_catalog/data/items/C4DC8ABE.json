@@ -1,8 +1,13 @@
 {
     "id": "C4DC8ABE",
     "name": "Ensemble Chapeau et Grants, Fillette - Pat'patrouille - Le Film",
-    "price": "12,99$",
+    "price": "1299",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw1844e7b5/images/C4DC8ABE_1.jpg",
     "description": "Ensemble Chapeau et Grants, Fillette - Pat'patrouille - Le Film",
-    "url": "https://www.toysrus.ca/fr/Ensemble-Chapeau-et-Grants--Fillette---Pat-patrouille---Le-Film/C4DC8ABE.html"
+    "url": "https://www.toysrus.ca/fr/Ensemble-Chapeau-et-Grants--Fillette---Pat-patrouille---Le-Film/C4DC8ABE.html",
+    "categories": [
+        "9c4b3adf-29d9-456e-86d9-2b689e53a16a",
+        "67271392-b424-4251-998a-20030a28dcd4",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

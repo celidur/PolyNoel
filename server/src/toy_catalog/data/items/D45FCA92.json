@@ -1,8 +1,18 @@
 {
     "id": "D45FCA92",
     "name": "Frisson Lecureuil Visite La Clinique",
-    "price": "19,99$",
+    "price": "1999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw89665474/images/D45FCA92_1.jpg",
     "description": "Frisson Lecureuil Visite La Clinique",
-    "url": "https://www.toysrus.ca/fr/Frisson-Lecureuil-Visite-La-Clinique/D45FCA92.html"
+    "url": "https://www.toysrus.ca/fr/Frisson-Lecureuil-Visite-La-Clinique/D45FCA92.html",
+    "categories": [
+        "ba304553-8bb1-494e-864f-a22462756e32",
+        "6686e1d2-e842-4ab1-b624-9f4e9ea26175",
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "erslNKwDgthad7j",
+        "eca99751-1e2d-44d3-92d6-3df3419dc31f",
+        "FSF6FiQ-T82JX0ZLAn8XKw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

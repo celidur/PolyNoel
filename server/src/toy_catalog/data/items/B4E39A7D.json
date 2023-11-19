@@ -1,8 +1,15 @@
 {
     "id": "B4E39A7D",
     "name": "Mon coffret de peinture Crayola",
-    "price": "26,99$",
+    "price": "2699",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw9455c46e/images/B4E39A7D_1.jpg",
     "description": "Mon coffret de peinture Crayola",
-    "url": "https://www.toysrus.ca/fr/Mon-coffret-de-peinture-Crayola/B4E39A7D.html"
+    "url": "https://www.toysrus.ca/fr/Mon-coffret-de-peinture-Crayola/B4E39A7D.html",
+    "categories": [
+        "oum-7vxuTbeC_7cuZaEQBA",
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "UohZnJvtQ0KaBYNj-NIQ4g",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

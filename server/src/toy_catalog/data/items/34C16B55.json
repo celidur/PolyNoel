@@ -1,8 +1,15 @@
 {
     "id": "34C16B55",
     "name": "Animal mystère Scribble Scrubbie Crayola",
-    "price": "11,99$",
+    "price": "1199",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw85685811/images/34C16B55_1.jpg",
     "description": "Animal mystère Scribble Scrubbie Crayola",
-    "url": "https://www.toysrus.ca/fr/Animal-mystere-Scribble-Scrubbie-Crayola/34C16B55.html"
+    "url": "https://www.toysrus.ca/fr/Animal-mystere-Scribble-Scrubbie-Crayola/34C16B55.html",
+    "categories": [
+        "oum-7vxuTbeC_7cuZaEQBA",
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "wB8JkNLKTD6LAnQHDVh_Kw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

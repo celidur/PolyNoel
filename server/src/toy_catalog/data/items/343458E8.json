@@ -1,8 +1,17 @@
 {
     "id": "343458E8",
     "name": "coureur de roues chaudes",
-    "price": "2,29$",
+    "price": "229",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw7fce98a6/images/343458E8_1.jpg",
     "description": "coureur de roues chaudes",
-    "url": "https://www.toysrus.ca/fr/coureur-de-roues-chaudes/343458E8.html"
+    "url": "https://www.toysrus.ca/fr/coureur-de-roues-chaudes/343458E8.html",
+    "categories": [
+        "87f478b0-94d0-48d9-b9ec-03c9960f91e8",
+        "hFPgaxjyTS-09FMgOvQS9g",
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "SoeT2PFORRuHrUwzGVMbug",
+        "kjq_n5CIQz6cr_b4QfCSuA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

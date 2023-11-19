@@ -1,8 +1,13 @@
 {
     "id": "C4E44AC0",
     "name": "Rococo Pantalon Legging Marguerite",
-    "price": "9,99$",
+    "price": "999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwe35b5cf3/images/C4E44AC0_1.jpg",
     "description": "Rococo Pantalon Legging Marguerite 3/6M",
-    "url": "https://www.toysrus.ca/fr/Rococo-Pantalon-Legging-Marguerite-3-6M/C4E44AC0.html"
+    "url": "https://www.toysrus.ca/fr/Rococo-Pantalon-Legging-Marguerite-3-6M/C4E44AC0.html",
+    "categories": [
+        "773f83fa-d559-4c01-a74f-d38dde6dae74",
+        "67271392-b424-4251-998a-20030a28dcd4",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

@@ -1,8 +1,13 @@
 {
     "id": "MD4B11853",
     "name": "Baskets Noire",
-    "price": "29,99$",
+    "price": "2999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwb8c71d28/images/D4B11853_1.jpg",
     "description": "Baskets Noire",
-    "url": "https://www.toysrus.ca/fr/Baskets-Noire/MD4B11853.html"
+    "url": "https://www.toysrus.ca/fr/Baskets-Noire/MD4B11853.html",
+    "categories": [
+        "596c8d6d-31d5-49cb-81c8-68733a3eedd9",
+        "67271392-b424-4251-998a-20030a28dcd4",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

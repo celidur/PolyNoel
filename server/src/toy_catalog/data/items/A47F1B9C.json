@@ -1,8 +1,15 @@
 {
     "id": "A47F1B9C",
     "name": "Tac Tac Jack Foxmind",
-    "price": "36,99$",
+    "price": "3699",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw81bf9e19/images/A47F1B9C_1.jpg",
     "description": "Tac Tac Jack Foxmind",
-    "url": "https://www.toysrus.ca/fr/Tac-Tac-Jack-Foxmind/A47F1B9C.html"
+    "url": "https://www.toysrus.ca/fr/Tac-Tac-Jack-Foxmind/A47F1B9C.html",
+    "categories": [
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "xQB8DNTQRQ-dnL7UmEQNiw",
+        "H_wmbx3lSDmpJYqSeU4WRA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

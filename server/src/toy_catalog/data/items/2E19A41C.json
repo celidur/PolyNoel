@@ -1,8 +1,15 @@
 {
     "id": "2E19A41C",
     "name": "Poney club",
-    "price": "89,99$",
+    "price": "8999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwdf9274a0/images/2E19A41C_1.jpg",
     "description": "Poney club",
-    "url": "https://www.toysrus.ca/fr/Poney-club/2E19A41C.html"
+    "url": "https://www.toysrus.ca/fr/Poney-club/2E19A41C.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "yMgFZPBSSbS0W0_67S6H2A",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

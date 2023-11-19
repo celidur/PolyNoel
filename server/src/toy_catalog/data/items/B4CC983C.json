@@ -1,8 +1,17 @@
 {
     "id": "B4CC983C",
     "name": "Wind Down Book - Édition anglaise",
-    "price": "11,95$",
+    "price": "1195",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwf47ba898/images/B4CC983C_1.jpg",
     "description": "Wind Down Book - Édition anglaise",
-    "url": "https://www.toysrus.ca/fr/Wind-Down-Book---Edition-anglaise/B4CC983C.html"
+    "url": "https://www.toysrus.ca/fr/Wind-Down-Book---Edition-anglaise/B4CC983C.html",
+    "categories": [
+        "ba304553-8bb1-494e-864f-a22462756e32",
+        "35b296e1-fb6d-4f54-b686-df22a28db9ce",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "Bo67ARGhRP6r9AUS1uBPUg",
+        "FSF6FiQ-T82JX0ZLAn8XKw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

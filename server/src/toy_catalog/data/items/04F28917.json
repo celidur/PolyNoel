@@ -1,8 +1,16 @@
 {
     "id": "04F28917",
     "name": "Minions explosifs",
-    "price": "24,99$",
+    "price": "2499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwb695fae5/images/04F28917_1.jpg",
     "description": "Minions explosifs",
-    "url": "https://www.toysrus.ca/fr/Minions-explosifs/04F28917.html"
+    "url": "https://www.toysrus.ca/fr/Minions-explosifs/04F28917.html",
+    "categories": [
+        "1fjjZGjyQQ289DQZw1JMdw",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "H_wmbx3lSDmpJYqSeU4WRA",
+        "V8SwQvVESCO7wX8XxLoZEA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

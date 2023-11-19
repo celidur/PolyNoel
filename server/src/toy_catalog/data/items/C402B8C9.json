@@ -1,8 +1,15 @@
 {
     "id": "C402B8C9",
     "name": "You and Me Parc de luxe",
-    "price": "29,99$",
+    "price": "2999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw769b1e64/images/C402B8C9_1.jpg",
     "description": "You and Me Parc de luxe",
-    "url": "https://www.toysrus.ca/fr/You-and-Me-Parc-de-luxe/C402B8C9.html"
+    "url": "https://www.toysrus.ca/fr/You-and-Me-Parc-de-luxe/C402B8C9.html",
+    "categories": [
+        "g50JvsbmQim87rIIIRR0Jw",
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "kSzVH6Q3RdGcG-yk9-k2jg",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

@@ -1,8 +1,18 @@
 {
     "id": "0446DA98",
     "name": "Ma Petite Epicerie",
-    "price": "29,99$",
+    "price": "2999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw972382c5/images/0446DA98_1.jpg",
     "description": "Ma Petite Epicerie",
-    "url": "https://www.toysrus.ca/fr/Ma-Petite-Epicerie/0446DA98.html"
+    "url": "https://www.toysrus.ca/fr/Ma-Petite-Epicerie/0446DA98.html",
+    "categories": [
+        "1fjjZGjyQQ289DQZw1JMdw",
+        "ba304553-8bb1-494e-864f-a22462756e32",
+        "6686e1d2-e842-4ab1-b624-9f4e9ea26175",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "f7a3c846-06c0-473c-a7ee-f31877cb6b4c",
+        "Bo67ARGhRP6r9AUS1uBPUg",
+        "FSF6FiQ-T82JX0ZLAn8XKw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

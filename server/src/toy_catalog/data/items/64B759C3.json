@@ -1,8 +1,15 @@
 {
     "id": "64B759C3",
     "name": "Laura Secord - Kit De Chocolat Au Lait",
-    "price": "5,99$",
+    "price": "599",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw9d6a5cce/images/64B759C3_1.jpg",
     "description": "Laura Secord - Kit De Chocolat Au Lait",
-    "url": "https://www.toysrus.ca/fr/Laura-Secord---Kit-De-Chocolat-Au-Lait/64B759C3.html"
+    "url": "https://www.toysrus.ca/fr/Laura-Secord---Kit-De-Chocolat-Au-Lait/64B759C3.html",
+    "categories": [
+        "87f478b0-94d0-48d9-b9ec-03c9960f91e8",
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "kjq_n5CIQz6cr_b4QfCSuA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

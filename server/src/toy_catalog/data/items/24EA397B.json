@@ -1,8 +1,15 @@
 {
     "id": "24EA397B",
     "name": "Le Cube de couleurs Crayola",
-    "price": "39,99$",
+    "price": "3999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwa82af275/images/24EA397B_1.jpg",
     "description": "Le Cube de couleurs Crayola",
-    "url": "https://www.toysrus.ca/fr/Le-Cube-de-couleurs-Crayola%C2%A0/24EA397B.html"
+    "url": "https://www.toysrus.ca/fr/Le-Cube-de-couleurs-Crayola%C2%A0/24EA397B.html",
+    "categories": [
+        "oum-7vxuTbeC_7cuZaEQBA",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "wB8JkNLKTD6LAnQHDVh_Kw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

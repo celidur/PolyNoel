@@ -1,8 +1,13 @@
 {
     "id": "148B48A2",
     "name": "Rococo Pantalon Legging Noir",
-    "price": "9,99$",
+    "price": "999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwd5791030/images/148B48A2_1.jpg",
     "description": "Rococo Pantalon Legging Noir 18/24M",
-    "url": "https://www.toysrus.ca/fr/Rococo-Pantalon-Legging-Noir-18-24M/148B48A2.html"
+    "url": "https://www.toysrus.ca/fr/Rococo-Pantalon-Legging-Noir-18-24M/148B48A2.html",
+    "categories": [
+        "773f83fa-d559-4c01-a74f-d38dde6dae74",
+        "67271392-b424-4251-998a-20030a28dcd4",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

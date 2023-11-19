@@ -1,8 +1,17 @@
 {
     "id": "F4187B0B",
     "name": "That's Not My Lemur - Édition anglaise",
-    "price": "12,95$",
+    "price": "1295",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwa3062d0d/images/F4187B0B_1.jpg",
     "description": "That's Not My Lemur - Édition anglaise",
-    "url": "https://www.toysrus.ca/fr/That-s-Not-My-Lemur---Edition-anglaise/F4187B0B.html"
+    "url": "https://www.toysrus.ca/fr/That-s-Not-My-Lemur---Edition-anglaise/F4187B0B.html",
+    "categories": [
+        "ba304553-8bb1-494e-864f-a22462756e32",
+        "k1dYuCMyRxenOpsOzZXidg",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "nz2fYPxzTaO1fJoZq0u76Q",
+        "FSF6FiQ-T82JX0ZLAn8XKw",
+        "aec5bdbc-2805-4827-96d5-9f4e41886f33",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

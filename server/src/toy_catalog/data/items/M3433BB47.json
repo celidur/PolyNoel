@@ -1,8 +1,13 @@
 {
     "id": "M3433BB47",
     "name": "Bottes de pluie éclairées Cocomelon, bleu",
-    "price": "34,99$",
+    "price": "3499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwb8e8515c/images/3433BB47_1.jpg",
     "description": "Bottes de pluie éclairées Cocomelon, bleu",
-    "url": "https://www.toysrus.ca/fr/Bottes-de-pluie-eclairees-Cocomelon--bleu/M3433BB47.html"
+    "url": "https://www.toysrus.ca/fr/Bottes-de-pluie-eclairees-Cocomelon--bleu/M3433BB47.html",
+    "categories": [
+        "596c8d6d-31d5-49cb-81c8-68733a3eedd9",
+        "67271392-b424-4251-998a-20030a28dcd4",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

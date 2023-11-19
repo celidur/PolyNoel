@@ -1,8 +1,15 @@
 {
     "id": "D49AA99C",
     "name": "Sweet Workshop Holiday Pot Set",
-    "price": "12,99$",
+    "price": "1299",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw7b7d0490/images/D49AA99C_1.jpg",
     "description": "Sweet Workshop Holiday Pot Set",
-    "url": "https://www.toysrus.ca/fr/Sweet-Workshop-Holiday-Pot-Set/D49AA99C.html"
+    "url": "https://www.toysrus.ca/fr/Sweet-Workshop-Holiday-Pot-Set/D49AA99C.html",
+    "categories": [
+        "87f478b0-94d0-48d9-b9ec-03c9960f91e8",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "kjq_n5CIQz6cr_b4QfCSuA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

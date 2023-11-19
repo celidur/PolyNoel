@@ -1,8 +1,15 @@
 {
     "id": "A456FA7D",
     "name": "ALEX - Machine à laver",
-    "price": "24,99$",
+    "price": "2499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw8e860c2e/images/A456FA7D_1.jpg",
     "description": "ALEX - Machine à laver",
-    "url": "https://www.toysrus.ca/fr/ALEX---Machine-a-laver/A456FA7D.html"
+    "url": "https://www.toysrus.ca/fr/ALEX---Machine-a-laver/A456FA7D.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "p4GuDYzBTseOWhFMOiTgpw",
+        "Ek5AfUwASGWAcmFz9SzzoQ",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

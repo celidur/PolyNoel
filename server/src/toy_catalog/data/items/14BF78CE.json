@@ -1,8 +1,13 @@
 {
     "id": "14BF78CE",
     "name": "Ensemble de Leggings Nike - Rose",
-    "price": "50,00$",
+    "price": "5000",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwcb5222ec/images/14BF78CE_1.jpg",
     "description": "Ensemble de Leggings Nike - Rose - Taille 5",
-    "url": "https://www.toysrus.ca/fr/Ensemble-de-Leggings-Nike---Rose---Taille-5/14BF78CE.html"
+    "url": "https://www.toysrus.ca/fr/Ensemble-de-Leggings-Nike---Rose---Taille-5/14BF78CE.html",
+    "categories": [
+        "e79e20e2-748d-49df-87b7-ba8fdf921049",
+        "67271392-b424-4251-998a-20030a28dcd4",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

@@ -1,8 +1,17 @@
 {
     "id": "A4F72833",
     "name": "Le Chat Potté 2 - Le roman du film",
-    "price": "8,95$",
+    "price": "895",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw2b827258/images/A4F72833_1.jpg",
     "description": "Le Chat Potté 2 - Le roman du film",
-    "url": "https://www.toysrus.ca/fr/Le-Chat-Potte-2---Le-roman-du-film/A4F72833.html"
+    "url": "https://www.toysrus.ca/fr/Le-Chat-Potte-2---Le-roman-du-film/A4F72833.html",
+    "categories": [
+        "ba304553-8bb1-494e-864f-a22462756e32",
+        "35b296e1-fb6d-4f54-b686-df22a28db9ce",
+        "6686e1d2-e842-4ab1-b624-9f4e9ea26175",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "FSF6FiQ-T82JX0ZLAn8XKw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

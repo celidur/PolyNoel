@@ -1,8 +1,13 @@
 {
     "id": "MA44F09BD",
     "name": "Espadrille bleu marine pour bébé",
-    "price": "17,99$",
+    "price": "1799",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw4ca6e6fe/images/A44F09BD_1.jpg",
     "description": "Espadrille bleu marine pour bébé",
-    "url": "https://www.toysrus.ca/fr/Espadrille-bleu-marine-pour-bebe/MA44F09BD.html"
+    "url": "https://www.toysrus.ca/fr/Espadrille-bleu-marine-pour-bebe/MA44F09BD.html",
+    "categories": [
+        "596c8d6d-31d5-49cb-81c8-68733a3eedd9",
+        "67271392-b424-4251-998a-20030a28dcd4",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

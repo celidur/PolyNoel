@@ -1,8 +1,17 @@
 {
     "id": "E4DCF80E",
     "name": "Trousse De Village En Pain D'Épices",
-    "price": "19,99$",
+    "price": "1999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwae645da4/images/E4DCF80E_1.jpg",
     "description": "Trousse De Village En Pain D'Épices",
-    "url": "https://www.toysrus.ca/fr/Trousse-De-Village-En-Pain-D-Epices/E4DCF80E.html"
+    "url": "https://www.toysrus.ca/fr/Trousse-De-Village-En-Pain-D-Epices/E4DCF80E.html",
+    "categories": [
+        "87f478b0-94d0-48d9-b9ec-03c9960f91e8",
+        "hFPgaxjyTS-09FMgOvQS9g",
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "SoeT2PFORRuHrUwzGVMbug",
+        "kjq_n5CIQz6cr_b4QfCSuA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

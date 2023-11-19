@@ -1,8 +1,12 @@
 {
     "id": "41BA3637",
     "name": "Jouet Dansant - Hibou de Benbat",
-    "price": "14,99$",
+    "price": "1499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw31b54e69/images/41BA3637_1.jpg",
     "description": "Jouet Dansant - Hibou de Benbat",
-    "url": "https://www.toysrus.ca/fr/Jouet-Dansant---Hibou-de-Benbat/41BA3637.html"
+    "url": "https://www.toysrus.ca/fr/Jouet-Dansant---Hibou-de-Benbat/41BA3637.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A"
+    ]
 }

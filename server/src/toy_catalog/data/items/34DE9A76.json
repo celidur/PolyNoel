@@ -1,8 +1,15 @@
 {
     "id": "34DE9A76",
     "name": "Ravensburger - Marvel jeu d'association",
-    "price": "9,99$",
+    "price": "999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw076aa180/images/34DE9A76_1.jpg",
     "description": "Ravensburger - Marvel jeu d'association",
-    "url": "https://www.toysrus.ca/fr/Ravensburger---Marvel-jeu-d-association/34DE9A76.html"
+    "url": "https://www.toysrus.ca/fr/Ravensburger---Marvel-jeu-d-association/34DE9A76.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "DlsBn-0tRoWdsZnanywNvw",
+        "H_wmbx3lSDmpJYqSeU4WRA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

@@ -1,8 +1,15 @@
 {
     "id": "667CEF31",
     "name": "Dragon Blok - CN Tower",
-    "price": "44,99$",
+    "price": "4499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwcd84ae22/images/667CEF31_1.jpg",
     "description": "Dragon Blok - CN Tower",
-    "url": "https://www.toysrus.ca/fr/Dragon-Blok---CN-Tower/667CEF31.html"
+    "url": "https://www.toysrus.ca/fr/Dragon-Blok---CN-Tower/667CEF31.html",
+    "categories": [
+        "1fjjZGjyQQ289DQZw1JMdw",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "yMgFZPBSSbS0W0_67S6H2A",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

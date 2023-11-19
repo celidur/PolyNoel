@@ -1,8 +1,18 @@
 {
     "id": "AFE2ABE7",
     "name": "Xbox One NHL 20",
-    "price": "24,48$",
+    "price": "2448",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw8a123a2c/images/AFE2ABE7_1.jpg",
     "description": "Xbox One NHL 20",
-    "url": "https://www.toysrus.ca/fr/Xbox-One-NHL-20/AFE2ABE7.html"
+    "url": "https://www.toysrus.ca/fr/Xbox-One-NHL-20/AFE2ABE7.html",
+    "categories": [
+        "396cd5a9-5878-4e36-895f-1733be3804da",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "lLC7wLFUTcmYCFFbBF9txA",
+        "EcEq2U1VRiaWkujI4AO-hg",
+        "zvDQSNjGT5GMtkCUN9y4hg",
+        "nR3vqPRmSISP5EWA8s8nXw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

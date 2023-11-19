@@ -1,8 +1,17 @@
 {
     "id": "1434FB33",
     "name": "Pokémon - Super Color",
-    "price": "6,95$",
+    "price": "695",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw097a350f/images/1434FB33_1.jpg",
     "description": "Pokémon - Super Color",
-    "url": "https://www.toysrus.ca/fr/Pokemon---Super-Color/1434FB33.html"
+    "url": "https://www.toysrus.ca/fr/Pokemon---Super-Color/1434FB33.html",
+    "categories": [
+        "ba304553-8bb1-494e-864f-a22462756e32",
+        "35b296e1-fb6d-4f54-b686-df22a28db9ce",
+        "6686e1d2-e842-4ab1-b624-9f4e9ea26175",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "FSF6FiQ-T82JX0ZLAn8XKw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

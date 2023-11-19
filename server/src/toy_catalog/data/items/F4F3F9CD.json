@@ -1,8 +1,15 @@
 {
     "id": "F4F3F9CD",
     "name": "Heys - TMNT Lunch Bag",
-    "price": "18,99$",
+    "price": "1899",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw1ecc9744/images/F4F3F9CD_1.jpg",
     "description": "Heys - TMNT Lunch Bag",
-    "url": "https://www.toysrus.ca/fr/Heys---TMNT-Lunch-Bag/F4F3F9CD.html"
+    "url": "https://www.toysrus.ca/fr/Heys---TMNT-Lunch-Bag/F4F3F9CD.html",
+    "categories": [
+        "aa69db2e-bf33-40e6-a7a2-6bd809d9780a",
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "02f05a42-3c06-4b2b-976b-f683e4c933fe",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

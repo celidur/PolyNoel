@@ -1,8 +1,13 @@
 {
     "id": "MA4DB5B49",
     "name": "Rococo Pantalon Legging Marine",
-    "price": "6,97$",
+    "price": "697",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw8d5a90b7/images/A4DB5B49_1.jpg",
     "description": "Rococo Pantalon Legging Marine",
-    "url": "https://www.toysrus.ca/fr/Rococo-Pantalon-Legging-Marine/MA4DB5B49.html"
+    "url": "https://www.toysrus.ca/fr/Rococo-Pantalon-Legging-Marine/MA4DB5B49.html",
+    "categories": [
+        "773f83fa-d559-4c01-a74f-d38dde6dae74",
+        "67271392-b424-4251-998a-20030a28dcd4",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

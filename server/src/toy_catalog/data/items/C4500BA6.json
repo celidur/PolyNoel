@@ -1,8 +1,15 @@
 {
     "id": "C4500BA6",
     "name": "Ensemble de jeu Salade verte",
-    "price": "8,48$",
+    "price": "848",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwb2bd000d/images/C4500BA6_1.jpg",
     "description": "Ensemble de jeu Salade verte",
-    "url": "https://www.toysrus.ca/fr/Ensemble-de-jeu-Salade-verte/C4500BA6.html"
+    "url": "https://www.toysrus.ca/fr/Ensemble-de-jeu-Salade-verte/C4500BA6.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "p4GuDYzBTseOWhFMOiTgpw",
+        "Ek5AfUwASGWAcmFz9SzzoQ",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

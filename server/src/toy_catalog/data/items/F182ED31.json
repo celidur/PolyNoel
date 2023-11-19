@@ -1,8 +1,16 @@
 {
     "id": "F182ED31",
     "name": "Piscine de 117 cm",
-    "price": "26,99$",
+    "price": "2699",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw368526c8/images/F182ED31_1.jpg",
     "description": "Piscine de 117 cm",
-    "url": "https://www.toysrus.ca/fr/Piscine-de-117-cm/F182ED31.html"
+    "url": "https://www.toysrus.ca/fr/Piscine-de-117-cm/F182ED31.html",
+    "categories": [
+        "3772c94d-b8a8-4b9d-bfe3-7f6878135c93",
+        "k1dYuCMyRxenOpsOzZXidg",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "nR3vqPRmSISP5EWA8s8nXw",
+        "r94NDRSOTcGURuA_VDhd3g",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

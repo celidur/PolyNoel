@@ -1,8 +1,17 @@
 {
     "id": "B4DCB875",
     "name": "Cat and Cat Adventures: The Quest For Snacks - Édition anglaise",
-    "price": "10,99$",
+    "price": "1099",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw7e5c05fd/images/B4DCB875_1.jpg",
     "description": "Cat and Cat Adventures: The Quest For Snacks - Édition anglaise",
-    "url": "https://www.toysrus.ca/fr/Cat-and-Cat-Adventures--The-Quest-For-Snacks---Edition-anglaise/B4DCB875.html"
+    "url": "https://www.toysrus.ca/fr/Cat-and-Cat-Adventures--The-Quest-For-Snacks---Edition-anglaise/B4DCB875.html",
+    "categories": [
+        "d3a5af7d-b85e-4866-912b-57367548be67",
+        "ba304553-8bb1-494e-864f-a22462756e32",
+        "35b296e1-fb6d-4f54-b686-df22a28db9ce",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "FSF6FiQ-T82JX0ZLAn8XKw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

@@ -1,8 +1,14 @@
 {
     "id": "667CDD31",
     "name": "Dragon Blok - Tour Eiffel - Paris",
-    "price": "74,99$",
+    "price": "7499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw39454969/images/667CDD31_1.jpg",
     "description": "Dragon Blok - Tour Eiffel - Paris",
-    "url": "https://www.toysrus.ca/fr/Dragon-Blok---Tour-Eiffel---Paris/667CDD31.html"
+    "url": "https://www.toysrus.ca/fr/Dragon-Blok---Tour-Eiffel---Paris/667CDD31.html",
+    "categories": [
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "yMgFZPBSSbS0W0_67S6H2A",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

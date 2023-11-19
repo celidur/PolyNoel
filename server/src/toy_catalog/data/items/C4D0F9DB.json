@@ -1,8 +1,16 @@
 {
     "id": "C4D0F9DB",
     "name": "H20 36 \"Star Design Pool",
-    "price": "19,99$",
+    "price": "1999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw6a4d5b62/images/C4D0F9DB_1.jpg",
     "description": "H20 36 \"Star Design Pool",
-    "url": "https://www.toysrus.ca/fr/H20-36--Star-Design-Pool/C4D0F9DB.html"
+    "url": "https://www.toysrus.ca/fr/H20-36--Star-Design-Pool/C4D0F9DB.html",
+    "categories": [
+        "3772c94d-b8a8-4b9d-bfe3-7f6878135c93",
+        "k1dYuCMyRxenOpsOzZXidg",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "nR3vqPRmSISP5EWA8s8nXw",
+        "r94NDRSOTcGURuA_VDhd3g",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

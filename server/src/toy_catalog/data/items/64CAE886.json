@@ -1,8 +1,13 @@
 {
     "id": "64CAE886",
     "name": "Rococo Shorts Bleu",
-    "price": "12,99$",
+    "price": "1299",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw35e1cfa3/images/64CAE886_1.jpg",
     "description": "Rococo Shorts Bleu 2/3",
-    "url": "https://www.toysrus.ca/fr/Rococo-Shorts-Bleu-2-3/64CAE886.html"
+    "url": "https://www.toysrus.ca/fr/Rococo-Shorts-Bleu-2-3/64CAE886.html",
+    "categories": [
+        "67271392-b424-4251-998a-20030a28dcd4",
+        "9246b207-3a30-417c-bc04-02615dd15461",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

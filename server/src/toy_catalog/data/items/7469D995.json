@@ -1,8 +1,16 @@
 {
     "id": "7469D995",
     "name": "Discovery Underwater Volcano",
-    "price": "34,99$",
+    "price": "3499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw3ccf5c83/images/7469D995_1.jpg",
     "description": "Discovery Underwater Volcano",
-    "url": "https://www.toysrus.ca/fr/Discovery-Underwater-Volcano/7469D995.html"
+    "url": "https://www.toysrus.ca/fr/Discovery-Underwater-Volcano/7469D995.html",
+    "categories": [
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "H-0oXd77RpuqhVvQ4Ncdlw",
+        "GHqce8v4S2axCV9ZPkqyeQ",
+        "SqNRVU9HTHuhIqHxOJaN8w",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

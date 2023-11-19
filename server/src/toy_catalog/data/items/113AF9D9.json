@@ -1,8 +1,13 @@
 {
     "id": "113AF9D9",
     "name": "Coffre à jouets Austin - Expresso",
-    "price": "169,99$",
+    "price": "16999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw586208d7/images/113AF9D9_1.jpg",
     "description": "Coffre à jouets Austin - Expresso",
-    "url": "https://www.toysrus.ca/fr/Coffre-a-jouets-Austin---Expresso/113AF9D9.html"
+    "url": "https://www.toysrus.ca/fr/Coffre-a-jouets-Austin---Expresso/113AF9D9.html",
+    "categories": [
+        "SSD5eBk3Tba-zfF37IIhvQ",
+        "7LQShfVYQgmtUADWdj0_kg",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

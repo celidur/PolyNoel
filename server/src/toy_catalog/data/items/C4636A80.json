@@ -1,8 +1,15 @@
 {
     "id": "C4636A80",
     "name": "Atelier Spiral 4-en-1",
-    "price": "34,99$",
+    "price": "3499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw4603301a/images/C4636A80_1.jpg",
     "description": "Atelier Spiral 4-en-1",
-    "url": "https://www.toysrus.ca/fr/Atelier-Spiral-4-en-1/C4636A80.html"
+    "url": "https://www.toysrus.ca/fr/Atelier-Spiral-4-en-1/C4636A80.html",
+    "categories": [
+        "oum-7vxuTbeC_7cuZaEQBA",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "LXPG4BZfSu69_kBT4W7KGw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

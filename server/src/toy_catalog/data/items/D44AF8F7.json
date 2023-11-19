@@ -1,8 +1,15 @@
 {
     "id": "D44AF8F7",
     "name": "DISNEY 100 Mickey Mouse View Master",
-    "price": "29,99$",
+    "price": "2999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwdf06356e/images/D44AF8F7_1.jpg",
     "description": "DISNEY 100 Mickey Mouse View Master",
-    "url": "https://www.toysrus.ca/fr/DISNEY-100-Mickey-Mouse-View-Master/D44AF8F7.html"
+    "url": "https://www.toysrus.ca/fr/DISNEY-100-Mickey-Mouse-View-Master/D44AF8F7.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "nLE2pK09RWWGiTrGV-IhRw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

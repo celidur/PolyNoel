@@ -1,8 +1,15 @@
 {
     "id": "5471A81D",
     "name": "ALEX - Boule à bulles",
-    "price": "5,99$",
+    "price": "599",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw586860ff/images/5471A81D_1.jpg",
     "description": "ALEX - Boule à bulles",
-    "url": "https://www.toysrus.ca/fr/ALEX---Boule-a-bulles/5471A81D.html"
+    "url": "https://www.toysrus.ca/fr/ALEX---Boule-a-bulles/5471A81D.html",
+    "categories": [
+        "hFPgaxjyTS-09FMgOvQS9g",
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "SoeT2PFORRuHrUwzGVMbug",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

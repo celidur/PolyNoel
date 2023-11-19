@@ -1,8 +1,16 @@
 {
     "id": "C43569BC",
     "name": "Camion-benne Tipper",
-    "price": "69,99$",
+    "price": "6999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwc9ff6ce6/images/C43569BC_1.jpg",
     "description": "Camion-benne Tipper",
-    "url": "https://www.toysrus.ca/fr/Camion-benne-Tipper/C43569BC.html"
+    "url": "https://www.toysrus.ca/fr/Camion-benne-Tipper/C43569BC.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "k1dYuCMyRxenOpsOzZXidg",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "U-n9wowiS5W0FO43ivGuig",
+        "JptOk_sgRPO6qa9Ojjq5pA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

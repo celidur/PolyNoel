@@ -1,8 +1,15 @@
 {
     "id": "A135B96F",
     "name": "PlushCraft - Chien.",
-    "price": "16,99$",
+    "price": "1699",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwd11ba062/images/A135B96F_1.jpg",
     "description": "PlushCraft - Chien.",
-    "url": "https://www.toysrus.ca/fr/PlushCraft---Chien./A135B96F.html"
+    "url": "https://www.toysrus.ca/fr/PlushCraft---Chien./A135B96F.html",
+    "categories": [
+        "oum-7vxuTbeC_7cuZaEQBA",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "S-dx9fVvQeaj9Om-UzWcIQ",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

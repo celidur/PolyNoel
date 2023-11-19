@@ -1,8 +1,15 @@
 {
     "id": "446A9B3E",
     "name": "Coureur Sno",
-    "price": "89,99$",
+    "price": "8999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwa11f072e/images/446A9B3E_1.jpg",
     "description": "Coureur Sno",
-    "url": "https://www.toysrus.ca/fr/Coureur-Sno/446A9B3E.html"
+    "url": "https://www.toysrus.ca/fr/Coureur-Sno/446A9B3E.html",
+    "categories": [
+        "x1Agp9C-QsaTPdLdETwixg",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "nR3vqPRmSISP5EWA8s8nXw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

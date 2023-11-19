@@ -1,8 +1,15 @@
 {
     "id": "247D6A3D",
     "name": "Stratego Classique",
-    "price": "29,99$",
+    "price": "2999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw197264cc/images/247D6A3D_1.jpg",
     "description": "Stratego Classique",
-    "url": "https://www.toysrus.ca/fr/Stratego-Classique/247D6A3D.html"
+    "url": "https://www.toysrus.ca/fr/Stratego-Classique/247D6A3D.html",
+    "categories": [
+        "1fjjZGjyQQ289DQZw1JMdw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "MdrfLA6aTwye4NaFEhKQQg",
+        "H_wmbx3lSDmpJYqSeU4WRA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

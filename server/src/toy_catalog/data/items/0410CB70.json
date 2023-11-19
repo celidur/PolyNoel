@@ -1,8 +1,16 @@
 {
     "id": "0410CB70",
     "name": "Crayola Lueur Art Studio",
-    "price": "21,99$",
+    "price": "2199",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw21945848/images/0410CB70_1.jpg",
     "description": "Crayola Lueur Art Studio",
-    "url": "https://www.toysrus.ca/fr/Crayola-Lueur-Art-Studio/0410CB70.html"
+    "url": "https://www.toysrus.ca/fr/Crayola-Lueur-Art-Studio/0410CB70.html",
+    "categories": [
+        "1fjjZGjyQQ289DQZw1JMdw",
+        "oum-7vxuTbeC_7cuZaEQBA",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "wB8JkNLKTD6LAnQHDVh_Kw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

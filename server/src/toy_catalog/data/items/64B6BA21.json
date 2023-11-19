@@ -1,8 +1,15 @@
 {
     "id": "64B6BA21",
     "name": "Spot It Animal Jr. Eco",
-    "price": "18,99$",
+    "price": "1899",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwa5df1a54/images/64B6BA21_1.jpg",
     "description": "Spot It Animal Jr. Eco",
-    "url": "https://www.toysrus.ca/fr/Spot-It-Animal-Jr.-Eco/64B6BA21.html"
+    "url": "https://www.toysrus.ca/fr/Spot-It-Animal-Jr.-Eco/64B6BA21.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "H_wmbx3lSDmpJYqSeU4WRA",
+        "V8SwQvVESCO7wX8XxLoZEA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

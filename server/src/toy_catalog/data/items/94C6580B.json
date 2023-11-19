@@ -1,8 +1,15 @@
 {
     "id": "94C6580B",
     "name": "Fisher-Price - Ukulélé Girafe",
-    "price": "9,99$",
+    "price": "999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw85e890b1/images/94C6580B_1.jpg",
     "description": "Fisher-Price - Ukulélé Girafe",
-    "url": "https://www.toysrus.ca/fr/Fisher-Price---Ukulele-Girafe/94C6580B.html"
+    "url": "https://www.toysrus.ca/fr/Fisher-Price---Ukulele-Girafe/94C6580B.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "lLC7wLFUTcmYCFFbBF9txA",
+        "Ag0wQeqPQlKyEfcj8_cU9g",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

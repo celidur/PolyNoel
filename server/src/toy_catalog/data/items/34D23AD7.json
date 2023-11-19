@@ -1,8 +1,14 @@
 {
     "id": "34D23AD7",
     "name": "Disney Princesse: Moana (peluche moyenne)",
-    "price": "19,99$",
+    "price": "1999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwca22273c/images/34D23AD7_1.jpg",
     "description": "Disney Princesse: Moana (peluche moyenne)",
-    "url": "https://www.toysrus.ca/fr/Disney-Princesse--Moana--peluche-moyenne-/34D23AD7.html"
+    "url": "https://www.toysrus.ca/fr/Disney-Princesse--Moana--peluche-moyenne-/34D23AD7.html",
+    "categories": [
+        "rFlTVotoSuuUXYkfGrXA2A",
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

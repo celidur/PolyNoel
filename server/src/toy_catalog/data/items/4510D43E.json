@@ -1,8 +1,13 @@
 {
     "id": "4510D43E",
     "name": "Livre De Dessins De Mode.",
-    "price": "19,99$",
+    "price": "1999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw41507ef2/images/4510D43E_1.jpg",
     "description": "Livre De Dessins De Mode.",
-    "url": "https://www.toysrus.ca/fr/Livre-De-Dessins-De-Mode./4510D43E.html"
+    "url": "https://www.toysrus.ca/fr/Livre-De-Dessins-De-Mode./4510D43E.html",
+    "categories": [
+        "oum-7vxuTbeC_7cuZaEQBA",
+        "S-dx9fVvQeaj9Om-UzWcIQ",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

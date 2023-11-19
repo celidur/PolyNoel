@@ -1,8 +1,17 @@
 {
     "id": "64A58A2A",
     "name": "Now That You're Here - Édition anglaise",
-    "price": "10,99$",
+    "price": "1099",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwc197c149/images/64A58A2A_1.jpg",
     "description": "Now That You're Here - Édition anglaise",
-    "url": "https://www.toysrus.ca/fr/Now-That-You-re-Here---Edition-anglaise/64A58A2A.html"
+    "url": "https://www.toysrus.ca/fr/Now-That-You-re-Here---Edition-anglaise/64A58A2A.html",
+    "categories": [
+        "ba304553-8bb1-494e-864f-a22462756e32",
+        "k1dYuCMyRxenOpsOzZXidg",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "nz2fYPxzTaO1fJoZq0u76Q",
+        "FSF6FiQ-T82JX0ZLAn8XKw",
+        "aec5bdbc-2805-4827-96d5-9f4e41886f33",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

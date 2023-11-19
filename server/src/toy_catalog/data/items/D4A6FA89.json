@@ -1,8 +1,15 @@
 {
     "id": "D4A6FA89",
     "name": "Méga Coffret Requinet Épaulard",
-    "price": "39,99$",
+    "price": "3999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwe2320963/images/D4A6FA89_1.jpg",
     "description": "Méga Coffret Requinet Épaulard",
-    "url": "https://www.toysrus.ca/fr/Mega-Coffret-Requinet-Epaulard/D4A6FA89.html"
+    "url": "https://www.toysrus.ca/fr/Mega-Coffret-Requinet-Epaulard/D4A6FA89.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "H-0oXd77RpuqhVvQ4Ncdlw",
+        "SqNRVU9HTHuhIqHxOJaN8w",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

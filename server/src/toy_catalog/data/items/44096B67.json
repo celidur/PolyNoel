@@ -1,8 +1,15 @@
 {
     "id": "44096B67",
     "name": "Aspirateur sans fil Dyson",
-    "price": "49,99$",
+    "price": "4999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw816e7f66/images/44096B67_1.jpg",
     "description": "Aspirateur sans fil Dyson",
-    "url": "https://www.toysrus.ca/fr/Aspirateur-sans-fil-Dyson/44096B67.html"
+    "url": "https://www.toysrus.ca/fr/Aspirateur-sans-fil-Dyson/44096B67.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "p4GuDYzBTseOWhFMOiTgpw",
+        "Ek5AfUwASGWAcmFz9SzzoQ",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

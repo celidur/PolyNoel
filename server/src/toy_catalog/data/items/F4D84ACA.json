@@ -1,8 +1,17 @@
 {
     "id": "F4D84ACA",
     "name": "Dickie Toys - ABC Teddi Trucker",
-    "price": "59,99$",
+    "price": "5999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwa8a68413/images/F4D84ACA_1.jpg",
     "description": "Dickie Toys - ABC Teddi Trucker",
-    "url": "https://www.toysrus.ca/fr/Dickie-Toys---ABC-Teddi-Trucker/F4D84ACA.html"
+    "url": "https://www.toysrus.ca/fr/Dickie-Toys---ABC-Teddi-Trucker/F4D84ACA.html",
+    "categories": [
+        "k1dYuCMyRxenOpsOzZXidg",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "JptOk_sgRPO6qa9Ojjq5pA",
+        "ufviqKmGQNq5gej63royHg",
+        "V6F5qJDST4-SDE3PvCAjqg",
+        "nLE2pK09RWWGiTrGV-IhRw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

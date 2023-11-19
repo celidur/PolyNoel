@@ -1,8 +1,16 @@
 {
     "id": "D4206B21",
     "name": "My First Jumpy Dragon, Green",
-    "price": "49,99$",
+    "price": "4999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwcf4a92bb/images/D4206B21_1.jpg",
     "description": "My First Jumpy Dragon, Green",
-    "url": "https://www.toysrus.ca/fr/My-First-Jumpy-Dragon--Green/D4206B21.html"
+    "url": "https://www.toysrus.ca/fr/My-First-Jumpy-Dragon--Green/D4206B21.html",
+    "categories": [
+        "lsodjjnFRaG1cGrpTjKWnA",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "ufviqKmGQNq5gej63royHg",
+        "C_x4GOEXRlii0g-JIQfqCQ",
+        "nR3vqPRmSISP5EWA8s8nXw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

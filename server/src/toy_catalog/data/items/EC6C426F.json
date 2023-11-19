@@ -1,8 +1,15 @@
 {
     "id": "EC6C426F",
     "name": "Jeu Ker Plunk!",
-    "price": "22,99$",
+    "price": "2299",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwb31419fa/images/EC6C426F_1.jpg",
     "description": "Jeu Ker Plunk!",
-    "url": "https://www.toysrus.ca/fr/Jeu-Ker-Plunk-/EC6C426F.html"
+    "url": "https://www.toysrus.ca/fr/Jeu-Ker-Plunk-/EC6C426F.html",
+    "categories": [
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "xQB8DNTQRQ-dnL7UmEQNiw",
+        "H_wmbx3lSDmpJYqSeU4WRA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

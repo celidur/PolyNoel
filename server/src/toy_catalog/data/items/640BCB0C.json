@@ -1,8 +1,17 @@
 {
     "id": "640BCB0C",
     "name": "Lionel Lines Train",
-    "price": "379,99$",
+    "price": "37999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw230ded2c/images/640BCB0C_1.jpg",
     "description": "Lionel Lines Train",
-    "url": "https://www.toysrus.ca/fr/Lionel-Lines-Train/640BCB0C.html"
+    "url": "https://www.toysrus.ca/fr/Lionel-Lines-Train/640BCB0C.html",
+    "categories": [
+        "k1dYuCMyRxenOpsOzZXidg",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "ufviqKmGQNq5gej63royHg",
+        "mQkNSvHcShiKaCDqjehk3A",
+        "hVSzt2gbTWutwbGYjM_4ww",
+        "nR3vqPRmSISP5EWA8s8nXw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

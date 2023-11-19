@@ -1,8 +1,15 @@
 {
     "id": "84FD78AF",
     "name": "Playmobil - Bébé Panda",
-    "price": "5,99$",
+    "price": "599",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw70d4cee6/images/84FD78AF_1.jpg",
     "description": "Playmobil - Bébé Panda",
-    "url": "https://www.toysrus.ca/fr/Playmobil---Bebe-Panda/84FD78AF.html"
+    "url": "https://www.toysrus.ca/fr/Playmobil---Bebe-Panda/84FD78AF.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "yMgFZPBSSbS0W0_67S6H2A",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

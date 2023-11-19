@@ -1,8 +1,15 @@
 {
     "id": "55D442A4",
     "name": "Huer Sucettes Gelifies Sures 120g",
-    "price": "2,49$",
+    "price": "249",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw665c30fe/images/55D442A4_1.jpg",
     "description": "Huer Sucettes Gelifies Sures 120g",
-    "url": "https://www.toysrus.ca/fr/Huer-Sucettes-Gelifies-Sures-120g/55D442A4.html"
+    "url": "https://www.toysrus.ca/fr/Huer-Sucettes-Gelifies-Sures-120g/55D442A4.html",
+    "categories": [
+        "87f478b0-94d0-48d9-b9ec-03c9960f91e8",
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "kjq_n5CIQz6cr_b4QfCSuA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

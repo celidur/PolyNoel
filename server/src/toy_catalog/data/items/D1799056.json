@@ -1,8 +1,22 @@
 {
     "id": "D1799056",
     "name": "Goodnight, Canada",
-    "price": "9,99$",
+    "price": "999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwcc80ac48/images/D1799056_1.jpg",
     "description": "Goodnight, Canada",
-    "url": "https://www.toysrus.ca/fr/Goodnight--Canada/D1799056.html"
+    "url": "https://www.toysrus.ca/fr/Goodnight--Canada/D1799056.html",
+    "categories": [
+        "tSiG_BNZRa-4mXagVF-uYw",
+        "ba304553-8bb1-494e-864f-a22462756e32",
+        "k1dYuCMyRxenOpsOzZXidg",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "nz2fYPxzTaO1fJoZq0u76Q",
+        "e52bcc68-e24d-489a-b2b2-c19817578bc1",
+        "ufviqKmGQNq5gej63royHg",
+        "SqNRVU9HTHuhIqHxOJaN8w",
+        "0t1X5B_DR1eHx9Zk9Um_gQ",
+        "FSF6FiQ-T82JX0ZLAn8XKw",
+        "aec5bdbc-2805-4827-96d5-9f4e41886f33",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

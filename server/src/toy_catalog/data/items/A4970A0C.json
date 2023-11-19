@@ -1,8 +1,15 @@
 {
     "id": "A4970A0C",
     "name": "Pokémon - Ensemble de bandoulière",
-    "price": "39,99$",
+    "price": "3999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw031beef5/images/A4970A0C_1.jpg",
     "description": "Pokémon - Ensemble de bandoulière",
-    "url": "https://www.toysrus.ca/fr/Pokemon---Ensemble-de-bandouliere/A4970A0C.html"
+    "url": "https://www.toysrus.ca/fr/Pokemon---Ensemble-de-bandouliere/A4970A0C.html",
+    "categories": [
+        "2LAIi61IROKwIcGCtn1n1g",
+        "LRsfCDC0TyG2dyvcxjN-ig",
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

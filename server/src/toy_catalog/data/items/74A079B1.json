@@ -1,8 +1,15 @@
 {
     "id": "74A079B1",
     "name": "Laura Secord - Candy Drops Caramel 150G",
-    "price": "4,99$",
+    "price": "499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwa47b17ae/images/74A079B1_1.jpg",
     "description": "Laura Secord - Candy Drops Caramel 150G",
-    "url": "https://www.toysrus.ca/fr/Laura-Secord---Candy-Drops-Caramel-150G/74A079B1.html"
+    "url": "https://www.toysrus.ca/fr/Laura-Secord---Candy-Drops-Caramel-150G/74A079B1.html",
+    "categories": [
+        "87f478b0-94d0-48d9-b9ec-03c9960f91e8",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "kjq_n5CIQz6cr_b4QfCSuA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

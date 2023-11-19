@@ -1,8 +1,16 @@
 {
     "id": "EC71D46F",
     "name": "Step2 - Crabbie Sandbox",
-    "price": "119,99$",
+    "price": "11999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwf4ec8dc0/images/EC71D46F_1.jpg",
     "description": "Step2 - Crabbie Sandbox",
-    "url": "https://www.toysrus.ca/fr/Step2---Crabbie-Sandbox/EC71D46F.html"
+    "url": "https://www.toysrus.ca/fr/Step2---Crabbie-Sandbox/EC71D46F.html",
+    "categories": [
+        "k1dYuCMyRxenOpsOzZXidg",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "7_bHOlWTR2ylvvCXOkbEqw",
+        "C_x4GOEXRlii0g-JIQfqCQ",
+        "nR3vqPRmSISP5EWA8s8nXw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

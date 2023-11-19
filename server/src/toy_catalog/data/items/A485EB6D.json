@@ -1,8 +1,16 @@
 {
     "id": "A485EB6D",
     "name": "Thomas et ses amis - Grue",
-    "price": "16,99$",
+    "price": "1699",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwbebf1829/images/A485EB6D_1.jpg",
     "description": "Thomas et ses amis - Grue",
-    "url": "https://www.toysrus.ca/fr/Thomas-et-ses-amis---Grue/A485EB6D.html"
+    "url": "https://www.toysrus.ca/fr/Thomas-et-ses-amis---Grue/A485EB6D.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "DW6X-0JfSNSWGMMXtctBvw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "JptOk_sgRPO6qa9Ojjq5pA",
+        "V6F5qJDST4-SDE3PvCAjqg",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

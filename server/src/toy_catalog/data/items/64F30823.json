@@ -1,8 +1,15 @@
 {
     "id": "64F30823",
     "name": "Astérix : La hutte d'Assurancetourix",
-    "price": "99,99$",
+    "price": "9999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw98bc0087/images/64F30823_1.jpg",
     "description": "Astérix : La hutte d'Assurancetourix",
-    "url": "https://www.toysrus.ca/fr/Asterix-La-hutte-d-Assurancetourix/64F30823.html"
+    "url": "https://www.toysrus.ca/fr/Asterix-La-hutte-d-Assurancetourix/64F30823.html",
+    "categories": [
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "SqNRVU9HTHuhIqHxOJaN8w",
+        "bliwe_2LQZyAE9I_DhqDYQ",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

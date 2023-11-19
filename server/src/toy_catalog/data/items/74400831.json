@@ -1,8 +1,12 @@
 {
     "id": "74400831",
     "name": "Hochet P'tite Bête de Lamaze",
-    "price": "9,99$",
+    "price": "999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw6b070c97/images/74400831_1.jpg",
     "description": "Hochet P'tite Bête de Lamaze",
-    "url": "https://www.toysrus.ca/fr/Hochet-P-tite-Bete-de-Lamaze/74400831.html"
+    "url": "https://www.toysrus.ca/fr/Hochet-P-tite-Bete-de-Lamaze/74400831.html",
+    "categories": [
+        "MdvawtJvSomMvUa1KjQc_A",
+        "0t1X5B_DR1eHx9Zk9Um_gQ"
+    ]
 }

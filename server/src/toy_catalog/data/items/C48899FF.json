@@ -1,8 +1,15 @@
 {
     "id": "C48899FF",
     "name": "Slinky Junior",
-    "price": "2,99$",
+    "price": "299",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw0490cf66/images/C48899FF_1.jpg",
     "description": "Slinky Junior",
-    "url": "https://www.toysrus.ca/fr/Slinky-Junior/C48899FF.html"
+    "url": "https://www.toysrus.ca/fr/Slinky-Junior/C48899FF.html",
+    "categories": [
+        "hFPgaxjyTS-09FMgOvQS9g",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "SoeT2PFORRuHrUwzGVMbug",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

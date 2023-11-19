@@ -1,8 +1,15 @@
 {
     "id": "240BD983",
     "name": "Dinosaure vert",
-    "price": "99,99$",
+    "price": "9999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw4edbbeab/images/240BD983_1.jpg",
     "description": "Dinosaure vert",
-    "url": "https://www.toysrus.ca/fr/Dinosaure-vert/240BD983.html"
+    "url": "https://www.toysrus.ca/fr/Dinosaure-vert/240BD983.html",
+    "categories": [
+        "MdvawtJvSomMvUa1KjQc_A",
+        "7LQShfVYQgmtUADWdj0_kg",
+        "ufviqKmGQNq5gej63royHg",
+        "vAFTd6O2SG671Xx2eR02gw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

@@ -1,8 +1,17 @@
 {
     "id": "E4B528F9",
     "name": "Camion de recyclage",
-    "price": "59,99$",
+    "price": "5999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwdc328a0f/images/E4B528F9_1.jpg",
     "description": "Camion de recyclage",
-    "url": "https://www.toysrus.ca/fr/Camion-de-recyclage/E4B528F9.html"
+    "url": "https://www.toysrus.ca/fr/Camion-de-recyclage/E4B528F9.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "U-n9wowiS5W0FO43ivGuig",
+        "JptOk_sgRPO6qa9Ojjq5pA",
+        "V6F5qJDST4-SDE3PvCAjqg",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

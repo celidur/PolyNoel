@@ -1,8 +1,15 @@
 {
     "id": "89385E74",
     "name": "Boggle Classic",
-    "price": "24,99$",
+    "price": "2499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwf13ab533/images/89385E74_1.jpg",
     "description": "Boggle Classic",
-    "url": "https://www.toysrus.ca/fr/Boggle-Classic/89385E74.html"
+    "url": "https://www.toysrus.ca/fr/Boggle-Classic/89385E74.html",
+    "categories": [
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "xQB8DNTQRQ-dnL7UmEQNiw",
+        "H_wmbx3lSDmpJYqSeU4WRA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

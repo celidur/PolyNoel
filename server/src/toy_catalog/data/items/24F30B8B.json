@@ -1,8 +1,15 @@
 {
     "id": "24F30B8B",
     "name": "B. toys - Ensemble de jouets pour le bain",
-    "price": "34,99$",
+    "price": "3499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw45705c5e/images/24F30B8B_1.jpg",
     "description": "B. toys - Ensemble de jouets pour le bain",
-    "url": "https://www.toysrus.ca/fr/B.-toys---Ensemble-de-jouets-pour-le-bain/24F30B8B.html"
+    "url": "https://www.toysrus.ca/fr/B.-toys---Ensemble-de-jouets-pour-le-bain/24F30B8B.html",
+    "categories": [
+        "k1dYuCMyRxenOpsOzZXidg",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "ufviqKmGQNq5gej63royHg",
+        "nLE2pK09RWWGiTrGV-IhRw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

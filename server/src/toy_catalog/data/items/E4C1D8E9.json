@@ -1,8 +1,15 @@
 {
     "id": "E4C1D8E9",
     "name": "Disney Frozen II Jeu de Caracteres",
-    "price": "19,99$",
+    "price": "1999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw62f6fd93/images/E4C1D8E9_1.jpg",
     "description": "Disney Frozen II Jeu de Caracteres",
-    "url": "https://www.toysrus.ca/fr/Disney-Frozen-II-Jeu-de-Caracteres/E4C1D8E9.html"
+    "url": "https://www.toysrus.ca/fr/Disney-Frozen-II-Jeu-de-Caracteres/E4C1D8E9.html",
+    "categories": [
+        "oum-7vxuTbeC_7cuZaEQBA",
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "S-dx9fVvQeaj9Om-UzWcIQ",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

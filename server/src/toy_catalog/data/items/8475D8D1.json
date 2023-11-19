@@ -1,8 +1,12 @@
 {
     "id": "8475D8D1",
     "name": "The Hockey Skates - Édition anglaise",
-    "price": "24,99$",
+    "price": "2499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw214daeb8/images/8475D8D1_1.jpg",
     "description": "The Hockey Skates - Édition anglaise",
-    "url": "https://www.toysrus.ca/fr/The-Hockey-Skates---Edition-anglaise/8475D8D1.html"
+    "url": "https://www.toysrus.ca/fr/The-Hockey-Skates---Edition-anglaise/8475D8D1.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A"
+    ]
 }

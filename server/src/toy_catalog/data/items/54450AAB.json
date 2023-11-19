@@ -1,8 +1,15 @@
 {
     "id": "54450AAB",
     "name": "Patate chaude électronique",
-    "price": "16,99$",
+    "price": "1699",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw1f12e1a3/images/54450AAB_1.jpg",
     "description": "Patate chaude électronique",
-    "url": "https://www.toysrus.ca/fr/Patate-chaude-electronique/54450AAB.html"
+    "url": "https://www.toysrus.ca/fr/Patate-chaude-electronique/54450AAB.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "xQB8DNTQRQ-dnL7UmEQNiw",
+        "H_wmbx3lSDmpJYqSeU4WRA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

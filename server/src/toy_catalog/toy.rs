@@ -7,21 +7,9 @@ pub struct Toy {
     pub id: String,
     pub name: String,
     pub description: String,
-    #[serde(deserialize_with = "from_price")]
     pub price: u32,
     pub image: String,
-}
-
-fn from_price<'de, D>(deserializer: D) -> Result<u32, D::Error>
-where
-    D: Deserializer<'de>,
-{
-    let s: String = Deserialize::deserialize(deserializer)?;
-    let price: String = s.replace("$", "");
-    let price: String = price.replace(",", "");
-    let price: String = price.replace(".", "");
-    let price = price.parse().unwrap();
-    Ok(price)
+    pub categories: Vec<String>,
 }
 
 impl Toy {

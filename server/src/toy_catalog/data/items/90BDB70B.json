@@ -1,8 +1,15 @@
 {
     "id": "90BDB70B",
     "name": "Crayola - 6 bouteilles de peinture lavable",
-    "price": "7,99$",
+    "price": "799",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwb659530e/images/90BDB70B_1.jpg",
     "description": "Crayola - 6 bouteilles de peinture lavable",
-    "url": "https://www.toysrus.ca/fr/Crayola---6-bouteilles-de-peinture-lavable/90BDB70B.html"
+    "url": "https://www.toysrus.ca/fr/Crayola---6-bouteilles-de-peinture-lavable/90BDB70B.html",
+    "categories": [
+        "oum-7vxuTbeC_7cuZaEQBA",
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "UohZnJvtQ0KaBYNj-NIQ4g",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

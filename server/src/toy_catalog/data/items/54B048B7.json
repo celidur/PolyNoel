@@ -1,8 +1,16 @@
 {
     "id": "54B048B7",
     "name": "VFI PAW PATROL pour enfants",
-    "price": "39,99$",
+    "price": "3999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw20b758d1/images/54B048B7_1.jpg",
     "description": "VFI PAW PATROL pour enfants",
-    "url": "https://www.toysrus.ca/fr/VFI-PAW-PATROL-pour-enfants/54B048B7.html"
+    "url": "https://www.toysrus.ca/fr/VFI-PAW-PATROL-pour-enfants/54B048B7.html",
+    "categories": [
+        "17dc2b0a-6a65-491f-9229-4e08b3ce2fcc",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "nR3vqPRmSISP5EWA8s8nXw",
+        "r94NDRSOTcGURuA_VDhd3g",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

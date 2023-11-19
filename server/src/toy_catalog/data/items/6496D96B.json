@@ -1,8 +1,15 @@
 {
     "id": "6496D96B",
     "name": "The Littlest Easter Bunny - Édition anglaise",
-    "price": "9,99$",
+    "price": "999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwa86815f0/images/6496D96B_1.jpg",
     "description": "The Littlest Easter Bunny - Édition anglaise",
-    "url": "https://www.toysrus.ca/fr/The-Littlest-Easter-Bunny---Edition-anglaise/6496D96B.html"
+    "url": "https://www.toysrus.ca/fr/The-Littlest-Easter-Bunny---Edition-anglaise/6496D96B.html",
+    "categories": [
+        "f2a50a57-e9e6-4a40-ad2d-dfbdaf1d2211",
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "FSF6FiQ-T82JX0ZLAn8XKw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

@@ -1,8 +1,14 @@
 {
     "id": "640E2AB2",
     "name": "Disney Classique Peluches: Minnie Mouse",
-    "price": "14,99$",
+    "price": "1499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwd46f5a00/images/640E2AB2_1.jpg",
     "description": "Disney Classique Peluches: Minnie Mouse",
-    "url": "https://www.toysrus.ca/fr/Disney-Classique-Peluches--Minnie-Mouse/640E2AB2.html"
+    "url": "https://www.toysrus.ca/fr/Disney-Classique-Peluches--Minnie-Mouse/640E2AB2.html",
+    "categories": [
+        "rFlTVotoSuuUXYkfGrXA2A",
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

@@ -1,8 +1,15 @@
 {
     "id": "5BB32139",
     "name": "Smash A Mole",
-    "price": "24,99$",
+    "price": "2499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwe88ce7dd/images/5BB32139_1.jpg",
     "description": "Smash A Mole",
-    "url": "https://www.toysrus.ca/fr/Smash-A-Mole/5BB32139.html"
+    "url": "https://www.toysrus.ca/fr/Smash-A-Mole/5BB32139.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "xQB8DNTQRQ-dnL7UmEQNiw",
+        "H_wmbx3lSDmpJYqSeU4WRA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

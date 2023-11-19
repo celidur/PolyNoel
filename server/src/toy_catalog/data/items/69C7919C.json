@@ -1,8 +1,12 @@
 {
     "id": "69C7919C",
     "name": "Parc de Jeu Dwinguler - Château Arc en Ciel",
-    "price": "439,99$",
+    "price": "43999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwe6896537/images/69C7919C_1.jpg",
     "description": "Parc de Jeu Dwinguler - Château Arc en Ciel",
-    "url": "https://www.toysrus.ca/fr/Parc-de-Jeu-Dwinguler---Chateau-Arc-en-Ciel/69C7919C.html"
+    "url": "https://www.toysrus.ca/fr/Parc-de-Jeu-Dwinguler---Chateau-Arc-en-Ciel/69C7919C.html",
+    "categories": [
+        "MdvawtJvSomMvUa1KjQc_A",
+        "0t1X5B_DR1eHx9Zk9Um_gQ"
+    ]
 }

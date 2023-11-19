@@ -1,8 +1,16 @@
 {
     "id": "9496FA3D",
     "name": "Jeu d'empilage de la chenille",
-    "price": "12,99$",
+    "price": "1299",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dweb9b2646/images/9496FA3D_1.jpg",
     "description": "Jeu d'empilage de la chenille",
-    "url": "https://www.toysrus.ca/fr/Jeu-d-empilage-de-la-chenille/9496FA3D.html"
+    "url": "https://www.toysrus.ca/fr/Jeu-d-empilage-de-la-chenille/9496FA3D.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "k1dYuCMyRxenOpsOzZXidg",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "xQB8DNTQRQ-dnL7UmEQNiw",
+        "H_wmbx3lSDmpJYqSeU4WRA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

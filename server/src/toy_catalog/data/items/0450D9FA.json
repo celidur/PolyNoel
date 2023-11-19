@@ -1,8 +1,15 @@
 {
     "id": "0450D9FA",
     "name": "Chauve-souris au labo Dissect-It",
-    "price": "24,99$",
+    "price": "2499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwef15c586/images/0450D9FA_1.jpg",
     "description": "Chauve-souris au labo Dissect-It",
-    "url": "https://www.toysrus.ca/fr/Chauve-souris-au-labo-Dissect-It/0450D9FA.html"
+    "url": "https://www.toysrus.ca/fr/Chauve-souris-au-labo-Dissect-It/0450D9FA.html",
+    "categories": [
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "H-0oXd77RpuqhVvQ4Ncdlw",
+        "SqNRVU9HTHuhIqHxOJaN8w",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

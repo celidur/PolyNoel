@@ -1,8 +1,15 @@
 {
     "id": "548839ED",
     "name": "Elf Pets : La tradition du renne - français",
-    "price": "39,99$",
+    "price": "3999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwe0741fd4/images/548839ED_1.jpg",
     "description": "Elf Pets : La tradition du renne - français",
-    "url": "https://www.toysrus.ca/fr/Elf-Pets-La-tradition-du-renne---francais/548839ED.html"
+    "url": "https://www.toysrus.ca/fr/Elf-Pets-La-tradition-du-renne---francais/548839ED.html",
+    "categories": [
+        "hFPgaxjyTS-09FMgOvQS9g",
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "SoeT2PFORRuHrUwzGVMbug",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

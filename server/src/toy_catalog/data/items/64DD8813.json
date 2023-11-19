@@ -1,8 +1,15 @@
 {
     "id": "64DD8813",
     "name": "Heys - Spiderman Black Duffle Bag",
-    "price": "29,99$",
+    "price": "2999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwbfea5ca5/images/64DD8813_1.jpg",
     "description": "Heys - Spiderman Black Duffle Bag",
-    "url": "https://www.toysrus.ca/fr/Heys---Spiderman-Black-Duffle-Bag/64DD8813.html"
+    "url": "https://www.toysrus.ca/fr/Heys---Spiderman-Black-Duffle-Bag/64DD8813.html",
+    "categories": [
+        "6e8cbcee-00a6-4f45-a193-cfa833242a98",
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "02f05a42-3c06-4b2b-976b-f683e4c933fe",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

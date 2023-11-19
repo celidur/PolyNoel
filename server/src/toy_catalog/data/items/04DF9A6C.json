@@ -1,8 +1,15 @@
 {
     "id": "04DF9A6C",
     "name": "Perceuse électrique Black and Decker",
-    "price": "16,99$",
+    "price": "1699",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw49dd5645/images/04DF9A6C_1.jpg",
     "description": "Perceuse électrique Black and Decker",
-    "url": "https://www.toysrus.ca/fr/Perceuse-electrique-Black-and-Decker%C2%A0/04DF9A6C.html"
+    "url": "https://www.toysrus.ca/fr/Perceuse-electrique-Black-and-Decker%C2%A0/04DF9A6C.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "p4GuDYzBTseOWhFMOiTgpw",
+        "Ek5AfUwASGWAcmFz9SzzoQ",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

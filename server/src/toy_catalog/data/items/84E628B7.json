@@ -1,8 +1,16 @@
 {
     "id": "84E628B7",
     "name": "Kit de maquillage crâne",
-    "price": "3,99$",
+    "price": "399",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw81ac31c5/images/84E628B7_1.jpg",
     "description": "Kit de maquillage crâne",
-    "url": "https://www.toysrus.ca/fr/Kit-de-maquillage-crane/84E628B7.html"
+    "url": "https://www.toysrus.ca/fr/Kit-de-maquillage-crane/84E628B7.html",
+    "categories": [
+        "psgy3esBSJubwV3AY-AYnw",
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "Ek5AfUwASGWAcmFz9SzzoQ",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

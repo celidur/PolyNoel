@@ -1,8 +1,13 @@
 {
     "id": "M845C581C",
     "name": "Chloe + Ethan - Chaussettes pour tout-Petits, Trains Grises",
-    "price": "1,99$",
+    "price": "199",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw1f412cc2/images/845C581C_1.jpg",
     "description": "Chloe + Ethan - Chaussettes pour tout-Petits, Trains Grises",
-    "url": "https://www.toysrus.ca/fr/Chloe-Ethan---Chaussettes-pour-tout-Petits--Trains-Grises/M845C581C.html"
+    "url": "https://www.toysrus.ca/fr/Chloe-Ethan---Chaussettes-pour-tout-Petits--Trains-Grises/M845C581C.html",
+    "categories": [
+        "6910e33b-ca8f-42f7-a747-bb3dd3b3872c",
+        "67271392-b424-4251-998a-20030a28dcd4",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

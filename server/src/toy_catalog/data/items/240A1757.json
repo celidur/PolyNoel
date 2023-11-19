@@ -1,8 +1,15 @@
 {
     "id": "240A1757",
     "name": "Hoyle 6-in-1 paquet amusant",
-    "price": "7,99$",
+    "price": "799",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw0080e4e7/images/240A1757_1.jpg",
     "description": "Hoyle 6-in-1 paquet amusant",
-    "url": "https://www.toysrus.ca/fr/Hoyle-6-in-1-paquet-amusant/240A1757.html"
+    "url": "https://www.toysrus.ca/fr/Hoyle-6-in-1-paquet-amusant/240A1757.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "H_wmbx3lSDmpJYqSeU4WRA",
+        "V8SwQvVESCO7wX8XxLoZEA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

@@ -1,8 +1,16 @@
 {
     "id": "54B789E8",
     "name": "Camion à crème glacée animé Blippi",
-    "price": "24,99$",
+    "price": "2499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwb79249b4/images/54B789E8_1.jpg",
     "description": "Camion à crème glacée animé Blippi",
-    "url": "https://www.toysrus.ca/fr/Camion-a-creme-glacee-anime-Blippi/54B789E8.html"
+    "url": "https://www.toysrus.ca/fr/Camion-a-creme-glacee-anime-Blippi/54B789E8.html",
+    "categories": [
+        "k1dYuCMyRxenOpsOzZXidg",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "JptOk_sgRPO6qa9Ojjq5pA",
+        "V6F5qJDST4-SDE3PvCAjqg",
+        "nLE2pK09RWWGiTrGV-IhRw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

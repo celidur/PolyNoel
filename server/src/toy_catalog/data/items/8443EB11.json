@@ -1,8 +1,13 @@
 {
     "id": "8443EB11",
     "name": "Disney Minnie Mouse Haut/Pantalon Rose",
-    "price": "24,99$",
+    "price": "2499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw8cbb5b47/images/8443EB11_1.jpg",
     "description": "Disney Minnie Mouse Haut/Pantalon Rose 2/3",
-    "url": "https://www.toysrus.ca/fr/Disney-Minnie-Mouse-Haut-Pantalon-Rose-2-3/8443EB11.html"
+    "url": "https://www.toysrus.ca/fr/Disney-Minnie-Mouse-Haut-Pantalon-Rose-2-3/8443EB11.html",
+    "categories": [
+        "e79e20e2-748d-49df-87b7-ba8fdf921049",
+        "67271392-b424-4251-998a-20030a28dcd4",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

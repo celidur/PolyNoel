@@ -1,8 +1,15 @@
 {
     "id": "F417F98E",
     "name": "Peluches LankyBox - Boxy",
-    "price": "19,99$",
+    "price": "1999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw26fb8a42/images/F417F98E_1.jpg",
     "description": "Peluches LankyBox - Boxy",
-    "url": "https://www.toysrus.ca/fr/Peluches-LankyBox---Boxy/F417F98E.html"
+    "url": "https://www.toysrus.ca/fr/Peluches-LankyBox---Boxy/F417F98E.html",
+    "categories": [
+        "hFPgaxjyTS-09FMgOvQS9g",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "SoeT2PFORRuHrUwzGVMbug",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

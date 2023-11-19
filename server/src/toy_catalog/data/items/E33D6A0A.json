@@ -1,8 +1,16 @@
 {
     "id": "E33D6A0A",
     "name": "Telescope AZ SM de 114mm",
-    "price": "199,99$",
+    "price": "19999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwa9f3798f/images/E33D6A0A_1.jpg",
     "description": "Telescope AZ SM de 114mm",
-    "url": "https://www.toysrus.ca/fr/Telescope-AZ-SM-de-114mm/E33D6A0A.html"
+    "url": "https://www.toysrus.ca/fr/Telescope-AZ-SM-de-114mm/E33D6A0A.html",
+    "categories": [
+        "PJ62VhseQeGlbBsZIOI_iQ",
+        "Up8qo1oqR2iddXr602l1jg",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "H-0oXd77RpuqhVvQ4Ncdlw",
+        "SqNRVU9HTHuhIqHxOJaN8w",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

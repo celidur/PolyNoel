@@ -1,8 +1,16 @@
 {
     "id": "B439F873",
     "name": "36-pc Puzzle/Dino Land",
-    "price": "34,99$",
+    "price": "3499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw15df4b2a/images/B439F873_1.jpg",
     "description": "36-pc Puzzle/Dino Land",
-    "url": "https://www.toysrus.ca/fr/36-pc-Puzzle-Dino-Land/B439F873.html"
+    "url": "https://www.toysrus.ca/fr/36-pc-Puzzle-Dino-Land/B439F873.html",
+    "categories": [
+        "6523f30a-88f5-4d73-b139-09bf6bf1cfd8",
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "ujYfBCxwSW-UFQmFp8K3qg",
+        "H_wmbx3lSDmpJYqSeU4WRA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

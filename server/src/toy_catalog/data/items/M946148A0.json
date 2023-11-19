@@ -1,8 +1,13 @@
 {
     "id": "M946148A0",
     "name": "Chloe + Ethan - Chaussettes pour Tout-Petits, Renne Bleu",
-    "price": "11,99$",
+    "price": "1199",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwac403a9e/images/946148A0_1.jpg",
     "description": "Chloe + Ethan - Chaussettes pour Tout-Petits, Renne Bleu",
-    "url": "https://www.toysrus.ca/fr/Chloe-Ethan---Chaussettes-pour-Tout-Petits--Renne-Bleu/M946148A0.html"
+    "url": "https://www.toysrus.ca/fr/Chloe-Ethan---Chaussettes-pour-Tout-Petits--Renne-Bleu/M946148A0.html",
+    "categories": [
+        "6910e33b-ca8f-42f7-a747-bb3dd3b3872c",
+        "67271392-b424-4251-998a-20030a28dcd4",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

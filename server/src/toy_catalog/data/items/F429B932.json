@@ -1,8 +1,15 @@
 {
     "id": "F429B932",
     "name": "Let'S Feed The Very Hungry Catepillar",
-    "price": "24,99$",
+    "price": "2499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw7b42dfb5/images/F429B932_1.jpg",
     "description": "Let'S Feed The Very Hungry Catepillar",
-    "url": "https://www.toysrus.ca/fr/Let-S-Feed-The-Very-Hungry-Catepillar/F429B932.html"
+    "url": "https://www.toysrus.ca/fr/Let-S-Feed-The-Very-Hungry-Catepillar/F429B932.html",
+    "categories": [
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "DlsBn-0tRoWdsZnanywNvw",
+        "H_wmbx3lSDmpJYqSeU4WRA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

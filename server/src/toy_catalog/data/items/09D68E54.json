@@ -1,8 +1,17 @@
 {
     "id": "09D68E54",
     "name": "Puzzle Le monde d'Harry Potter",
-    "price": "19,99$",
+    "price": "1999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwee82bec7/images/09D68E54_1.jpg",
     "description": "Puzzle Le monde d'Harry Potter",
-    "url": "https://www.toysrus.ca/fr/Puzzle-Le-monde-d-Harry-Potter/09D68E54.html"
+    "url": "https://www.toysrus.ca/fr/Puzzle-Le-monde-d-Harry-Potter/09D68E54.html",
+    "categories": [
+        "c723d5c9-676c-4e66-a812-070ecdf77a8b",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "ujYfBCxwSW-UFQmFp8K3qg",
+        "H_wmbx3lSDmpJYqSeU4WRA",
+        "78f1fabc-8051-447a-9703-61c0b3be0a33",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

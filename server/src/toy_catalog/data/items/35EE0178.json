@@ -1,8 +1,12 @@
 {
     "id": "35EE0178",
     "name": "Muffin l'elan de Lamaze",
-    "price": "26,99$",
+    "price": "2699",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw731e2a54/images/35EE0178_1.jpg",
     "description": "Muffin l'elan de Lamaze",
-    "url": "https://www.toysrus.ca/fr/Muffin-l-elan-de-Lamaze/35EE0178.html"
+    "url": "https://www.toysrus.ca/fr/Muffin-l-elan-de-Lamaze/35EE0178.html",
+    "categories": [
+        "MdvawtJvSomMvUa1KjQc_A",
+        "0t1X5B_DR1eHx9Zk9Um_gQ"
+    ]
 }

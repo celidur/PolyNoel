@@ -1,8 +1,19 @@
 {
     "id": "F1FC0760",
     "name": "Multiplication",
-    "price": "4,99$",
+    "price": "499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwb8213fd8/images/F1FC0760_1.jpg",
     "description": "Multiplication",
-    "url": "https://www.toysrus.ca/fr/Multiplication/F1FC0760.html"
+    "url": "https://www.toysrus.ca/fr/Multiplication/F1FC0760.html",
+    "categories": [
+        "ba304553-8bb1-494e-864f-a22462756e32",
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "f7a3c846-06c0-473c-a7ee-f31877cb6b4c",
+        "SqNRVU9HTHuhIqHxOJaN8w",
+        "Bo67ARGhRP6r9AUS1uBPUg",
+        "FSF6FiQ-T82JX0ZLAn8XKw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

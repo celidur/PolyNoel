@@ -1,8 +1,13 @@
 {
     "id": "24570A3D",
     "name": "Disney Ariel ens2mcx Pyjama Bleu",
-    "price": "19,99$",
+    "price": "1999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwec955a87/images/24570A3D_1.jpg",
     "description": "Disney Ariel ens2mcx Pyjama Bleu 3/4",
-    "url": "https://www.toysrus.ca/fr/Disney-Ariel-ens2mcx-Pyjama-Bleu-3-4/24570A3D.html"
+    "url": "https://www.toysrus.ca/fr/Disney-Ariel-ens2mcx-Pyjama-Bleu-3-4/24570A3D.html",
+    "categories": [
+        "b99155fd-285b-47da-99d1-20fcbde5c976",
+        "67271392-b424-4251-998a-20030a28dcd4",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

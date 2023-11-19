@@ -1,8 +1,15 @@
 {
     "id": "D42D3956",
     "name": "Crayons étoiles arc-en-ciel",
-    "price": "2,78$",
+    "price": "278",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw25b5154b/images/D42D3956_1.jpg",
     "description": "Crayons étoiles arc-en-ciel",
-    "url": "https://www.toysrus.ca/fr/Crayons-etoiles-arc-en-ciel/D42D3956.html"
+    "url": "https://www.toysrus.ca/fr/Crayons-etoiles-arc-en-ciel/D42D3956.html",
+    "categories": [
+        "oum-7vxuTbeC_7cuZaEQBA",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "S-dx9fVvQeaj9Om-UzWcIQ",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

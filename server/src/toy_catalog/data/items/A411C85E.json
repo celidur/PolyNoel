@@ -1,8 +1,15 @@
 {
     "id": "A411C85E",
     "name": "Le Litehawk Rig",
-    "price": "259,99$",
+    "price": "25999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwc9f28eea/images/A411C85E_1.jpg",
     "description": "Le Litehawk Rig",
-    "url": "https://www.toysrus.ca/fr/Le-Litehawk-Rig/A411C85E.html"
+    "url": "https://www.toysrus.ca/fr/Le-Litehawk-Rig/A411C85E.html",
+    "categories": [
+        "Up8qo1oqR2iddXr602l1jg",
+        "wlyJQQk8SBejboMAer5DRg",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "JptOk_sgRPO6qa9Ojjq5pA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

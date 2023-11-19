@@ -1,8 +1,16 @@
 {
     "id": "84B839BC",
     "name": "Thomas et ses amis - Mon Thomas à tirer",
-    "price": "69,99$",
+    "price": "6999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwa7158122/images/84B839BC_1.jpg",
     "description": "Thomas et ses amis - Mon Thomas à tirer",
-    "url": "https://www.toysrus.ca/fr/Thomas-et-ses-amis---Mon-Thomas-a-tirer/84B839BC.html"
+    "url": "https://www.toysrus.ca/fr/Thomas-et-ses-amis---Mon-Thomas-a-tirer/84B839BC.html",
+    "categories": [
+        "k1dYuCMyRxenOpsOzZXidg",
+        "DW6X-0JfSNSWGMMXtctBvw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "JptOk_sgRPO6qa9Ojjq5pA",
+        "nLE2pK09RWWGiTrGV-IhRw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

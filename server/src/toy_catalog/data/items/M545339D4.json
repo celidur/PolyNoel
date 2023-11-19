@@ -1,8 +1,13 @@
 {
     "id": "M545339D4",
     "name": "Chloe + Ethan - Chaussettes pour Petites, Lavande",
-    "price": "1,99$",
+    "price": "199",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwfc1808d1/images/545339D4_1.jpg",
     "description": "Chloe + Ethan - Chaussettes pour Petites, Lavande",
-    "url": "https://www.toysrus.ca/fr/Chloe-Ethan---Chaussettes-pour-Petites--Lavande/M545339D4.html"
+    "url": "https://www.toysrus.ca/fr/Chloe-Ethan---Chaussettes-pour-Petites--Lavande/M545339D4.html",
+    "categories": [
+        "6910e33b-ca8f-42f7-a747-bb3dd3b3872c",
+        "67271392-b424-4251-998a-20030a28dcd4",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

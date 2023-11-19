@@ -1,8 +1,15 @@
 {
     "id": "2429BBA5",
     "name": "Heys - Transformers Backpack",
-    "price": "26,99$",
+    "price": "2699",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwf455d2f2/images/2429BBA5_1.jpg",
     "description": "Heys - Transformers Backpack",
-    "url": "https://www.toysrus.ca/fr/Heys---Transformers-Backpack/2429BBA5.html"
+    "url": "https://www.toysrus.ca/fr/Heys---Transformers-Backpack/2429BBA5.html",
+    "categories": [
+        "6e8cbcee-00a6-4f45-a193-cfa833242a98",
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "02f05a42-3c06-4b2b-976b-f683e4c933fe",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

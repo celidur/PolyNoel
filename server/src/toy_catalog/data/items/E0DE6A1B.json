@@ -1,8 +1,15 @@
 {
     "id": "E0DE6A1B",
     "name": "Boîte d'art géante Crayola",
-    "price": "34,99$",
+    "price": "3499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw2eddf4ce/images/E0DE6A1B_1.jpg",
     "description": "Boîte d'art géante Crayola",
-    "url": "https://www.toysrus.ca/fr/Boite-d-art-geante-Crayola/E0DE6A1B.html"
+    "url": "https://www.toysrus.ca/fr/Boite-d-art-geante-Crayola/E0DE6A1B.html",
+    "categories": [
+        "oum-7vxuTbeC_7cuZaEQBA",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "wB8JkNLKTD6LAnQHDVh_Kw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

@@ -1,8 +1,15 @@
 {
     "id": "F4EF2964",
     "name": "Ensemble de coiffure Dyson Corrale",
-    "price": "39,99$",
+    "price": "3999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw56f7a1b8/images/F4EF2964_1.jpg",
     "description": "Ensemble de coiffure Dyson Corrale",
-    "url": "https://www.toysrus.ca/fr/Ensemble-de-coiffure-Dyson-Corrale/F4EF2964.html"
+    "url": "https://www.toysrus.ca/fr/Ensemble-de-coiffure-Dyson-Corrale/F4EF2964.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "p4GuDYzBTseOWhFMOiTgpw",
+        "Ek5AfUwASGWAcmFz9SzzoQ",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

@@ -1,8 +1,15 @@
 {
     "id": "54E3AA5B",
     "name": "Triplet Stroller",
-    "price": "12,99$",
+    "price": "1299",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw51096c3e/images/54E3AA5B_1.jpg",
     "description": "Triplet Stroller",
-    "url": "https://www.toysrus.ca/fr/Triplet-Stroller/54E3AA5B.html"
+    "url": "https://www.toysrus.ca/fr/Triplet-Stroller/54E3AA5B.html",
+    "categories": [
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "E7HvAgCgQmiDIthWj-waHQ",
+        "kSzVH6Q3RdGcG-yk9-k2jg",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

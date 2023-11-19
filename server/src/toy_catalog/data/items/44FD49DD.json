@@ -1,8 +1,16 @@
 {
     "id": "44FD49DD",
     "name": "Ninja Obstacle Course",
-    "price": "99,99$",
+    "price": "9999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw30d65b3c/images/44FD49DD_1.jpg",
     "description": "Ninja Obstacle Course",
-    "url": "https://www.toysrus.ca/fr/Ninja-Obstacle-Course/44FD49DD.html"
+    "url": "https://www.toysrus.ca/fr/Ninja-Obstacle-Course/44FD49DD.html",
+    "categories": [
+        "1fjjZGjyQQ289DQZw1JMdw",
+        "JU9lH3JiSbyL1M7Lm94gHA",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "Ckm1jNfORo2_2e3G4NNbMw",
+        "nR3vqPRmSISP5EWA8s8nXw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

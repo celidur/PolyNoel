@@ -1,8 +1,13 @@
 {
     "id": "M6465782F",
     "name": "Ensemble de t-shirt et shorts Nike - Bleu",
-    "price": "45,00$",
+    "price": "4500",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwf1e5f007/images/6465782F_1.jpg",
     "description": "Ensemble de t-shirt et shorts Nike - Bleu",
-    "url": "https://www.toysrus.ca/fr/Ensemble-de-t-shirt-et-shorts-Nike---Bleu/M6465782F.html"
+    "url": "https://www.toysrus.ca/fr/Ensemble-de-t-shirt-et-shorts-Nike---Bleu/M6465782F.html",
+    "categories": [
+        "e79e20e2-748d-49df-87b7-ba8fdf921049",
+        "67271392-b424-4251-998a-20030a28dcd4",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

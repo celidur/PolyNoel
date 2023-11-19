@@ -1,8 +1,17 @@
 {
     "id": "54D52A8E",
     "name": "Triangle - Édition anglaise",
-    "price": "12,99$",
+    "price": "1299",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwd65d3d68/images/54D52A8E_1.jpg",
     "description": "Triangle - Édition anglaise",
-    "url": "https://www.toysrus.ca/fr/Triangle---Edition-anglaise/54D52A8E.html"
+    "url": "https://www.toysrus.ca/fr/Triangle---Edition-anglaise/54D52A8E.html",
+    "categories": [
+        "ba304553-8bb1-494e-864f-a22462756e32",
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "erslNKwDgthad7j",
+        "eca99751-1e2d-44d3-92d6-3df3419dc31f",
+        "FSF6FiQ-T82JX0ZLAn8XKw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

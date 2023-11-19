@@ -1,8 +1,15 @@
 {
     "id": "E479BA99",
     "name": "Fisher-Price- Ice Cream Scoops of Fun",
-    "price": "15,99$",
+    "price": "1599",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwe0bd1bb1/images/E479BA99_1.jpg",
     "description": "Fisher-Price- Ice Cream Scoops of Fun",
-    "url": "https://www.toysrus.ca/fr/Fisher-Price--Ice-Cream%C2%A0Scoops-of-Fun/E479BA99.html"
+    "url": "https://www.toysrus.ca/fr/Fisher-Price--Ice-Cream%C2%A0Scoops-of-Fun/E479BA99.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "DlsBn-0tRoWdsZnanywNvw",
+        "H_wmbx3lSDmpJYqSeU4WRA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

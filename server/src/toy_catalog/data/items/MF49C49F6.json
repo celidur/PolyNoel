@@ -1,8 +1,13 @@
 {
     "id": "MF49C49F6",
     "name": "Chaussures vernies blanches pour bébé",
-    "price": "17,99$",
+    "price": "1799",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw358925ee/images/F49C49F6_1.jpg",
     "description": "Chaussures vernies blanches pour bébé",
-    "url": "https://www.toysrus.ca/fr/Chaussures-vernies-blanches-pour-bebe/MF49C49F6.html"
+    "url": "https://www.toysrus.ca/fr/Chaussures-vernies-blanches-pour-bebe/MF49C49F6.html",
+    "categories": [
+        "596c8d6d-31d5-49cb-81c8-68733a3eedd9",
+        "67271392-b424-4251-998a-20030a28dcd4",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

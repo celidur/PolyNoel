@@ -1,8 +1,17 @@
 {
     "id": "6477794B",
     "name": "Ma Première Voiture Assortiment",
-    "price": "24,99$",
+    "price": "2499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwbe290881/images/6477794B_1.jpg",
     "description": "Ma Première Voiture Assortiment",
-    "url": "https://www.toysrus.ca/fr/Ma-Premiere-Voiture-Assortiment/6477794B.html"
+    "url": "https://www.toysrus.ca/fr/Ma-Premiere-Voiture-Assortiment/6477794B.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "k1dYuCMyRxenOpsOzZXidg",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "JptOk_sgRPO6qa9Ojjq5pA",
+        "V6F5qJDST4-SDE3PvCAjqg",
+        "nLE2pK09RWWGiTrGV-IhRw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

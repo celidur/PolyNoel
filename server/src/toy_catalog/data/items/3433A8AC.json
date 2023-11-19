@@ -1,8 +1,14 @@
 {
     "id": "3433A8AC",
     "name": "Fom Mania Fomalanche",
-    "price": "64,99$",
+    "price": "6499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwc5b630ac/images/3433A8AC_1.jpg",
     "description": "Fom Mania Fomalanche",
-    "url": "https://www.toysrus.ca/fr/Fom-Mania-Fomalanche/3433A8AC.html"
+    "url": "https://www.toysrus.ca/fr/Fom-Mania-Fomalanche/3433A8AC.html",
+    "categories": [
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "nR3vqPRmSISP5EWA8s8nXw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

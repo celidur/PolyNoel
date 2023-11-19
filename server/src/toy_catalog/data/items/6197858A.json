@@ -1,8 +1,15 @@
 {
     "id": "6197858A",
     "name": "Camion à ordures - Dickie Toys",
-    "price": "59,99$",
+    "price": "5999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwf19bcbe0/images/6197858A_1.jpg",
     "description": "Camion à ordures - Dickie Toys",
-    "url": "https://www.toysrus.ca/fr/Camion-a-ordures---Dickie-Toys/6197858A.html"
+    "url": "https://www.toysrus.ca/fr/Camion-a-ordures---Dickie-Toys/6197858A.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "JptOk_sgRPO6qa9Ojjq5pA",
+        "V6F5qJDST4-SDE3PvCAjqg",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

@@ -1,8 +1,14 @@
 {
     "id": "34D78B74",
     "name": "Jeu De Disques Timio #4",
-    "price": "11,98$",
+    "price": "1198",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwb9947130/images/34d78b74_1.jpg",
     "description": "Jeu De Disques Timio #4",
-    "url": "https://www.toysrus.ca/fr/Jeu-De-Disques-Timio--4/34D78B74.html"
+    "url": "https://www.toysrus.ca/fr/Jeu-De-Disques-Timio--4/34D78B74.html",
+    "categories": [
+        "k1dYuCMyRxenOpsOzZXidg",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "nLE2pK09RWWGiTrGV-IhRw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

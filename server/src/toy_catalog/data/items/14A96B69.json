@@ -1,8 +1,16 @@
 {
     "id": "14A96B69",
     "name": "Kit de vlog 10 pouces",
-    "price": "34,99$",
+    "price": "3499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwda5dbc27/images/14A96B69_1.jpg",
     "description": "Kit de vlog 10 pouces",
-    "url": "https://www.toysrus.ca/fr/Kit-de-vlog-10-pouces/14A96B69.html"
+    "url": "https://www.toysrus.ca/fr/Kit-de-vlog-10-pouces/14A96B69.html",
+    "categories": [
+        "1fjjZGjyQQ289DQZw1JMdw",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "NM1ksaLOSlSh05_RiQGzNw",
+        "lLC7wLFUTcmYCFFbBF9txA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

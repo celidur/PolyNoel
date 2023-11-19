@@ -1,8 +1,16 @@
 {
     "id": "CA5A0EE2",
     "name": "Ensemble de laboratoire Color Chemistry Crayola",
-    "price": "34,99$",
+    "price": "3499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwa52c4dc8/images/CA5A0EE2_1.jpg",
     "description": "Ensemble de laboratoire Color Chemistry Crayola",
-    "url": "https://www.toysrus.ca/fr/Ensemble-de-laboratoire-Color-Chemistry-Crayola/CA5A0EE2.html"
+    "url": "https://www.toysrus.ca/fr/Ensemble-de-laboratoire-Color-Chemistry-Crayola/CA5A0EE2.html",
+    "categories": [
+        "oum-7vxuTbeC_7cuZaEQBA",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "wB8JkNLKTD6LAnQHDVh_Kw",
+        "S-dx9fVvQeaj9Om-UzWcIQ",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

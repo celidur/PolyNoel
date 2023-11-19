@@ -1,8 +1,16 @@
 {
     "id": "646D38B8",
     "name": "Méga sonique",
-    "price": "54,99$",
+    "price": "5499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwcdc7a73b/images/646D38B8_1.jpg",
     "description": "Méga sonique",
-    "url": "https://www.toysrus.ca/fr/Mega-sonique/646D38B8.html"
+    "url": "https://www.toysrus.ca/fr/Mega-sonique/646D38B8.html",
+    "categories": [
+        "hFPgaxjyTS-09FMgOvQS9g",
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "SoeT2PFORRuHrUwzGVMbug",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

@@ -1,8 +1,15 @@
 {
     "id": "2FB2B75B",
     "name": "Play-Doh - Sac de fête",
-    "price": "14,99$",
+    "price": "1499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwecef5173/images/2FB2B75B_1.jpg",
     "description": "Play-Doh - Sac de fête",
-    "url": "https://www.toysrus.ca/fr/Play-Doh---Sac-de-fete/2FB2B75B.html"
+    "url": "https://www.toysrus.ca/fr/Play-Doh---Sac-de-fete/2FB2B75B.html",
+    "categories": [
+        "oum-7vxuTbeC_7cuZaEQBA",
+        "k1dYuCMyRxenOpsOzZXidg",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "0eQsCttnTZmOo3TAjoRsUg",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

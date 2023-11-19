@@ -1,8 +1,15 @@
 {
     "id": "1F78C350",
     "name": "5 pinceaux crayola",
-    "price": "3,99$",
+    "price": "399",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw01d20f60/images/1F78C350_1.JPG",
     "description": "5 pinceaux crayola",
-    "url": "https://www.toysrus.ca/fr/5-pinceaux-crayola/1F78C350.html"
+    "url": "https://www.toysrus.ca/fr/5-pinceaux-crayola/1F78C350.html",
+    "categories": [
+        "oum-7vxuTbeC_7cuZaEQBA",
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "UohZnJvtQ0KaBYNj-NIQ4g",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

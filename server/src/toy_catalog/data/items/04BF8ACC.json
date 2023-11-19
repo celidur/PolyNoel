@@ -1,8 +1,14 @@
 {
     "id": "04BF8ACC",
     "name": "Le hochet d'anneau de Carter's",
-    "price": "9,99$",
+    "price": "999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw85aa50d3/images/04BF8ACC_1.jpg",
     "description": "Le hochet d'anneau de Carter's",
-    "url": "https://www.toysrus.ca/fr/Le-hochet-d-anneau-de-Carter-s/04BF8ACC.html"
+    "url": "https://www.toysrus.ca/fr/Le-hochet-d-anneau-de-Carter-s/04BF8ACC.html",
+    "categories": [
+        "rFlTVotoSuuUXYkfGrXA2A",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "ufviqKmGQNq5gej63royHg",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

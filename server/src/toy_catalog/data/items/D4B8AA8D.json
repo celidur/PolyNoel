@@ -1,8 +1,13 @@
 {
     "id": "D4B8AA8D",
     "name": "Ensemble chapeau et gants Pat'Patrouille, enfant - Inscription «PAW»",
-    "price": "12,99$",
+    "price": "1299",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwf87058e7/images/D4B8AA8D_1.jpg",
     "description": "Ensemble chapeau et gants Pat'Patrouille, enfant - Inscription «PAW»",
-    "url": "https://www.toysrus.ca/fr/Ensemble-chapeau-et-gants-Pat-Patrouille--enfant---Inscription-%C2%ABPAW%C2%BB/D4B8AA8D.html"
+    "url": "https://www.toysrus.ca/fr/Ensemble-chapeau-et-gants-Pat-Patrouille--enfant---Inscription-%C2%ABPAW%C2%BB/D4B8AA8D.html",
+    "categories": [
+        "9c4b3adf-29d9-456e-86d9-2b689e53a16a",
+        "67271392-b424-4251-998a-20030a28dcd4",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

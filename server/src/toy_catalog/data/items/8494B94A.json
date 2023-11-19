@@ -1,8 +1,16 @@
 {
     "id": "8494B94A",
     "name": "ALEX - Bâton sauteur",
-    "price": "24,99$",
+    "price": "2499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw02a345dd/images/8494B94A_1.jpg",
     "description": "ALEX - Bâton sauteur",
-    "url": "https://www.toysrus.ca/fr/ALEX---Baton-sauteur/8494B94A.html"
+    "url": "https://www.toysrus.ca/fr/ALEX---Baton-sauteur/8494B94A.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "Ckm1jNfORo2_2e3G4NNbMw",
+        "InEXyWoERxKLaxSgvcQYoQ",
+        "nR3vqPRmSISP5EWA8s8nXw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

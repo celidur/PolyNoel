@@ -1,8 +1,12 @@
 {
     "id": "145FE946",
     "name": "I Am Hungry - Édition anglaise",
-    "price": "20,99$",
+    "price": "2099",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw1dd92cdd/images/145FE946_1.jpg",
     "description": "I Am Hungry - Édition anglaise",
-    "url": "https://www.toysrus.ca/fr/I-Am-Hungry---Edition-anglaise/145FE946.html"
+    "url": "https://www.toysrus.ca/fr/I-Am-Hungry---Edition-anglaise/145FE946.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A"
+    ]
 }

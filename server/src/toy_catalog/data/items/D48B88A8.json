@@ -1,8 +1,12 @@
 {
     "id": "D48B88A8",
     "name": "ALEX - Mon premier grille-pain",
-    "price": "14,99$",
+    "price": "1499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwa2f782d0/images/D48B88A8_1.jpg",
     "description": "ALEX - Mon premier grille-pain",
-    "url": "https://www.toysrus.ca/fr/ALEX---Mon-premier-grille-pain/D48B88A8.html"
+    "url": "https://www.toysrus.ca/fr/ALEX---Mon-premier-grille-pain/D48B88A8.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A"
+    ]
 }

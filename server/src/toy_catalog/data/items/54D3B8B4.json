@@ -1,8 +1,15 @@
 {
     "id": "54D3B8B4",
     "name": "Ice Cream Take-Along Pull Toy",
-    "price": "29,99$",
+    "price": "2999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwb10c4d23/images/54D3B8B4_1.jpg",
     "description": "Ice Cream Take-Along Pull Toy",
-    "url": "https://www.toysrus.ca/fr/Ice-Cream-Take-Along-Pull-Toy/54D3B8B4.html"
+    "url": "https://www.toysrus.ca/fr/Ice-Cream-Take-Along-Pull-Toy/54D3B8B4.html",
+    "categories": [
+        "k1dYuCMyRxenOpsOzZXidg",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "ufviqKmGQNq5gej63royHg",
+        "nLE2pK09RWWGiTrGV-IhRw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

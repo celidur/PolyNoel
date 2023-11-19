@@ -1,8 +1,15 @@
 {
     "id": "E4417954",
     "name": "Policier et quad",
-    "price": "12,99$",
+    "price": "1299",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwf2106974/images/E4417954_1.jpg",
     "description": "Policier et quad",
-    "url": "https://www.toysrus.ca/fr/Policier-et-quad/E4417954.html"
+    "url": "https://www.toysrus.ca/fr/Policier-et-quad/E4417954.html",
+    "categories": [
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "SqNRVU9HTHuhIqHxOJaN8w",
+        "bliwe_2LQZyAE9I_DhqDYQ",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

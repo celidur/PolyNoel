@@ -1,8 +1,15 @@
 {
     "id": "0400286D",
     "name": "Cavalier avec poney brun",
-    "price": "19,99$",
+    "price": "1999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwc740071d/images/0400286D_1.jpg",
     "description": "Cavalier avec poney brun",
-    "url": "https://www.toysrus.ca/fr/Cavalier-avec-poney-brun/0400286D.html"
+    "url": "https://www.toysrus.ca/fr/Cavalier-avec-poney-brun/0400286D.html",
+    "categories": [
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "SqNRVU9HTHuhIqHxOJaN8w",
+        "bliwe_2LQZyAE9I_DhqDYQ",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

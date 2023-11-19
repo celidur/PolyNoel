@@ -1,8 +1,15 @@
 {
     "id": "44EEB974",
     "name": "UNO Flex",
-    "price": "9,99$",
+    "price": "999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw2c28113a/images/44EEB974_1.jpg",
     "description": "UNO Flex",
-    "url": "https://www.toysrus.ca/fr/UNO-Flex/44EEB974.html"
+    "url": "https://www.toysrus.ca/fr/UNO-Flex/44EEB974.html",
+    "categories": [
+        "1fjjZGjyQQ289DQZw1JMdw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "H_wmbx3lSDmpJYqSeU4WRA",
+        "V8SwQvVESCO7wX8XxLoZEA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

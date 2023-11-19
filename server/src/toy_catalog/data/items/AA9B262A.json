@@ -1,8 +1,12 @@
 {
     "id": "AA9B262A",
     "name": "Oball Classic",
-    "price": "9,99$",
+    "price": "999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwb5998674/images/AA9B262A_1.jpg",
     "description": "Oball Classic",
-    "url": "https://www.toysrus.ca/fr/Oball-Classic/AA9B262A.html"
+    "url": "https://www.toysrus.ca/fr/Oball-Classic/AA9B262A.html",
+    "categories": [
+        "MdvawtJvSomMvUa1KjQc_A",
+        "0t1X5B_DR1eHx9Zk9Um_gQ"
+    ]
 }

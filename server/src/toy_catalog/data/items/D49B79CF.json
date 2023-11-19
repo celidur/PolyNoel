@@ -1,8 +1,14 @@
 {
     "id": "D49B79CF",
     "name": "Peppa Pig Le labyrinthe, jouets préscolaires",
-    "price": "34,99$",
+    "price": "3499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw32a672a2/images/D49B79CF_1.jpg",
     "description": "Peppa Pig Le labyrinthe, jouets préscolaires",
-    "url": "https://www.toysrus.ca/fr/Peppa-Pig-Le-labyrinthe--jouets-prescolaires/D49B79CF.html"
+    "url": "https://www.toysrus.ca/fr/Peppa-Pig-Le-labyrinthe--jouets-prescolaires/D49B79CF.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "nLE2pK09RWWGiTrGV-IhRw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

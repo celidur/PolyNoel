@@ -1,8 +1,15 @@
 {
     "id": "A43058E0",
     "name": "Electronic Arcade Pinball",
-    "price": "59,99$",
+    "price": "5999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw9fbe6f1c/images/A43058E0_1.jpg",
     "description": "Electronic Arcade Pinball",
-    "url": "https://www.toysrus.ca/fr/Electronic-Arcade-Pinball/A43058E0.html"
+    "url": "https://www.toysrus.ca/fr/Electronic-Arcade-Pinball/A43058E0.html",
+    "categories": [
+        "1fjjZGjyQQ289DQZw1JMdw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "xQB8DNTQRQ-dnL7UmEQNiw",
+        "H_wmbx3lSDmpJYqSeU4WRA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

@@ -1,8 +1,15 @@
 {
     "id": "14049978",
     "name": "ALEX - Machine à laver",
-    "price": "24,99$",
+    "price": "2499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwe33c7722/images/14049978_1.jpg",
     "description": "ALEX - Machine à laver",
-    "url": "https://www.toysrus.ca/fr/ALEX---Machine-a-laver/14049978.html"
+    "url": "https://www.toysrus.ca/fr/ALEX---Machine-a-laver/14049978.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "p4GuDYzBTseOWhFMOiTgpw",
+        "Ek5AfUwASGWAcmFz9SzzoQ",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

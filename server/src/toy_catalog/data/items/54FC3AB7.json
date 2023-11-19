@@ -1,8 +1,17 @@
 {
     "id": "54FC3AB7",
     "name": "Happy Pi Day to You! - Édition anglaise",
-    "price": "12,99$",
+    "price": "1299",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw8b145c7d/images/54FC3AB7_1.jpg",
     "description": "Happy Pi Day to You! - Édition anglaise",
-    "url": "https://www.toysrus.ca/fr/Happy-Pi-Day-to-You----Edition-anglaise/54FC3AB7.html"
+    "url": "https://www.toysrus.ca/fr/Happy-Pi-Day-to-You----Edition-anglaise/54FC3AB7.html",
+    "categories": [
+        "ba304553-8bb1-494e-864f-a22462756e32",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "erslNKwDgthad7j",
+        "eca99751-1e2d-44d3-92d6-3df3419dc31f",
+        "FSF6FiQ-T82JX0ZLAn8XKw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

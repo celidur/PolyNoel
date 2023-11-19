@@ -1,8 +1,13 @@
 {
     "id": "D4604945",
     "name": "Rococo Robe Picnic Blue",
-    "price": "26,99$",
+    "price": "2699",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw3a70fc06/images/D4604945_1.jpg",
     "description": "Rococo Robe Picnic Blue 2/3",
-    "url": "https://www.toysrus.ca/fr/Rococo-Robe-Picnic-Blue-2-3/D4604945.html"
+    "url": "https://www.toysrus.ca/fr/Rococo-Robe-Picnic-Blue-2-3/D4604945.html",
+    "categories": [
+        "16137fe1-1b79-4fe2-9150-bdd38372c3b3",
+        "67271392-b424-4251-998a-20030a28dcd4",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

@@ -1,8 +1,14 @@
 {
     "id": "64A86AB8",
     "name": "Black & Decker ma première boîte à outils",
-    "price": "16,99$",
+    "price": "1699",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw745948a9/images/64A86AB8_1.jpg",
     "description": "Black & Decker ma première boîte à outils",
-    "url": "https://www.toysrus.ca/fr/Black-and-Decker-ma-premiere-boite-a-outils/64A86AB8.html"
+    "url": "https://www.toysrus.ca/fr/Black-and-Decker-ma-premiere-boite-a-outils/64A86AB8.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "Ek5AfUwASGWAcmFz9SzzoQ",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

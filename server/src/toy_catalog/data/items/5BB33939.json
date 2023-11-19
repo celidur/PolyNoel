@@ -1,8 +1,15 @@
 {
     "id": "5BB33939",
     "name": "4 En Ligne",
-    "price": "14,99$",
+    "price": "1499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw9e820e64/images/5BB33939_1.jpg",
     "description": "4 En Ligne",
-    "url": "https://www.toysrus.ca/fr/4-En-Ligne/5BB33939.html"
+    "url": "https://www.toysrus.ca/fr/4-En-Ligne/5BB33939.html",
+    "categories": [
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "xQB8DNTQRQ-dnL7UmEQNiw",
+        "H_wmbx3lSDmpJYqSeU4WRA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

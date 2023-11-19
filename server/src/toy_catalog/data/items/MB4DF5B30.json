@@ -1,8 +1,13 @@
 {
     "id": "MB4DF5B30",
     "name": "Bluey – Ensemble avec short Groupe de danse Marine",
-    "price": "29,99$",
+    "price": "2999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw532a7d0b/images/B4DF5B30_1.jpg",
     "description": "Bluey – Ensemble avec short Groupe de danse Marine",
-    "url": "https://www.toysrus.ca/fr/Bluey-%E2%80%93-Ensemble-avec-short-Groupe-de-danse-Marine/MB4DF5B30.html"
+    "url": "https://www.toysrus.ca/fr/Bluey-%E2%80%93-Ensemble-avec-short-Groupe-de-danse-Marine/MB4DF5B30.html",
+    "categories": [
+        "e79e20e2-748d-49df-87b7-ba8fdf921049",
+        "67271392-b424-4251-998a-20030a28dcd4",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

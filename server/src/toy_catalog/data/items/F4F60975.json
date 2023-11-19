@@ -1,8 +1,14 @@
 {
     "id": "F4F60975",
     "name": "Ensemble de cuisine J'adore",
-    "price": "119,99$",
+    "price": "11999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw03b3cbbe/images/F4F60975_1.jpg",
     "description": "Ensemble de cuisine J'adore",
-    "url": "https://www.toysrus.ca/fr/Ensemble-de-cuisine-J-adore/F4F60975.html"
+    "url": "https://www.toysrus.ca/fr/Ensemble-de-cuisine-J-adore/F4F60975.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "nLE2pK09RWWGiTrGV-IhRw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

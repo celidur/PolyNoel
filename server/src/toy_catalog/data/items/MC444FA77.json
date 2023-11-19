@@ -1,8 +1,13 @@
 {
     "id": "MC444FA77",
     "name": "Disney Stitch Robe Corail",
-    "price": "16,99$",
+    "price": "1699",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw95a47021/images/C444FA77_1.jpg",
     "description": "Disney Stitch Robe Corail",
-    "url": "https://www.toysrus.ca/fr/Disney-Stitch-Robe-Corail/MC444FA77.html"
+    "url": "https://www.toysrus.ca/fr/Disney-Stitch-Robe-Corail/MC444FA77.html",
+    "categories": [
+        "16137fe1-1b79-4fe2-9150-bdd38372c3b3",
+        "67271392-b424-4251-998a-20030a28dcd4",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

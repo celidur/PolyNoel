@@ -1,8 +1,15 @@
 {
     "id": "A45F1915",
     "name": "Jeu De Cartes De Bataille De Rubik",
-    "price": "9,99$",
+    "price": "999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwb30c0f07/images/A45F1915_1.jpg",
     "description": "Jeu De Cartes De Bataille De Rubik",
-    "url": "https://www.toysrus.ca/fr/Jeu-De-Cartes-De-Bataille-De-Rubik/A45F1915.html"
+    "url": "https://www.toysrus.ca/fr/Jeu-De-Cartes-De-Bataille-De-Rubik/A45F1915.html",
+    "categories": [
+        "1fjjZGjyQQ289DQZw1JMdw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "xQB8DNTQRQ-dnL7UmEQNiw",
+        "H_wmbx3lSDmpJYqSeU4WRA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

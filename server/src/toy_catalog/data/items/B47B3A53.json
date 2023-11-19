@@ -1,8 +1,15 @@
 {
     "id": "B47B3A53",
     "name": "Disney Frozen II Jeu Complet.",
-    "price": "29,99$",
+    "price": "2999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw7b3c6472/images/B47B3A53_1.jpg",
     "description": "Disney Frozen II Jeu Complet.",
-    "url": "https://www.toysrus.ca/fr/Disney-Frozen-II-Jeu-Complet./B47B3A53.html"
+    "url": "https://www.toysrus.ca/fr/Disney-Frozen-II-Jeu-Complet./B47B3A53.html",
+    "categories": [
+        "oum-7vxuTbeC_7cuZaEQBA",
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "S-dx9fVvQeaj9Om-UzWcIQ",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

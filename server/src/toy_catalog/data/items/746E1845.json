@@ -1,8 +1,15 @@
 {
     "id": "746E1845",
     "name": "Heys - Lol Omg Lunch Bag",
-    "price": "18,99$",
+    "price": "1899",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw0c545091/images/746E1845_1.jpg",
     "description": "Heys - Lol Omg Lunch Bag",
-    "url": "https://www.toysrus.ca/fr/Heys---Lol-Omg-Lunch-Bag/746E1845.html"
+    "url": "https://www.toysrus.ca/fr/Heys---Lol-Omg-Lunch-Bag/746E1845.html",
+    "categories": [
+        "aa69db2e-bf33-40e6-a7a2-6bd809d9780a",
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "02f05a42-3c06-4b2b-976b-f683e4c933fe",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

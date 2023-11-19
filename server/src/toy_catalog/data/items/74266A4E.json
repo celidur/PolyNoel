@@ -1,8 +1,13 @@
 {
     "id": "74266A4E",
     "name": "Warner Brothers Batman Pantalon Jogger Noir",
-    "price": "19,99$",
+    "price": "1999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw86bd2d70/images/74266A4E_1.jpg",
     "description": "Warner Brothers Batman Pantalon Jogger Noir 3/4",
-    "url": "https://www.toysrus.ca/fr/Warner-Brothers-Batman-Pantalon-Jogger-Noir-3-4/74266A4E.html"
+    "url": "https://www.toysrus.ca/fr/Warner-Brothers-Batman-Pantalon-Jogger-Noir-3-4/74266A4E.html",
+    "categories": [
+        "67271392-b424-4251-998a-20030a28dcd4",
+        "6db4a122-d7c7-4d74-8bda-753f7d894f69",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

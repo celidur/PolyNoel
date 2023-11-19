@@ -1,8 +1,16 @@
 {
     "id": "C45A1951",
     "name": "Portfolio 9 pochettes Pokémon",
-    "price": "17,99$",
+    "price": "1799",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw3ef54a4d/images/C45A1951_1.jpg",
     "description": "Portfolio 9 pochettes Pokémon",
-    "url": "https://www.toysrus.ca/fr/Portfolio-9-pochettes-Pokemon/C45A1951.html"
+    "url": "https://www.toysrus.ca/fr/Portfolio-9-pochettes-Pokemon/C45A1951.html",
+    "categories": [
+        "1fjjZGjyQQ289DQZw1JMdw",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "SoeT2PFORRuHrUwzGVMbug",
+        "-t7XaQqaQTSXtyLMVTu4NQ",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

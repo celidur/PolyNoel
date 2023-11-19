@@ -1,8 +1,15 @@
 {
     "id": "D4A35ACA",
     "name": "UNO sous licence Zelda",
-    "price": "9,99$",
+    "price": "999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwf7c47bfc/images/D4A35ACA_1.jpg",
     "description": "UNO sous licence Zelda",
-    "url": "https://www.toysrus.ca/fr/UNO-sous-licence-Zelda/D4A35ACA.html"
+    "url": "https://www.toysrus.ca/fr/UNO-sous-licence-Zelda/D4A35ACA.html",
+    "categories": [
+        "1fjjZGjyQQ289DQZw1JMdw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "H_wmbx3lSDmpJYqSeU4WRA",
+        "V8SwQvVESCO7wX8XxLoZEA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

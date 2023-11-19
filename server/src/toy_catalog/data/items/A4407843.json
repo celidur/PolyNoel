@@ -1,8 +1,15 @@
 {
     "id": "A4407843",
     "name": "PLAYGO-Station de bricolage",
-    "price": "29,99$",
+    "price": "2999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwe465804e/images/A4407843_1.jpg",
     "description": "PLAYGO-Station de bricolage",
-    "url": "https://www.toysrus.ca/fr/PLAYGO-Station-de-bricolage/A4407843.html"
+    "url": "https://www.toysrus.ca/fr/PLAYGO-Station-de-bricolage/A4407843.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "k1dYuCMyRxenOpsOzZXidg",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "nLE2pK09RWWGiTrGV-IhRw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

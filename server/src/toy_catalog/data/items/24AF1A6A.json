@@ -1,8 +1,15 @@
 {
     "id": "24AF1A6A",
     "name": "Slinky classique",
-    "price": "5,99$",
+    "price": "599",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw13369fbe/images/24AF1A6A_1.jpg",
     "description": "Slinky classique",
-    "url": "https://www.toysrus.ca/fr/Slinky-classique/24AF1A6A.html"
+    "url": "https://www.toysrus.ca/fr/Slinky-classique/24AF1A6A.html",
+    "categories": [
+        "hFPgaxjyTS-09FMgOvQS9g",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "SoeT2PFORRuHrUwzGVMbug",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

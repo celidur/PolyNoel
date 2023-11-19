@@ -1,8 +1,15 @@
 {
     "id": "2E528DA9",
     "name": "Flotte de construction Cat",
-    "price": "19,99$",
+    "price": "1999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw47c8aa5d/images/2E528DA9_1.jpg",
     "description": "Flotte de construction Cat",
-    "url": "https://www.toysrus.ca/fr/Flotte-de-construction-Cat/2E528DA9.html"
+    "url": "https://www.toysrus.ca/fr/Flotte-de-construction-Cat/2E528DA9.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "U-n9wowiS5W0FO43ivGuig",
+        "JptOk_sgRPO6qa9Ojjq5pA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

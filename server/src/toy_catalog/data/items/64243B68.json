@@ -1,8 +1,15 @@
 {
     "id": "64243B68",
     "name": "Hasbro - Perfection",
-    "price": "29,99$",
+    "price": "2999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw63be4bc9/images/64243B68_1.jpg",
     "description": "Hasbro - Perfection",
-    "url": "https://www.toysrus.ca/fr/Hasbro---Perfection/64243B68.html"
+    "url": "https://www.toysrus.ca/fr/Hasbro---Perfection/64243B68.html",
+    "categories": [
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "xQB8DNTQRQ-dnL7UmEQNiw",
+        "H_wmbx3lSDmpJYqSeU4WRA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

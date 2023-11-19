@@ -1,8 +1,15 @@
 {
     "id": "248A7AB9",
     "name": "Merchant Ambassador - Table De Billard",
-    "price": "69,99$",
+    "price": "6999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw25c5bb50/images/248A7AB9_1.jpg",
     "description": "Merchant Ambassador - Table De Billard",
-    "url": "https://www.toysrus.ca/fr/Merchant-Ambassador---Table-De-Billard/248A7AB9.html"
+    "url": "https://www.toysrus.ca/fr/Merchant-Ambassador---Table-De-Billard/248A7AB9.html",
+    "categories": [
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "viGmcgt8Rz-ioh_w634X3Q",
+        "H_wmbx3lSDmpJYqSeU4WRA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

@@ -1,8 +1,15 @@
 {
     "id": "64BBB85C",
     "name": "Bentgo Kids imprime des écailles de sirène",
-    "price": "39,99$",
+    "price": "3999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwb6502890/images/64BBB85C_1.jpg",
     "description": "Bentgo Kids imprime des écailles de sirène",
-    "url": "https://www.toysrus.ca/fr/Bentgo-Kids-imprime-des-ecailles-de-sirene/64BBB85C.html"
+    "url": "https://www.toysrus.ca/fr/Bentgo-Kids-imprime-des-ecailles-de-sirene/64BBB85C.html",
+    "categories": [
+        "aa69db2e-bf33-40e6-a7a2-6bd809d9780a",
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "02f05a42-3c06-4b2b-976b-f683e4c933fe",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

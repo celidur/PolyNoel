@@ -1,8 +1,16 @@
 {
     "id": "04271A7D",
     "name": "Maisonnette Bord de Mer",
-    "price": "269,99$",
+    "price": "26999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw9fe29066/images/04271A7D_1.jpg",
     "description": "Maisonnette Bord de Mer",
-    "url": "https://www.toysrus.ca/fr/Maisonnette-Bord-de-Mer/04271A7D.html"
+    "url": "https://www.toysrus.ca/fr/Maisonnette-Bord-de-Mer/04271A7D.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "HQlg5JegRtq6W76gPqTCQw",
+        "C_x4GOEXRlii0g-JIQfqCQ",
+        "nR3vqPRmSISP5EWA8s8nXw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

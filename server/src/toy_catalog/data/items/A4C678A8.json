@@ -1,8 +1,15 @@
 {
     "id": "A4C678A8",
     "name": "Trousse de peinture peu salissante",
-    "price": "24,99$",
+    "price": "2499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw48222fb3/images/A4C678A8_1.jpg",
     "description": "Trousse de peinture peu salissante",
-    "url": "https://www.toysrus.ca/fr/Trousse-de-peinture-peu-salissante/A4C678A8.html"
+    "url": "https://www.toysrus.ca/fr/Trousse-de-peinture-peu-salissante/A4C678A8.html",
+    "categories": [
+        "oum-7vxuTbeC_7cuZaEQBA",
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "UohZnJvtQ0KaBYNj-NIQ4g",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

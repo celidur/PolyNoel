@@ -1,8 +1,13 @@
 {
     "id": "842D1AED",
     "name": "T-shirt à manches courtes TB TMNT - Bleu - 4T",
-    "price": "14,99$",
+    "price": "1499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw44a57dc5/images/842D1AED_1.jpg",
     "description": "T-shirt à manches courtes TB TMNT - Bleu - 4T",
-    "url": "https://www.toysrus.ca/fr/T-shirt-a-manches-courtes-TB-TMNT---Bleu---4T/842D1AED.html"
+    "url": "https://www.toysrus.ca/fr/T-shirt-a-manches-courtes-TB-TMNT---Bleu---4T/842D1AED.html",
+    "categories": [
+        "67271392-b424-4251-998a-20030a28dcd4",
+        "1794bd32-dba8-4a3e-b475-2eefe5d7d5a6",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

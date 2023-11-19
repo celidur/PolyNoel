@@ -1,8 +1,15 @@
 {
     "id": "94243B57",
     "name": "ALEX - Mixeur",
-    "price": "16,99$",
+    "price": "1699",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw95ccfc6f/images/94243B57_1.jpg",
     "description": "ALEX - Mixeur",
-    "url": "https://www.toysrus.ca/fr/ALEX---Mixeur/94243B57.html"
+    "url": "https://www.toysrus.ca/fr/ALEX---Mixeur/94243B57.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "p4GuDYzBTseOWhFMOiTgpw",
+        "Ek5AfUwASGWAcmFz9SzzoQ",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

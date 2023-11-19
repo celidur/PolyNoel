@@ -1,8 +1,15 @@
 {
     "id": "A46C99D9",
     "name": "Pop Stick Art",
-    "price": "5,98$",
+    "price": "598",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwb6c595b7/images/A46C99D9_1.jpg",
     "description": "Pop Stick Art",
-    "url": "https://www.toysrus.ca/fr/Pop-Stick-Art/A46C99D9.html"
+    "url": "https://www.toysrus.ca/fr/Pop-Stick-Art/A46C99D9.html",
+    "categories": [
+        "oum-7vxuTbeC_7cuZaEQBA",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "S-dx9fVvQeaj9Om-UzWcIQ",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

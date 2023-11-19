@@ -1,8 +1,14 @@
 {
     "id": "046F6BB4",
     "name": "YCOO - Robo (Robot programmable)",
-    "price": "69,99$",
+    "price": "6999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw5889543c/images/046F6BB4_1.jpg",
     "description": "YCOO - Robo (Robot programmable)",
-    "url": "https://www.toysrus.ca/fr/YCOO---Robo--Robot-programmable-/046F6BB4.html"
+    "url": "https://www.toysrus.ca/fr/YCOO---Robo--Robot-programmable-/046F6BB4.html",
+    "categories": [
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "PMNNqHMAQa-cS6BWERLfKA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

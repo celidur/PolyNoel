@@ -1,8 +1,15 @@
 {
     "id": "64BD5A6A",
     "name": "ALEX - Éléphant 7\"",
-    "price": "9,99$",
+    "price": "999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwd5ee6a30/images/64BD5A6A_1.jpg",
     "description": "ALEX - Éléphant 7\"",
-    "url": "https://www.toysrus.ca/fr/ALEX---Elephant-7-/64BD5A6A.html"
+    "url": "https://www.toysrus.ca/fr/ALEX---Elephant-7-/64BD5A6A.html",
+    "categories": [
+        "rFlTVotoSuuUXYkfGrXA2A",
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "k1dYuCMyRxenOpsOzZXidg",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

@@ -1,8 +1,14 @@
 {
     "id": "14B37A39",
     "name": "Distributeur désaltérant",
-    "price": "54,99$",
+    "price": "5499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dweaef526e/images/14B37A39_1.jpg",
     "description": "Distributeur désaltérant",
-    "url": "https://www.toysrus.ca/fr/Distributeur-desalterant/14B37A39.html"
+    "url": "https://www.toysrus.ca/fr/Distributeur-desalterant/14B37A39.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "nLE2pK09RWWGiTrGV-IhRw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

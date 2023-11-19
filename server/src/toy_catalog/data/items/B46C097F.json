@@ -1,8 +1,15 @@
 {
     "id": "B46C097F",
     "name": "Calendrier De L'Avent Avengers",
-    "price": "3,99$",
+    "price": "399",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw714782e0/images/B46C097F_1.jpg",
     "description": "Calendrier De L'Avent Avengers",
-    "url": "https://www.toysrus.ca/fr/Calendrier-De-L-Avent-Avengers/B46C097F.html"
+    "url": "https://www.toysrus.ca/fr/Calendrier-De-L-Avent-Avengers/B46C097F.html",
+    "categories": [
+        "87f478b0-94d0-48d9-b9ec-03c9960f91e8",
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "kjq_n5CIQz6cr_b4QfCSuA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

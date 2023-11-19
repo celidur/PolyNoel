@@ -1,8 +1,15 @@
 {
     "id": "5DAEBB57",
     "name": "Jeu RPM L'univers de l'automobile.",
-    "price": "23,98$",
+    "price": "2398",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwe10912c5/images/5DAEBB57_1.jpg",
     "description": "Jeu RPM L'univers de l'automobile.",
-    "url": "https://www.toysrus.ca/fr/Jeu-RPM-L-univers-de-l-automobile./5DAEBB57.html"
+    "url": "https://www.toysrus.ca/fr/Jeu-RPM-L-univers-de-l-automobile./5DAEBB57.html",
+    "categories": [
+        "Up8qo1oqR2iddXr602l1jg",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "D-X00pVTSma5ATw9sGGD2A",
+        "H_wmbx3lSDmpJYqSeU4WRA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

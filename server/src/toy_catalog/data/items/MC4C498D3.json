@@ -1,8 +1,13 @@
 {
     "id": "MC4C498D3",
     "name": "Ensemble Nike - Rose",
-    "price": "55,00$",
+    "price": "5500",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwf5a470cf/images/C4C498D3_1.jpg",
     "description": "Ensemble Nike - Rose",
-    "url": "https://www.toysrus.ca/fr/Ensemble-Nike---Rose/MC4C498D3.html"
+    "url": "https://www.toysrus.ca/fr/Ensemble-Nike---Rose/MC4C498D3.html",
+    "categories": [
+        "e79e20e2-748d-49df-87b7-ba8fdf921049",
+        "67271392-b424-4251-998a-20030a28dcd4",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

@@ -1,8 +1,18 @@
 {
     "id": "E4E30BFF",
     "name": "Dr. Seuss's Green Eggs and Ham - Édition anglaise",
-    "price": "24,99$",
+    "price": "2499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw8b53c706/images/E4E30BFF_1.jpg",
     "description": "Dr. Seuss's Green Eggs and Ham - Édition anglaise",
-    "url": "https://www.toysrus.ca/fr/Dr.-Seuss-s-Green-Eggs-and-Ham---Edition-anglaise/E4E30BFF.html"
+    "url": "https://www.toysrus.ca/fr/Dr.-Seuss-s-Green-Eggs-and-Ham---Edition-anglaise/E4E30BFF.html",
+    "categories": [
+        "ba304553-8bb1-494e-864f-a22462756e32",
+        "5O3R0yJFRvmmQiA4vDDzvA",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "nz2fYPxzTaO1fJoZq0u76Q",
+        "ufviqKmGQNq5gej63royHg",
+        "FSF6FiQ-T82JX0ZLAn8XKw",
+        "aec5bdbc-2805-4827-96d5-9f4e41886f33",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

@@ -1,8 +1,13 @@
 {
     "id": "E4011A2C",
     "name": "Tuque Hot Wheels avec pompon pour garçon",
-    "price": "9,99$",
+    "price": "999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw70babeea/images/E4011A2C_1.jpg",
     "description": "Tuque Hot Wheels avec pompon pour garçon",
-    "url": "https://www.toysrus.ca/fr/Tuque-Hot-Wheels-avec-pompon-pour-garcon/E4011A2C.html"
+    "url": "https://www.toysrus.ca/fr/Tuque-Hot-Wheels-avec-pompon-pour-garcon/E4011A2C.html",
+    "categories": [
+        "9c4b3adf-29d9-456e-86d9-2b689e53a16a",
+        "67271392-b424-4251-998a-20030a28dcd4",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

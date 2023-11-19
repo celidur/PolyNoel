@@ -1,8 +1,15 @@
 {
     "id": "DA71C582",
     "name": "Xbox One Rage 2",
-    "price": "59,98$",
+    "price": "5998",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwe87f4d88/images/DA71C582_1.jpg",
     "description": "Xbox One Rage 2",
-    "url": "https://www.toysrus.ca/fr/Xbox-One-Rage-2/DA71C582.html"
+    "url": "https://www.toysrus.ca/fr/Xbox-One-Rage-2/DA71C582.html",
+    "categories": [
+        "KP8kb676TQ6gg32Hm8mimg",
+        "396cd5a9-5878-4e36-895f-1733be3804da",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "lLC7wLFUTcmYCFFbBF9txA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

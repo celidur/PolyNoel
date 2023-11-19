@@ -1,8 +1,14 @@
 {
     "id": "74D7FA93",
     "name": "Mossy Oak Talkies-Walkies",
-    "price": "19,99$",
+    "price": "1999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw54d63dac/images/74D7FA93_1.jpg",
     "description": "Mossy Oak Talkies-Walkies",
-    "url": "https://www.toysrus.ca/fr/Mossy-Oak-Talkies-Walkies/74D7FA93.html"
+    "url": "https://www.toysrus.ca/fr/Mossy-Oak-Talkies-Walkies/74D7FA93.html",
+    "categories": [
+        "LRsfCDC0TyG2dyvcxjN-ig",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

@@ -1,8 +1,16 @@
 {
     "id": "14DCC864",
     "name": "Éclaboussure de tornade",
-    "price": "32,99$",
+    "price": "3299",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw76c8c8ac/images/14DCC864_1.jpg",
     "description": "Éclaboussure de tornade",
-    "url": "https://www.toysrus.ca/fr/Eclaboussure-de-tornade/14DCC864.html"
+    "url": "https://www.toysrus.ca/fr/Eclaboussure-de-tornade/14DCC864.html",
+    "categories": [
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "c125afb3-d4d3-4ca3-87f3-677c46c7d308",
+        "nR3vqPRmSISP5EWA8s8nXw",
+        "r94NDRSOTcGURuA_VDhd3g",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

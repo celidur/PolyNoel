@@ -1,8 +1,15 @@
 {
     "id": "34D61862",
     "name": "Mon premier set de cuisine noir",
-    "price": "7,99$",
+    "price": "799",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw1398a650/images/34D61862_1.jpg",
     "description": "Mon premier set de cuisine noir",
-    "url": "https://www.toysrus.ca/fr/Mon-premier-set-de-cuisine-noir/34D61862.html"
+    "url": "https://www.toysrus.ca/fr/Mon-premier-set-de-cuisine-noir/34D61862.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "p4GuDYzBTseOWhFMOiTgpw",
+        "Ek5AfUwASGWAcmFz9SzzoQ",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

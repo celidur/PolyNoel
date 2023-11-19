@@ -1,8 +1,14 @@
 {
     "id": "046B0BDC",
     "name": "Disney - Bambi Peluche",
-    "price": "14,99$",
+    "price": "1499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwd89bc955/images/046B0BDC_1.jpg",
     "description": "Disney - Bambi Peluche",
-    "url": "https://www.toysrus.ca/fr/Disney---Bambi-Peluche/046B0BDC.html"
+    "url": "https://www.toysrus.ca/fr/Disney---Bambi-Peluche/046B0BDC.html",
+    "categories": [
+        "rFlTVotoSuuUXYkfGrXA2A",
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

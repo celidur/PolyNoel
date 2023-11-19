@@ -1,8 +1,16 @@
 {
     "id": "C92D3075",
     "name": "Télescope.",
-    "price": "29,99$",
+    "price": "2999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwb231a4b1/images/C92D3075_1.jpg",
     "description": "Télescope.",
-    "url": "https://www.toysrus.ca/fr/Telescope./C92D3075.html"
+    "url": "https://www.toysrus.ca/fr/Telescope./C92D3075.html",
+    "categories": [
+        "tZ8rQzhUSR-gN4VdKARaAg",
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "C_x4GOEXRlii0g-JIQfqCQ",
+        "nR3vqPRmSISP5EWA8s8nXw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

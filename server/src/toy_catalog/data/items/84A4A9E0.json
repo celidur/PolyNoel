@@ -1,8 +1,13 @@
 {
     "id": "84A4A9E0",
     "name": "Rococo Shorts Gris",
-    "price": "11,99$",
+    "price": "1199",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw9ff2d1e3/images/84A4A9E0_1.jpg",
     "description": "Rococo Shorts Gris 18/24M",
-    "url": "https://www.toysrus.ca/fr/Rococo-Shorts-Gris-18-24M/84A4A9E0.html"
+    "url": "https://www.toysrus.ca/fr/Rococo-Shorts-Gris-18-24M/84A4A9E0.html",
+    "categories": [
+        "67271392-b424-4251-998a-20030a28dcd4",
+        "9246b207-3a30-417c-bc04-02615dd15461",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

@@ -1,8 +1,13 @@
 {
     "id": "MB45E59CA",
     "name": "Baskets Marine",
-    "price": "29,99$",
+    "price": "2999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwcb66e2e1/images/B45E59CA_1.jpg",
     "description": "Baskets Marine",
-    "url": "https://www.toysrus.ca/fr/Baskets-Marine/MB45E59CA.html"
+    "url": "https://www.toysrus.ca/fr/Baskets-Marine/MB45E59CA.html",
+    "categories": [
+        "596c8d6d-31d5-49cb-81c8-68733a3eedd9",
+        "67271392-b424-4251-998a-20030a28dcd4",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

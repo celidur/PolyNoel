@@ -1,8 +1,15 @@
 {
     "id": "6440F9F9",
     "name": "TCG Toys - Boogers",
-    "price": "14,98$",
+    "price": "1498",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwcaed767a/images/6440F9F9_1.jpg",
     "description": "TCG Toys - Boogers",
-    "url": "https://www.toysrus.ca/fr/TCG-Toys---Boogers/6440F9F9.html"
+    "url": "https://www.toysrus.ca/fr/TCG-Toys---Boogers/6440F9F9.html",
+    "categories": [
+        "1fjjZGjyQQ289DQZw1JMdw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "DlsBn-0tRoWdsZnanywNvw",
+        "H_wmbx3lSDmpJYqSeU4WRA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

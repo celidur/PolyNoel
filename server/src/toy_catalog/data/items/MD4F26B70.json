@@ -1,8 +1,13 @@
 {
     "id": "MD4F26B70",
     "name": "Marvel - Veste Réversible - Avengers - Bleue",
-    "price": "49,99$",
+    "price": "4999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw08d1655f/images/D4F26B70_1.jpg",
     "description": "Marvel - Veste Réversible - Avengers - Bleue",
-    "url": "https://www.toysrus.ca/fr/Marvel---Veste-Reversible---Avengers---Bleue/MD4F26B70.html"
+    "url": "https://www.toysrus.ca/fr/Marvel---Veste-Reversible---Avengers---Bleue/MD4F26B70.html",
+    "categories": [
+        "dc39db50-6c4b-4511-bbcb-06ce3c5224f1",
+        "67271392-b424-4251-998a-20030a28dcd4",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

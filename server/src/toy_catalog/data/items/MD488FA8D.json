@@ -1,8 +1,13 @@
 {
     "id": "MD488FA8D",
     "name": "Ensemble t-shirt et short de vélo Nike - Rose",
-    "price": "40,00$",
+    "price": "4000",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwcb58a4a9/images/D488FA8D_1.jpg",
     "description": "Ensemble t-shirt et short de vélo Nike - Rose",
-    "url": "https://www.toysrus.ca/fr/Ensemble-t-shirt-et-short-de-velo-Nike---Rose/MD488FA8D.html"
+    "url": "https://www.toysrus.ca/fr/Ensemble-t-shirt-et-short-de-velo-Nike---Rose/MD488FA8D.html",
+    "categories": [
+        "e79e20e2-748d-49df-87b7-ba8fdf921049",
+        "67271392-b424-4251-998a-20030a28dcd4",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

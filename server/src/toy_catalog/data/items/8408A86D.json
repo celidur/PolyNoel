@@ -1,8 +1,14 @@
 {
     "id": "8408A86D",
     "name": "Mega Construx - Pokémon - Magicarpe",
-    "price": "9,99$",
+    "price": "999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw039629d5/images/8408A86D_1.jpg",
     "description": "Mega Construx - Pokémon - Magicarpe",
-    "url": "https://www.toysrus.ca/fr/Mega-Construx---Pokemon---Magicarpe/8408A86D.html"
+    "url": "https://www.toysrus.ca/fr/Mega-Construx---Pokemon---Magicarpe/8408A86D.html",
+    "categories": [
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "yMgFZPBSSbS0W0_67S6H2A",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

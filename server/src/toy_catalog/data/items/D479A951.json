@@ -1,8 +1,14 @@
 {
     "id": "D479A951",
     "name": "Zoob- Car Designer",
-    "price": "34,99$",
+    "price": "3499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw12876da1/images/D479A951_1.jpg",
     "description": "Zoob- Car Designer",
-    "url": "https://www.toysrus.ca/fr/Zoob--Car-Designer/D479A951.html"
+    "url": "https://www.toysrus.ca/fr/Zoob--Car-Designer/D479A951.html",
+    "categories": [
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "yMgFZPBSSbS0W0_67S6H2A",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

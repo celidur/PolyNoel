@@ -1,8 +1,16 @@
 {
     "id": "04FA8A2D",
     "name": "Eraser Maker",
-    "price": "32,99$",
+    "price": "3299",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw8a8ebf30/images/04FA8A2D_1.jpg",
     "description": "Eraser Maker",
-    "url": "https://www.toysrus.ca/fr/Eraser-Maker/04FA8A2D.html"
+    "url": "https://www.toysrus.ca/fr/Eraser-Maker/04FA8A2D.html",
+    "categories": [
+        "1fjjZGjyQQ289DQZw1JMdw",
+        "oum-7vxuTbeC_7cuZaEQBA",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "wB8JkNLKTD6LAnQHDVh_Kw",
+        "S-dx9fVvQeaj9Om-UzWcIQ",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

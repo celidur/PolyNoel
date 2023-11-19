@@ -1,8 +1,13 @@
 {
     "id": "MB499DAC6",
     "name": "Rococo Shorts Marine",
-    "price": "11,99$",
+    "price": "1199",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwcdf2a5ac/images/B499DAC6_1.jpg",
     "description": "Rococo Shorts Marine",
-    "url": "https://www.toysrus.ca/fr/Rococo-Shorts-Marine/MB499DAC6.html"
+    "url": "https://www.toysrus.ca/fr/Rococo-Shorts-Marine/MB499DAC6.html",
+    "categories": [
+        "67271392-b424-4251-998a-20030a28dcd4",
+        "9246b207-3a30-417c-bc04-02615dd15461",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

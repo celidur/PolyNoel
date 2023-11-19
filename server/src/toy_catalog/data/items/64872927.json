@@ -1,8 +1,16 @@
 {
     "id": "64872927",
     "name": "Fabrique d'autocollants Imaginarium",
-    "price": "20,98$",
+    "price": "2098",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwc6d0243d/images/64872927_1.jpg",
     "description": "Fabrique d'autocollants Imaginarium",
-    "url": "https://www.toysrus.ca/fr/Fabrique-d-autocollants-Imaginarium/64872927.html"
+    "url": "https://www.toysrus.ca/fr/Fabrique-d-autocollants-Imaginarium/64872927.html",
+    "categories": [
+        "oum-7vxuTbeC_7cuZaEQBA",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "wB8JkNLKTD6LAnQHDVh_Kw",
+        "S-dx9fVvQeaj9Om-UzWcIQ",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

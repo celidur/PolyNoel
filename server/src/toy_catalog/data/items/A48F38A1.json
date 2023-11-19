@@ -1,8 +1,15 @@
 {
     "id": "A48F38A1",
     "name": "Dyson Ball Vacuum",
-    "price": "49,99$",
+    "price": "4999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwd41a41ce/images/A48F38A1_1.jpg",
     "description": "Dyson Ball Vacuum",
-    "url": "https://www.toysrus.ca/fr/Dyson-Ball-Vacuum/A48F38A1.html"
+    "url": "https://www.toysrus.ca/fr/Dyson-Ball-Vacuum/A48F38A1.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "p4GuDYzBTseOWhFMOiTgpw",
+        "Ek5AfUwASGWAcmFz9SzzoQ",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

@@ -1,8 +1,13 @@
 {
     "id": "747C9A6E",
     "name": "Rococo Haut à manches courte Ancre Blanc",
-    "price": "11,99$",
+    "price": "1199",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw68e668de/images/747C9A6E_1.jpg",
     "description": "Rococo Haut à manches courte Ancre Blanc 4/5",
-    "url": "https://www.toysrus.ca/fr/Rococo-Haut-a-manches-courte-Ancre-Blanc-4-5/747C9A6E.html"
+    "url": "https://www.toysrus.ca/fr/Rococo-Haut-a-manches-courte-Ancre-Blanc-4-5/747C9A6E.html",
+    "categories": [
+        "67271392-b424-4251-998a-20030a28dcd4",
+        "1794bd32-dba8-4a3e-b475-2eefe5d7d5a6",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

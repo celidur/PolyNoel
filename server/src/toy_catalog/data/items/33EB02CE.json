@@ -1,8 +1,15 @@
 {
     "id": "33EB02CE",
     "name": "Catan - Édition française",
-    "price": "69,99$",
+    "price": "6999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwf9f12c22/images/33EB02CE_1.JPG",
     "description": "Catan - Édition française",
-    "url": "https://www.toysrus.ca/fr/Catan---Edition-francaise/33EB02CE.html"
+    "url": "https://www.toysrus.ca/fr/Catan---Edition-francaise/33EB02CE.html",
+    "categories": [
+        "1fjjZGjyQQ289DQZw1JMdw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "D-X00pVTSma5ATw9sGGD2A",
+        "H_wmbx3lSDmpJYqSeU4WRA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

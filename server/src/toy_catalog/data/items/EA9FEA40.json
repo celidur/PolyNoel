@@ -1,8 +1,15 @@
 {
     "id": "EA9FEA40",
     "name": "Bus ensoleillé de garderie de Calico Critters",
-    "price": "34,99$",
+    "price": "3499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwecd86c14/images/EA9FEA40_1.jpg",
     "description": "Bus ensoleillé de garderie de Calico Critters",
-    "url": "https://www.toysrus.ca/fr/Bus-ensoleille-de-garderie-de-Calico-Critters/EA9FEA40.html"
+    "url": "https://www.toysrus.ca/fr/Bus-ensoleille-de-garderie-de-Calico-Critters/EA9FEA40.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "E7HvAgCgQmiDIthWj-waHQ",
+        "kSzVH6Q3RdGcG-yk9-k2jg",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

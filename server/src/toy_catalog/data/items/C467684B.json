@@ -1,8 +1,16 @@
 {
     "id": "C467684B",
     "name": "Tour d'observation en bois TP",
-    "price": "399,99$",
+    "price": "39999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw6e839c89/images/C467684B_1.jpg",
     "description": "Tour d'observation en bois TP",
-    "url": "https://www.toysrus.ca/fr/Tour-d-observation-en-bois-TP/C467684B.html"
+    "url": "https://www.toysrus.ca/fr/Tour-d-observation-en-bois-TP/C467684B.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "HQlg5JegRtq6W76gPqTCQw",
+        "C_x4GOEXRlii0g-JIQfqCQ",
+        "nR3vqPRmSISP5EWA8s8nXw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

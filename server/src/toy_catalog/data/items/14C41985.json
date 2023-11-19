@@ -1,8 +1,16 @@
 {
     "id": "14C41985",
     "name": "My First Jumpy Dog, Brown",
-    "price": "49,99$",
+    "price": "4999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwa71b4941/images/14C41985_1.jpg",
     "description": "My First Jumpy Dog, Brown",
-    "url": "https://www.toysrus.ca/fr/My-First-Jumpy-Dog--Brown/14C41985.html"
+    "url": "https://www.toysrus.ca/fr/My-First-Jumpy-Dog--Brown/14C41985.html",
+    "categories": [
+        "lsodjjnFRaG1cGrpTjKWnA",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "ufviqKmGQNq5gej63royHg",
+        "C_x4GOEXRlii0g-JIQfqCQ",
+        "nR3vqPRmSISP5EWA8s8nXw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

@@ -1,8 +1,17 @@
 {
     "id": "24D0F98A",
     "name": "LEGO Star Wars Awesome Vehicles - Édition anglaise",
-    "price": "25,99$",
+    "price": "2599",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwfbe094d2/images/24D0F98A_1.jpg",
     "description": "LEGO Star Wars Awesome Vehicles - Édition anglaise",
-    "url": "https://www.toysrus.ca/fr/LEGO-Star-Wars-Awesome-Vehicles---Edition-anglaise/24D0F98A.html"
+    "url": "https://www.toysrus.ca/fr/LEGO-Star-Wars-Awesome-Vehicles---Edition-anglaise/24D0F98A.html",
+    "categories": [
+        "ba304553-8bb1-494e-864f-a22462756e32",
+        "35b296e1-fb6d-4f54-b686-df22a28db9ce",
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "Bo67ARGhRP6r9AUS1uBPUg",
+        "FSF6FiQ-T82JX0ZLAn8XKw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

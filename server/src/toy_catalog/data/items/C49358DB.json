@@ -1,8 +1,15 @@
 {
     "id": "C49358DB",
     "name": "UNO jeu de cartes",
-    "price": "8,99$",
+    "price": "899",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwae155071/images/C49358DB_1.jpg",
     "description": "UNO jeu de cartes",
-    "url": "https://www.toysrus.ca/fr/UNO-jeu-de-cartes/C49358DB.html"
+    "url": "https://www.toysrus.ca/fr/UNO-jeu-de-cartes/C49358DB.html",
+    "categories": [
+        "1fjjZGjyQQ289DQZw1JMdw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "H_wmbx3lSDmpJYqSeU4WRA",
+        "V8SwQvVESCO7wX8XxLoZEA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

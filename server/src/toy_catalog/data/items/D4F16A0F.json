@@ -1,8 +1,15 @@
 {
     "id": "D4F16A0F",
     "name": "Camion à benne Acier",
-    "price": "59,99$",
+    "price": "5999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw857827c9/images/D4F16A0F_1.jpg",
     "description": "Camion à benne Acier",
-    "url": "https://www.toysrus.ca/fr/Camion-a-benne-Acier/D4F16A0F.html"
+    "url": "https://www.toysrus.ca/fr/Camion-a-benne-Acier/D4F16A0F.html",
+    "categories": [
+        "KZZsR5bdRIC5lTNJeyihTw",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "U-n9wowiS5W0FO43ivGuig",
+        "JptOk_sgRPO6qa9Ojjq5pA",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

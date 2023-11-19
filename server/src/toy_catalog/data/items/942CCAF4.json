@@ -1,8 +1,14 @@
 {
     "id": "942CCAF4",
     "name": "Ballon-Sauteur Princess",
-    "price": "19,99$",
+    "price": "1999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw796ac1c8/images/942CCAF4_1.jpg",
     "description": "Ballon-Sauteur Princess",
-    "url": "https://www.toysrus.ca/fr/Ballon-Sauteur-Princess/942CCAF4.html"
+    "url": "https://www.toysrus.ca/fr/Ballon-Sauteur-Princess/942CCAF4.html",
+    "categories": [
+        "vdjSQqKnTw6VVik-7a3i3g",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "nR3vqPRmSISP5EWA8s8nXw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

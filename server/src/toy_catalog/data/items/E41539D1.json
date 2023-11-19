@@ -1,8 +1,13 @@
 {
     "id": "E41539D1",
     "name": "Warner Brothers Batman Haut À Manches Courtes Gris",
-    "price": "14,99$",
+    "price": "1499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwe7e023e6/images/E41539D1_1.jpg",
     "description": "Warner Brothers Batman Haut À Manches Courtes Gris 3/4",
-    "url": "https://www.toysrus.ca/fr/Warner-Brothers-Batman-Haut-A-Manches-Courtes-Gris-3-4/E41539D1.html"
+    "url": "https://www.toysrus.ca/fr/Warner-Brothers-Batman-Haut-A-Manches-Courtes-Gris-3-4/E41539D1.html",
+    "categories": [
+        "67271392-b424-4251-998a-20030a28dcd4",
+        "1794bd32-dba8-4a3e-b475-2eefe5d7d5a6",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

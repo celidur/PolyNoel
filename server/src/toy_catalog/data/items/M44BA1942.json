@@ -1,8 +1,13 @@
 {
     "id": "M44BA1942",
     "name": "Chaussures à brides noires pour tout-petit",
-    "price": "32,99$",
+    "price": "3299",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw271103b0/images/44BA1942_1.jpg",
     "description": "Chaussures à brides noires pour tout-petit",
-    "url": "https://www.toysrus.ca/fr/Chaussures-a-brides-noires-pour-tout-petit/M44BA1942.html"
+    "url": "https://www.toysrus.ca/fr/Chaussures-a-brides-noires-pour-tout-petit/M44BA1942.html",
+    "categories": [
+        "596c8d6d-31d5-49cb-81c8-68733a3eedd9",
+        "67271392-b424-4251-998a-20030a28dcd4",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

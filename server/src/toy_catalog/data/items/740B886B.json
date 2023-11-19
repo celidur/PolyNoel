@@ -1,8 +1,16 @@
 {
     "id": "740B886B",
     "name": "Maison cubique en bois TP",
-    "price": "369,99$",
+    "price": "36999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw1bfc2ce1/images/740B886B_1.jpg",
     "description": "Maison cubique en bois TP",
-    "url": "https://www.toysrus.ca/fr/Maison-cubique-en-bois-TP/740B886B.html"
+    "url": "https://www.toysrus.ca/fr/Maison-cubique-en-bois-TP/740B886B.html",
+    "categories": [
+        "k1dYuCMyRxenOpsOzZXidg",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "HQlg5JegRtq6W76gPqTCQw",
+        "C_x4GOEXRlii0g-JIQfqCQ",
+        "nR3vqPRmSISP5EWA8s8nXw",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

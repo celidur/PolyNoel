@@ -1,8 +1,13 @@
 {
     "id": "M340FBA11",
     "name": "Rococo Chemise Flanelle Brun",
-    "price": "13,97$",
+    "price": "1397",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwfdec38e2/images/340FBA11_1.jpg",
     "description": "Rococo Chemise Flanelle Brun",
-    "url": "https://www.toysrus.ca/fr/Rococo-Chemise-Flanelle-Brun/M340FBA11.html"
+    "url": "https://www.toysrus.ca/fr/Rococo-Chemise-Flanelle-Brun/M340FBA11.html",
+    "categories": [
+        "67271392-b424-4251-998a-20030a28dcd4",
+        "1794bd32-dba8-4a3e-b475-2eefe5d7d5a6",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

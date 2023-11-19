@@ -1,8 +1,13 @@
 {
     "id": "54472995",
     "name": "T-Shirt Manches Courtes Mario Noir",
-    "price": "19,99$",
+    "price": "1999",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dw30f19c59/images/54472995_1.jpg",
     "description": "T-Shirt Manches Courtes Mario Noir - 6",
-    "url": "https://www.toysrus.ca/fr/T-Shirt-Manches-Courtes-Mario-Noir---6/54472995.html"
+    "url": "https://www.toysrus.ca/fr/T-Shirt-Manches-Courtes-Mario-Noir---6/54472995.html",
+    "categories": [
+        "67271392-b424-4251-998a-20030a28dcd4",
+        "1794bd32-dba8-4a3e-b475-2eefe5d7d5a6",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }

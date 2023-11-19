@@ -1,8 +1,16 @@
 {
     "id": "D467A9DA",
     "name": "DISCOVERY Chimie Extrême",
-    "price": "34,99$",
+    "price": "3499",
     "image": "https://www.toysrus.ca/dw/image/v2/BDFX_PRD/on/demandware.static/-/Sites-toys-master-catalog/default/dwd6799095/images/D467A9DA_1.jpg",
     "description": "DISCOVERY Chimie Extrême",
-    "url": "https://www.toysrus.ca/fr/DISCOVERY-Chimie-Extreme/D467A9DA.html"
+    "url": "https://www.toysrus.ca/fr/DISCOVERY-Chimie-Extreme/D467A9DA.html",
+    "categories": [
+        "Up8qo1oqR2iddXr602l1jg",
+        "MdvawtJvSomMvUa1KjQc_A",
+        "H-0oXd77RpuqhVvQ4Ncdlw",
+        "GHqce8v4S2axCV9ZPkqyeQ",
+        "SqNRVU9HTHuhIqHxOJaN8w",
+        "YoWnZV46QhOKwjAMbt3Ibw"
+    ]
 }
