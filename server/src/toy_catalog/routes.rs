@@ -3,7 +3,7 @@ use axum::{
     extract::{State, Path},
     http::StatusCode,
     response::IntoResponse,
-    routing::{get, post},
+    routing::{get, post, put},
     Json, Router,
 };
 use serde::{Deserialize, Serialize};
@@ -15,6 +15,8 @@ pub fn routes() -> Router<App> {
         .route("/toy/:id", get(get_item))
         .route("/toys", get(get_all_items))
         .route("/category/:id", post(add_category).delete(delete_category))
+        .route("/categories", get(get_categories))
+        .route("/price_born", put(modify_price_born))
 }
 
 #[utoipa::path(
@@ -135,5 +137,43 @@ pub async fn delete_category(
 ) -> impl IntoResponse {
     let mut user = app.users.lock().await;
     user.remove_category(&id);
+    StatusCode::OK
+}
+
+#[utoipa::path(
+    get,
+    path = "/toy_catalog/categories",
+    responses(
+        (status = 200, description = "Get all categories", body = Vec<Category>),
+    ),
+)]
+pub async fn get_categories(State(app): State<App>) -> impl IntoResponse {
+    // give the possibility categories of user
+    todo!()
+}
+
+#[derive(Serialize, Deserialize, ToSchema, Debug, Default)]
+pub struct NewPrice{
+    inferior: u32,
+    superior: u32,
+}
+
+#[utoipa::path(
+    put,
+    path = "/toy_catalog/price_born",
+    responses(
+        (status = 200, description = "Price born modified successfully"),
+    ),
+    params(
+        ("price_born" = NewPrice, description = "price born of toy")
+    ), 
+)]
+pub async fn modify_price_born(
+    State(app): State<App>,
+    Json(price_born): Json<NewPrice>,
+) -> impl IntoResponse {
+    let mut user = app.users.lock().await;
+    let price_born = price_born.inferior..price_born.superior;
+    user.modify_price_born(price_born);
     StatusCode::OK
 }
