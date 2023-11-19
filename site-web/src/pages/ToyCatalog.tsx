@@ -78,6 +78,7 @@ function TinderGame() : JSX.Element {
 function accept(toy:ToyCardProps, callback :  (setSwitchFlag:boolean)=>void) : void {
     console.log("Accepted : " + toy.title);
     callback(true);
+    httpManager.updateToyLike({item_id:toy.id,like:true});
 }
 interface DecisionSquareProps {
     callback: (setSwitchFlag:boolean)=>void,
@@ -106,6 +107,7 @@ function AcceptSquare({callback, cards}: DecisionSquareProps) : JSX.Element {
 function refuse(toy:ToyCardProps, callback : (setSwitchFlag:boolean)=>void) : void {
     console.log("Refused : " + toy.title);
     callback(true);
+    httpManager.updateToyLike({item_id:toy.id,like:false});
 }
 
 function RefuseSquare({callback, cards} : DecisionSquareProps) : JSX.Element {
