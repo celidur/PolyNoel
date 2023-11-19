@@ -18,7 +18,13 @@ use crate::toy_catalog;
             toy_catalog::routes::delete_category,
         ),
         components(
-            schemas(child_labor::task::Task, child_labor::task::CreateTask, toy_catalog::toy::Toy, toy_catalog::routes::LikeToy)
+            schemas(
+                child_labor::task::Task,
+                child_labor::task::CreateTask,
+                toy_catalog::toy::Toy,
+                toy_catalog::routes::LikeToy,
+                toy_catalog::routes::NewPrice
+            )
         ),
         tags(
             (name = "PolyNoel", description = "A battlepass for christmas")
