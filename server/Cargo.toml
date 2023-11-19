@@ -17,3 +17,5 @@ tracing-subscriber = { version = "0.3", features = ["env-filter"] }
 uuid = { version = "1.5.0", features = ["v4", "fast-rng", "macro-diagnostics"] }
 utoipa = { version = "4.1.0", features = ["axum_extras"] }
 utoipa-swagger-ui = { version = "4.0.0", features = ["axum"] }
+rand = "0.8.5"
+compact_str = { version = "0.7.1", features = ["serde"] }

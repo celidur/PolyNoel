@@ -1,0 +1,36 @@
+.toyCard {
+    height: 50vh;
+    position: absolute;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #8b0000;
+    border-radius: 50px;
+
+}
+.toyCard h1 {
+    color:white;
+    text-align: center;
+}
+.toyCard img {
+    width: 100%;
+}
+
+.cardDragContainer {
+    height: 50vh;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.cardStack {
+    height: 50vh;
+    width: 40vw;
+}
+
+.decisionSquare {
+    flex-grow: 1;
+    height:100%;
+    border-radius: 50px;
+}
+
