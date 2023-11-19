@@ -1,1 +1,1 @@
-export const SERVER_URL : string = "http://localhost:6969";
+export const SERVER_URL : string = "https://polynoel.polyorbite.com/";
