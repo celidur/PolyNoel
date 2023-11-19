@@ -2,12 +2,17 @@ use compact_str::CompactString;
 use serde::Deserialize;
 use std::{collections::HashSet, fs, io::BufReader, path::Path};
 
-#[derive(Default, Debug, Deserialize, Clone)]
+const fn one() -> f32 {
+    1.0
+}
+
+#[derive(Debug, Deserialize, Clone)]
 pub struct Category {
     pub id: CompactString,
     pub name: CompactString,
     pub category: Vec<CompactString>,
     pub items: HashSet<CompactString>,
+    #[serde(default = "one")]
     pub score: f32,
 }
 

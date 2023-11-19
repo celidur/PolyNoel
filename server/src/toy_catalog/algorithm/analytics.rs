@@ -1,15 +1,14 @@
 use super::categories::Categories;
 use super::category::Category;
+use rand::seq::SliceRandom;
 use rand::Rng;
-
-type CategoryId = String;
 
 pub struct Analytics {
     categories: Categories,
     score: f32,
 }
 
-type ItemId<'a> = &'a str;
+type ItemId<'a> = String;
 
 impl Analytics {
     pub fn new(categories: &Categories) -> Self {
@@ -23,26 +22,32 @@ impl Analytics {
     pub fn select(&self) -> ItemId {
         let mut rng = rand::thread_rng();
         let mut total = rng.gen_range(0.0..self.score);
-        for Category { id, score, .. } in self.categories.iter() {
-            total -= score;
+        for c in self.categories.iter() {
+            total -= c.score;
             if total <= 0.0 {
-                break;
+                let items: Vec<_> = c.items.iter().cloned().collect();
+                return items.choose(&mut rng).unwrap().to_string();
             }
         }
         unreachable!("We shouldn't not run out of item before the end");
     }
 
-    pub fn add_review(&mut self, category: &[&str], liked: bool) {
+    pub fn add_review(&mut self, item_id: &str, categories: &Vec<String>, liked: bool) -> bool {
         let factor = if liked { 2.0 } else { 0.5 };
-        let factor = factor / category.len() as f32;
+        let factor = factor / categories.len() as f32;
+        if self.categories.iter().all(|c| c.items.contains(item_id)) {
+            return false;
+        }
         for Category { score, .. } in self
             .categories
             .iter_mut()
-            .filter(|Category { id, .. }| category.contains(&id.as_str()))
+            .filter(|Category { id, .. }| categories.contains(&id.to_string()))
         {
             self.score += (*score * factor) - *score;
             *score *= factor;
         }
+        self.remove_item(item_id);
+        true
     }
 
     pub fn add_category(&mut self, category: Category) {
@@ -53,6 +58,9 @@ impl Analytics {
     pub fn remove_item(&mut self, item_id: &str) {
         self.categories.retain_mut(|c| {
             c.items.remove(item_id);
+            if c.items.is_empty() {
+                self.score -= c.score;
+            }
             !c.items.is_empty()
         })
     }
