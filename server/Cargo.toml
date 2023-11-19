@@ -14,7 +14,8 @@ serde_json = "1.0.68"
 tokio = { version = "1.0", features = ["full"] }
 tracing = "0.1"
 tracing-subscriber = { version = "0.3", features = ["env-filter"] }
-aide = { version = "0.12.0", features = ["axum", "redoc"] }
-schemars = "0.8.16"
-axum-jsonschema = { version = "0.7.0", features = ["aide"] }
 uuid = { version = "1.5.0", features = ["v4", "fast-rng", "macro-diagnostics"] }
+utoipa = { version = "4.1.0", features = ["axum_extras"] }
+utoipa-swagger-ui = { version = "4.0.0", features = ["axum"] }
+utoipa-redoc = { version = "1.0.0", features = ["axum"] }
+utoipa-rapidoc = { version = "1.0.0", features = ["axum"] }
