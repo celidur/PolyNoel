@@ -25,6 +25,7 @@ impl User {
     }
 
     pub fn add_category(&mut self, category: Category) {
+        // TODO: add item only respect privce and does not exist in selected_item and disliked_item
         self.analytics.add_category(category);
     }
 
@@ -33,6 +34,7 @@ impl User {
     }
 
     pub fn modify_price_born(&mut self, price_born: Range<u32>) {
+        // TODO: modify item in analytics to respect price_born
         self.price_born = price_born;
     }
 }
