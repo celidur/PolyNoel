@@ -130,7 +130,7 @@ export default class HTTPManager {
       await HTTPInterface.POST(`${this.toysURL}/${this.catalogCategoryURL}/${id}`, {});
     }
 
-    async geToyToSwipe() : Promise<Toy> {
+    async getToyToSwipe() : Promise<Toy> {
       return await HTTPInterface.GET(`${this.toysURL}/${this.catalogSwipToysURL}`);
     }
 

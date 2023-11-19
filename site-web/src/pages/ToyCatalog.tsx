@@ -8,9 +8,10 @@ import styles from "../assets/css/ToyCatalog.module.css"
 import { ToyCardProps } from "../ToyCatalog/ToyCard";
 import DraggableToyCard from "../ToyCatalog/DraggableToyCard";
 import CustomDragLayer from "../ToyCatalog/CustomDragLayer";
-
+import HTTPManager from "../assets/js/http_manager";
 import image1 from "../assets/placeholder/toy1.webp"
 
+const httpManager = new HTTPManager();
 export default function ToyCatalog() : JSX.Element {
     return (
         <DndProvider backend={isMobile ? TouchBackend : HTML5Backend}>
@@ -19,28 +20,39 @@ export default function ToyCatalog() : JSX.Element {
     );
 }
 
-function loadToys(amount : number) : ToyCardProps[] {
-    return [
-        {id:"1",title:"Test1", imgSrc:image1, difficulty:5},
-        {id:"2", title:"Test2", imgSrc:image1, difficulty:4},
-        {id:"3", title:"Test3", imgSrc:image1, difficulty:4}
-    ]
+async function loadToys(amount : number) : Promise<ToyCardProps[]> {
+    const newToys : ToyCardProps[] = [];
+    for(let i = 0; i < amount; i++) {
+        const toy = await httpManager.getToyToSwipe();
+        newToys.push({id:toy.id,title:toy.name, imgSrc:toy.image, difficulty:5});
+    }
+    return newToys;
 }
 
 function TinderGame() : JSX.Element {
-    const [cards, setCards] = useState<ToyCardProps[]>(loadToys(2));
+    const initialLoad = async () =>{
+        const newToys = await loadToys(2);
+        setCards(newToys);
+    }
+    const [cards, setCards] = useState<ToyCardProps[]>(
+        [{title:"Loading", imgSrc:"", id:"", difficulty:0},{title:"Loading", imgSrc:"", id:"", difficulty:0}]
+    );
     const [switchFlag, setSwitchFlag] = useState<boolean>(false);
+    useEffect(()=>{initialLoad()},[])
     useEffect(() => {
-        console.log("Switch flag changed");
-        if(switchFlag) {
-            console.log("Switching cards");
+        const load = async() => {
+            const newToys = await loadToys(2);
+            cards.push(...newToys);
+            setCards(cards);
+        };
+        if(switchFlag && cards) {
             console.log(cards);
             cards.shift();
-            if (cards.length < 2) {
-                cards.push(...loadToys(5));
-            }
             setCards(cards);
             setSwitchFlag(false);
+            if (cards.length < 2) {
+                load();
+            }
         }
     }, [switchFlag]);
 
