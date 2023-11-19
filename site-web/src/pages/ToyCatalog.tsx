@@ -9,7 +9,9 @@ import { ToyCardProps } from "../ToyCatalog/ToyCard";
 import DraggableToyCard from "../ToyCatalog/DraggableToyCard";
 import CustomDragLayer from "../ToyCatalog/CustomDragLayer";
 import HTTPManager from "../assets/js/http_manager";
-import image1 from "../assets/placeholder/toy1.webp"
+
+const MINIMUM_STACK_SIZE = 3;
+const LOAD_AMOUNT = 5;
 
 const httpManager = new HTTPManager();
 export default function ToyCatalog() : JSX.Element {
@@ -30,32 +32,33 @@ async function loadToys(amount : number) : Promise<ToyCardProps[]> {
 }
 
 function TinderGame() : JSX.Element {
-    const initialLoad = async () =>{
-        const newToys = await loadToys(2);
-        setCards(newToys);
-    }
     const [cards, setCards] = useState<ToyCardProps[]>(
         [{title:"Loading", imgSrc:"", id:"", difficulty:0},{title:"Loading", imgSrc:"", id:"", difficulty:0}]
     );
+    const initialLoad = async () =>{
+        console.log("Initial load");
+        const newToys = await loadToys(LOAD_AMOUNT);
+        setCards(newToys);
+    }
+
     const [switchFlag, setSwitchFlag] = useState<boolean>(false);
     useEffect(()=>{initialLoad()},[])
     useEffect(() => {
         const load = async() => {
-            const newToys = await loadToys(2);
+            const newToys = await loadToys(LOAD_AMOUNT);
             cards.push(...newToys);
             setCards(cards);
         };
         if(switchFlag && cards) {
-            console.log(cards);
             cards.shift();
-            setCards(cards);
-            setSwitchFlag(false);
-            if (cards.length < 2) {
+            if (cards.length < MINIMUM_STACK_SIZE) {
                 load();
             }
+            setCards(cards);
+            setSwitchFlag(false);
         }
     }, [switchFlag]);
-
+    
     return (
         <>
             <div className={styles.cardDragContainer}>
@@ -84,7 +87,7 @@ function AcceptSquare({callback, cards}: DecisionSquareProps) : JSX.Element {
     const [{isOver},drop] = useDrop(
         () => ({
             accept: ItemTypes.TOYCARD,
-            drop: () => accept(cards[0], callback),
+            drop: (item:ToyCardProps) => accept(item, callback),
             collect: (monitor) => ({
                 isOver: !!monitor.isOver()
             })
@@ -109,7 +112,7 @@ function RefuseSquare({callback, cards} : DecisionSquareProps) : JSX.Element {
     const [{isOver},drop] = useDrop(
         () => ({
             accept: ItemTypes.TOYCARD,
-            drop: () => refuse(cards[0], callback),
+            drop: (item:ToyCardProps) => refuse(item, callback),
             collect: (monitor) => ({
                 isOver: !!monitor.isOver()
             })

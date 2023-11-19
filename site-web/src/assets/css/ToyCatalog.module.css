@@ -13,7 +13,8 @@
     text-align: center;
 }
 .toyCard img {
-    width: 100%;
+    max-width: 100%;
+    flex-grow: 1;
 }
 
 .cardDragContainer {
