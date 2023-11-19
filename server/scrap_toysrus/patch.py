@@ -13,7 +13,7 @@ for filename in os.listdir('data/items'):
         # load the json
         item = json.load(json_file)
         # print the name
-        item['price'] = item['price'].replace('$', '').replace(',', '').replace(',', '')
+        item['price'] = int(item['price'].replace('$', '').replace('.', '').replace(',', ''))
         item_id = item['id']
 
         categories = []
@@ -23,6 +23,7 @@ for filename in os.listdir('data/items'):
                 categories.append(id_category)
 
         item['categories'] = categories
+
         with open('data/items/' + filename, 'w', encoding='utf-8') as item_f:
             json.dump(item, item_f, ensure_ascii=False, indent=4)
             print("Item modified: " + item['name'])
