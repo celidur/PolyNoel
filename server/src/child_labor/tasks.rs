@@ -10,25 +10,56 @@ pub struct Tasks {
 }
 
 impl Tasks {
-    fn push(&mut self, task: CreateTask) {
+    fn push(&mut self, task: CreateTask) -> &Task {
         self.tasks.push(task.build());
+        self.tasks.last().unwrap()
+    }
+    fn remove(&mut self, id: &str) -> bool {
+        if let Some(i) = self.tasks.iter().position(|t| t.id == id) {
+            self.tasks.remove(i);
+            true
+        } else {
+            false
+        }
+    }
+    fn mark_done(&mut self, id: &str) -> bool {
+        if let Some(task) = self.tasks.iter_mut().find(|t| t.id == id) {
+            task.need_review = true;
+            true
+        } else {
+            false
+        }
     }
 }
 
+/// Return the id of the added task
 pub async fn add_task(
     State(app): State<App>,
     Json(task): Json<CreateTask>,
 ) -> impl IntoApiResponse {
-    app.users.lock().await.tasks.push(task);
-    StatusCode::CREATED
+    let id = app.users.lock().await.tasks.push(task).id.clone();
+
+    (StatusCode::CREATED, Json(id))
 }
 
 pub async fn remove_task(State(app): State<App>, Json(id): Json<String>) -> impl IntoApiResponse {
-    let tasks = &mut app.users.lock().await.tasks.tasks;
-    if let Some(i) = tasks.iter().position(|t| t.id == id) {
-        tasks.remove(i);
-        StatusCode::OK
-    } else {
-        StatusCode::NOT_FOUND
+    match app.users.lock().await.tasks.remove(&id) {
+        true => StatusCode::OK,
+        false => StatusCode::NOT_FOUND,
+    }
+}
+
+pub async fn get_tasks(State(app): State<App>) -> impl IntoApiResponse {
+    let tasks = app.users.lock().await.tasks.tasks.clone();
+    (StatusCode::OK, Json(tasks))
+}
+
+pub async fn mark_task_done(
+    State(app): State<App>,
+    Json(id): Json<String>,
+) -> impl IntoApiResponse {
+    match app.users.lock().await.tasks.mark_done(&id) {
+        true => StatusCode::OK,
+        false => StatusCode::NOT_FOUND,
     }
 }

@@ -3,7 +3,10 @@ use aide::{
     openapi::{Info, OpenApi},
     redoc::Redoc,
 };
-use axum::{http::Request, Extension, Json};
+use axum::{
+    http::{Request, StatusCode},
+    Extension, Json,
+};
 use common::state::App;
 use tower_http::trace::TraceLayer;
 use tracing::Span;
@@ -27,9 +30,9 @@ async fn main() {
     let state = App::new();
 
     let app = ApiRouter::new()
-        .nest("/child_labor", child_labor::routes::routes())
-        .nest("/santapass", santapass::routes::routes())
-        .nest("/toy_catalog", toy_catalog::routes::routes())
+        .nest_api_service("/child_labor", child_labor::routes::routes(&state))
+        .nest_api_service("/santapass", santapass::routes::routes(&state))
+        .nest_api_service("/toy_catalog", toy_catalog::routes::routes(&state))
         .route("/api.json", get(serve_api))
         .route("/doc", Redoc::new("/api.json").axum_route())
         .layer(
