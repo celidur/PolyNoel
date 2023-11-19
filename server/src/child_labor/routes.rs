@@ -1,9 +1,12 @@
-use super::tasks::{add_task, remove_task};
+use super::tasks::{add_task, get_tasks, mark_task_done, remove_task};
 use crate::common::state::App;
-use aide::axum::{routing::post, ApiRouter};
+use axum::{
+    routing::{patch, post},
+    Router,
+};
 
-pub fn routes() -> ApiRouter<App> {
-    ApiRouter::new()
-        .api_route("/add_task", post(add_task))
-        .api_route("/remove_task", post(remove_task))
+pub fn routes() -> Router<App> {
+    Router::new()
+        .route("/", post(add_task).get(get_tasks))
+        .route("/:id", patch(mark_task_done).delete(remove_task))
 }

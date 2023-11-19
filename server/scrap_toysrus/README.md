@@ -13,6 +13,12 @@ python get_category.py
 python get_item.py
 ```
 
+## Step 3: Run patch.py
+
+```bash
+python patch.py
+```
+
 ## Result
 
 => Result will be saved in `data` folder

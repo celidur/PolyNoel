@@ -1,6 +1,6 @@
 use crate::common::state::App;
-use aide::axum::ApiRouter;
+use axum::Router;
 
-pub fn routes() -> ApiRouter<App> {
-    ApiRouter::new()
+pub fn routes() -> Router<App> {
+    Router::new()
 }
