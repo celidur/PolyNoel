@@ -14,7 +14,7 @@ pub fn routes() -> Router<App> {
         .route("/swip", get(get_new_item).patch(update_item))
         .route("/toy/:id", get(get_item))
         .route("/toys", get(get_all_items))
-        .route("/category/:id", post(add_category).delete(handler_delete_category))
+        .route("/category/:id", post(add_category).delete(delete_category))
 }
 
 #[utoipa::path(
@@ -102,7 +102,6 @@ pub async fn get_all_items(State(app): State<App>) -> impl IntoResponse {
 #[utoipa::path(
     post,
     path = "/category/",
-    request_body = categories::Category,
     responses(
         (status = 201, description = "Category created successfully", body = String),
     ),
@@ -130,7 +129,7 @@ pub async fn add_category(
         ("id" = i32, Path, description = "id of toy")
     ), 
 )]
-pub async fn handler_delete_category(
+pub async fn delete_category(
     State(app): State<App>,
     Path(id): Path<String>,
 ) -> impl IntoResponse {
