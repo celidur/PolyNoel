@@ -2,7 +2,7 @@ import styles from "./Task.module.css"
 
 type TaskProp = { index: number, taskname : string, onTaskClick : (removeIndex : number) => void }
 
-export default function Task(props: TaskProp) : JSX.Element {
+export default function TaskKid(props: TaskProp) : JSX.Element {
     return (
       <div className={styles.task}>
             <label className={styles.task__label}>

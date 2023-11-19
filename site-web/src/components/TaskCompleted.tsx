@@ -3,7 +3,7 @@ import { useState } from "react";
 
 type TaskProp = { index: number, taskname : string, onTaskClick : (removeIndex : number) => void }
 
-export default function TaskParentApproval(props: TaskProp) : JSX.Element {
+export default function TaskCompleted(props: TaskProp) : JSX.Element {
     const [approved, setApproved] = useState<boolean>(false);
 
     const changeApproved = () : void => {

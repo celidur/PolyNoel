@@ -3,12 +3,12 @@ import { SERVER_URL } from "./consts.js";
 export const HTTPInterface = {
   SERVER_URL: `${SERVER_URL}/api`,
 
-  GET: async function (endpoint) {
+  GET: async function<T>(endpoint : string) : Promise<T> {
     const response = await fetch(`${this.SERVER_URL}/${endpoint}`);
     return await response.json();
   },
 
-  POST: async function (endpoint, data) {
+  POST: async function<T, U> (endpoint : string, data : T) : Promise<U> {
     const response = await fetch(`${this.SERVER_URL}/${endpoint}`, {
       method: "POST",
       body: JSON.stringify(data),
@@ -20,21 +20,21 @@ export const HTTPInterface = {
     return await response.json();
   },
 
-  DELETE: async function (endpoint) {
+  DELETE: async function (endpoint : string) : Promise<number> {
     const response = await fetch(`${this.SERVER_URL}/${endpoint}`, {
       method: "DELETE",
     });
     return response.status;
   },
 
-  PATCH: async function (endpoint) {
+  PATCH: async function (endpoint : string) : Promise<number> {
     const response = await fetch(`${this.SERVER_URL}/${endpoint}`, {
       method: "PATCH",
     });
     return response.status;
   },
 
-  PUT: async function (endpoint, data) {
+  PUT: async function <T>(endpoint : string, data : T) : Promise<number> {
     const response = await fetch(`${this.SERVER_URL}/${endpoint}`, {
       method: "PUT",
       body: JSON.stringify(data),
@@ -46,10 +46,30 @@ export const HTTPInterface = {
   },
 };
 
+
+interface CreateTask {
+  deadline?: string,
+  name : string,
+  reccurent_interval? : number
+}
+
+interface Task extends CreateTask {  
+  id : string,  
+  need_review : boolean,  
+}
+
 export default class HTTPManager {
+    tasksURL : string;
+    toysURL : string;
+    parentURL : string;
+    battlePass : string
+
+    chosenToysURL : string;
+    randomToysURL : string;
+
     constructor() {
         //Main Endpoints
-        this.tasksURL = "tasks";
+        this.tasksURL = "child_labor";
         this.toysURL = "toys"
         this.parentURL = "parent"
         this.battlePass = "battlePass"
@@ -59,18 +79,21 @@ export default class HTTPManager {
         this.randomToysURL = "random";
     }
 
-    async fetchAllTasks() {
-        const tasks = await HTTPInterface.GET(`${this.tasksURL}`);
+    async fetchAllTasks() : Promise<Task[]> {
+        const tasks = await HTTPInterface.GET<Task[]>(`${this.tasksURL}`);        
         return tasks;
     }
 
-    async fetchAllChosenToys() {
-        const toys = await HTTPInterface.GET(`${this.toysURL}/${this.chosenToysURL}`);
-        return toys;
+    async createNewTask(data : Task) : Promise<string> {
+        const newTaskId = await HTTPInterface.POST<CreateTask, string>(`${this.tasksURL}`, data);
+        return newTaskId;
     }
 
-    async fetchRandomToys() {
-        const toys = await HTTPInterface.GET(`${this.toysURL}/${this.randomToysURL}`);
-        return toys;
+    async deleteTask(id : string) : Promise<void> {
+        await HTTPInterface.DELETE(`${this.tasksURL}/${id}`);        
     }
+
+    async updateTaskStatus(id : string) : Promise<void> {
+      await HTTPInterface.PATCH(`${this.tasksURL}/${id}`);        
+  }
 }

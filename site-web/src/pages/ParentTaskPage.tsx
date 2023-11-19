@@ -1,5 +1,5 @@
 import TaskList from "../components/TaskList";
-import TaskPageCSS from "./ParentTaskPage.module.css"
+import styles from "./ParentTaskPage.module.css"
 
 import { useEffect, useState } from "react";
 
@@ -53,29 +53,29 @@ export default function ParentTaskPage() : JSX.Element {
 
     
     return (        
-        <div className={TaskPageCSS.task_container}>
-            <div className={TaskPageCSS.task_block}>
+        <div className={styles.task_container}>
+            <div className={styles.task_block}>
                 <TaskList taskNames={dailyTasks} title="Daily Tasks" onTaskClick={removeDailyTask} taskType={"edit-task"}></TaskList>
-                <div className={TaskPageCSS.add_task}>
-                    <input className={TaskPageCSS.input} placeholder="New Daily Task" type="text" value={dailyInput} onChange={(e) => setDailyInput(e.target.value)}></input>                        
-                    <button className={TaskPageCSS.add_task_button} 
+                <div className={styles.add_task}>
+                    <input className={styles.input} placeholder="New Daily Task" type="text" value={dailyInput} onChange={(e) => setDailyInput(e.target.value)}></input>                        
+                    <button className={styles.add_task_button} 
                     onClick={() =>{
                         addDaily(dailyInput);
                     }}>+</button>
                 </div>
             </div>
-            <div className={TaskPageCSS.task_block}>
+            <div className={styles.task_block}>
                 <TaskList taskNames={generalTasks} title="General Tasks" onTaskClick={removeGeneralTask} taskType={"edit-task"}></TaskList>
-                <div className={TaskPageCSS.add_task}>
-                    <input className={TaskPageCSS.input} placeholder="New General Task" type="text" value={generalInput} onChange={(e) => setGeneralInput(e.target.value)}></input>
-                    <button className={TaskPageCSS.add_task_button} 
+                <div className={styles.add_task}>
+                    <input className={styles.input} placeholder="New General Task" type="text" value={generalInput} onChange={(e) => setGeneralInput(e.target.value)}></input>
+                    <button className={styles.add_task_button} 
                     onClick={() =>{
                         addGeneral(generalInput);
                     }}>+</button>
                 </div>
             </div>
 
-            <div className={TaskPageCSS.task_block}>
+            <div className={styles.task_block}>
                 <TaskList taskNames={doneTasks} title="Completed Tasks" onTaskClick={removeDoneTask} taskType={"approve-task"}></TaskList>                    
             </div>
         </div>        

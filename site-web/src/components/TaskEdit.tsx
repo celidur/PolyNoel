@@ -3,7 +3,7 @@ import TrashIcon from '../assets/img/trash.svg'
 
 type TaskProp = { index: number, taskname : string, onTaskClick : (removeIndex : number) => void }
 
-export default function TaskParent(props: TaskProp) : JSX.Element {
+export default function TaskEdit(props: TaskProp) : JSX.Element {
     return (
       <div className={styles.task_manage}>            
             <span>{props.taskname}</span>                                        
