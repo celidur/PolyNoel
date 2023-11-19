@@ -1,7 +1,10 @@
 use api_doc::ApiDoc;
 use axum::{http::Request, Router};
 use common::state::App;
-use tower_http::trace::TraceLayer;
+use tower_http::{
+    cors::{Any, CorsLayer},
+    trace::TraceLayer,
+};
 use tracing::Span;
 use utoipa::OpenApi;
 use utoipa_swagger_ui::SwaggerUi;
@@ -16,6 +19,12 @@ mod toy_catalog;
 async fn main() {
     tracing_subscriber::fmt::init();
 
+    let cors = CorsLayer::new()
+        // allow `GET` and `POST` when accessing the resource
+        .allow_methods(Any)
+        // allow requests from any origin
+        .allow_origin(Any);
+
     let state = App::new();
 
     let app = Router::new()
@@ -28,6 +37,7 @@ async fn main() {
                 println!("{:?} {}", request.method(), request.uri());
             }),
         )
+        .layer(cors)
         .with_state(state);
 
     axum::Server::bind(&"0.0.0.0:6969".parse().unwrap())

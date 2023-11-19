@@ -1,7 +1,9 @@
 use super::categories::Categories;
 use super::category::Category;
+use crate::toy_catalog::toys::Toys;
 use rand::seq::SliceRandom;
 use rand::Rng;
+use std::ops::Range;
 
 pub struct Analytics {
     categories: Categories,
@@ -83,5 +85,39 @@ impl Analytics {
                 true
             }
         });
+    }
+
+    pub fn limit_prices(
+        &mut self,
+        all_categories: &Categories,
+        old_price_born: &Range<u32>,
+        price_born: &Range<u32>,
+        toys: &Toys,
+    ) {
+        if old_price_born.start <= price_born.start && old_price_born.end >= price_born.end {
+            self.categories.retain_mut(|c| {
+                c.items.retain(|toy_id| {
+                    let toy = toys.get(toy_id.as_str()).unwrap();
+                    price_born.contains(&toy.price)
+                });
+                if c.items.is_empty() {
+                    self.score -= c.score;
+                }
+                !c.items.is_empty()
+            });
+        } else {
+            self.categories.retain_mut(|c| {
+                let toy_ids = &all_categories.get(&c.id).items;
+                c.items = toy_ids
+                    .iter()
+                    .filter(|toy_id| price_born.contains(&toys.get(toy_id.as_str()).unwrap().price))
+                    .cloned()
+                    .collect();
+                if c.items.is_empty() {
+                    self.score -= c.score;
+                }
+                !c.items.is_empty()
+            });
+        }
     }
 }
