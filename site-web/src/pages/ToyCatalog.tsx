@@ -17,7 +17,8 @@ export default function ToyCatalog() : JSX.Element {
 function loadToys(amount : number) : ToyCardProps[] {
     return [
         {id:"1",title:"Test1", imgSrc:"test", difficulty:5},
-        {id:"2", title:"Test2", imgSrc:"test", difficulty:4}
+        {id:"2", title:"Test2", imgSrc:"test", difficulty:4},
+        {id:"3", title:"Test3", imgSrc:"test", difficulty:4}
     ]
 }
 
@@ -41,9 +42,12 @@ function TinderGame() : JSX.Element {
     return (
         <>
             <div className={styles.cardDragContainer}>
-                <RefuseSquare callback={setSwitchFlag} currentCard={cards[0]}/>
-                <ToyCard {...cards[0]}/>
-                <AcceptSquare callback={setSwitchFlag} currentCard={cards[0]}/>
+                <RefuseSquare callback={setSwitchFlag} cards={cards}/>
+                <div className={styles.cardStack}>
+                    <ToyCard {...cards[1]}/>
+                    <ToyCard {...cards[0]}/>
+                </div>
+                <AcceptSquare callback={setSwitchFlag} cards={cards}/>
             </div>
 
         </>
@@ -56,13 +60,13 @@ function accept(toy:ToyCardProps, callback :  (setSwitchFlag:boolean)=>void) : v
 }
 interface DecisionSquareProps {
     callback: (setSwitchFlag:boolean)=>void,
-    currentCard: ToyCardProps
+    cards: ToyCardProps[]
 }
-function AcceptSquare({callback, currentCard}: DecisionSquareProps) : JSX.Element {
+function AcceptSquare({callback, cards}: DecisionSquareProps) : JSX.Element {
     const [{isOver},drop] = useDrop(
         () => ({
             accept: ItemTypes.TOYCARD,
-            drop: () => accept(currentCard, callback),
+            drop: () => accept(cards[0], callback),
             collect: (monitor) => ({
                 isOver: !!monitor.isOver()
             })
@@ -80,11 +84,11 @@ function refuse(toy:ToyCardProps, callback : (setSwitchFlag:boolean)=>void) : vo
     callback(true);
 }
 
-function RefuseSquare({callback, currentCard} : DecisionSquareProps) : JSX.Element {
+function RefuseSquare({callback, cards} : DecisionSquareProps) : JSX.Element {
     const [{isOver},drop] = useDrop(
         () => ({
             accept: ItemTypes.TOYCARD,
-            drop: (_,monitor) => refuse(monitor.getItem(), callback),
+            drop: () => refuse(cards[0], callback),
             collect: (monitor) => ({
                 isOver: !!monitor.isOver()
             })

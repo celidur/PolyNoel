@@ -1,4 +1,5 @@
 .toyCard {
+    position: absolute;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -18,7 +19,8 @@
     display: flex;
     flex-direction: row;
 }
-.cardDragContainer div {
-    background-color: aqua;
-    border: 3px solid black;
+
+.cardStack {
+    height: 100px;
+    width: 100px;
 }

@@ -19,7 +19,7 @@ export default function ToyCard({id, title, imgSrc, difficulty} : ToyCardProps) 
         })
     }))
     return(
-        <div ref={drag} className={styles.toyCard} style={{backgroundColor: isDragging? "blue": "red",}}>
+        <div ref={drag} className={styles.toyCard} style={{opacity: isDragging? "0": "1",}}>
             <h1>{title}</h1>
             <img src={imgSrc} alt="test"></img>
             <DifficultySlider level={difficulty}/>
