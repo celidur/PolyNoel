@@ -4,7 +4,8 @@ import { HTML5Backend } from "react-dnd-html5-backend";
 import { ItemTypes } from "../Constants";
 import styles from "../assets/css/ToyCatalog.module.css"
 import ToyCard, { ToyCardProps } from "../ToyCatalog/ToyCard";
-//import nav bar
+
+import image1 from "../assets/placeholder/toy1.webp"
 
 export default function ToyCatalog() : JSX.Element {
     return (
@@ -16,9 +17,9 @@ export default function ToyCatalog() : JSX.Element {
 
 function loadToys(amount : number) : ToyCardProps[] {
     return [
-        {id:"1",title:"Test1", imgSrc:"test", difficulty:5},
-        {id:"2", title:"Test2", imgSrc:"test", difficulty:4},
-        {id:"3", title:"Test3", imgSrc:"test", difficulty:4}
+        {id:"1",title:"Test1", imgSrc:image1, difficulty:5},
+        {id:"2", title:"Test2", imgSrc:image1, difficulty:4},
+        {id:"3", title:"Test3", imgSrc:image1, difficulty:4}
     ]
 }
 
@@ -73,9 +74,12 @@ function AcceptSquare({callback, cards}: DecisionSquareProps) : JSX.Element {
         })
     )
     return(
-        <div ref={drop} style={{width: "150px", backgroundColor: isOver?"limegreen" : "lightgreen"}}>
-
-        </div>
+        <div ref={drop} className={styles.decisionSquare} style={
+            {backgroundImage: `linear-gradient(to right,rgba(0,255,0,1),
+                ${isOver?
+                'rgba(0,255,0,1)': 'rgba(0,255,0,0)'}, 
+                rgba(0,255,0,0)`}
+        }/>
     )
 }
 
@@ -95,8 +99,12 @@ function RefuseSquare({callback, cards} : DecisionSquareProps) : JSX.Element {
         })
     )
     return(
-        <div ref={drop} style={{width: "150px", backgroundColor: isOver?"red":"pink"}}>
+        <div ref={drop} className={styles.decisionSquare} style={            
+            {backgroundImage: `linear-gradient(to right,rgba(255,0,0,0),
+                ${isOver?
+                'rgba(255,0,0,1)': 'rgba(255,0,0,0)'}, 
+                rgba(255,0,0,1)`}
+        }/>
             
-        </div>
     )
 }
