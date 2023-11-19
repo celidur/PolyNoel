@@ -1,3 +1,4 @@
+pub mod algorithm;
 pub mod categories;
 pub mod category;
 pub mod routes;
