@@ -1,0 +1,24 @@
+.toyCard {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #8b0000;
+    border-radius: 30px;
+
+}
+.toyCard h1 {
+    color:white;
+    text-align: center;
+}
+.toyCard img {
+    width: 100%;
+}
+
+.cardDragContainer {
+    display: flex;
+    flex-direction: row;
+}
+.cardDragContainer div {
+    background-color: aqua;
+    border: 3px solid black;
+}
