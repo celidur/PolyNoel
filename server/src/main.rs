@@ -1,68 +1,61 @@
-//! Run with
-//!
-//! ```not_rust
-//! cargo run -p example-readme
-//! ```
-
-use axum::{
-    http::StatusCode,
-    response::IntoResponse,
-    routing::{get, post},
-    Json, Router,
+use aide::{
+    axum::{routing::get, ApiRouter, IntoApiResponse},
+    openapi::{Info, OpenApi},
+    redoc::Redoc,
 };
-use serde::{Deserialize, Serialize};
+use axum::{http::Request, Extension, Json};
+use common::state::App;
+use tower_http::trace::TraceLayer;
+use tracing::Span;
 
 mod child_labor;
+mod common;
+mod santapass;
+mod toy_catalog;
+
+// Note that this clones the document on each request.
+// To be more efficient, we could wrap it into an Arc,
+// or even store it as a serialized string.
+async fn serve_api(Extension(api): Extension<OpenApi>) -> impl IntoApiResponse {
+    Json(api)
+}
 
 #[tokio::main]
 async fn main() {
-    // initialize tracing
     tracing_subscriber::fmt::init();
 
-    // build our application with a route
-    let app = Router::new()
-        // `GET /` goes to `root`
-        .route("/", get(root))
-        // `POST /users` goes to `create_user`
-        .route("/users", post(create_user));
+    let state = App::new();
 
-    // run our app with hyper
-    axum::Server::bind(&"0.0.0.0:3000".parse().unwrap())
-        .serve(app.into_make_service())
-        .await
-        .unwrap();
-}
+    let app = ApiRouter::new()
+        .nest("/child_labor", child_labor::routes::routes())
+        .nest("/santapass", santapass::routes::routes())
+        .nest("/toy_catalog", toy_catalog::routes::routes())
+        .route("/api.json", get(serve_api))
+        .route("/doc", Redoc::new("/api.json").axum_route())
+        .layer(
+            TraceLayer::new_for_http().on_request(|request: &Request<_>, _span: &Span| {
+                println!("{:?} {}", request.method(), request.uri());
+            }),
+        )
+        .with_state(state);
 
-// basic handler that responds with a static string
-async fn root() -> &'static str {
-    "Hello, World!"
-}
-
-async fn create_user(
-    // this argument tells axum to parse the request body
-    // as JSON into a `CreateUser` type
-    Json(payload): Json<CreateUser>,
-) -> impl IntoResponse {
-    // insert your application logic here
-    let user = User {
-        id: 1337,
-        username: payload.username,
+    let mut api = OpenApi {
+        info: Info {
+            title: "PolyNoel".to_string(),
+            summary: Some("Une liste de Noel".to_string()),
+            ..Info::default()
+        },
+        ..OpenApi::default()
     };
 
-    // this will be converted into a JSON response
-    // with a status code of `201 Created`
-    (StatusCode::CREATED, Json(user))
-}
-
-// the input to our `create_user` handler
-#[derive(Deserialize)]
-struct CreateUser {
-    username: String,
-}
-
-// the output to our `create_user` handler
-#[derive(Serialize)]
-struct User {
-    id: u64,
-    username: String,
+    axum::Server::bind(&"0.0.0.0:6969".parse().unwrap())
+        .serve(
+            app
+                // Generate the documentation.
+                .finish_api(&mut api)
+                .layer(Extension(api))
+                .into_make_service(),
+        )
+        .await
+        .unwrap();
 }
