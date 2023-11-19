@@ -1,8 +1,9 @@
 use std::{fs, io::BufReader, path::Path};
 
-use serde::{Deserialize, Deserializer};
+use serde::{Deserialize, Serialize};
+use utoipa::ToSchema;
 
-#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
+#[derive(Default, Debug, Clone, PartialEq, Deserialize, ToSchema, Serialize)]
 pub struct Toy {
     pub id: String,
     pub name: String,

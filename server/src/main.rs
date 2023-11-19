@@ -18,8 +18,6 @@ async fn main() {
 
     let state = App::new();
 
-    println!("{:?}", state.toys);
-
     let app = Router::new()
         .nest("/child_labor/", child_labor::routes::routes())
         .nest("/santapass/", santapass::routes::routes())
