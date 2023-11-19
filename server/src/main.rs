@@ -2,7 +2,7 @@ use api_doc::ApiDoc;
 use axum::{
     http::{
         header::{ACCEPT, CONTENT_TYPE, ORIGIN},
-        Request,
+        Method, Request,
     },
     Router,
 };
@@ -27,7 +27,13 @@ async fn main() {
 
     let cors = CorsLayer::new()
         // allow `GET` and `POST` when accessing the resource
-        .allow_methods(Any)
+        .allow_methods([
+            Method::GET,
+            Method::PATCH,
+            Method::POST,
+            Method::DELETE,
+            Method::PUT,
+        ])
         // allow requests from any origin
         .allow_origin(Any)
         .allow_headers([CONTENT_TYPE, ORIGIN, ACCEPT]);
