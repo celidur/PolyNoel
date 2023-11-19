@@ -8,7 +8,7 @@ pub struct Task {
     pub name: String,
     pub need_review: bool,
     /// This is a string representing a date
-    pub deadline: String,
+    pub deadline: Option<String>,
     /// This represent a number of day
     pub recurrent_interval: Option<u16>,
 }
@@ -18,7 +18,7 @@ impl Task {
         id: String,
         name: String,
         need_review: bool,
-        deadline: String,
+        deadline: Option<String>,
         recurrent_interval: Option<u16>,
     ) -> Self {
         Self {
@@ -34,7 +34,7 @@ impl Task {
 #[derive(Serialize, Deserialize, ToSchema, Debug, Default)]
 pub struct CreateTask {
     name: String,
-    deadline: String,
+    deadline: Option<String>,
     recurrent_interval: Option<u16>,
 }
 
