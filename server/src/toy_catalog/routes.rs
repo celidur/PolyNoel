@@ -3,19 +3,18 @@ use axum::{
     extract::{State, Path},
     http::StatusCode,
     response::IntoResponse,
-    routing::{get, post, patch},
+    routing::{get, post},
     Json, Router,
 };
 use serde::{Deserialize, Serialize};
 use utoipa::ToSchema;
 
-use super::algorithm::categories;
-
 pub fn routes() -> Router<App> {
     Router::new()
         .route("/swip", get(get_new_item).patch(update_item))
-        .route("/:id", get(get_item))
+        .route("/toy/:id", get(get_item))
         .route("/toys", get(get_all_items))
+        .route("/category/:id", post(add_category).delete(handler_delete_category))
 }
 
 #[utoipa::path(
@@ -69,7 +68,7 @@ pub async fn update_item(
 
 #[utoipa::path(
     get,
-    path = "/:id",
+    path = "/toy/:id",
     responses(
         (status = 200, description = "Get item", body = Toy),
         (status = 404, description = "Item not found")
@@ -98,4 +97,44 @@ pub async fn get_all_items(State(app): State<App>) -> impl IntoResponse {
     let user = app.users.lock().await;
     let toys = user.selected_item.clone();
     (StatusCode::OK, Json(toys))
+}
+
+#[utoipa::path(
+    post,
+    path = "/category/",
+    request_body = categories::Category,
+    responses(
+        (status = 201, description = "Category created successfully", body = String),
+    ),
+    params(
+        ("id" = i32, Path, description = "id of toy")
+    ), 
+)]
+pub async fn add_category(
+    State(app): State<App>,
+    Path(id): Path<String>,
+) -> impl IntoResponse {
+    let mut user = app.users.lock().await;
+    let category = app.categories.categories.iter().filter(|c| c.id == id).next().unwrap().clone();
+    user.add_category(category);
+    StatusCode::CREATED
+}
+
+#[utoipa::path(
+    delete,
+    path = "/category/",
+    responses(
+        (status = 200, description = "Category deleted successfully"),
+    ),
+    params(
+        ("id" = i32, Path, description = "id of toy")
+    ), 
+)]
+pub async fn handler_delete_category(
+    State(app): State<App>,
+    Path(id): Path<String>,
+) -> impl IntoResponse {
+    let mut user = app.users.lock().await;
+    user.remove_category(&id);
+    StatusCode::OK
 }
