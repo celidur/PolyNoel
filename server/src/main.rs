@@ -1,5 +1,11 @@
 use api_doc::ApiDoc;
-use axum::{http::Request, Router};
+use axum::{
+    http::{
+        header::{ACCEPT, CONTENT_TYPE, ORIGIN},
+        Request,
+    },
+    Router,
+};
 use common::state::App;
 use tower_http::{
     cors::{Any, CorsLayer},
@@ -23,7 +29,8 @@ async fn main() {
         // allow `GET` and `POST` when accessing the resource
         .allow_methods(Any)
         // allow requests from any origin
-        .allow_origin(Any);
+        .allow_origin(Any)
+        .allow_headers([CONTENT_TYPE, ORIGIN, ACCEPT]);
 
     let state = App::new();
 
