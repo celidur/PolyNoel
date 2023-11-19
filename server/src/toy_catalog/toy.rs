@@ -1,6 +1,6 @@
 use std::{fs, io::BufReader, path::Path};
 
-use serde::{Deserialize, Deserializer};
+use serde::Deserialize;
 
 #[derive(Default, Debug, Clone, PartialEq, Deserialize)]
 pub struct Toy {

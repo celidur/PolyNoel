@@ -2,7 +2,7 @@ use std::{fs, io::BufReader, path::Path};
 
 use serde::Deserialize;
 
-#[derive(Default, Debug, Clone, PartialEq, Deserialize)]
+#[derive(Default, Debug, Deserialize)]
 pub struct Category {
     pub id: String,
     pub name: String,
