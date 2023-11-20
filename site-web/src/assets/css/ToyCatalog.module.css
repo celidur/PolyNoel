@@ -1,4 +1,13 @@
-
+.tinderGame{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 2.5%;
+}
+.cardStack {
+    height: 50vh;
+    width:  max(40vw, 300px);
+}
 .toyCard {
     height: max(50vh);
     position: absolute;
@@ -9,12 +18,6 @@
     border-radius: 50px;
     align-items: center;
 }
-
-.cardStack {
-    height: 50vh;
-    width:  max(40vw, 300px);
-}
-
 
 .toyCard h1 {
     font-size: max(2vw, 1.5em);
@@ -61,3 +64,41 @@
     border-radius: 50px;
 }
 
+.buttonInterface {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding-top: 30px;
+}
+
+.buttonInterface button {
+    border-radius: 10px;
+    font-size: 1.5em;
+    height: 3em;
+    width: 25%;
+}
+
+.buttonInterface button:hover {
+    cursor: pointer;
+}
+
+.buttonInterface button:active {
+    transform: scale(0.95);
+}
+
+.acceptButton{
+    background-color: green;
+}
+
+.refuseButton{
+    background-color: red;
+}
+
+.buttonInterface img{
+    max-width: 100%;
+    max-height: 100%;
+    align-self: center;
+    filter: invert(97%) sepia(92%) saturate(0%) hue-rotate(2deg) brightness(103%) contrast(101%);
+}

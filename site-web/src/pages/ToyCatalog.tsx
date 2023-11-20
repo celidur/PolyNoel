@@ -10,6 +10,9 @@ import DraggableToyCard from "../ToyCatalog/DraggableToyCard";
 import CustomDragLayer from "../ToyCatalog/CustomDragLayer";
 import HTTPManager from "../assets/js/http_manager";
 
+import checkLogo from "../assets/img/check-mark.svg";
+import crossLogo from "../assets/img/cross.svg";
+
 const MINIMUM_STACK_SIZE = 3;
 
 const httpManager = new HTTPManager();
@@ -73,8 +76,8 @@ function TinderGame() : JSX.Element {
                     <AcceptSquare callback={setSwitchFlag} cards={cards}/>
                 </div>
                 <div className={styles.buttonInterface}>
-                    <button className={styles.refuseButton} onClick={()=>{refuse(cards[0], setSwitchFlag)}}>Refuse</button>
-                    <button className={styles.acceptButton} onClick={()=>{accept(cards[0], setSwitchFlag)}}>Accept</button>
+                    <button className={styles.refuseButton} onClick={()=>{refuse(cards[0], setSwitchFlag)}}><img src={crossLogo}/></button>
+                    <button className={styles.acceptButton} onClick={()=>{accept(cards[0], setSwitchFlag)}}><img src={checkLogo}/></button>
                 </div>
             </div>
         </>
