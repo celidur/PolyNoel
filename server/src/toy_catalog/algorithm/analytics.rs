@@ -74,7 +74,7 @@ impl Analytics {
         let removed_items = category.items.clone();
         self.categories.retain_mut(|c| {
             if c.id != category_id {
-                return false;
+                return true;
             } else {
                 c.items = c
                     .items
@@ -82,7 +82,7 @@ impl Analytics {
                     .into_iter()
                     .cloned()
                     .collect();
-                true
+                false
             }
         });
     }
