@@ -31,7 +31,16 @@ impl Analytics {
                 return items.choose(&mut rng).unwrap().to_string();
             }
         }
-        unreachable!("We shouldn't not run out of item before the end");
+
+        let items: Vec<_> = self
+            .categories
+            .last()
+            .unwrap()
+            .items
+            .iter()
+            .cloned()
+            .collect();
+        return items.choose(&mut rng).unwrap().to_string();
     }
 
     pub fn add_review(&mut self, item_id: &str, categories: &Vec<String>, liked: bool) -> bool {
