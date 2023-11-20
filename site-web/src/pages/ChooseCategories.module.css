@@ -1,0 +1,27 @@
+.container  {
+    padding: 5%;
+    padding-top:20px;
+}
+
+.title {
+    font-size:30px;
+    font-weight: bold;
+    text-align: center;   
+    padding: 30px;  
+    padding-bottom: 50px; 
+}
+
+.input {
+    padding:10px;
+    text-align: center;
+    border-radius: 20px;
+    width:300px;
+}
+
+.header_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+

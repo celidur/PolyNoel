@@ -34,14 +34,14 @@ export default function RankToys() : JSX.Element {
             <div className="table">
                 <div className="row">
                     <div className="cell">
-                    <div className="content">
-                        <div className="text">S</div>
-                    </div>
+                        <div className="content">
+                            <div className="text">S</div>
+                        </div>  
                     </div>
                     <div className="cell1">
-                    <div className="content">
-                        <div className="text"></div>
-                    </div>
+                        <div className="content">
+                            <div className="text"></div>
+                        </div>
                     </div>
                 </div>
                 <div className="row">

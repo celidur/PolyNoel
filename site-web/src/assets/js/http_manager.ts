@@ -16,8 +16,16 @@ export const HTTPInterface = {
         "content-type": "application/json",
       },
     });
-
-    return await response.json();
+      return await response.json();
+  },
+  POST_NO_RESPONSE: async function<T> (endpoint : string, data : T) : Promise<void> {
+    const response = await fetch(`${this.SERVER_URL}/${endpoint}`, {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "content-type": "application/json",
+      },
+    });
   },
 
   DELETE: async function (endpoint : string) : Promise<number> {
@@ -87,6 +95,20 @@ export interface NewPrice {
   superior : number,
 }
 
+export interface SimpleCategory{
+  id :	string
+  is_selected :	boolean
+  name :	string
+}
+
+export interface Category {
+  category : string[]
+  id : string
+  items : string[]
+  name : string
+  score: number
+  }
+
 export default class HTTPManager {
     tasksURL : string;
     toysURL : string;
@@ -137,13 +159,23 @@ export default class HTTPManager {
     }
     
     /* TOY CATALOG ENDPOINTS */
-
-    async createCategoryForUser(id : string) : Promise<string> {
-      return await HTTPInterface.POST<{}, string>(`${this.toysURL}/${this.catalogCategoryURL}/${id}`, {});
+    
+    async createCategoryForUser(id : string) : Promise<void> {
+      await HTTPInterface.POST_NO_RESPONSE<{}>(`${this.toysURL}/${this.catalogCategoryURL}/${id}`, {});
+    }
+    
+    async deleteCategoryForUser(id : string) {
+      await HTTPInterface.DELETE(`${this.toysURL}/${this.catalogCategoryURL}/${id}`);
     }
 
-    async deleteCategoryForUser(id : string) {
-      await HTTPInterface.POST(`${this.toysURL}/${this.catalogCategoryURL}/${id}`, {});
+    async getAllCategories() : Promise<SimpleCategory[]> {
+      const simpleCategories = await HTTPInterface.GET<SimpleCategory[]>(`${this.toysURL}/${this.catalogCategoryURL}`);                
+      return simpleCategories;
+    }
+
+    async getCategoryOfToy(id : string) : Promise<Category> {
+      const category = await HTTPInterface.GET<Category>(`${this.toysURL}/${this.catalogCategoryURL}/${id}`);                
+      return category;
     }
 
     async getToyToSwipe() : Promise<Toy> {
