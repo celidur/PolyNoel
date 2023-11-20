@@ -45,7 +45,6 @@ export default function CustomDragLayer() : any {
     }))
 
   function renderItem() {
-    console.log({...item});
     switch (itemType) {
       case ItemTypes.TOYCARD:
         return <ToyCardPreview props={item} initialOffset={initialOffset} currentOffset={currentOffset}/>

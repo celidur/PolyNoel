@@ -1,53 +1,85 @@
 import TaskList from "../components/TaskList";
 import styles from "./ParentTaskPage.module.css"
-
+import HTTPManager, { CreateTask, Task } from "../assets/js/http_manager";
 import { useEffect, useState } from "react";
+import { GroupTasksByCategories } from "../assets/js/utils";
+
+
 
 export default function ParentTaskPage() : JSX.Element {
-    const [dailyTasks, setDailyTasks] = useState<string[]>([]);
-    const [generalTasks, setGeneralTasks] = useState<string[]>([]);
-    const [doneTasks, setDoneTasks] = useState<string[]>([]);
+    const [dailyTasks, setDailyTasks] = useState<Task[]>([]);
+    const [generalTasks, setGeneralTasks] = useState<Task[]>([]);
+    const [doneTasks, setDoneTasks] = useState<Task[]>([]);
 
     const [dailyInput, setDailyInput] = useState<string>("");
     const [generalInput, setGeneralInput] = useState<string>("");
-
+    const httpManager = new HTTPManager();
     
-    useEffect(() => {
-        //fetch from api
-        const dailyTasksMock : string[] = ["task 1", "task 2"];
-        const generalTasksMock : string[] = ["task 1", "task 2", "task 3", "task 4"];
-        const doneTasksMock : string[] = ["task 1", "task 2"];
-        setDailyTasks(dailyTasksMock);
-        setGeneralTasks(generalTasksMock);
-        setDoneTasks(doneTasksMock);
+    useEffect(() => {        
+        httpManager.fetchAllTasks()
+        .then((tasks : Task[]) => {
+            const { daily , general, done } = GroupTasksByCategories(tasks);     
+            setDailyTasks(daily);       
+            setGeneralTasks(general);
+            setDoneTasks(done);
+        });                
     }, [])
 
-    const addGeneral = (taskName : string) => {        
-        setGeneralTasks([...generalTasks, taskName])
-        setGeneralInput("");
-        //send to api
+    const addGeneral = (taskName : CreateTask) => {        
+        if(taskName.name === "")   
+            return;
+        httpManager
+            .createNewTask(taskName)
+            .then((newTask : Task) => setGeneralTasks([...generalTasks, newTask]))
+            .catch( () => setGeneralTasks([]) );
+        setGeneralInput("");        
     }
 
-    const addDaily = (taskName : string) => {        
-        setDailyTasks([...dailyTasks, taskName])
-        setDailyInput("");
-        //send to api
+    const addDaily = (taskName : CreateTask) => {     
+        if(taskName.name === "")   
+            return;
+        httpManager
+            .createNewTask(taskName)
+            .then((newTask : Task) => setDailyTasks([...dailyTasks, newTask]))
+            .catch( () => setDailyTasks([]) );
+        setDailyInput("");  
     }
 
     const removeDailyTask = (removeIndex : number) => {
+        const taskToDelete : Task | undefined = dailyTasks.find((_, index) => {
+            return index === removeIndex;
+        });
+
+        if(!taskToDelete)
+            throw new Error("Couldn't delete task");
+
+        httpManager.deleteTask(taskToDelete.id)            
         setDailyTasks(dailyTasks.filter(( _, index : number) => { 
             return index !== removeIndex;
         }));
     } 
     const removeGeneralTask = (removeIndex : number) => {
+        const taskToDelete : Task | undefined = generalTasks.find((_, index) => {
+            return index === removeIndex;
+        });
+        
+        if(!taskToDelete)
+            throw new Error("Couldn't delete task");
+
+        httpManager.deleteTask(taskToDelete.id)            
         setGeneralTasks(generalTasks.filter(( _, index : number) => { 
             return index !== removeIndex;
         }));
     } 
-    const removeDoneTask = (removeIndex : number) => {
-        setDoneTasks(doneTasks.filter(( _, index : number) => { 
-            return index !== removeIndex;
-        }));
+    const approvePendingTask = (removeIndex : number) => {
+        const taskToDelete : Task | undefined = doneTasks.find((_, index) => {
+            return index === removeIndex;
+        });
+        
+        if(!taskToDelete)
+            throw new Error("Couldn't delete task");
+        
+        setDoneTasks(doneTasks);
     } 
 
 
@@ -55,28 +87,28 @@ export default function ParentTaskPage() : JSX.Element {
     return (        
         <div className={styles.task_container}>
             <div className={styles.task_block}>
-                <TaskList taskNames={dailyTasks} title="Daily Tasks" onTaskClick={removeDailyTask} taskType={"edit-task"}></TaskList>
+                <TaskList tasks={dailyTasks} title="Daily Tasks" onTaskClick={removeDailyTask} taskType={"edit-task"}></TaskList>
                 <div className={styles.add_task}>
                     <input className={styles.input} placeholder="New Daily Task" type="text" value={dailyInput} onChange={(e) => setDailyInput(e.target.value)}></input>                        
                     <button className={styles.add_task_button} 
                     onClick={() =>{
-                        addDaily(dailyInput);
+                        addDaily({name: dailyInput, recurrent_interval: 1});
                     }}>+</button>
                 </div>
             </div>
             <div className={styles.task_block}>
-                <TaskList taskNames={generalTasks} title="General Tasks" onTaskClick={removeGeneralTask} taskType={"edit-task"}></TaskList>
+                <TaskList tasks={generalTasks} title="General Tasks" onTaskClick={removeGeneralTask} taskType={"edit-task"}></TaskList>
                 <div className={styles.add_task}>
                     <input className={styles.input} placeholder="New General Task" type="text" value={generalInput} onChange={(e) => setGeneralInput(e.target.value)}></input>
                     <button className={styles.add_task_button} 
                     onClick={() =>{
-                        addGeneral(generalInput);
+                        addGeneral({name: generalInput, recurrent_interval: 0});
                     }}>+</button>
                 </div>
             </div>
 
             <div className={styles.task_block}>
-                <TaskList taskNames={doneTasks} title="Completed Tasks" onTaskClick={removeDoneTask} taskType={"approve-task"}></TaskList>                    
+                <TaskList tasks={doneTasks} title="Completed Tasks" onTaskClick={approvePendingTask} taskType={"approve-task"}></TaskList>                    
             </div>
         </div>        
     );

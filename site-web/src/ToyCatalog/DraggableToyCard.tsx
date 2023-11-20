@@ -16,7 +16,7 @@ export default function DraggableToyCard(props : ToyCardProps) : JSX.Element {
         collect: (monitor) => ({
             isDragging: !!monitor.isDragging()
         })
-    }));
+    }), [props]);
 
     useEffect(() => {
         preview(getEmptyImage(), { captureDraggingState: true })

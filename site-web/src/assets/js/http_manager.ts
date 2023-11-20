@@ -1,7 +1,7 @@
 import { SERVER_URL } from "./consts.js";
 
 export const HTTPInterface = {
-  SERVER_URL: `${SERVER_URL}/api`,
+  SERVER_URL: SERVER_URL,
 
   GET: async function<T>(endpoint : string) : Promise<T> {
     const response = await fetch(`${this.SERVER_URL}/${endpoint}`);
@@ -51,29 +51,40 @@ export const HTTPInterface = {
 };
 
 
-interface CreateTask {
+export interface CreateTask {
   deadline?: string,
   name : string,
-  reccurent_interval? : number
+  recurrent_interval? : number
 }
 
-interface Task extends CreateTask {  
+export interface Task extends CreateTask {  
   id : string,  
-  need_review : boolean,  
+  status : TaskStatus,  
 }
 
-interface LikeToy {
+export interface LikeToy {
   item_id : string,
   like : boolean,
 }
 
-interface Toy {
+export interface Toy {
   categories : string[],
   description: string,
   id : string,
   image : string,
   name : string,
   price : number
+}
+
+export enum TaskStatus {
+  NotDone = "NotDone",
+  Pending = "Pending",
+  Done = "Done",
+}
+
+export interface NewPrice {
+  inferior: number,
+  superior : number,
 }
 
 export default class HTTPManager {
@@ -103,21 +114,26 @@ export default class HTTPManager {
     /* TASK ENDPOINTS */
 
     async fetchAllTasks() : Promise<Task[]> {
-        const tasks = await HTTPInterface.GET<Task[]>(`${this.tasksURL}`);        
+        const tasks = await HTTPInterface.GET<Task[]>(`${this.tasksURL}/`);                
         return tasks;
     }
 
-    async createNewTask(data : Task) : Promise<string> {
-        const newTaskId = await HTTPInterface.POST<CreateTask, string>(`${this.tasksURL}`, data);
-        return newTaskId;
+    async createNewTask(data : CreateTask) : Promise<Task> {
+        const newTaskId = await HTTPInterface.POST<CreateTask, string>(`${this.tasksURL}/`, data);                
+
+        const newTask = data as Task;
+        newTask.id = newTaskId;
+        newTask.status = TaskStatus.NotDone;
+
+        return newTask;
     }
 
     async deleteTask(id : string) : Promise<void> {
         await HTTPInterface.DELETE(`${this.tasksURL}/${id}`);        
     }
 
-    async updateTaskStatus(id : string) : Promise<void> {
-      await HTTPInterface.PATCH<{}>(`${this.tasksURL}/${id}`, {});        
+    async updateTaskStatus(id : string, status : TaskStatus) : Promise<void> {
+      await HTTPInterface.PATCH<{}>(`${this.tasksURL}/${id}/${status}`, {});        
     }
     
     /* TOY CATALOG ENDPOINTS */
