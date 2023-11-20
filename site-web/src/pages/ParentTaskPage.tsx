@@ -71,18 +71,15 @@ export default function ParentTaskPage() : JSX.Element {
             return index !== removeIndex;
         }));
     } 
-    const removeDoneTask = (removeIndex : number) => {
+    const approvePendingTask = (removeIndex : number) => {
         const taskToDelete : Task | undefined = doneTasks.find((_, index) => {
             return index === removeIndex;
         });
         
         if(!taskToDelete)
             throw new Error("Couldn't delete task");
-
-        httpManager.deleteTask(taskToDelete.id)            
-        setDoneTasks(doneTasks.filter(( _, index : number) => { 
-            return index !== removeIndex;
-        }));
+        
+        setDoneTasks(doneTasks);
     } 
 
 
@@ -111,7 +108,7 @@ export default function ParentTaskPage() : JSX.Element {
             </div>
 
             <div className={styles.task_block}>
-                <TaskList tasks={doneTasks} title="Completed Tasks" onTaskClick={removeDoneTask} taskType={"approve-task"}></TaskList>                    
+                <TaskList tasks={doneTasks} title="Completed Tasks" onTaskClick={approvePendingTask} taskType={"approve-task"}></TaskList>                    
             </div>
         </div>        
     );

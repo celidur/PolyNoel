@@ -15,7 +15,13 @@ export default function TaskList(props : TaskListProps) : JSX.Element {
             {props.title}
         </div>
         <div className={styles.tasklist}>
-            {props.tasks.map((task, i) => {
+            { 
+              props.tasks.length === 0 ?
+                <div className={styles.no_task}>
+                    { props.taskType === "view-task" ? "You Finished Your Tasks!!!" : "No Tasks"}
+                  </div>
+              : 
+              props.tasks.map((task, i) => {
               if(props.taskType === "view-task")
                 return <TaskKid key={i} index={i} task={task} onTaskClick={props.onTaskClick}></TaskKid>
               else if(props.taskType === "edit-task")
