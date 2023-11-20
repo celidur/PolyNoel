@@ -7,6 +7,7 @@ import NavBar from './components/Navbar';
 import './assets/css/styles.css'
 import RankToys from './pages/RankToys';
 import ParentTaskPage from './pages/ParentTaskPage';
+import ChooseCategories from './pages/ChooseCategories';
 
 type RouteData = {
   path: string;
@@ -20,6 +21,7 @@ function App() : JSX.Element {
     { path: "/parent", element: <Parent /> },
     { path: "/ranktoys", element: <RankToys /> },
     { path: "/parent/tasks", element: <ParentTaskPage /> },
+    { path: "/parent/categories", element: <ChooseCategories /> },
     { path: "/", element: <Index /> },
   ];
   return (

@@ -31,7 +31,16 @@ impl Analytics {
                 return items.choose(&mut rng).unwrap().to_string();
             }
         }
-        unreachable!("We shouldn't not run out of item before the end");
+
+        let items: Vec<_> = self
+            .categories
+            .last()
+            .unwrap()
+            .items
+            .iter()
+            .cloned()
+            .collect();
+        return items.choose(&mut rng).unwrap().to_string();
     }
 
     pub fn add_review(&mut self, item_id: &str, categories: &Vec<String>, liked: bool) -> bool {
@@ -74,7 +83,7 @@ impl Analytics {
         let removed_items = category.items.clone();
         self.categories.retain_mut(|c| {
             if c.id != category_id {
-                return false;
+                return true;
             } else {
                 c.items = c
                     .items
@@ -82,7 +91,7 @@ impl Analytics {
                     .into_iter()
                     .cloned()
                     .collect();
-                true
+                false
             }
         });
     }
