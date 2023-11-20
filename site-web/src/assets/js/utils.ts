@@ -15,7 +15,7 @@ export function GroupTasksByCategories(tasks : Task[]) : TasksByCategories  {
     tasks.forEach((task : Task)=> {
         if(task.need_review){
             groupedTasks.done.push(task);
-        }else if(task.reccurent_interval){
+        }else if(task.recurrent_interval){
             groupedTasks.daily.push(task);
         }else {
             groupedTasks.general.push(task);

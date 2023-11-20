@@ -54,7 +54,7 @@ export const HTTPInterface = {
 export interface CreateTask {
   deadline?: string,
   name : string,
-  reccurent_interval? : number
+  recurrent_interval? : number
 }
 
 export interface Task extends CreateTask {  

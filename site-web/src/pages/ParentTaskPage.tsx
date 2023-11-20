@@ -22,7 +22,7 @@ export default function ParentTaskPage() : JSX.Element {
             setDailyTasks(daily);       
             setGeneralTasks(general);
             setDoneTasks(done);
-        })
+        });        
 
         // const dailyTasksMock : string[] = ["task 1", "task 2"];
         // const generalTasksMock : string[] = ["task 1", "task 2", "task 3", "task 4"];
@@ -33,6 +33,8 @@ export default function ParentTaskPage() : JSX.Element {
     }, [])
 
     const addGeneral = (taskName : CreateTask) => {        
+        if(taskName.name === "")   
+            return;
         httpManager
             .createNewTask(taskName)
             .then((newTask : Task) => setGeneralTasks([...generalTasks, newTask]))
@@ -40,7 +42,9 @@ export default function ParentTaskPage() : JSX.Element {
         setGeneralInput("");        
     }
 
-    const addDaily = (taskName : CreateTask) => {        
+    const addDaily = (taskName : CreateTask) => {     
+        if(taskName.name === "")   
+            return;
         httpManager
             .createNewTask(taskName)
             .then((newTask : Task) => setDailyTasks([...dailyTasks, newTask]))
@@ -49,16 +53,40 @@ export default function ParentTaskPage() : JSX.Element {
     }
 
     const removeDailyTask = (removeIndex : number) => {
+        const taskToDelete : Task | undefined = dailyTasks.find((_, index) => {
+            return index === removeIndex;
+        });
+
+        if(!taskToDelete)
+            throw new Error("Couldn't delete task");
+
+        httpManager.deleteTask(taskToDelete.id)            
         setDailyTasks(dailyTasks.filter(( _, index : number) => { 
             return index !== removeIndex;
         }));
     } 
     const removeGeneralTask = (removeIndex : number) => {
+        const taskToDelete : Task | undefined = generalTasks.find((_, index) => {
+            return index === removeIndex;
+        });
+        
+        if(!taskToDelete)
+            throw new Error("Couldn't delete task");
+
+        httpManager.deleteTask(taskToDelete.id)            
         setGeneralTasks(generalTasks.filter(( _, index : number) => { 
             return index !== removeIndex;
         }));
     } 
     const removeDoneTask = (removeIndex : number) => {
+        const taskToDelete : Task | undefined = doneTasks.find((_, index) => {
+            return index === removeIndex;
+        });
+        
+        if(!taskToDelete)
+            throw new Error("Couldn't delete task");
+
+        httpManager.deleteTask(taskToDelete.id)            
         setDoneTasks(doneTasks.filter(( _, index : number) => { 
             return index !== removeIndex;
         }));
@@ -74,7 +102,7 @@ export default function ParentTaskPage() : JSX.Element {
                     <input className={styles.input} placeholder="New Daily Task" type="text" value={dailyInput} onChange={(e) => setDailyInput(e.target.value)}></input>                        
                     <button className={styles.add_task_button} 
                     onClick={() =>{
-                        addDaily({name: dailyInput, reccurent_interval: 1});
+                        addDaily({name: dailyInput, recurrent_interval: 1});
                     }}>+</button>
                 </div>
             </div>
@@ -84,7 +112,7 @@ export default function ParentTaskPage() : JSX.Element {
                     <input className={styles.input} placeholder="New General Task" type="text" value={generalInput} onChange={(e) => setGeneralInput(e.target.value)}></input>
                     <button className={styles.add_task_button} 
                     onClick={() =>{
-                        addGeneral({name: dailyInput, reccurent_interval: 0});
+                        addGeneral({name: generalInput, recurrent_interval: 0});
                     }}>+</button>
                 </div>
             </div>
