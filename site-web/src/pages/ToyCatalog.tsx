@@ -139,6 +139,6 @@ function RefuseSquare({callback, cards} : DecisionSquareProps) : JSX.Element {
                 'rgba(255,0,0,1)': 'rgba(255,0,0,0)'}, 
                 rgba(255,0,0,1)`}
         }/>
-            
+
     )
 }

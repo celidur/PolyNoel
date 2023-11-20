@@ -36,7 +36,6 @@ export default function ToyCard({id, title, imgSrc, difficulty, preview} : any) 
 }
 
 function getStars(difficulty: number) : JSX.Element[] {
-    console.log(difficulty);
     const stars = [];
     for(let i = 0; i < difficulty; i++) {
         stars.push(<img key={i} src={starLogo} alt="star" className={getDifficultyClassName(difficulty)}/>);
