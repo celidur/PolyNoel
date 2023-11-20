@@ -66,14 +66,18 @@
     height: 70px;
     margin: auto;
     border-radius: 25px 0px 0px 25px;
-    position:absolute;
+    position: absolute;
     object-fit: cover;
+    transition: 0.8s ease;
 }
 
 .patternDone, .patternProjectedDone {
     border-radius: 25px !important;
+    height: 70px;
+    margin: auto;
     position:absolute;
     object-fit: cover;
+    transition: 0.8s ease;
 }
 
 .pattern {
