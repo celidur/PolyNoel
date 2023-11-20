@@ -109,48 +109,48 @@ export default function RankToys() : JSX.Element {
     );
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    const image = document.getElementsByClassName("image-row")[0] as HTMLElement;
+// document.addEventListener("DOMContentLoaded", () => {
+//     const image = document.getElementsByClassName("image-row")[0] as HTMLElement;
 
-    // Drag and drop functionality
-    let draggedItem: HTMLElement | null = null;
+//     // Drag and drop functionality
+//     let draggedItem: HTMLElement | null = null;
   
-    image.addEventListener("dragstart", (e) => {
-      if (e.target instanceof HTMLElement && e.target.classList.contains("draggable")) {
-        draggedItem = e.target.parentElement as HTMLElement;
-        draggedItem.classList.add("dragging");
-      }
-    });
+//     image.addEventListener("dragstart", (e) => {
+//       if (e.target instanceof HTMLElement && e.target.classList.contains("draggable")) {
+//         draggedItem = e.target.parentElement as HTMLElement;
+//         draggedItem.classList.add("dragging");
+//       }
+//     });
   
-    // image.addEventListener("dragover", (e) => {
-    //   e.preventDefault();
-    // //   const afterElement = getDragAfterElement(image, e.clientY);
-    //   const draggable = draggedItem as HTMLElement;
+//     // image.addEventListener("dragover", (e) => {
+//     //   e.preventDefault();
+//     // //   const afterElement = getDragAfterElement(image, e.clientY);
+//     //   const draggable = draggedItem as HTMLElement;
   
-    // //   if (afterElement == null) {
-    // //     image.appendChild(draggable);
-    // //   } else {
-    // //     image.insertBefore(draggable, afterElement);
-    // //   }
-    // });
+//     // //   if (afterElement == null) {
+//     // //     image.appendChild(draggable);
+//     // //   } else {
+//     // //     image.insertBefore(draggable, afterElement);
+//     // //   }
+//     // });
   
-    image.addEventListener("dragend", () => {
-      if (draggedItem) {
-        draggedItem.classList.remove("dragging");
-        draggedItem = null;
-      }
-    });
+//     image.addEventListener("dragend", () => {
+//       if (draggedItem) {
+//         draggedItem.classList.remove("dragging");
+//         draggedItem = null;
+//       }
+//     });
   
-    // function getDragAfterElement(container: HTMLElement, y: number): HTMLElement | null {
-    //   const draggableElements = Array.from(container.querySelectorAll(".draggable:not(.dragging)"));
-    //   return draggableElements.reduce((closest, child) => {
-    //     const box = child.getBoundingClientRect();
-    //     const offset = y - box.top - box.height / 2;
-    //     if (offset < 0 && offset > closest.offset) {
-    //       return { offset, element: child };
-    //     } else {
-    //       return closest;
-    //     }
-    //   }, { offset: Number.NEGATIVE_INFINITY, element: null }).element;
-    // }
-   });
+//     // function getDragAfterElement(container: HTMLElement, y: number): HTMLElement | null {
+//     //   const draggableElements = Array.from(container.querySelectorAll(".draggable:not(.dragging)"));
+//     //   return draggableElements.reduce((closest, child) => {
+//     //     const box = child.getBoundingClientRect();
+//     //     const offset = y - box.top - box.height / 2;
+//     //     if (offset < 0 && offset > closest.offset) {
+//     //       return { offset, element: child };
+//     //     } else {
+//     //       return closest;
+//     //     }
+//     //   }, { offset: Number.NEGATIVE_INFINITY, element: null }).element;
+//     // }
+//    });
