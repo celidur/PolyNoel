@@ -22,14 +22,7 @@ export default function ParentTaskPage() : JSX.Element {
             setDailyTasks(daily);       
             setGeneralTasks(general);
             setDoneTasks(done);
-        });        
-
-        // const dailyTasksMock : string[] = ["task 1", "task 2"];
-        // const generalTasksMock : string[] = ["task 1", "task 2", "task 3", "task 4"];
-        // const doneTasksMock : string[] = ["task 1", "task 2"];
-        // setDailyTasks(dailyTasksMock);
-        // setGeneralTasks(generalTasksMock);
-        // setDoneTasks(doneTasksMock);
+        });                
     }, [])
 
     const addGeneral = (taskName : CreateTask) => {        
@@ -97,7 +90,7 @@ export default function ParentTaskPage() : JSX.Element {
     return (        
         <div className={styles.task_container}>
             <div className={styles.task_block}>
-                <TaskList taskNames={dailyTasks} title="Daily Tasks" onTaskClick={removeDailyTask} taskType={"edit-task"}></TaskList>
+                <TaskList tasks={dailyTasks} title="Daily Tasks" onTaskClick={removeDailyTask} taskType={"edit-task"}></TaskList>
                 <div className={styles.add_task}>
                     <input className={styles.input} placeholder="New Daily Task" type="text" value={dailyInput} onChange={(e) => setDailyInput(e.target.value)}></input>                        
                     <button className={styles.add_task_button} 
@@ -107,7 +100,7 @@ export default function ParentTaskPage() : JSX.Element {
                 </div>
             </div>
             <div className={styles.task_block}>
-                <TaskList taskNames={generalTasks} title="General Tasks" onTaskClick={removeGeneralTask} taskType={"edit-task"}></TaskList>
+                <TaskList tasks={generalTasks} title="General Tasks" onTaskClick={removeGeneralTask} taskType={"edit-task"}></TaskList>
                 <div className={styles.add_task}>
                     <input className={styles.input} placeholder="New General Task" type="text" value={generalInput} onChange={(e) => setGeneralInput(e.target.value)}></input>
                     <button className={styles.add_task_button} 
@@ -118,7 +111,7 @@ export default function ParentTaskPage() : JSX.Element {
             </div>
 
             <div className={styles.task_block}>
-                <TaskList taskNames={doneTasks} title="Completed Tasks" onTaskClick={removeDoneTask} taskType={"approve-task"}></TaskList>                    
+                <TaskList tasks={doneTasks} title="Completed Tasks" onTaskClick={removeDoneTask} taskType={"approve-task"}></TaskList>                    
             </div>
         </div>        
     );

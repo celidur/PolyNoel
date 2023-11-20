@@ -2,7 +2,7 @@
     /* TODO: configuration des couleurs des taches */
     --task-color: #ffebeb; 
     --unchecked-color: #000000;
-    --checked-color: #f1faee;
+    --checked-color: #000000; /*#f1faee*/
 
     --task-font-size: 24px;
     --task-font-weight: 500;

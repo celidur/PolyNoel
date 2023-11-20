@@ -4,8 +4,9 @@ import TaskEdit from "./TaskEdit";
 import TaskCompleted from "./TaskCompleted";
 import { Task } from "../assets/js/http_manager";
 
-type TaskListProps = { taskNames : Task[], title : string, onTaskClick: (removeIndex : number) => void, taskType : string }
+type TaskListProps = { tasks : Task[], title : string, onTaskClick: (removeIndex : number) => void, taskType : TaskUIType }
 
+type TaskUIType = "view-task" | "edit-task" | "approve-task";
 
 export default function TaskList(props : TaskListProps) : JSX.Element {
   return (
@@ -14,14 +15,14 @@ export default function TaskList(props : TaskListProps) : JSX.Element {
             {props.title}
         </div>
         <div className={styles.tasklist}>
-            {props.taskNames.map((task, i) => {
+            {props.tasks.map((task, i) => {
               if(props.taskType === "view-task")
-                return <TaskKid key={i} index={i} taskname={task.name} onTaskClick={props.onTaskClick}></TaskKid>
+                return <TaskKid key={i} index={i} task={task} onTaskClick={props.onTaskClick}></TaskKid>
               else if(props.taskType === "edit-task")
-                return <TaskEdit key={i} index={i} taskname={task.name} onTaskClick={props.onTaskClick}></TaskEdit>
+                return <TaskEdit key={i} index={i} task={task} onTaskClick={props.onTaskClick}></TaskEdit>
               else if(props.taskType === "approve-task")
-                return <TaskCompleted key={i} index={i} taskname={task.name} onTaskClick={props.onTaskClick}></TaskCompleted>
-              return <TaskKid key={i} index={i} taskname={task.name} onTaskClick={props.onTaskClick}></TaskKid>
+                return <TaskCompleted key={i} index={i} task={task} onTaskClick={props.onTaskClick}></TaskCompleted>
+              return <TaskKid key={i} index={i} task={task} onTaskClick={props.onTaskClick}></TaskKid>
               
             }
             )}            

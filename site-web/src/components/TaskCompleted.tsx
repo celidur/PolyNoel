@@ -1,7 +1,6 @@
 import styles from "./Task.module.css"
 import { useState } from "react";
-
-type TaskProp = { index: number, taskname : string, onTaskClick : (removeIndex : number) => void }
+import { TaskProp } from "./TaskTypes";
 
 export default function TaskCompleted(props: TaskProp) : JSX.Element {
     const [approved, setApproved] = useState<boolean>(false);
@@ -12,7 +11,7 @@ export default function TaskCompleted(props: TaskProp) : JSX.Element {
 
     return (
       <div className={styles.task_manage} onClick={ () => changeApproved()}>            
-            <span>{props.taskname}</span>                                        
+            <span>{props.task.name}</span>                                        
             {
                 approved ? <span className={styles.approved_task}>Approved</span> : <span className={styles.approved_task}>Pending</span>                        
             }
