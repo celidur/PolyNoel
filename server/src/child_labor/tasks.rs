@@ -1,4 +1,4 @@
-use super::task::{CreateTask, Task};
+use super::task::{CreateTask, Task, TaskStatus};
 
 #[derive(Debug, Default)]
 pub struct Tasks {
@@ -18,9 +18,9 @@ impl Tasks {
             false
         }
     }
-    pub fn mark_done(&mut self, id: &str) -> bool {
+    pub fn mark(&mut self, id: &str, status: TaskStatus) -> bool {
         if let Some(task) = self.tasks.iter_mut().find(|t| t.id == id) {
-            task.need_review = true;
+            task.status = status;
             true
         } else {
             false
