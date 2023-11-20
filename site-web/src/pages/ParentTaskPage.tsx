@@ -22,6 +22,10 @@ export default function ParentTaskPage() : JSX.Element {
             setDailyTasks(daily);       
             setGeneralTasks(general);
             setDoneTasks(done);
+        }).catch(()=>{
+            setDailyTasks([]);
+            setGeneralTasks([]);
+            setDoneTasks([]);
         });                
     }, [])
 
@@ -89,7 +93,12 @@ export default function ParentTaskPage() : JSX.Element {
             <div className={styles.task_block}>
                 <TaskList tasks={dailyTasks} title="Daily Tasks" onTaskClick={removeDailyTask} taskType={"edit-task"}></TaskList>
                 <div className={styles.add_task}>
-                    <input className={styles.input} placeholder="New Daily Task" type="text" value={dailyInput} onChange={(e) => setDailyInput(e.target.value)}></input>                        
+                    <input className={styles.input} placeholder="New Daily Task" type="text" value={dailyInput} 
+                        onChange={(e) => setDailyInput(e.target.value)}
+                        onKeyDown={(e)=>{
+                            if(e.key == "Enter")
+                                addDaily({name: dailyInput, recurrent_interval: 1})
+                        }}></input>                        
                     <button className={styles.add_task_button} 
                     onClick={() =>{
                         addDaily({name: dailyInput, recurrent_interval: 1});
@@ -99,7 +108,12 @@ export default function ParentTaskPage() : JSX.Element {
             <div className={styles.task_block}>
                 <TaskList tasks={generalTasks} title="General Tasks" onTaskClick={removeGeneralTask} taskType={"edit-task"}></TaskList>
                 <div className={styles.add_task}>
-                    <input className={styles.input} placeholder="New General Task" type="text" value={generalInput} onChange={(e) => setGeneralInput(e.target.value)}></input>
+                    <input className={styles.input} placeholder="New General Task" type="text" value={generalInput} 
+                    onChange={(e) => setGeneralInput(e.target.value)}
+                    onKeyDown={(e)=>{
+                        if(e.key == "Enter")
+                            addDaily({name: dailyInput, recurrent_interval: 1})
+                    }}></input>
                     <button className={styles.add_task_button} 
                     onClick={() =>{
                         addGeneral({name: generalInput, recurrent_interval: 0});
