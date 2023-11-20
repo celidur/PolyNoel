@@ -59,7 +59,11 @@ export default function Index() : JSX.Element {
                     <NavLink to="/toycatalog">
                         <button className={styles.button}>Add Ideas</button>
                     </NavLink>
-                    <button className={styles.button}>Rank Ideas</button>                    
+                    <NavLink to="/ranktoys">
+                        <button className={styles.button}>Rank Ideas</button>   
+                    </NavLink>
+
+                                     
                 </div>
            </div>
             <TaskList tasks={tasks} title="Tasks" taskType={"view-task"} onTaskClick={ changeTaskState }></TaskList>
