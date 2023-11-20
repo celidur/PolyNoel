@@ -1,4 +1,4 @@
-import '../assets/css/indexStyles.css'
+import './indexStyles.css'
 import styles from './Index.module.css';
 
 import React, { useEffect, useState } from "react"
@@ -45,28 +45,32 @@ export default function Index() : JSX.Element {
                     <p>xx:xx:xx</p>
                 </div>
                 <div id="battleBarContainer">
-                    <span>naughty</span>
                     <div className='battleBar'></div>
-                    <span>nice</span>
+                    <div id="labelsContainer">
+                        <p className="naughty">Naughty</p>
+                        <p className="nice">Nice</p>
+                    </div>
                 </div>
            </div>
-           <div>
-                <div className={styles.title}>TOYS THINGS</div>
-                <div className={styles.toys_container}>
-                    Something
-                </div>
-                <div className={styles.button_container}>
-                    <NavLink to="/toycatalog">
-                        <button className={styles.button}>Add Ideas</button>
-                    </NavLink>
-                    <NavLink to="/ranktoys">
-                        <button className={styles.button}>Rank Ideas</button>   
-                    </NavLink>
 
-                                     
+            <div className={styles.bottomContainer}>
+                <div className={styles.wishlistContainer}>
+                    <div className={styles.title}>My wishlist</div>
+                    <div className={styles.toys_container}>Something</div>
+
+                    <div className={styles.button_container}>
+                        <NavLink to="/toycatalog">
+                            <button className={styles.button}>Add Ideas</button>
+                        </NavLink>
+                        <NavLink to="/ranktoys">
+                            <button className={styles.button}>Rank Ideas</button>   
+                        </NavLink>                   
+                    </div>
                 </div>
-           </div>
-            <TaskList tasks={tasks} title="Tasks" taskType={"view-task"} onTaskClick={ changeTaskState }></TaskList>
+                <div className={styles.tasklistContainer}>
+                    <TaskList tasks={tasks} title="Tasks" taskType={"view-task"} onTaskClick={ changeTaskState }></TaskList>
+                </div>
+            </div>
         </div>
     );
 }

@@ -2,13 +2,50 @@
     font-size:30px;
     font-weight: bold;
     color: #424429;
-    padding: 25px 0px 0px 50px;
 }
 
-.countdown>p:nth-child(2) { 
+.countdown>p:nth-child(2) {
     font-size:30px;
     background-color: #C5C99F;
     border-radius: 15px;
     padding: 15px;
     width: 425px;
 };
+
+.battleBarContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto;
+    position: relative;
+}
+
+.battleBar {
+    height: 70px;
+    width: 700px;
+    background-color: #E1454B;
+    margin: auto;
+    border-radius: 25px;
+}
+
+#labelsContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#labelsContainer>p {
+    font-size: 25px;
+    color: #424429;
+    font-weight: bold;
+    max-width: 700px;
+    margin: 15px 200px 0px 200px;
+}
+
+#labelsContainer>p.naughty {
+    float: left;
+}
+
+#labelsContainer>p.nice {
+    float: right;
+}

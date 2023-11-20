@@ -2,22 +2,20 @@
     display:grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    justify-content: center;
-    align-items: center;
     justify-items: center;
     align-content: center;
-    gap:50px;
+    grid-row-gap: 50px;
 }
 
 .battlepass_container {
     grid-area : 1 / 1 / 2 / 3;
 }
 
-.toys_container {    
+.toys_container {
     width:300px;
     height:300px;
     background-color: grey;
-    border-radius: 20px;    
+    border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,10 +23,11 @@
 }
 
 .title {
-    text-align: center;
-    font-size:26px;
+    font-size:30px;
     font-weight: bold;
-    padding-bottom: 10px;;
+    text-align: center;
+    padding-bottom: 10px;
+    color: #424429;
 }
 
 .button_container {
@@ -41,6 +40,21 @@
     border-radius: 20px;
     border: 2px solid black;
     font-weight: bold;
-    font-size: 24px;    
+    font-size: 24px;
     cursor: pointer;
+}
+
+.tasklistContainer, .wishlistContainer {
+    padding: 50px;
+}
+
+.bottomContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    position: relative;
+    align-items: flex-start;
+    background-color: #ECDCD4;
+    margin-bottom: 25px;
 }
