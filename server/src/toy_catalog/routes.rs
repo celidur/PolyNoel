@@ -144,13 +144,13 @@ pub async fn delete_category(
     get,
     path = "/toy_catalog/categories",
     responses(
-        (status = 200, description = "Get all categories", body = Vec<Category>),
+        (status = 200, description = "Get all categories", body = Vec<SimpleCategory>),
     ),
 )]
 pub async fn get_categories(State(app): State<App>) -> impl IntoResponse {
-    // give the possibility categories of user
-    // app.categories
-    todo!()
+    let user = app.users.lock().await;
+    let simple_categories = app.categories.get_simple(&user.analytics.categories);
+    (StatusCode::OK, Json(simple_categories))
 }
 
 #[derive(Serialize, Deserialize, ToSchema, Debug, Default)]

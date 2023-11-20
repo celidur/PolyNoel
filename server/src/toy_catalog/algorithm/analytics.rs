@@ -6,7 +6,7 @@ use rand::Rng;
 use std::ops::Range;
 
 pub struct Analytics {
-    categories: Categories,
+    pub categories: Categories,
     score: f32,
 }
 
