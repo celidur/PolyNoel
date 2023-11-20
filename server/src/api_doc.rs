@@ -13,6 +13,7 @@ use crate::toy_catalog;
             toy_catalog::routes::get_new_item,
             toy_catalog::routes::update_item,
             toy_catalog::routes::get_item,
+            toy_catalog::routes::delete_toy,
             toy_catalog::routes::get_all_items,
             toy_catalog::routes::add_category,
             toy_catalog::routes::delete_category,
