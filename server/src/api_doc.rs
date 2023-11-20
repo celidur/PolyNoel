@@ -16,7 +16,8 @@ use crate::toy_catalog;
             toy_catalog::routes::get_all_items,
             toy_catalog::routes::add_category,
             toy_catalog::routes::delete_category,
-            toy_catalog::routes::get_categories
+            toy_catalog::routes::get_categories,
+            toy_catalog::routes::get_category
         ),
         components(
             schemas(
@@ -25,6 +26,8 @@ use crate::toy_catalog;
                 child_labor::task::TaskStatus,
                 toy_catalog::toy::Toy,
                 toy_catalog::routes::LikeToy,
+                toy_catalog::algorithm::category::SimpleCategory,
+                toy_catalog::algorithm::category::Category,
                 toy_catalog::routes::NewPrice
             )
         ),

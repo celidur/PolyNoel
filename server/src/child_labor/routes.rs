@@ -38,7 +38,7 @@ pub async fn add_task(State(app): State<App>, Json(task): Json<CreateTask>) -> i
         (status = 404, description = "Task not found")
     ),
     params(
-        ("id" = i32, Path, description = "Task id")
+        ("id" = String, Path, description = "Task id")
     ),
 )]
 pub async fn remove_task(State(app): State<App>, Path(id): Path<String>) -> impl IntoResponse {

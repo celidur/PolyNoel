@@ -14,8 +14,8 @@ pub fn routes() -> Router<App> {
         .route("/swip", get(get_new_item).patch(update_item))
         .route("/toy/:id", get(get_item))
         .route("/toys", get(get_all_items))
-        .route("/category/:id", post(add_category).delete(delete_category))
-        .route("/categories", get(get_categories))
+        .route("/category/:id", post(add_category).delete(delete_category).get(get_category))
+        .route("/category", get(get_categories))
         .route("/price_born", put(modify_price_born))
 }
 
@@ -70,7 +70,7 @@ pub async fn update_item(
 
 #[utoipa::path(
     get,
-    path = "/toy_catalog/toy/:id",
+    path = "/toy_catalog/toy/{id}",
     responses(
         (status = 200, description = "Get item", body = Toy),
         (status = 404, description = "Item not found")
@@ -103,7 +103,7 @@ pub async fn get_all_items(State(app): State<App>) -> impl IntoResponse {
 
 #[utoipa::path(
     post,
-    path = "/toy_catalog/category",
+    path = "/toy_catalog/category/{id}",
     responses(
         (status = 201, description = "Category created successfully", body = String),
     ),
@@ -123,12 +123,12 @@ pub async fn add_category(
 
 #[utoipa::path(
     delete,
-    path = "/toy_catalog/category",
+    path = "/toy_catalog/category/{id}",
     responses(
         (status = 200, description = "Category deleted successfully"),
     ),
     params(
-        ("id" = i32, Path, description = "id of toy")
+        ("id" = String, Path, description = "id of toy")
     ), 
 )]
 pub async fn delete_category(
@@ -142,15 +142,31 @@ pub async fn delete_category(
 
 #[utoipa::path(
     get,
-    path = "/toy_catalog/categories",
+    path = "/toy_catalog/category",
     responses(
         (status = 200, description = "Get all categories", body = Vec<SimpleCategory>),
     ),
 )]
 pub async fn get_categories(State(app): State<App>) -> impl IntoResponse {
     let user = app.users.lock().await;
-    let simple_categories = app.categories.get_simple(&user.analytics.categories);
+    let simple_categories = app.categories.get_all_simple(&user.analytics.categories);
     (StatusCode::OK, Json(simple_categories))
+}
+
+#[utoipa::path(
+    get,
+    path = "/toy_catalog/category/{id}",
+    responses(
+        (status = 200, description = "Get a category", body = Option<Category>),
+        (status = 404, description = "Category not found", body = Option<Category>),
+    ),
+    params(
+        ("id" = String, Path, description = "id of toy")
+    ),
+)]
+pub async fn get_category(State(app): State<App>, Path(id): Path<String>) -> impl IntoResponse {
+    let category = app.users.lock().await.analytics.categories.get(&id).cloned();
+    (StatusCode::OK, Json(category))
 }
 
 #[derive(Serialize, Deserialize, ToSchema, Debug, Default)]

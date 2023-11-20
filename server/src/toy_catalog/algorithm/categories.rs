@@ -1,22 +1,13 @@
 use super::category::Category;
-use serde::Deserialize;
-use serde::Serialize;
+use super::category::SimpleCategory;
 use std::fs;
 use std::ops::Deref;
 use std::ops::DerefMut;
 use std::path::Path;
-use utoipa::ToSchema;
 
 #[derive(Default, Debug, Clone)]
 pub struct Categories {
     pub categories: Vec<Category>,
-}
-
-#[derive(Default, Debug, Clone, Serialize, Deserialize, ToSchema)]
-pub struct SimpleCategory {
-    pub id: String,
-    pub name: String,
-    pub is_selected: bool,
 }
 
 impl DerefMut for Categories {
@@ -36,7 +27,7 @@ impl Deref for Categories {
 impl Categories {
     // read all toys in data/items/*.json  and return a HashMap
 
-    pub fn get_simple(&self, selected: &Categories) -> Vec<SimpleCategory> {
+    pub fn get_all_simple(&self, selected: &Categories) -> Vec<SimpleCategory> {
         self.iter()
             .map(|c| SimpleCategory {
                 id: c.id.to_string(),
@@ -64,7 +55,7 @@ impl Categories {
     }
 
     /// This only get existing category
-    pub fn get(&self, id: &str) -> &Category {
-        self.categories.iter().find(|c| c.id == id).unwrap()
+    pub fn get(&self, id: &str) -> Option<&Category> {
+        self.categories.iter().find(|c| c.id == id)
     }
 }

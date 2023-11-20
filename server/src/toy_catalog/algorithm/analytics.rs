@@ -107,7 +107,7 @@ impl Analytics {
             });
         } else {
             self.categories.retain_mut(|c| {
-                let toy_ids = &all_categories.get(&c.id).items;
+                let toy_ids = &all_categories.get(&c.id).unwrap().items;
                 c.items = toy_ids
                     .iter()
                     .filter(|toy_id| price_born.contains(&toys.get(toy_id.as_str()).unwrap().price))
