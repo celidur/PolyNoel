@@ -24,7 +24,9 @@
     height: 70px;
     width: 700px;
     margin: auto;
-    border-radius: 25px;
+    border-radius: 28px;
+    border: 3px solid #424429;
+    position:relative;
 }
 
 #labelsContainer {

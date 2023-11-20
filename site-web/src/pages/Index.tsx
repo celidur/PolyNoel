@@ -1,6 +1,7 @@
 import './indexStyles.css'
 import styles from './Index.module.css';
 import CandyCane from '../assets/img/pattern.jpg'
+import CandyCaneProjected from '../assets/img/patterngris.jpg'
 
 import React, { useEffect, useState } from "react"
 import HTTPManager, { Task, TaskStatus } from '../assets/js/http_manager';
@@ -47,7 +48,7 @@ export default function Index() : JSX.Element {
                 </div>
                 <div id="battleBarContainer">
                     <div className='battleBar'>
-                        <img className={styles.pattern} src={CandyCane} alt="candycane pattern"/>
+                        <ProgressBar projectedProgress={300} realProgress={200} ></ProgressBar>
                     </div>
                     <div id="labelsContainer">
                         <p className="naughty">Naughty</p>
@@ -77,3 +78,15 @@ export default function Index() : JSX.Element {
         </div>
     );
 }
+
+interface progressBarProps{
+    projectedProgress: number;
+    realProgress: number;
+}
+function ProgressBar({projectedProgress, realProgress}:progressBarProps):JSX.Element {
+    return (
+    <>
+        <img className={styles.patternProjected} src={CandyCaneProjected} width={projectedProgress} alt="candycane pattern projected"></img>
+        <img className={styles.pattern} src={CandyCane} alt="candycane pattern" width={realProgress}></img>
+    </>
+);}
