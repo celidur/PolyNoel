@@ -14,6 +14,8 @@ import checkLogo from "../assets/img/check-mark.svg";
 import crossLogo from "../assets/img/cross.svg";
 
 const MINIMUM_STACK_SIZE = 3;
+const parentPrice = 10000; //TODO implement parent price maximum
+const clamp = (num:number, min:number, max:number) => Math.min(Math.max(num, min), max);
 
 const httpManager = new HTTPManager();
 export default function ToyCatalog() : JSX.Element {
@@ -28,7 +30,8 @@ async function loadToys(amount : number =1) : Promise<ToyCardProps[]> {
     const newToys : ToyCardProps[] = [];
     for(let i = 0; i < amount; i++) {
         const toy = await httpManager.getToyToSwipe();
-        newToys.push({id:toy.id,title:toy.name, imgSrc:toy.image, difficulty:5});
+        const difficulty = Math.round(clamp((toy.price / parentPrice) * 5, 1, 5)); //TODO implement parent price maximum
+        newToys.push({id:toy.id,title:toy.name, imgSrc:toy.image, difficulty:difficulty});
     }
     return newToys;
 }

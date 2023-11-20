@@ -39,6 +39,34 @@
     object-fit: contain;
 }
 
+.difficultySlider{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 3em;
+}
+
+.difficultySlider h2 {
+    font-size: 1.5em;
+    color:white;
+    text-align: center;
+    container-name: toyName;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.color1{
+    filter: invert(60%) sepia(43%) saturate(6626%) hue-rotate(94deg) brightness(104%) contrast(106%);
+}
+
+.color2{
+    filter: invert(71%) sepia(29%) saturate(1877%) hue-rotate(11deg) brightness(109%) contrast(96%);
+}
+
+.color3{
+    filter: invert(15%) sepia(89%) saturate(6075%) hue-rotate(6deg) brightness(101%) contrast(98%)
+}
+
 .imageContainer {
     border-radius: 10px;
     display: flex;
