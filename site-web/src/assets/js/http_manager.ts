@@ -59,7 +59,7 @@ export interface CreateTask {
 
 export interface Task extends CreateTask {  
   id : string,  
-  need_review : boolean,  
+  status : TaskStatus,  
 }
 
 export interface LikeToy {
@@ -74,6 +74,17 @@ export interface Toy {
   image : string,
   name : string,
   price : number
+}
+
+export enum TaskStatus {
+  NotDone = "NotDone",
+  Pending = "Pending",
+  Done = "Done",
+}
+
+export interface NewPrice {
+  inferior: number,
+  superior : number,
 }
 
 export default class HTTPManager {
@@ -112,7 +123,7 @@ export default class HTTPManager {
 
         const newTask = data as Task;
         newTask.id = newTaskId;
-        newTask.need_review = false;
+        newTask.status = TaskStatus.NotDone;
 
         return newTask;
     }
@@ -121,8 +132,8 @@ export default class HTTPManager {
         await HTTPInterface.DELETE(`${this.tasksURL}/${id}`);        
     }
 
-    async updateTaskStatus(id : string) : Promise<void> {
-      await HTTPInterface.PATCH<{}>(`${this.tasksURL}/${id}`, {});        
+    async updateTaskStatus(id : string, status : TaskStatus) : Promise<void> {
+      await HTTPInterface.PATCH<{}>(`${this.tasksURL}/${id}/${status}`, {});        
     }
     
     /* TOY CATALOG ENDPOINTS */

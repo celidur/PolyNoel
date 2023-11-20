@@ -1,4 +1,4 @@
-import { Task } from "./http_manager";
+import { Task, TaskStatus } from "./http_manager";
 export interface TasksByCategories {
     daily : Task[],
     general : Task[],
@@ -13,7 +13,7 @@ export function GroupTasksByCategories(tasks : Task[]) : TasksByCategories  {
     }
 
     tasks.forEach((task : Task)=> {
-        if(task.need_review){
+        if(task.status !== TaskStatus.NotDone){
             groupedTasks.done.push(task);
         }else if(task.recurrent_interval){
             groupedTasks.daily.push(task);
