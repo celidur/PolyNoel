@@ -5,6 +5,7 @@ import Parent from './pages/Parent';
 import { Route, Routes } from 'react-router-dom';
 import NavBar from './components/Navbar';
 import './assets/css/styles.css'
+import RankToys from './pages/RankToys';
 import ParentTaskPage from './pages/ParentTaskPage';
 
 type RouteData = {
@@ -17,6 +18,7 @@ function App() : JSX.Element {
     { path: "/index", element: <Index /> },
     { path: "/toycatalog", element: <ToyCatalog /> },
     { path: "/parent", element: <Parent /> },
+    { path: "/ranktoys", element: <RankToys /> },
     { path: "/parent/tasks", element: <ParentTaskPage /> },
     { path: "/", element: <Index /> },
   ];

@@ -3,16 +3,17 @@ use axum::{
     extract::{Path, State},
     http::StatusCode,
     response::IntoResponse,
-    routing::{patch, post},
+    routing::{delete, patch, post},
     Json, Router,
 };
 
-use super::task::CreateTask;
+use super::task::{CreateTask, TaskStatus};
 
 pub fn routes() -> Router<App> {
     Router::new()
         .route("/", post(add_task).get(get_tasks))
-        .route("/:id", patch(mark_task_done).delete(remove_task))
+        .route("/:id", delete(remove_task))
+        .route("/:id/:status", patch(change_task))
 }
 
 #[utoipa::path(
@@ -37,7 +38,7 @@ pub async fn add_task(State(app): State<App>, Json(task): Json<CreateTask>) -> i
         (status = 404, description = "Task not found")
     ),
     params(
-        ("id" = i32, Path, description = "Task id")
+        ("id" = String, Path, description = "Task id")
     ),
 )]
 pub async fn remove_task(State(app): State<App>, Path(id): Path<String>) -> impl IntoResponse {
@@ -61,17 +62,21 @@ pub async fn get_tasks(State(app): State<App>) -> impl IntoResponse {
 
 #[utoipa::path(
     patch,
-    path = "/child_labor/{id}",
+    path = "/child_labor/{id}/{status}",
     responses(
         (status = 200, description = "Task updated successfully"),
         (status = 404, description = "Task not found")
     ),
     params(
-        ("id" = i32, Path, description = "Task id")
+        ("id" = String, Path, description = "Task id"),
+        ("status" = TaskStatus, description = "New status")
     ),
 )]
-pub async fn mark_task_done(State(app): State<App>, Path(id): Path<String>) -> impl IntoResponse {
-    match app.users.lock().await.tasks.mark_done(&id) {
+pub async fn change_task(
+    State(app): State<App>,
+    Path((id, status)): Path<(String, TaskStatus)>,
+) -> impl IntoResponse {
+    match app.users.lock().await.tasks.mark(&id, status) {
         true => StatusCode::OK,
         false => StatusCode::NOT_FOUND,
     }
