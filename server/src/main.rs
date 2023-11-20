@@ -1,7 +1,7 @@
 use api_doc::ApiDoc;
 use axum::{
     http::{
-        header::{ACCEPT, CONTENT_TYPE, ORIGIN},
+        header::{ACCEPT, AUTHORIZATION, CONTENT_TYPE, ORIGIN},
         Method, Request,
     },
     Router,
@@ -36,7 +36,7 @@ async fn main() {
         ])
         // allow requests from any origin
         .allow_origin(Any)
-        .allow_headers([CONTENT_TYPE, ORIGIN, ACCEPT]);
+        .allow_headers([CONTENT_TYPE, ORIGIN, ACCEPT, AUTHORIZATION]);
 
     let state = App::new();
 
