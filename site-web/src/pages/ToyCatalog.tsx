@@ -11,7 +11,6 @@ import CustomDragLayer from "../ToyCatalog/CustomDragLayer";
 import HTTPManager from "../assets/js/http_manager";
 
 const MINIMUM_STACK_SIZE = 3;
-const LOAD_AMOUNT = 5;
 
 const httpManager = new HTTPManager();
 export default function ToyCatalog() : JSX.Element {
@@ -22,7 +21,7 @@ export default function ToyCatalog() : JSX.Element {
     );
 }
 
-async function loadToys(amount : number) : Promise<ToyCardProps[]> {
+async function loadToys(amount : number =1) : Promise<ToyCardProps[]> {
     const newToys : ToyCardProps[] = [];
     for(let i = 0; i < amount; i++) {
         const toy = await httpManager.getToyToSwipe();
@@ -37,7 +36,7 @@ function TinderGame() : JSX.Element {
     );
     const initialLoad = async () =>{
         console.log("Initial load");
-        const newToys = await loadToys(LOAD_AMOUNT);
+        const newToys = await loadToys(MINIMUM_STACK_SIZE);
         setCards(newToys);
     }
 
@@ -45,9 +44,11 @@ function TinderGame() : JSX.Element {
     useEffect(()=>{initialLoad()},[])
     useEffect(() => {
         const load = async() => {
-            const newToys = await loadToys(LOAD_AMOUNT);
-            cards.push(...newToys);
-            setCards(cards);
+            while(cards.length < MINIMUM_STACK_SIZE) {
+                const newToys = await loadToys();
+                cards.push(...newToys);
+                setCards(cards);
+            }
         };
         if(switchFlag && cards) {
             cards.shift();
