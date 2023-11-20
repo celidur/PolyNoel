@@ -1,5 +1,6 @@
 import './indexStyles.css'
 import styles from './Index.module.css';
+import CandyCane from '../assets/img/pattern.jpg'
 
 import React, { useEffect, useState } from "react"
 import HTTPManager, { Task, TaskStatus } from '../assets/js/http_manager';
@@ -45,7 +46,9 @@ export default function Index() : JSX.Element {
                     <p>xx:xx:xx</p>
                 </div>
                 <div id="battleBarContainer">
-                    <div className='battleBar'></div>
+                    <div className='battleBar'>
+                        <img className={styles.pattern} src={CandyCane} alt="candycane pattern"/>
+                    </div>
                     <div id="labelsContainer">
                         <p className="naughty">Naughty</p>
                         <p className="nice">Nice</p>
