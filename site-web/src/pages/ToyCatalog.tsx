@@ -61,16 +61,21 @@ function TinderGame() : JSX.Element {
     
     return (
         <>
-            <div className={styles.cardDragContainer}>
-                <CustomDragLayer/>
-                <RefuseSquare callback={setSwitchFlag} cards={cards}/>
-                <div className={styles.cardStack}>
-                    <DraggableToyCard {...cards[1]}/>
-                    <DraggableToyCard {...cards[0]}/>
+            <div className={styles.tinderGame}>
+                <div className={styles.cardDragContainer}>
+                    <CustomDragLayer/>
+                    <RefuseSquare callback={setSwitchFlag} cards={cards}/>
+                    <div className={styles.cardStack}>
+                        <DraggableToyCard {...cards[1]}/>
+                        <DraggableToyCard {...cards[0]}/>
+                    </div>
+                    <AcceptSquare callback={setSwitchFlag} cards={cards}/>
                 </div>
-                <AcceptSquare callback={setSwitchFlag} cards={cards}/>
+                <div className={styles.buttonInterface}>
+                    <button className={styles.refuseButton} onClick={()=>{refuse(cards[0], setSwitchFlag)}}>Refuse</button>
+                    <button className={styles.acceptButton} onClick={()=>{accept(cards[0], setSwitchFlag)}}>Accept</button>
+                </div>
             </div>
-
         </>
     )
 }
@@ -107,7 +112,7 @@ function AcceptSquare({callback, cards}: DecisionSquareProps) : JSX.Element {
 function refuse(toy:ToyCardProps, callback : (setSwitchFlag:boolean)=>void) : void {
     console.log("Refused : " + toy.title);
     callback(true);
-    httpManager.updateToyLike({item_id:toy.id,like:false});
+    httpManager.updateToyLike({item_id:toy.id, like:false});
 }
 
 function RefuseSquare({callback, cards} : DecisionSquareProps) : JSX.Element {
