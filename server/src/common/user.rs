@@ -50,4 +50,8 @@ impl User {
             .limit_prices(all_categories, &self.price_born, &price_born, toys);
         self.price_born = price_born;
     }
+
+    pub fn remove_toy(&mut self, item_id: &str) -> bool {
+        self.selected_item.remove(item_id)
+    }
 }

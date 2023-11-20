@@ -12,7 +12,7 @@ use utoipa::ToSchema;
 pub fn routes() -> Router<App> {
     Router::new()
         .route("/swip", get(get_new_item).patch(update_item))
-        .route("/toy/:id", get(get_item))
+        .route("/toy/:id", get(get_item).delete(delete_toy))
         .route("/toys", get(get_all_items))
         .route("/category/:id", post(add_category).delete(delete_category).get(get_category))
         .route("/category", get(get_categories))
@@ -92,7 +92,7 @@ pub async fn get_item(State(app): State<App>, Path(id): Path<String>) -> Result<
     get,
     path = "/toy_catalog/toys",
     responses(
-        (status = 200, description = "Get all items", body = Vec<Toy>),
+        (status = 200, description = "Get all items id of select toy", body = Vec<String>),
     ),
 )]
 pub async fn get_all_items(State(app): State<App>) -> impl IntoResponse {
@@ -209,4 +209,27 @@ pub async fn get_price_born(State(app): State<App>) -> impl IntoResponse {
         superior: user.price_born.end,
     };
     (StatusCode::OK, Json(price_born))
+}
+
+#[utoipa::path(
+    delete,
+    path = "/toy_catalog/toy/{id}",
+    responses(
+        (status = 200, description = "Toy deleted successfully of select toy"),
+        (status = 404, description = "Toy not found")
+    ),
+    params(
+        ("id" = String, Path, description = "id of toy")
+    ), 
+)]
+pub async fn delete_toy(
+    State(app): State<App>,
+    Path(id): Path<String>,
+) -> impl IntoResponse {
+    let mut user = app.users.lock().await;
+    let res = user.remove_toy(&id);
+    if !res {
+        return StatusCode::NOT_FOUND;
+    }
+    StatusCode::OK
 }
