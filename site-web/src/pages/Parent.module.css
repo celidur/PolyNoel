@@ -10,7 +10,7 @@
 .feature {
     padding: 10px;    
     border-radius: 20px;
-    background-color:var(--nav-bar-color); /* TODO: change Color */
+    background-color:#8A914A; /* TODO: change Color */
     font-weight: bold;
     font-size: 24px;
     color: white;

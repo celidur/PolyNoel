@@ -1,7 +1,7 @@
 :root {
     /* TODO: configuration des couleurs des taches */
-    --task-color: #ffebeb; 
-    --unchecked-color: #000000;
+    --task-color: #8A914A; 
+    --unchecked-color: #30372E;
     --checked-color: #f1faee;
 
     --task-font-size: 24px;

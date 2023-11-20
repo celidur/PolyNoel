@@ -28,9 +28,11 @@
     border:none;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;    
-    caret-color: transparent;            
+    caret-color: transparent;  
+    background-color: #C5C99F;          
     cursor:pointer;
     user-select: none;
+    color: #424429;
 }
 
 .input {    
@@ -39,6 +41,10 @@
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;    
     border:none;    
-    background-color: rgb(239, 239, 239);
-    caret-color: black;    
+    background-color: #C5C99F;
+    caret-color: #424429;    
+}
+
+::placeholder {
+    color: #424429;
 }

@@ -1,7 +1,8 @@
 :root {
-    --main-color: white;
+    --main-color: #C3BDB1;
     --text-color: black;    
-    --nav-bar-color: #d00505;
+    --nav-bar-color: #C92F37;
+    background-color: #F2F0EE;
 }
 
 * {
@@ -18,7 +19,7 @@ header {
     align-items: center;    
     padding: 20px 8%;    
     
-    background: #D00505;
+    background: var(--nav-bar-color);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);    
 }
 
@@ -35,33 +36,88 @@ header a, header button {
 
 header button {
     padding: 14px 32px;
-    background-color: white;
+    background-color:#E4EFEC;
     border:none;    
-    color:#d00505;
+    color:var(--nav-bar-color);
     cursor: pointer;
     transition: all 0.3 ease 0s;
 }
 
 #battleBarContainer {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin-top: 7%;
     margin: auto;
-}
-
-#battleBarContainer>span {
-    font-size: 160%;
-    margin: auto;
+    margin: 50px auto;
+    position: relative;
 }
 
 .battleBar {
-    display: inline-block;
-    height: 50px;
+    height: 70px;
     width: 700px;
-    background-color: rgb(57, 93, 63);
+    background-color: #E1454B;
     margin: auto 50px;
+    border-radius: 25px;
+}
+
+#labelsContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#labelsContainer>p {
+    font-size: 25px;
+    color: #424429;
+    font-weight: bold;
+    max-width: 700px;
+    margin: 15px 200px 0px 200px;
+}
+
+#labelsContainer>p.naughty {
+    float: left;
+}
+
+#labelsContainer>p.nice {
+    float: right;
+}
+
+#todoListContainer>p, #wishlistContainer>p {
+    font-size: 25px;
+    color: #424429;
+    font-weight: bold;
+    max-width: 700px;
+}
+
+#bottomContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    justify-content: space-evenly;
+    align-items: start;
+    background-color: #ECDCD4;
+    margin-bottom: 25px;
+}
+
+#bottomContainer>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.todoListBox {
+    height: 70px;
+    width: 400px;
+    background-color: #E1454B;
+    border-radius: 25px;
+    margin-bottom: 1%;
+}
+
+.wishlistBox {
+    height: 400px;
+    width: 400px;
+    background-color: #E1454B;
     border-radius: 25px;
 }
