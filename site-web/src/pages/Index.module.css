@@ -70,6 +70,12 @@
     object-fit: cover;
 }
 
+.patternDone, .patternProjectedDone {
+    border-radius: 25px !important;
+    position:absolute;
+    object-fit: cover;
+}
+
 .pattern {
     z-index: 2;
 }

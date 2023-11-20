@@ -10,12 +10,21 @@ import { NavLink } from 'react-router-dom';
 
 export default function Index() : JSX.Element {
     const [tasks, setTasks] = useState<Task[]>([]);
+    const [realPercentage, setReal] = useState(0);
+    const [projectedPercentage, setProjected] = useState(0);
     const httpManager = new HTTPManager();
     useEffect(()=> {
         httpManager.fetchAllTasks()
         .then((fetchedTasks : Task[]) => {
-            const filtered = fetchedTasks.filter((task : Task)=> { return task.status !== TaskStatus.Done});                        
+            const barLength = 700;
+            const filtered = fetchedTasks.filter((task : Task)=> { return task.status !== TaskStatus.Done});
+            const pending = fetchedTasks.filter((task : Task)=> { return task.status === TaskStatus.Pending});                        
             setTasks(filtered);
+
+            const realData = (barLength/fetchedTasks.length)*(fetchedTasks.length-filtered.length);
+            const projectedData = realData + (barLength/fetchedTasks.length)*(pending.length);
+            setReal(realData);
+            setProjected(projectedData);
         });  
     }, []);
 
@@ -32,15 +41,21 @@ export default function Index() : JSX.Element {
         httpManager.updateTaskStatus(taskToDelete.id, status).then(()=> {
             httpManager.fetchAllTasks()
             .then((fetchedTasks : Task[]) => {
-                const filtered = fetchedTasks.filter((task : Task)=> { return task.status !== TaskStatus.Done});        
+                const barLength = 700;
+                const filtered = fetchedTasks.filter((task : Task)=> { return task.status !== TaskStatus.Done});
+                const pending = fetchedTasks.filter((task : Task)=> { return task.status === TaskStatus.Pending}); 
                 setTasks(filtered)
+
+                const realData = (barLength/fetchedTasks.length)*(fetchedTasks.length-filtered.length);
+                const projectedData = realData + (barLength/fetchedTasks.length)*(pending.length);
+                setReal(realData);
+                setProjected(projectedData);
             });  
         })
     };
 
     return (
         <div className={styles.container}>
-           {/* Hello World! */}
            <div className={styles.battlepass_container}>
                 <div className='countdown'>
                     <p>Time left to complete tasks</p>
@@ -48,7 +63,7 @@ export default function Index() : JSX.Element {
                 </div>
                 <div id="battleBarContainer">
                     <div className='battleBar'>
-                        <ProgressBar projectedProgress={300} realProgress={200} ></ProgressBar>
+                        <ProgressBar projectedProgress={projectedPercentage} realProgress={realPercentage} ></ProgressBar>
                     </div>
                     <div id="labelsContainer">
                         <p className="naughty">Naughty</p>
@@ -84,9 +99,28 @@ interface progressBarProps{
     realProgress: number;
 }
 function ProgressBar({projectedProgress, realProgress}:progressBarProps):JSX.Element {
-    return (
-    <>
-        <img className={styles.patternProjected} src={CandyCaneProjected} width={projectedProgress} alt="candycane pattern projected"></img>
-        <img className={styles.pattern} src={CandyCane} alt="candycane pattern" width={realProgress}></img>
-    </>
-);}
+    const barLength = 700;
+    if (barLength === realProgress) {
+        return (
+            <>
+                <img className={styles.patternDone} src={CandyCane} alt="candycane pattern" width={realProgress}></img>
+            </>
+        );
+    }
+    else if (barLength === projectedProgress) {
+        return (
+            <>
+                <img className={styles.patternProjectedDone} src={CandyCaneProjected} width={projectedProgress} alt="candycane pattern projected"></img>
+                <img className={styles.pattern} src={CandyCane} alt="candycane pattern" width={realProgress}></img>
+            </>
+        );
+    }
+    else {
+        return (
+        <>
+            <img className={styles.patternProjected} src={CandyCaneProjected} width={projectedProgress} alt="candycane pattern projected"></img>
+            <img className={styles.pattern} src={CandyCane} alt="candycane pattern" width={realProgress}></img>
+        </>
+    );}
+}
+    
