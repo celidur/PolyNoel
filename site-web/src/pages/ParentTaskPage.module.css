@@ -17,6 +17,7 @@
 .add_task {
     width:360px;
     display: flex;
+    justify-content: flex-start;
     caret-color: transparent;
 }
 
@@ -33,16 +34,24 @@
     cursor:pointer;
     user-select: none;
     color: #424429;
+    flex: 1 1 20px; 
+    
 }
 .input {    
     padding: 10px;
-    flex: 1 1;
+    width:200px;
+    flex: 0 2 340px; 
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;    
     border:none;    
     background-color: #C5C99F;
-    caret-color: #424429;    
+    caret-color: #424429;   
 }
+
+.textarea:focus, .input:focus{
+    outline: none;
+}
+
 
 ::placeholder {
     color: #424429;
