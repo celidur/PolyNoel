@@ -3,6 +3,7 @@
     --font-inter: Inter;
     --font-size-xs: 12px;
     --font-size-xl: 20px;
+    --font-size-mini: 15px;
   
     /* Colors */
     --color-white: #fff;
@@ -14,8 +15,121 @@
     /* Paddings */
     --padding-3xs: 10px;
     --padding-xs: 12px;
+
+    /* Border radiuses */
+  --br-3xs: 10px;
 }
 
+.page-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fef5d4;
+  width: 401px;
+  height: 982px;
+}
+
+.blacksquare {
+  position: absolute;
+  top: 0;
+  left: 115px;
+  background-color: var(--color-black);
+  width: 99px;
+  height: 88px;
+}
+
+.image1 {
+  position: absolute;
+  top: 0;
+  left: 115px;
+  width: 99px;
+  height: 88px;
+}
+
+/* .image2 {
+  position: absolute;
+  top: 0;
+  left: 231px;
+  background-color: var(--color-black);
+  width: 99px;
+  height: 88px;
+}
+.image3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-black);
+  width: 99px;
+  height: 88px;
+} */
+
+.image-row {
+  position: absolute;
+  top: 236px;
+  left: 36px;
+  width: 330px;
+  height: 88px;
+}
+
+.save {
+  position: absolute;
+  top: 14px;
+  left: 188px;
+  line-height: 130%;
+  font-weight: 600;
+}
+.save-button {
+  position: absolute;
+  top: 918px;
+  left: 786px;
+  width: 423px;
+  height: 54px;
+  font-size: 20px;
+  background-color: #159650;
+  border-radius: var(--br-3xs);
+}
+.edit {
+  font-weight: 600;
+}
+
+.edit-button {
+  position: absolute;
+  top: 901px;
+  left: 36px;
+  border-radius: var(--br-3xs);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 157px;
+  height: 41px;
+  background-color: #939393;
+  justify-content: center;
+  align-items: center;
+}
+.delete-all {
+  font-weight: 600;
+}
+.delete-all-button {
+  position: absolute;
+  top: 901px;
+  left: 209px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 157px;
+  height: 41px;
+  background-color: #b6071c;
+  border-radius: var(--br-3xs);
+  justify-content: center;
+  align-items: center;
+}
+.page-rank-ideas {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  height: 982px;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--font-size-mini);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}
 
 .rank-your-wishes, .text {
   line-height: 130%;
@@ -26,6 +140,14 @@
     line-height: 130%;
     font-weight: 600;
   }
+.my-wishes {
+  position: absolute;
+  top: 152px;
+  left: 50px;
+  line-height: 130%;
+  font-weight: 600;
+}
+
 
 .rank-your-wishes {
   position: absolute;
