@@ -69,6 +69,7 @@ function TinderGame() : JSX.Element {
     return (
         <>
             <div className={styles.tinderGame}>
+                <h1>Do you want this?</h1>
                 <div className={styles.cardDragContainer}>
                     <CustomDragLayer/>
                     <RefuseSquare callback={setSwitchFlag} cards={cards}/>

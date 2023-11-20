@@ -49,7 +49,6 @@ interface DifficultySliderProps {
 function DifficultySlider({level}: DifficultySliderProps) : JSX.Element {
     return (
         <div className={styles.difficultySlider}>
-            <h2>Difficulty : </h2>
             {getStars(level)}
         </div>
     )
