@@ -125,7 +125,7 @@ pub async fn add_category(
     delete,
     path = "/toy_catalog/category/{id}",
     responses(
-        (status = 200, description = "Category deleted successfully"),
+        (status = 200, description = "Category deleted successfully", body = Vec<SimpleCategory>),
     ),
     params(
         ("id" = String, Path, description = "id of toy")
@@ -137,7 +137,8 @@ pub async fn delete_category(
 ) -> impl IntoResponse {
     let mut user = app.users.lock().await;
     user.remove_category(&id);
-    StatusCode::OK
+    let simple_categories = app.categories.get_all_simple(&user.analytics.categories);
+    (StatusCode::OK, Json(simple_categories))
 }
 
 #[utoipa::path(
