@@ -44,19 +44,25 @@ impl Analytics {
     }
 
     pub fn add_review(&mut self, item_id: &str, categories: &Vec<String>, liked: bool) -> bool {
-        let factor = if liked { 2.0 } else { 0.5 };
-        let factor = factor / categories.len() as f32;
+        let base_factor = if liked { 1.2 } else { 0.8 };
+
         if self.categories.iter().all(|c| !c.items.contains(item_id)) {
             return false;
         }
-        for Category { score, .. } in self
+
+        for category in self
             .categories
             .iter_mut()
             .filter(|Category { id, .. }| categories.contains(&id.to_string()))
         {
-            self.score += (*score * factor) - *score;
-            *score *= factor;
+            let depth_factor = 1.0 + (category.depth() as f32 * 0.1);
+            let adjustment_factor = base_factor * depth_factor;
+
+            self.score += (category.score * adjustment_factor) - category.score;
+
+            category.score *= adjustment_factor;
         }
+
         self.remove_item(item_id);
         true
     }

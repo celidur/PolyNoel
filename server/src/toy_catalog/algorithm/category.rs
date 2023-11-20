@@ -1,6 +1,6 @@
 use compact_str::CompactString;
 use serde::{Deserialize, Serialize};
-use std::{collections::HashSet, fs, io::BufReader, path::Path};
+use std::{cmp::min, collections::HashSet, fs, io::BufReader, path::Path};
 use utoipa::ToSchema;
 
 #[derive(Default, Debug, Clone, Serialize, Deserialize, ToSchema)]
@@ -33,5 +33,9 @@ impl Category {
         let file = fs::File::open(path).unwrap();
         let reader = BufReader::new(file);
         serde_json::from_reader(reader).unwrap()
+    }
+
+    pub fn depth(&self) -> usize {
+        min(self.category.len(), 0)
     }
 }
