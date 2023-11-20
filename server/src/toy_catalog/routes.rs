@@ -16,7 +16,7 @@ pub fn routes() -> Router<App> {
         .route("/toys", get(get_all_items))
         .route("/category/:id", post(add_category).delete(delete_category).get(get_category))
         .route("/category", get(get_categories))
-        .route("/price_born", put(modify_price_born))
+        .route("/price_born", put(modify_price_born).get(get_price_born))
 }
 
 #[utoipa::path(
@@ -193,4 +193,20 @@ pub async fn modify_price_born(
     let price_born = price_born.inferior..price_born.superior;
     user.modify_price_born(&app.categories, price_born, &app.toys);
     StatusCode::OK
+}
+
+#[utoipa::path(
+    get,
+    path = "/toy_catalog/price_born",
+    responses(
+        (status = 200, description = "Get price born", body = NewPrice),
+    ),
+)]
+pub async fn get_price_born(State(app): State<App>) -> impl IntoResponse {
+    let user = app.users.lock().await;
+    let price_born = NewPrice{
+        inferior: user.price_born.start,
+        superior: user.price_born.end,
+    };
+    (StatusCode::OK, Json(price_born))
 }
