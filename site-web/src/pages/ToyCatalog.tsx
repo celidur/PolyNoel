@@ -32,22 +32,21 @@ async function loadToys(amount : number =1) : Promise<ToyCardProps[]> {
     for(let i = 0; i < amount; i++) {
         const toy = await httpManager.getToyToSwipe();
 
+        // TO AJUST: once price range error is fixed
         // const priceBorn = await httpManager.getPriceBorn();
         // const priceMin = priceBorn.inferior;
         // const priceMax = priceBorn.superior;
 
         // let difficulty;
-        
-        // if (toy.price < priceMin)
-        //     difficulty = 5;
-        // else if (toy.price >= priceMin && toy.price <= priceMax) {
+        // if (toy.price <= priceMax) {
         //     const range = priceMax - priceMin;
         //     difficulty = 1 + ((toy.price - priceMin) / range) * 4;
         // } else 
         //     difficulty = 5;
-        
         // difficulty = Math.round(clamp(difficulty, 1, 5)); 
-        const difficulty = Math.round(clamp((toy.price / parentPrice) * 5, 1, 5)); //TODO implement parent price maximum
+
+        const difficulty = Math.round(clamp((toy.price / parentPrice) * 5, 1, 5)); //TO remove once lines above are implemented
+
         newToys.push({id:toy.id,title:toy.name, imgSrc:toy.image, difficulty:difficulty});
     }
     return newToys;
