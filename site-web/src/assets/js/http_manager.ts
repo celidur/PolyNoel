@@ -52,6 +52,7 @@ export const HTTPInterface = {
       body: JSON.stringify(data),
       headers: {
         "content-type": "application/json",
+        'accept': '*/*'
       },
     });
     return response.status;
@@ -119,6 +120,7 @@ export default class HTTPManager {
     catalogSwipToysURL : string;
     catalogToyURL : string;
     catalogToysURL : string
+    priceBornURL : string
     constructor() {
         //Main Endpoints
         this.tasksURL = "child_labor";
@@ -131,6 +133,7 @@ export default class HTTPManager {
         this.catalogSwipToysURL = "swip";
         this.catalogToyURL = "toy";
         this.catalogToysURL = "toys";
+        this.priceBornURL = "price_born";
     }
 
     /* TASK ENDPOINTS */
@@ -190,9 +193,27 @@ export default class HTTPManager {
       return await HTTPInterface.GET<Toy>(`${this.toysURL}/${this.catalogToyURL}/${id}`);
     }
 
-    async getToys() : Promise<Toy[]> {
-      return await HTTPInterface.GET<Toy[]>(`${this.toysURL}/${this.catalogToysURL}`);
+    async getToyIds() : Promise<string[]> {
+      return await HTTPInterface.GET<string[]>(`${this.toysURL}/${this.catalogToysURL}`);
     }
 
+    async getToys() : Promise<Toy[]> {
+      const toyIds = await this.getToyIds();
+      const toys : Toy[] = [];
+      for(let id of toyIds){
+        toys.push(await this.getToyById(id));
+      }
+      return toys;
+    }
+
+    /* Prices */
+
+    async getPriceBorn() : Promise<NewPrice> {
+      return await HTTPInterface.GET(`${this.toysURL}/${this.priceBornURL}`);
+    }
+
+    async setPriceBorn(price : NewPrice) : Promise<void> {
+      await HTTPInterface.PUT<NewPrice>(`${this.toysURL}/${this.priceBornURL}`, price);
+    }
 
 }

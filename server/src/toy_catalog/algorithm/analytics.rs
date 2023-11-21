@@ -3,6 +3,7 @@ use super::category::Category;
 use crate::toy_catalog::toys::Toys;
 use rand::seq::SliceRandom;
 use rand::Rng;
+use std::collections::{HashMap, HashSet};
 use std::ops::Range;
 
 pub struct Analytics {
@@ -21,14 +22,17 @@ impl Analytics {
         }
     }
 
-    pub fn select(&self) -> ItemId {
+    pub fn select(&self) -> Result<ItemId, bool> {
+        if self.categories.is_empty() {
+            return Err(false);
+        }
         let mut rng = rand::thread_rng();
         let mut total = rng.gen_range(0.0..self.score);
         for c in self.categories.iter() {
             total -= c.score;
             if total <= 0.0 {
                 let items: Vec<_> = c.items.iter().cloned().collect();
-                return items.choose(&mut rng).unwrap().to_string();
+                return Ok(items.choose(&mut rng).unwrap().to_string());
             }
         }
 
@@ -40,28 +44,38 @@ impl Analytics {
             .iter()
             .cloned()
             .collect();
-        return items.choose(&mut rng).unwrap().to_string();
+        return Ok(items.choose(&mut rng).unwrap().to_string());
     }
 
     pub fn add_review(&mut self, item_id: &str, categories: &Vec<String>, liked: bool) -> bool {
-        let factor = if liked { 2.0 } else { 0.5 };
-        let factor = factor / categories.len() as f32;
+        let base_factor = if liked { 2.0 } else { 0.4 };
+
         if self.categories.iter().all(|c| !c.items.contains(item_id)) {
             return false;
         }
-        for Category { score, .. } in self
+
+        for category in self
             .categories
             .iter_mut()
             .filter(|Category { id, .. }| categories.contains(&id.to_string()))
         {
-            self.score += (*score * factor) - *score;
-            *score *= factor;
+            let depth_factor = 1.0 + (category.depth() as f32 * 0.1);
+            let adjustment_factor = base_factor * depth_factor;
+
+            self.score += (category.score * adjustment_factor) - category.score;
+
+            category.score *= adjustment_factor;
         }
+
         self.remove_item(item_id);
+        self.categories.retain(|c| !c.items.is_empty());
         true
     }
 
     pub fn add_category(&mut self, category: Category) {
+        if category.items.is_empty() {
+            return;
+        }
         self.categories.push(category);
         self.score += 1.0;
     }
@@ -101,12 +115,14 @@ impl Analytics {
         all_categories: &Categories,
         old_price_born: &Range<u32>,
         price_born: &Range<u32>,
+        dislikes: &HashSet<String>,
+        likes: &HashMap<String, u32>,
         toys: &Toys,
     ) {
         if old_price_born.start <= price_born.start && old_price_born.end >= price_born.end {
             self.categories.retain_mut(|c| {
                 c.items.retain(|toy_id| {
-                    let toy = toys.get(toy_id.as_str()).unwrap();
+                    let toy = toys.get(toy_id.to_uppercase().as_str()).unwrap();
                     price_born.contains(&toy.price)
                 });
                 if c.items.is_empty() {
@@ -119,7 +135,12 @@ impl Analytics {
                 let toy_ids = &all_categories.get(&c.id).unwrap().items;
                 c.items = toy_ids
                     .iter()
-                    .filter(|toy_id| price_born.contains(&toys.get(toy_id.as_str()).unwrap().price))
+                    .filter(|toy_id| {
+                        price_born
+                            .contains(&toys.get(toy_id.to_uppercase().as_str()).unwrap().price)
+                            && !dislikes.contains(toy_id.to_uppercase().as_str())
+                            && !likes.contains_key(toy_id.to_uppercase().as_str())
+                    })
                     .cloned()
                     .collect();
                 if c.items.is_empty() {

@@ -13,13 +13,16 @@ use crate::toy_catalog;
             toy_catalog::routes::get_new_item,
             toy_catalog::routes::update_item,
             toy_catalog::routes::get_item,
+            toy_catalog::routes::delete_toy,
             toy_catalog::routes::get_all_items,
             toy_catalog::routes::add_category,
             toy_catalog::routes::delete_category,
             toy_catalog::routes::get_categories,
             toy_catalog::routes::get_category,
             toy_catalog::routes::modify_price_born,
-            toy_catalog::routes::get_price_born
+            toy_catalog::routes::get_price_born,
+            toy_catalog::routes::get_rank,
+            toy_catalog::routes::update_rank
         ),
         components(
             schemas(
@@ -30,7 +33,8 @@ use crate::toy_catalog;
                 toy_catalog::routes::LikeToy,
                 toy_catalog::algorithm::category::SimpleCategory,
                 toy_catalog::algorithm::category::Category,
-                toy_catalog::routes::NewPrice
+                toy_catalog::routes::NewPrice,
+                toy_catalog::routes::UpdateRank,
             )
         ),
         tags(

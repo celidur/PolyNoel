@@ -1,0 +1,14 @@
+.container {
+
+}
+
+.image_container {
+    /* width:400px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, 200px); */
+}
+
+.image {
+    width:100px;
+    height:100px;
+}
