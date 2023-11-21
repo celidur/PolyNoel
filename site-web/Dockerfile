@@ -4,7 +4,7 @@
 # If you need more help, visit the Dockerfile reference guide at
 # https://docs.docker.com/engine/reference/builder/
 
-ARG NODE_VERSION=21.2.0
+ARG NODE_VERSION=16.10.0
 
 ################################################################################
 # Use node image for base image for all stages.

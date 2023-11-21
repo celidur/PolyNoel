@@ -1,5 +1,5 @@
 use crate::common::state::App;
-use axum::{extract::State, http::StatusCode, response::IntoResponse, routing::get, Json, Router};
+use axum::{extract::{State, Path}, http::StatusCode, response::IntoResponse, routing::{get, delete}, Json, Router};
 
 use super::santapass::SantPass;
 
@@ -8,13 +8,13 @@ pub fn routes() -> Router<App> {
         "/",
         get(get_santapass)
             .post(add_santapass)
-            .delete(delete_santapass),
-    )
+
+    ).route(":id", delete(delete_santapass))
 }
 
 #[utoipa::path(
     get,
-    path = "/santapass",
+    path = "/santapass/",
     responses(
         (status = 200, description = "Get santapass", body = Vec<SantPass>),
     )
@@ -26,7 +26,7 @@ pub async fn get_santapass(State(app): State<App>) -> impl IntoResponse {
 
 #[utoipa::path(
     post,
-    path = "/santapass",
+    path = "/santapass/",
     responses(
         (status = 200, description = "Add santapass"),
         (status = 400, description = "Already in the battlepass"),
@@ -47,19 +47,21 @@ pub async fn add_santapass(
 
 #[utoipa::path(
     delete,
-    path = "/santapass",
+    path = "/santapass/:id",
     responses(
         (status = 200, description = "Delete santapass"),
         (status = 404, description = "not found"),
     ),
-    request_body = SantPass,
+    params(
+        ("id" = String, Path, description = "id of toy")
+    ), 
 )]
 pub async fn delete_santapass(
     State(app): State<App>,
-    Json(santapass): Json<SantPass>,
+    Path(id): Path<String>,
 ) -> impl IntoResponse {
     let mut user = app.users.lock().await;
-    if let Some(index) = user.battlepass.iter().position(|s| s.toy == santapass.toy) {
+    if let Some(index) = user.battlepass.iter().position(|s| s.toy == id) {
         user.battlepass.remove(index);
         return StatusCode::OK;
     }
