@@ -35,7 +35,7 @@ impl User {
                 && !self.selected_item.contains_key(item.as_str())
                 && self
                     .price_born
-                    .contains(&toys.get(item.as_str()).unwrap().price)
+                    .contains(&toys.get(item.to_uppercase().as_str()).unwrap().price)
         });
         self.analytics.add_category(category);
     }
