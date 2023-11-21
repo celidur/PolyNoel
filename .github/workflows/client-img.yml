@@ -16,6 +16,6 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: |
-        docker login --username celidur --password ${{ secrets.GITHUB_TOKEN }} ghcr.io
+        docker login --username ${{github.actor}} --password ${{ secrets.GITHUB_TOKEN }} ghcr.io
         docker build ./site-web/ --file ./site-web/Dockerfile --tag ghcr.io/celidur/polynoel-client-ghcr:lastest
         docker push ghcr.io/celidur/polynoel-client-ghcr:lastest
