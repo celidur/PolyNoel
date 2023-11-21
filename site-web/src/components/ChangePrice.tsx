@@ -8,8 +8,8 @@ export default function ChangePrice() : JSX.Element {
 
     useEffect(()=>{
         httpManager.getPriceBorn().then((priceBorn)=>{
-            setMin(priceBorn.inferior);
-            setMax(priceBorn.superior);
+            setMin(priceBorn.inferior/100);
+            setMax(priceBorn.superior/100);
         }).catch(()=>{
             setMin(0);
             setMax(4294967295);
@@ -18,17 +18,15 @@ export default function ChangePrice() : JSX.Element {
 
     const httpManager = new HTTPManager();
     const changeMin = (min : number) => {
-        min = Number.isNaN(min) ? 0 : min;
         if(!Number.isNaN(min) && !Number.isNaN(max)){
-            httpManager.setPriceBorn({inferior : min, superior : max});
+            httpManager.setPriceBorn({inferior : min*100, superior : max*100});
         }
         setMin(min);
     }
 
     const changeMax = (max : number) => {
-        max = Number.isNaN(max) ? 0 : max;
         if(!Number.isNaN(min) && !Number.isNaN(max)){
-            httpManager.setPriceBorn({inferior : min, superior : max});
+            httpManager.setPriceBorn({inferior : min*100, superior : max*100});
         }
         setMax(max);
     }
