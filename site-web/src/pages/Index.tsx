@@ -21,8 +21,16 @@ export default function Index() : JSX.Element {
             const pending = fetchedTasks.filter((task : Task)=> { return task.status === TaskStatus.Pending});                        
             setTasks(filtered);
 
-            const realData = (barLength/fetchedTasks.length)*(fetchedTasks.length-filtered.length);
-            const projectedData = realData + (barLength/fetchedTasks.length)*(pending.length);
+            let realData;
+            let projectedData;
+            if (fetchedTasks.length == 0) {
+                realData = 0;
+                projectedData = 0;
+            }
+            else {
+                realData = (barLength/fetchedTasks.length)*(fetchedTasks.length-filtered.length);
+                projectedData = realData + (barLength/fetchedTasks.length)*(pending.length);
+            }
             setReal(realData);
             setProjected(projectedData);
         });  
@@ -46,8 +54,16 @@ export default function Index() : JSX.Element {
                 const pending = fetchedTasks.filter((task : Task)=> { return task.status === TaskStatus.Pending}); 
                 setTasks(filtered)
 
-                const realData = (barLength/fetchedTasks.length)*(fetchedTasks.length-filtered.length);
-                const projectedData = realData + (barLength/fetchedTasks.length)*(pending.length);
+                let realData;
+                let projectedData;
+                if (fetchedTasks.length === 0) {
+                    realData = 0;
+                    projectedData = 0;
+                }
+                else {
+                    realData = (barLength/fetchedTasks.length)*(fetchedTasks.length-filtered.length);
+                    projectedData = realData + (barLength/fetchedTasks.length)*(pending.length);
+                }
                 setReal(realData);
                 setProjected(projectedData);
             });  
@@ -107,6 +123,14 @@ function ProgressBar({projectedProgress, realProgress}:progressBarProps):JSX.Ele
             </>
         );
     }
+
+    else if (realProgress === 0 && projectedProgress === 0) {
+        return (
+            <>
+            </>
+        );
+    }
+
     else if (barLength === projectedProgress) {
         return (
             <>
