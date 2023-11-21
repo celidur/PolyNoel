@@ -85,6 +85,10 @@ export interface Toy {
   price : number
 }
 
+export interface ToyWithScore extends Toy {
+  score: number
+}
+
 export enum TaskStatus {
   NotDone = "NotDone",
   Pending = "Pending",
@@ -193,15 +197,18 @@ export default class HTTPManager {
       return await HTTPInterface.GET<Toy>(`${this.toysURL}/${this.catalogToyURL}/${id}`);
     }
 
-    async getToyIds() : Promise<string[]> {
-      return await HTTPInterface.GET<string[]>(`${this.toysURL}/${this.catalogToysURL}`);
+    async getToyIds() : Promise<{[key:string] : number}> {
+      return await HTTPInterface.GET<{[key:string] : number}>(`${this.toysURL}/${this.catalogToysURL}`);
     }
 
-    async getToys() : Promise<Toy[]> {
+    async getToys() : Promise<ToyWithScore[]> {
       const toyIds = await this.getToyIds();
-      const toys : Toy[] = [];
-      for(let id of toyIds){
-        toys.push(await this.getToyById(id));
+      const toys : ToyWithScore[] = [];
+      for(let [id, score] of Object.entries(toyIds)){
+        const toy = await this.getToyById(id);
+        const toyWithScore = toy as ToyWithScore;
+        toyWithScore.score = score;
+        toys.push(toyWithScore);
       }
       return toys;
     }

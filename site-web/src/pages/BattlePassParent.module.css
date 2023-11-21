@@ -1,14 +1,35 @@
 .container {
-
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    justify-items: center;
 }
 
 .image_container {
-    /* width:400px;
+    width:450px;
     display:grid;
-    grid-template-columns: repeat(auto-fit, 200px); */
+    grid-template-columns: repeat(auto-fit, 100px);
+    gap:10px;
 }
 
 .image {
     width:100px;
     height:100px;
+}
+
+.tier_container {
+
+}
+
+.title {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.select_image {
+
+}
+.select_image:hover {
+    border: 2px solid yellow;
 }
