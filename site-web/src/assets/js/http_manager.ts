@@ -120,11 +120,21 @@ export interface Category {
     rank : number
   }
 
+  interface SantaPassId {
+    points: number,
+    toy: string
+  }
+
+  export interface SantaPass {
+    points: number,
+    toy: Toy
+  }
+
 export default class HTTPManager {
     tasksURL : string;
     toysURL : string;
     parentURL : string;
-    battlePass : string
+    battlePassURL : string
 
     catalogCategoryURL : string;
     catalogSwipToysURL : string;
@@ -138,7 +148,7 @@ export default class HTTPManager {
         this.tasksURL = "child_labor";
         this.toysURL = "toy_catalog"
         this.parentURL = "parent"
-        this.battlePass = "santapass"
+        this.battlePassURL = "santapass"
 
         //Sub Endpoints
         this.catalogCategoryURL = "category";        
@@ -248,5 +258,21 @@ export default class HTTPManager {
 
     /* SantaPass */
 
+    async getSantaPass() : Promise<SantaPass[]> {
+      const santapasses : SantaPass[] = [];
+      const santapassIds = await HTTPInterface.GET<SantaPassId[]>(`${this.battlePassURL}/`);
+      for(let santapassId of santapassIds) {
+        const toy = await this.getToyById(santapassId.toy);
+        santapasses.push({points: santapassId.points, toy : toy});
+      }
+      return santapasses;
+    }
 
+    async addToSantaPass(santapassId : SantaPassId) : Promise<void> {
+      await HTTPInterface.POST_NO_RESPONSE<SantaPassId>(`${this.battlePassURL}/`, santapassId);
+    }
+
+    async deleteInSantaPass(id : string) : Promise<void> {
+      await HTTPInterface.DELETE(`${this.battlePassURL}/${id}`);
+    }
 }

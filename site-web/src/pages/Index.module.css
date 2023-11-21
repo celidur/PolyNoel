@@ -1,6 +1,9 @@
 .container {
     display: flex;
     flex-direction: column;
+    background-image: url('../assets/img/feuillespin.jpg');
+    background-size: contain;
+    height: 100%;
 }
 
 .battlepass_container {
@@ -15,7 +18,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .title {
@@ -43,7 +45,9 @@
 }
 
 .tasklistContainer, .wishlistContainer {
-    padding: 25px 10%;
+    margin: 25px 10%;
+    padding: 10px;
+    background-color: #F2F0EE;
 }
 
 .bottomContainer {

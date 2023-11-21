@@ -7,6 +7,7 @@ type TierProps = {
     score: number,
     toy? : Toy,
     onImageClick : (id : number) => void 
+    onDeleteClick : (id : string | undefined) => void 
 }
 
 export default function TierMaker(props : TierProps) : JSX.Element {
@@ -17,6 +18,7 @@ export default function TierMaker(props : TierProps) : JSX.Element {
     return (
     <div className={styles.container}>
         <input type="number" value={score} className={styles.score} onChange={(e)=>{changeScore(parseInt(e.target.value))}}/>
+        <button onClick={()=>props.onDeleteClick(props.toy?.id)} >delete</button>
         <img className={styles.image} src={props.toy?.image || ""} alt="no-image" onClick={()=>props.onImageClick(props.index)}></img>
     </div>
   );
