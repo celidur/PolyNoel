@@ -138,7 +138,7 @@ export default class HTTPManager {
         this.tasksURL = "child_labor";
         this.toysURL = "toy_catalog"
         this.parentURL = "parent"
-        this.battlePass = "battlePass"
+        this.battlePass = "santapass"
 
         //Sub Endpoints
         this.catalogCategoryURL = "category";        
@@ -178,6 +178,10 @@ export default class HTTPManager {
     
     async createCategoryForUser(id : string) : Promise<void> {
       await HTTPInterface.POST_NO_RESPONSE<{}>(`${this.toysURL}/${this.catalogCategoryURL}/${id}`, {});
+    }
+
+    async selectAllCategories() : Promise<void> {
+      await HTTPInterface.PUT<{}>(`${this.toysURL}/${this.catalogCategoryURL}`, {});
     }
     
     async deleteCategoryForUser(id : string) {
@@ -241,6 +245,8 @@ export default class HTTPManager {
     async setPriceBorn(price : NewPrice) : Promise<void> {
       await HTTPInterface.PUT<NewPrice>(`${this.toysURL}/${this.priceBornURL}`, price);
     }
+
+    /* SantaPass */
 
 
 }

@@ -2,7 +2,7 @@ import styles from './CategoriesSelect.module.css'
 import { useEffect, useState } from 'react';
 import HTTPManager, { SimpleCategory } from '../assets/js/http_manager';
 
-type CategoriesSearch  = { input : string }
+type CategoriesSearch  = { input : string, select: boolean }
 
 export default function CategoriesSelect(props : CategoriesSearch) : JSX.Element {
     const httpManager = new HTTPManager();
@@ -23,7 +23,7 @@ export default function CategoriesSelect(props : CategoriesSearch) : JSX.Element
 
     useEffect(()=> {
         fetchCategories();
-    }, [props.input])
+    }, [props.input, props.select])
 
 
     const unselectCategory = (category: SimpleCategory) => {
@@ -42,8 +42,8 @@ export default function CategoriesSelect(props : CategoriesSearch) : JSX.Element
 
   return (
     <div className={styles.container}>
-        {categories.map((category)=>{
-            return <div className={`${styles.category} ${category.is_selected ? styles.selected : styles.not_selected}`}
+        {categories.map((category, i)=>{
+            return <div key={i} className={`${styles.category} ${category.is_selected ? styles.selected : styles.not_selected}`}
                     onClick={ ()=>unselectCategory(category) }>
                     {category.name}
                     </div>
