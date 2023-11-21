@@ -14,7 +14,7 @@ pub fn routes() -> Router<App> {
 
 #[utoipa::path(
     get,
-    path = "/santapass",
+    path = "/santapass/",
     responses(
         (status = 200, description = "Get santapass", body = Vec<SantPass>),
     )
@@ -26,7 +26,7 @@ pub async fn get_santapass(State(app): State<App>) -> impl IntoResponse {
 
 #[utoipa::path(
     post,
-    path = "/santapass",
+    path = "/santapass/",
     responses(
         (status = 200, description = "Add santapass"),
         (status = 400, description = "Already in the battlepass"),
@@ -47,7 +47,7 @@ pub async fn add_santapass(
 
 #[utoipa::path(
     delete,
-    path = "/santapass",
+    path = "/santapass/",
     responses(
         (status = 200, description = "Delete santapass"),
         (status = 404, description = "not found"),
