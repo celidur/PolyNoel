@@ -11,11 +11,11 @@ export default function Parent() : JSX.Element {
                 <NavLink className={styles.feature} to="/parent/battlepass">
                     BattlePass
                 </NavLink>
-                <NavLink className={styles.feature} to="#">
-                    View Rankings
-                </NavLink>
                 <NavLink className={styles.feature} to="/parent/categories">
                     Filter Categories
+                </NavLink>
+                <NavLink className={styles.feature} to="/parent/settings">
+                    Settings
                 </NavLink>
             </div>            
         </>
