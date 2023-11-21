@@ -19,6 +19,12 @@
     text-align: center;
 }
 
+.feature:hover {
+    border:3px solid lightgray;  
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
 .pageTile {
     font-weight: bold;
     font-size: 24px;
