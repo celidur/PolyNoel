@@ -56,6 +56,7 @@ export default function RankToys() : JSX.Element {
 
     return(
         <DndProvider backend={isMobile ? TouchBackend : HTML5Backend}>
+            <a className={styles.returnButton} href="/">Retour</a>
             <div className={styles.mainPage}>
                 <h1 className={styles.title}>Rank your wishes</h1>
                 <div className={styles.content}>

@@ -89,6 +89,8 @@ function TinderGame() : JSX.Element {
     return (
         <>
             <div className={styles.tinderGame}>
+                <a className={styles.returnButton} href="/">Retour</a>
+                
                 <h1>Do you want this?</h1>
                 <div className={styles.cardDragContainer}>
                     <CustomDragLayer/>

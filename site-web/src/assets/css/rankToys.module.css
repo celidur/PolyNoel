@@ -20,7 +20,29 @@
   --br-3xs: 10px;
 }
 
+.returnButton {
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: lightgray;
+  width: 50px;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  position: relative;
+  top: 20px;
+  border-radius: 5px;
+  border:1px solid darkgrey;
+}
 
+.returnButton:hover{
+  border:1px solid black;  
+  cursor: pointer;
+  transform: scale(1.02);
+ }
 
 .mainPage{
   display: flex;

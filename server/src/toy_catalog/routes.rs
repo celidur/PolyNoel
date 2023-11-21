@@ -122,7 +122,7 @@ pub async fn add_category(
     Path(id): Path<String>,
 ) -> impl IntoResponse {
     let mut user = app.users.lock().await;
-    let category = app.categories.categories.iter().filter(|c| c.id == id).next().unwrap().clone();
+    let category = app.categories.categories.iter().find(|c| c.id == id).unwrap().clone();
     user.add_category(category, &app.toys);
     StatusCode::CREATED
 }

@@ -67,7 +67,7 @@ COPY --from=build /usr/src/app/build ./build
 
 
 # Expose the port that the application listens on.
-EXPOSE 3000
+EXPOSE 4242
 
 # Run the application.
-CMD ["npx","serve", "-s", "build","-l", "3000"]
+CMD ["npx","serve", "-s", "build","-l", "4242"]
