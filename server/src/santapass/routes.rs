@@ -5,7 +5,7 @@ use super::santapass::SantPass;
 
 pub fn routes() -> Router<App> {
     Router::new().route(
-        "/santapass",
+        "/",
         get(get_santapass)
             .post(add_santapass)
             .delete(delete_santapass),
