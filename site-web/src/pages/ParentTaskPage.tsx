@@ -90,6 +90,7 @@ export default function ParentTaskPage() : JSX.Element {
     return (        
             <div className={styles.task_container}>
                 <div className={styles.taskBlockContainer}>
+                    <a className={styles.returnButton} href="/parent">Retour</a>
 
                     <div className={styles.task_block}>
                         <TaskList tasks={dailyTasks} title="Daily Tasks" onTaskClick={removeDailyTask} taskType={"edit-task"}></TaskList>
