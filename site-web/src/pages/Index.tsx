@@ -6,13 +6,17 @@ import CandyCaneProjected from '../assets/img/patterngris.jpg'
 import React, { useEffect, useState } from "react"
 import HTTPManager, { Task, TaskStatus } from '../assets/js/http_manager';
 import TaskList from '../components/TaskList';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useParams } from 'react-router-dom';
+import { ChildCountdown } from './ParentTaskPage';
 import { delay } from 'q';
+import { count } from 'console';
 
 export default function Index() : JSX.Element {
     const [tasks, setTasks] = useState<Task[]>([]);
     const [realPercentage, setReal] = useState(0);
     const [projectedPercentage, setProjected] = useState(0);
+    const [countdownData, setCountdownData] = useState<{ month: number; day: number }>({ month: 0, day: 0 });
+    console.log(countdownData);
     const httpManager = new HTTPManager();
     useEffect(()=> {
         httpManager.fetchAllTasks()
@@ -77,7 +81,7 @@ export default function Index() : JSX.Element {
             <div className={styles.countdownContainer}>
                 <p className="timerTitle">Time left to complete tasks</p>
                 <div className='countdown'>
-                    <Countdown month={"December"} day={21} year={2023}></Countdown>
+                <ChildCountdown countdownData={countdownData} />
                 </div>
             </div>
                 <div id="battleBarContainer">
@@ -151,40 +155,3 @@ function ProgressBar({projectedProgress, realProgress}:progressBarProps):JSX.Ele
         </>
     );}
 }
-
-interface countDownProps{
-    month: string;
-    day: number;
-    year: number;
-}
-function Countdown({month, day, year}:countDownProps):JSX.Element {
-    const [days, setDays] = useState(0);
-    const [hours, setHours] = useState(0);
-    const [minutes, setMinutes] = useState(0);
-    const [seconds, setSeconds] = useState(0);
-    const countdownTo = `${month} ${day}, ${year}`;
-
-    const getTime = () => {
-        const time = Date.parse(countdownTo) - Date.now();
-        setDays(Math.floor(time / (1000 * 60 * 60 * 24)));
-        setHours(Math.floor((time / (1000 * 60 * 60)) % 24));
-        setMinutes(Math.floor((time / 1000 / 60) % 60));
-        setSeconds(Math.floor((time / 1000) % 60));
-    };
-
-    useEffect(() => {
-        const milliseconds = setInterval(getTime, 1000);
-
-        return () => clearInterval(milliseconds);
-    }, []);
-
-    return (
-        <div className='countDownDiv'>
-            <p className={styles.days}>{days} day(s): </p>
-            <p className={styles.hours}>{hours} hour(s): </p>
-            <p className={styles.minutes}>{minutes} minute(s): </p>
-            <p className={styles.seconds}>{seconds} second(s)</p>
-        </div>
-    );
-};
-    

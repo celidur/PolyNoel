@@ -1,5 +1,5 @@
 use crate::common::state::App;
-use axum::{extract::{State, Path}, http::StatusCode, response::IntoResponse, routing::{get, delete}, Json, Router};
+use axum::{extract::{State, Path}, http::StatusCode, response::IntoResponse, routing::{get, delete, patch}, Json, Router};
 
 use super::battlepass::SantaPass;
 
@@ -10,6 +10,7 @@ pub fn routes() -> Router<App> {
             .post(add_santapass)
 
     ).route("/:id", delete(delete_santapass))
+    .route("/:id/:score", patch(modify_santapass))
 }
 
 #[utoipa::path(
@@ -66,4 +67,37 @@ pub async fn delete_santapass(
         return StatusCode::OK;
     }
     StatusCode::NOT_FOUND
+}
+
+#[utoipa::path(
+    patch,
+    path = "/santapass/{id}/{score}",
+    responses(
+        (status = 200, description = "Modified santapass"),
+        (status = 404, description = "not found")
+    ),
+    params(
+        ("id" = String, Path, description = "santapass id"),
+        ("score" = String, description = "new Score")
+    ),
+)]
+pub async fn modify_santapass(
+    State(app): State<App>,
+    Path((id, score)): Path<(String, String)>,
+) -> impl IntoResponse {
+    let mut user = app.users.lock().await;
+    if let Some(index) = user.battlepass.iter().position(|s| s.toy == id) {
+        match score.parse::<u32>() {
+            Ok(n) =>{
+                user.battlepass[index].points = n;
+                return StatusCode::OK;
+
+            },
+            Err(_) => {
+                return StatusCode::NOT_FOUND;
+            },
+          }
+    }
+    StatusCode::NOT_FOUND
+
 }

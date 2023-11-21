@@ -13,6 +13,9 @@ export default function ParentTaskPage() : JSX.Element {
     const [dailyInput, setDailyInput] = useState<string>("");
     const [generalInput, setGeneralInput] = useState<string>("");
     const httpManager = new HTTPManager();
+
+    const [countdownData, setCountdownData] = useState<{ month: number; day: number }>({ month: 0, day: 0 });
+    console.log(countdownData);
     
     useEffect(() => {        
         httpManager.fetchAllTasks()
@@ -126,8 +129,200 @@ export default function ParentTaskPage() : JSX.Element {
                     <div className={styles.task_block}>
                         <TaskList tasks={doneTasks} title="Completed Tasks" onTaskClick={approvePendingTask} taskType={"approve-task"}></TaskList>                    
                     </div>
+                    <div className={styles.task_block}>
+                    <MonthsLeft setCountdownData={setCountdownData} />
+                    </div>
                 </div>
                 <img className={styles.treePattern} src={TreePattern} alt="tree pattern"></img>
             </div>        
     );
 }
+
+interface MonthsLeftProps {
+    setCountdownData: React.Dispatch<React.SetStateAction<{ month: number; day: number }>>;
+}
+export function MonthsLeft({ setCountdownData }: MonthsLeftProps): JSX.Element {
+    const [months, setMonths] = useState<string[]>([]);
+    const [monthDays, setDaysInMonth] = useState<number[]>([]);
+    const [selectedMonth, setSelectedMonth] = useState(() => {
+        const savedMonth = localStorage.getItem('selectedMonth');
+        return savedMonth ? parseInt(savedMonth, 10) : 0;
+    });
+    const [selectedDay, setSelectedDay] = useState(() => {
+        const savedDay = localStorage.getItem('selectedDay');
+        return savedDay ? parseInt(savedDay, 10) : 0;
+    });
+    const [currentMonthIndex, setCurrentMonthIndex] = useState<number>(0);
+
+    useEffect(() => {
+        const savedMonth = localStorage.getItem('selectedMonth');
+        const savedDay = localStorage.getItem('selectedDay');
+
+        if (savedMonth && savedDay) {
+            setSelectedMonth(parseInt(savedMonth, 10));
+            setSelectedDay(parseInt(savedDay, 10));
+        }
+    }, []);
+
+    useEffect(() => {
+        const currentMonth = new Date().getMonth();
+        const months = [
+            'January', 'February', 'March', 'April', 'May', 'June',
+            'July', 'August', 'September', 'October', 'November', 'December'
+        ];
+        const nextMonths = months.slice(currentMonth);
+        setMonths(nextMonths);
+
+        const currentMonthIndex = months.findIndex(month => month === months[currentMonth]);
+        setCurrentMonthIndex(currentMonthIndex);
+
+    }, []);
+
+
+    useEffect(() => {
+        if (selectedMonth !== 0) {
+            const daysInMonth = getDays(selectedMonth);
+            const days = Array.from({length: daysInMonth}, (_, i) => i + 1);
+            setDaysInMonth(days);  
+        }
+        else {
+            const days = Array.from({length: 0}, (_, i) => i + 1);
+            setDaysInMonth(days); 
+        }
+    }, [selectedMonth]);
+
+    const changeMonth = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        const chosenMonth = parseInt(event.target.value, 10);
+        setSelectedMonth(chosenMonth);
+        localStorage.setItem('selectedMonth', chosenMonth.toString());
+    };
+
+    const changeDay = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        const chosenDay = parseInt(event.target.value, 10);
+        setSelectedDay(chosenDay);
+        localStorage.setItem('selectedDay', chosenDay.toString());
+    };
+
+    const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        if (selectedMonth !== 0 && selectedDay !== 0) {
+            setCountdownData({ month: selectedMonth, day: selectedDay });
+        }
+    };
+
+    return (
+        <div className={styles.dateInpute}>
+            <form className={styles.countDownForm} onSubmit={handleFormSubmit}>
+                <label htmlFor="monthInput">Month: </label>
+                <select id="monthInput" onChange={changeMonth}>
+                    <option value="0">Select a month</option>
+                    {months.map((month, index) => (
+                            <option key={index + 1} value={index + 1 + currentMonthIndex}>
+                                {month}
+                            </option>
+                        ))}
+                </select>
+
+                <label htmlFor="dayInput">Day: </label>
+                <select id="dayInput" onChange={changeDay}>
+                    <option value="">Select a day</option>
+                    {monthDays.map((day, index) => (
+                            <option key={index + 1} value={index + 1}>
+                                {day}
+                            </option>
+                        ))}
+                </select>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    );
+}
+
+function getDays(month: number) {
+    const year = new Date().getFullYear();
+    return new Date(year, month, 0).getDate();
+}
+
+interface childCountdownProps {
+    countdownData: { month: number; day: number };
+}
+
+export function ChildCountdown({ countdownData }: childCountdownProps): JSX.Element {
+    const savedMonth = localStorage.getItem('selectedMonth');
+    const savedDay = localStorage.getItem('selectedDay');
+    let month: string;
+    let day: string;
+    if (savedDay && savedMonth) {
+        month = savedMonth;
+        console.log(month);
+        day = savedDay;
+        console.log(day);
+    }
+
+    
+    const [days, setDays] = useState(0);
+    const [hours, setHours] = useState(0);
+    const [minutes, setMinutes] = useState(0);
+    const [seconds, setSeconds] = useState(0);
+    const year = new Date().getFullYear();
+
+    useEffect(() => {
+        const countdownDate = new Date(year, parseInt(month, 10) - 1, parseInt(day, 10));
+
+        const timer = setInterval(() => {
+            const time = countdownDate.getTime() - Date.now();
+            setDays(Math.floor(time / (1000 * 60 * 60 * 24)));
+            setHours(Math.floor((time / (1000 * 60 * 60)) % 24));
+            setMinutes(Math.floor((time / 1000 / 60) % 60));
+            setSeconds(Math.floor((time / 1000) % 60));
+        }, 1000);
+
+        return () => clearInterval(timer);
+    }, [countdownData]);
+
+    if (days < 0 || hours < 0 || minutes < 0 || seconds < 0) {
+        return (
+            <div className='countDownDiv'>
+                <p > The countdown is over! </p>
+            </div>
+        );
+    }
+    else if (days == 0) {
+        return (
+            <div className='countDownDiv'>
+                <p className={styles.hours}>{hours} hour(s) &nbsp;</p>
+                <p className={styles.minutes}>{minutes} minute(s) &nbsp;</p>
+                <p className={styles.seconds}>{seconds} second(s)</p>
+            </div>
+        );
+    }
+
+    else if (hours == 0) {
+        return (
+            <div className='countDownDiv'>
+                <p className={styles.minutes}>{minutes} minute(s) &nbsp;</p>
+                <p className={styles.seconds}>{seconds} second(s)</p>
+            </div>
+        );
+    }
+
+    else if (minutes == 0) {
+        return (
+            <div className='countDownDiv'>
+                <p className={styles.seconds}>{seconds} second(s)</p>
+            </div>
+        );
+    }
+
+    else {
+        return (
+            <div className='countDownDiv'>
+                <p className={styles.days}>{days} day(s) &nbsp;</p>
+                <p className={styles.hours}>{hours} hour(s) &nbsp;</p>
+                <p className={styles.minutes}>{minutes} minute(s) &nbsp;</p>
+                <p className={styles.seconds}>{seconds} second(s)</p>
+            </div>
+        );
+    }
+
+};
