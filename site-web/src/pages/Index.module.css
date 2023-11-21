@@ -1,10 +1,6 @@
 .container {
-    display:grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    justify-items: center;
-    align-content: center;
-    grid-row-gap: 50px;
+    display: flex;
+    flex-direction: column;
 }
 
 .battlepass_container {
@@ -58,7 +54,6 @@
     align-items: flex-start;
     margin-bottom: 25px;
     min-width: 100%;
-    background-color: #ECDCD4;
 }
 
 .pattern, .patternProjected {
@@ -95,4 +90,8 @@
 
 .patternProjected {
     z-index: 1;
+}
+
+.countdownContainer {
+    margin: 50px;
 }
