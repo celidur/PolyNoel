@@ -28,12 +28,16 @@ impl App {
     }
     pub fn new() -> Self {
         let mut file_buffer = vec![];
-        let Ok(mut file) = File::open("data/dump.json.gz") else { return App::new_blank() };
+        let Ok(mut file) = File::open("dump/dump.json.gz") else {
+            return App::new_blank();
+        };
         file.read_to_end(&mut file_buffer).unwrap();
         let mut decoder = flate2::write::GzDecoder::new(Vec::new());
         decoder.write_all(&file_buffer).unwrap();
         let mut buffer = decoder.finish().unwrap();
-        let Ok(serializeable_app) = simd_json::from_slice::<SerializeableApp>(&mut buffer) else { return App::new_blank() };
+        let Ok(serializeable_app) = simd_json::from_slice::<SerializeableApp>(&mut buffer) else {
+            return App::new_blank();
+        };
         println!("Server restored");
         serializeable_app.into()
     }
@@ -42,7 +46,7 @@ impl App {
         loop {
             let serializable_app = SerializeableApp::from(self.clone()).await;
             let buffer = simd_json::to_vec_pretty(&serializable_app).unwrap();
-            let file = File::create("data/dump.json.gz").unwrap();
+            let file = File::create("dump/dump.json.gz").unwrap();
             let mut e = flate2::write::GzEncoder::new(file, Compression::default());
             e.write_all(&buffer).unwrap();
             e.finish().unwrap();
