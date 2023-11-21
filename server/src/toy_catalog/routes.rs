@@ -278,6 +278,9 @@ pub async fn get_rank(
         (status = 200, description = "Rank modified successfully"),
         (status = 404, description = "Category not found")
     ),
+    params(
+        ("rank" = UpdateRank, description = "rank of toy")
+    ),
 )]
 pub async fn update_rank(
     State(app): State<App>,
