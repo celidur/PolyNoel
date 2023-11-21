@@ -28,6 +28,7 @@ use crate::toy_catalog;
             santapass::routes::get_santapass,
             santapass::routes::add_santapass,
             santapass::routes::delete_santapass,
+            santapass::routes::modify_santapass,
         ),
         components(
             schemas(
