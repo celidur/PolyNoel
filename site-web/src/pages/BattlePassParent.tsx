@@ -3,6 +3,7 @@ import styles from './BattlePassParent.module.css'
 import HTTPManager, { Toy, ToyWithScore } from '../assets/js/http_manager';
 import TierMaker from '../components/TierMaker';
 import ChangePrice from '../components/ChangePrice';
+import Index from './Index';
 
 type TierInfo = {
     score: number,
@@ -28,6 +29,11 @@ export default function BattlePassParent() : JSX.Element {
             setToys(sorted);
         });
 
+        httpManager.getSantaPass().then((santapasses)=>{
+            const tierInfo : TierInfo[] = santapasses.map((pass)=> { return {score: pass.points, toy : pass.toy}  });
+            setTiers(tierInfo);
+        }).catch(()=>{console.log("tiers load failed")});
+
             
     }, []);
 
@@ -40,12 +46,27 @@ export default function BattlePassParent() : JSX.Element {
         setSelectedIndex(index);
     }
 
+    const onTierDeleteClick = (index : string | undefined) => {
+        if(!index)
+            return;
+        httpManager.deleteInSantaPass(index).then(()=>{
+            httpManager.getSantaPass().then((santapasses)=>{
+                const tierInfo : TierInfo[] = santapasses.map((pass)=> { return {score: pass.points, toy : pass.toy}  });
+                setTiers(tierInfo);
+            }).catch(()=>{console.log("tiers load failed")});
+        }).catch(()=>{console.log("delete failed")});
+    }
+
     const onClickSwipedImage = (toy : Toy) => {
         if(selectedIndex !== -1){
             const newTiers = [...tiers];
             newTiers[selectedIndex].toy = toy;
             setTiers(newTiers);
             setSelectedIndex(-1);
+
+            httpManager.addToSantaPass({toy : toy.id, points: newTiers[selectedIndex].score}).then(()=>{
+                console.log("created pass");
+            }).catch(()=>{console.log("failed create pass")});
 
         }
     }
@@ -90,7 +111,9 @@ export default function BattlePassParent() : JSX.Element {
                 <div className={styles.title}>Battle Pass Tiers</div>
                 {
                     tiers.map((tier, index)=>{
-                        return <TierMaker key={index} index={index} score={tier.score} toy={tier.toy} onImageClick={onTierImageClick} ></TierMaker>  
+                        return <TierMaker key={index} index={index} score={tier.score} toy={tier.toy} 
+                        onImageClick={onTierImageClick}
+                        onDeleteClick={onTierDeleteClick} ></TierMaker>  
                     })
                 }
                 <button onClick={createTier}>Add new Tier</button>
