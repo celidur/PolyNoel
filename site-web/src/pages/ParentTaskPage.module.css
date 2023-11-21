@@ -1,16 +1,27 @@
 .task_container {        
-    padding-top:3%;    
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(360px, max-content));  
-    justify-content: center;     
-    gap : 2rem;    
-    caret-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto;
+    position: relative;
+}
+
+.taskBlockContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    align-items: flex-start !important;
+    position: relative;
+    margin-top: 60px; 
 }
 
 .task_block {
     display: flex;
     flex-direction: column;
-    gap: 10px;            
+    gap: 10px;
+    margin-left: 70px;
+    margin-right: 70px;           
     caret-color: transparent;
 }
 
@@ -55,4 +66,11 @@
 
 ::placeholder {
     color: #424429;
+}
+
+.treePattern {
+    max-width: 100%;
+    height: auto;
+    position: fixed;
+    overflow: hidden
 }
