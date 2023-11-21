@@ -25,22 +25,34 @@ export default function Tier({level, toys, moveHandler}:TierProps) :  JSX.Elemen
     }
 
     function getColor() :string{
+        let rgb:string;
         switch(level){
             case 6:
-                return "#f99898";
+                rgb= "#f99898";
+                break;
             case 5: 
-                return "#f9bb98";
+                rgb= "#f9bb98";
+                break;
             case 4:
-                return "#f9e498";
+                rgb= "#f9e498";
+                break;
             case 3:
-                return "#e6f998";
+                rgb= "#e6f998";
+                break;
             case 2:
-                return "#c9f998";
+                rgb= "#c9f998";
+                break;
             case 1:
-                return "#98f9a2";
+                rgb= "#98f9a2";
+                break;
             default:
                 return "#000000";
         }
+        if(isOver){
+            return rgb;
+        }
+        return rgb + "90";
+
     };
 
     function getLabel(){
@@ -67,7 +79,7 @@ export default function Tier({level, toys, moveHandler}:TierProps) :  JSX.Elemen
             <div className={styles.tierCell} style={{"backgroundColor":getColor()}}>
                 <h1>{getLabel()}</h1>
             </div>
-            <div ref={drop} className={styles.dropZone}>
+            <div ref={drop} className={styles.dropZone} style={isOver?{"backgroundColor":"lightgrey"}:{}}>
                 {toys.map((toy) => {
                     return <DraggableToy key={toy.props.id} id={toy.props.id} rank={level}/>
                 })}
