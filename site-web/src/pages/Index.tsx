@@ -127,6 +127,7 @@ function ProgressBar({projectedProgress, realProgress}:progressBarProps):JSX.Ele
     else if (realProgress === 0 && projectedProgress === 0) {
         return (
             <>
+            <div className={styles.noPattern}></div>
             </>
         );
     }

@@ -52,13 +52,13 @@ export default function Tier({level, toys, moveHandler}:TierProps) :  JSX.Elemen
             case 4:
                 return "B";
             case 3:
-                return "B";
-            case 2:
                 return "C";
-            case 1:
+            case 2:
                 return "D";
-            default:
+            case 1:
                 return "F";
+            default:
+                return "INVALID";
         }
     }
 
