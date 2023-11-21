@@ -61,7 +61,7 @@ COPY --from=build /bin/server /bin/
 
 COPY ./data /data
 RUN chown -R appuser:appuser /data
-RUN chmod -R 755 /data
+RUN chmod -R 666 /data
 
 # Expose the port that the application listens on.
 EXPOSE 6969
