@@ -1,6 +1,7 @@
 use utoipa::OpenApi;
 
 use crate::child_labor;
+use crate::santapass;
 use crate::toy_catalog;
 
 #[derive(OpenApi)]
@@ -22,7 +23,10 @@ use crate::toy_catalog;
             toy_catalog::routes::modify_price_born,
             toy_catalog::routes::get_price_born,
             toy_catalog::routes::get_rank,
-            toy_catalog::routes::update_rank
+            toy_catalog::routes::update_rank,
+            santapass::routes::get_santapass,
+            santapass::routes::add_santapass,
+            santapass::routes::delete_santapass,
         ),
         components(
             schemas(
@@ -35,6 +39,7 @@ use crate::toy_catalog;
                 toy_catalog::algorithm::category::Category,
                 toy_catalog::routes::NewPrice,
                 toy_catalog::routes::UpdateRank,
+                santapass::santapass::SantPass,
             )
         ),
         tags(

@@ -1,4 +1,5 @@
 use crate::child_labor::tasks::Tasks;
+use crate::santapass::santapass::SantPass;
 use crate::toy_catalog::algorithm::analytics::Analytics;
 use crate::toy_catalog::algorithm::categories::Categories;
 use crate::toy_catalog::algorithm::category::Category;
@@ -12,6 +13,7 @@ pub struct User {
     pub disliked_item: HashSet<String>,
     pub price_born: Range<u32>,
     pub analytics: Analytics,
+    pub battlepass: Vec<SantPass>,
 }
 
 impl User {
@@ -22,6 +24,7 @@ impl User {
             disliked_item: HashSet::new(),
             price_born: 0..u32::MAX,
             analytics: Analytics::new(categories),
+            battlepass: Vec::new(),
         }
     }
 
