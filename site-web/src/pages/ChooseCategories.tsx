@@ -20,9 +20,13 @@ export default function ChooseCategories() : JSX.Element {
                     Choose Categories
                 </div>
                 <div className={styles.controls}>
-                <button onClick={selectAll}>Add All</button>
+                <div className={styles.button1Pos}><button className={styles.addAll} onClick={selectAll}>Select All</button></div>    
+                
                 <input className={styles.input} value={input} placeholder="Search Category" onChange={(e)=>setInput(e.target.value)}></input>
-                <button>Remove All</button>
+
+                <div className={styles.button2Pos}>
+                <button className={styles.removeAll}>Remove All</button>
+                </div>
 
                 </div>
             </div>

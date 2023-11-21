@@ -16,8 +16,10 @@
 .input {
     padding:10px;
     text-align: center;
-    border-radius: 20px;
+    border-radius: 18px;
     width:300px;
+    font-style: italic;
+    font-size: 14px;
 }
 
 .header_container{
@@ -29,5 +31,24 @@
 
 .controls {
     display: flex;
+}
+
+.addAll, .removeAll {
+    border-radius: 8px;
+    background-color: #8A914A;
+    height: 35px;
+    font-size: 13px;
+    font-weight: normal;
+    border-width: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.button1Pos {
+    padding-right: 20px;
+}
+
+.button2Pos {
+    padding-left: 20px;
 }
 
