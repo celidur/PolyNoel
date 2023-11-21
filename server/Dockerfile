@@ -7,7 +7,7 @@
 ################################################################################
 # Create a stage for building the application.
 
-ARG RUST_VERSION=1.72.1
+ARG RUST_VERSION=1.74.0
 ARG APP_NAME=server
 FROM rust:${RUST_VERSION}-slim-bullseye AS build
 ARG APP_NAME

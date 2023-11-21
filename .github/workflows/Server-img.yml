@@ -17,5 +17,5 @@ jobs:
     - name: Build the Docker image
       run: |
         docker login --username ${{github.actor}} --password ${{ secrets.GITHUB_TOKEN }} ghcr.io
-        docker build ./server/ --file ./server/Dockerfile --tag ghcr.io/celidur/polynoel-server-ghcr:lastest
+        docker build ./server/ --file ./server/Dockerfile --platform linux/amd64 --tag ghcr.io/celidur/polynoel-server-ghcr:lastest
         docker push ghcr.io/celidur/polynoel-server-ghcr:lastest

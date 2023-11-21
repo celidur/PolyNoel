@@ -9,7 +9,7 @@ pub fn routes() -> Router<App> {
         get(get_santapass)
             .post(add_santapass)
 
-    ).route(":id", delete(delete_santapass))
+    ).route("/:id", delete(delete_santapass))
 }
 
 #[utoipa::path(
