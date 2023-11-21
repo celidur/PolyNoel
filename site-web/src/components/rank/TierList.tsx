@@ -10,8 +10,6 @@ export interface TierListProps{
 export default function TierList({tierTable, moveHandler}:TierListProps) :  JSX.Element {
     return (
         <>
-        <a className={styles.returnButton} href="/">Retour</a>
-        <h1 className={styles.title}>Rank your wishes</h1>
         <div className={styles.table}>
             {[...Array(N_TIERS)].map((_, i) => <Tier key={N_TIERS-i} level={N_TIERS-i} toys={tierTable[N_TIERS-i-1]} moveHandler={moveHandler}/>)}
         </div>

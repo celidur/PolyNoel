@@ -245,6 +245,10 @@ export default class HTTPManager {
     async updateRank(rankUpdate : UpdateRank) : Promise<void> {
       await HTTPInterface.PATCH<UpdateRank>(`${this.toysURL}/${this.rankURL}`, rankUpdate);
     } 
+    
+    async removeLikeToy(id : string) : Promise<void> {
+      await HTTPInterface.DELETE(`${this.toysURL}/${this.catalogToyURL}/${id}`);
+    }
 
     /* Prices */
 

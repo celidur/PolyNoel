@@ -56,15 +56,21 @@ RUN adduser \
     appuser
 USER appuser
 
+
 # Copy the executable from the "build" stage.
 COPY --from=build /bin/server /bin/
 
 COPY ./data /data
-RUN chown -R appuser:appuser /data
-RUN chmod -R 666 /data
 
 # Expose the port that the application listens on.
 EXPOSE 6969
+
+USER root
+
+RUN mkdir /dump
+
+RUN chown -R appuser:appuser /dump
+USER appuser
 
 # What the container should run when it is started.
 CMD ["/bin/server"]

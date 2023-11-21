@@ -49,6 +49,16 @@
   flex-direction: column;
   align-items: center;
 }
+
+.content{
+  width: 100%;
+  display: grid;
+  grid-template: "delete table"
+                 "uncatgorised table";
+  grid-template-columns: fit-content(150px) 1fr;
+  grid-template-rows: fit-content(150px) 1fr;
+  margin: 10px 0px 25px;
+}
 .title {
   font-size: 3.5em;
   font-weight: 600;
@@ -82,21 +92,21 @@
 }
 
 .noTierZone {
+  grid-area: uncatgorised;
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(auto-fill, 150px);
+  grid-template-rows: repeat(auto-fill, 150px);
   background-color: rgb(82, 82, 82);
-  min-height: 150px;
-  width: 100%;
+  min-width: 150px;
   padding: 10px 0px;
 }
 
 .table {
+  grid-area: table;
   border-radius: 15px;
   background-color: var(--color-white);
   border: 1px solid var(--color-silver);
   width: 100%;
-  margin: 10px 0px 25px;
 }
 
 .draggableToy {
@@ -120,4 +130,27 @@
   height: auto;
   width: auto;
   object-fit: contain;
+}
+
+.deleteSquare{
+  background-color: darkred;
+  grid-area: delete;
+  min-width: 150px;
+  min-height: 150px;
+  display: flex;
+  align-items:end;
+  justify-content: center;
+}
+
+.openedTrashLogo{
+  width: 92%;
+  margin-left: -7px;
+  margin-bottom: 10px;
+  filter: invert(97%) sepia(92%) saturate(0%) hue-rotate(2deg) brightness(103%) contrast(101%);
+}
+
+.closedTrashLogo{
+  height: 70%;
+  margin-bottom: 10px;
+  filter: invert(97%) sepia(92%) saturate(0%) hue-rotate(2deg) brightness(103%) contrast(101%);
 }
