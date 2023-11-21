@@ -3,8 +3,7 @@ import styles from "./ParentTaskPage.module.css"
 import HTTPManager, { CreateTask, Task } from "../assets/js/http_manager";
 import { useEffect, useState } from "react";
 import { GroupTasksByCategories } from "../assets/js/utils";
-
-
+import TreePattern from '../assets/img/patternarbres.png'; 
 
 export default function ParentTaskPage() : JSX.Element {
     const [dailyTasks, setDailyTasks] = useState<Task[]>([]);
@@ -89,41 +88,45 @@ export default function ParentTaskPage() : JSX.Element {
 
     
     return (        
-        <div className={styles.task_container}>
-            <div className={styles.task_block}>
-                <TaskList tasks={dailyTasks} title="Daily Tasks" onTaskClick={removeDailyTask} taskType={"edit-task"}></TaskList>
-                <div className={styles.add_task}>
-                    <input className={styles.input} placeholder="New Daily Task" type="text" value={dailyInput} 
-                        onChange={(e) => setDailyInput(e.target.value)}
-                        onKeyDown={(e)=>{
-                            if(e.key == "Enter")
-                                addDaily({name: dailyInput, recurrent_interval: 1})
-                        }}></input>                        
-                    <button className={styles.add_task_button} 
-                    onClick={() =>{
-                        addDaily({name: dailyInput, recurrent_interval: 1});
-                    }}>+</button>
-                </div>
-            </div>
-            <div className={styles.task_block}>
-                <TaskList tasks={generalTasks} title="General Tasks" onTaskClick={removeGeneralTask} taskType={"edit-task"}></TaskList>
-                <div className={styles.add_task}>
-                    <input className={styles.input} placeholder="New General Task" type="text" value={generalInput} 
-                    onChange={(e) => setGeneralInput(e.target.value)}
-                    onKeyDown={(e)=>{
-                        if(e.key == "Enter")
-                            addDaily({name: dailyInput, recurrent_interval: 1})
-                    }}></input>
-                    <button className={styles.add_task_button} 
-                    onClick={() =>{
-                        addGeneral({name: generalInput, recurrent_interval: 0});
-                    }}>+</button>
-                </div>
-            </div>
+            <div className={styles.task_container}>
+                <div className={styles.taskBlockContainer}>
 
-            <div className={styles.task_block}>
-                <TaskList tasks={doneTasks} title="Completed Tasks" onTaskClick={approvePendingTask} taskType={"approve-task"}></TaskList>                    
-            </div>
-        </div>        
+                    <div className={styles.task_block}>
+                        <TaskList tasks={dailyTasks} title="Daily Tasks" onTaskClick={removeDailyTask} taskType={"edit-task"}></TaskList>
+                        <div className={styles.add_task}>
+                            <input className={styles.input} placeholder="New Daily Task" type="text" value={dailyInput} 
+                                onChange={(e) => setDailyInput(e.target.value)}
+                                onKeyDown={(e)=>{
+                                    if(e.key == "Enter")
+                                        addDaily({name: dailyInput, recurrent_interval: 1})
+                                }}></input>                        
+                            <button className={styles.add_task_button} 
+                            onClick={() =>{
+                                addDaily({name: dailyInput, recurrent_interval: 1});
+                            }}>+</button>
+                        </div>
+                    </div>
+                    <div className={styles.task_block}>
+                        <TaskList tasks={generalTasks} title="General Tasks" onTaskClick={removeGeneralTask} taskType={"edit-task"}></TaskList>
+                        <div className={styles.add_task}>
+                            <input className={styles.input} placeholder="New General Task" type="text" value={generalInput} 
+                            onChange={(e) => setGeneralInput(e.target.value)}
+                            onKeyDown={(e)=>{
+                                if(e.key == "Enter")
+                                    addDaily({name: dailyInput, recurrent_interval: 1})
+                            }}></input>
+                            <button className={styles.add_task_button} 
+                            onClick={() =>{
+                                addGeneral({name: generalInput, recurrent_interval: 0});
+                            }}>+</button>
+                        </div>
+                    </div>
+
+                    <div className={styles.task_block}>
+                        <TaskList tasks={doneTasks} title="Completed Tasks" onTaskClick={approvePendingTask} taskType={"approve-task"}></TaskList>                    
+                    </div>
+                </div>
+                <img className={styles.treePattern} src={TreePattern} alt="tree pattern"></img>
+            </div>        
     );
 }
