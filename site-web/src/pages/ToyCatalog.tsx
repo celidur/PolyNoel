@@ -28,12 +28,16 @@ export default function ToyCatalog() : JSX.Element {
 
 async function loadToys(amount : number =1) : Promise<ToyCardProps[]> {
     const newToys : ToyCardProps[] = [];
-    for(let i = 0; i < amount; i++) {
-        const toy = await httpManager.getToyToSwipe();
-        const difficulty = Math.round(clamp((toy.price / parentPrice) * 5, 1, 5)); //TODO implement parent price maximum
-        newToys.push({id:toy.id,title:toy.name, imgSrc:toy.image, difficulty:difficulty});
+    try{
+        for(let i = 0; i < amount; i++) {
+            const toy = await httpManager.getToyToSwipe();
+            const difficulty = Math.round(clamp((toy.price / parentPrice) * 5, 1, 5)); //TODO implement parent price maximum
+            newToys.push({id:toy.id,title:toy.name, imgSrc:toy.image, difficulty:difficulty});
+        }
+        return newToys;
+    }catch(e){
+        return [];
     }
-    return newToys;
 }
 
 function TinderGame() : JSX.Element {
@@ -91,7 +95,7 @@ function TinderGame() : JSX.Element {
 function accept(toy:ToyCardProps, callback :  (setSwitchFlag:boolean)=>void) : void {
     console.log("Accepted : " + toy.title);
     callback(true);
-    httpManager.updateToyLike({item_id:toy.id,like:true});
+    httpManager.updateToyLike({item_id:toy.id,like:true}).catch(()=>{console.log("Update Toy Failed")});
 }
 interface DecisionSquareProps {
     callback: (setSwitchFlag:boolean)=>void,
@@ -120,7 +124,7 @@ function AcceptSquare({callback, cards}: DecisionSquareProps) : JSX.Element {
 function refuse(toy:ToyCardProps, callback : (setSwitchFlag:boolean)=>void) : void {
     console.log("Refused : " + toy.title);
     callback(true);
-    httpManager.updateToyLike({item_id:toy.id, like:false});
+    httpManager.updateToyLike({item_id:toy.id, like:false}).catch(()=>{console.log("Update Toy Failed")});
 }
 
 function RefuseSquare({callback, cards} : DecisionSquareProps) : JSX.Element {
