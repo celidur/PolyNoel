@@ -15,7 +15,7 @@ pub fn routes() -> Router<App> {
         .route("/toy/:id", get(get_item).delete(delete_toy))
         .route("/toys", get(get_all_items))
         .route("/category/:id", post(add_category).delete(delete_category).get(get_category))
-        .route("/category", get(get_categories))
+        .route("/category", get(get_categories).put(add_all_categories))
         .route("/price_born", put(modify_price_born).get(get_price_born))
         .route("/rank/:id", get(get_rank))
         .route("/rank", patch(update_rank))
@@ -124,6 +124,19 @@ pub async fn add_category(
     let mut user = app.users.lock().await;
     let category = app.categories.categories.iter().filter(|c| c.id == id).next().unwrap().clone();
     user.add_category(category, &app.toys);
+    StatusCode::CREATED
+}
+
+#[utoipa::path(
+    put,
+    path = "/toy_catalog/category",
+    responses(
+        (status = 201, description = "All categories created successfully", body = Vec<String>),
+    ),
+)]
+pub async fn add_all_categories(State(app): State<App>) -> impl IntoResponse {
+    let mut user = app.users.lock().await;
+    app.categories.categories.iter().for_each(|c| user.add_category(c.clone(), &app.toys));
     StatusCode::CREATED
 }
 
