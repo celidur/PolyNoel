@@ -138,7 +138,7 @@ export default class HTTPManager {
         this.tasksURL = "child_labor";
         this.toysURL = "toy_catalog"
         this.parentURL = "parent"
-        this.battlePass = "battlePass"
+        this.battlePass = "santapass"
 
         //Sub Endpoints
         this.catalogCategoryURL = "category";        

@@ -8,8 +8,9 @@ export default function ChooseCategories() : JSX.Element {
     const [select, setSelect] = useState(false);
     const httpManager = new HTTPManager();
     const selectAll = () => {
-        httpManager.selectAllCategories();
-        setSelect(!select);
+        httpManager.selectAllCategories().then(()=>{
+            setSelect(!select);
+        });
     }
     return (
         <div className={styles.container}>

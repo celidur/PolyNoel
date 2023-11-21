@@ -72,5 +72,6 @@
     max-width: 100%;
     height: auto;
     position: fixed;
-    overflow: hidden
+    overflow: hidden;
+    z-index: -1;
 }
