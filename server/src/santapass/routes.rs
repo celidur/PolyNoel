@@ -58,9 +58,7 @@ pub async fn add_santapass(
         (status = 200, description = "Delete santapass"),
         (status = 404, description = "not found"),
     ),
-    params(
-        ("santapass" = SantPass, description = "santapass to delete")
-    ),
+    request_body = SantPass,
 )]
 pub async fn delete_santapass(
     State(app): State<App>,

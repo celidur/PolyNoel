@@ -187,9 +187,7 @@ pub struct NewPrice{
     responses(
         (status = 200, description = "Price born modified successfully"),
     ),
-    params(
-        ("price_born" = NewPrice, description = "price born of toy")
-    ), 
+    request_body = NewPrice,
 )]
 pub async fn modify_price_born(
     State(app): State<App>,
@@ -278,9 +276,7 @@ pub async fn get_rank(
         (status = 200, description = "Rank modified successfully"),
         (status = 404, description = "Category not found")
     ),
-    params(
-        ("rank" = UpdateRank, description = "rank of toy")
-    ),
+    request_body = UpdateRank,
 )]
 pub async fn update_rank(
     State(app): State<App>,
