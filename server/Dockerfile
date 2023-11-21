@@ -68,7 +68,6 @@ EXPOSE 6969
 USER root
 
 RUN mkdir /dump
-VOLUME /dump
 
 RUN chown -R appuser:appuser /dump
 USER appuser

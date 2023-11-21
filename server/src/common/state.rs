@@ -50,6 +50,7 @@ impl App {
             let mut e = flate2::write::GzEncoder::new(file, Compression::default());
             e.write_all(&buffer).unwrap();
             e.finish().unwrap();
+            println!("Server dumped");
             sleep(Duration::from_secs(5 * 60)).await
         }
     }
