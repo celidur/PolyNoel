@@ -42,8 +42,8 @@ export default function CategoriesSelect(props : CategoriesSearch) : JSX.Element
 
   return (
     <div className={styles.container}>
-        {categories.map((category)=>{
-            return <div className={`${styles.category} ${category.is_selected ? styles.selected : styles.not_selected}`}
+        {categories.map((category, i)=>{
+            return <div key={i} className={`${styles.category} ${category.is_selected ? styles.selected : styles.not_selected}`}
                     onClick={ ()=>unselectCategory(category) }>
                     {category.name}
                     </div>

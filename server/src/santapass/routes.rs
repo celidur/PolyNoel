@@ -7,7 +7,7 @@ pub fn routes() -> Router<App> {
     Router::new().route(
         "/santapass",
         get(get_santapass)
-            .put(add_santapass)
+            .post(add_santapass)
             .delete(delete_santapass),
     )
 }
@@ -25,15 +25,13 @@ pub async fn get_santapass(State(app): State<App>) -> impl IntoResponse {
 }
 
 #[utoipa::path(
-    put,
+    post,
     path = "/santapass",
     responses(
         (status = 200, description = "Add santapass"),
         (status = 400, description = "Already in the battlepass"),
     ),
-    params(
-        ("santapass" = SantPass, description = "new santapass")
-    ),
+    request_body = SantPass,
 )]
 pub async fn add_santapass(
     State(app): State<App>,
