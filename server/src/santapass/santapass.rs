@@ -9,8 +9,4 @@ pub struct SantPass {
     pub points: u32,
 }
 
-impl SantPass {
-    pub fn new(toy: Toy, points: u32) -> Self {
-        Self { toy, points }
-    }
-}
+impl SantPass {}
