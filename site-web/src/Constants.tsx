@@ -1,3 +1,4 @@
 export const ItemTypes = {
-    TOYCARD: "ToyCard"
+    TOYCARD: "ToyCard",
+    TOY_TO_RANK: "ToyToRank"
 }
