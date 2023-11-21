@@ -20,7 +20,9 @@ use crate::toy_catalog;
             toy_catalog::routes::get_categories,
             toy_catalog::routes::get_category,
             toy_catalog::routes::modify_price_born,
-            toy_catalog::routes::get_price_born
+            toy_catalog::routes::get_price_born,
+            toy_catalog::routes::get_rank,
+            toy_catalog::routes::update_rank
         ),
         components(
             schemas(

@@ -3,7 +3,7 @@ use axum::{
     extract::{State, Path},
     http::StatusCode,
     response::IntoResponse,
-    routing::{get, post, put},
+    routing::{get, post, put, patch},
     Json, Router,
 };
 use serde::{Deserialize, Serialize};
@@ -17,6 +17,8 @@ pub fn routes() -> Router<App> {
         .route("/category/:id", post(add_category).delete(delete_category).get(get_category))
         .route("/category", get(get_categories))
         .route("/price_born", put(modify_price_born).get(get_price_born))
+        .route("/rank/:id", get(get_rank))
+        .route("/rank", patch(update_rank))
 }
 
 #[utoipa::path(
@@ -24,13 +26,17 @@ pub fn routes() -> Router<App> {
     path = "/toy_catalog/swip",
     responses(
         (status = 200, description = "Get new swip item", body = Toy),
+        (status = 204, description = "No more item")
     )
 )]
-pub async fn get_new_item(State(app): State<App>) -> impl IntoResponse {
+pub async fn get_new_item(State(app): State<App>) ->  Result<impl IntoResponse, impl IntoResponse> {
     let user = app.users.lock().await;
-    let item_id = user.analytics.select();
-    let item = app.toys.toys.get(&item_id).unwrap().clone();
-    (StatusCode::OK, Json(item))
+    if let Ok(item_id) = user.analytics.select(){
+        let item = app.toys.toys.get(&item_id).unwrap().clone();
+        Ok((StatusCode::OK, Json(item)))
+    }else{
+        Err(StatusCode::NO_CONTENT)
+    }
 }
 
 #[derive(Serialize, Deserialize, ToSchema, Debug, Default)]
@@ -61,7 +67,7 @@ pub async fn update_item(
         return StatusCode::NOT_FOUND;
     }
     if like_toy.like {
-        user.selected_item.insert(like_toy.item_id);
+        user.selected_item.insert(like_toy.item_id, 0);
     } else {
         user.disliked_item.insert(like_toy.item_id);
     }
@@ -233,3 +239,58 @@ pub async fn delete_toy(
     }
     StatusCode::OK
 }
+
+
+#[derive(Serialize, Deserialize, ToSchema, Debug, Default)]
+pub struct UpdateRank{
+    rank: u32,
+    item_id: String,
+}
+
+#[utoipa::path(
+    get,
+    path = "/toy_catalog/rank/{id}",
+    responses(
+        (status = 200, description = "Get rank of category", body = u32),
+        (status = 404, description = "Category not found")
+    ),
+    params(
+        ("id" = String, Path, description = "id of toy")
+    ), 
+)]
+pub async fn get_rank(
+    State(app): State<App>,
+    Path(id): Path<String>,
+) -> Result<impl IntoResponse, impl IntoResponse> {
+    let user = app.users.lock().await;
+    let rank = user.selected_item.get(&id);
+    if let Some(rank) = rank {
+        Ok((StatusCode::OK, Json(*rank)))
+    } else {
+        Err(StatusCode::NOT_FOUND)
+    }
+}
+
+#[utoipa::path(
+    patch,
+    path = "/toy_catalog/rank",
+    responses(
+        (status = 200, description = "Rank modified successfully"),
+        (status = 404, description = "Category not found")
+    ),
+)]
+pub async fn update_rank(
+    State(app): State<App>,
+    Json(update_rank): Json<UpdateRank>,
+) -> impl IntoResponse {
+    let mut user = app.users.lock().await;
+    let rank = user.selected_item.get_mut(&update_rank.item_id);
+    if let Some(rank) = rank {
+        *rank = update_rank.rank;
+        StatusCode::OK
+    } else {
+        StatusCode::NOT_FOUND
+    }
+}
+
+
