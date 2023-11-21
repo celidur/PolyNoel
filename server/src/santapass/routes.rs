@@ -40,11 +40,7 @@ pub async fn add_santapass(
     Json(santapass): Json<SantPass>,
 ) -> impl IntoResponse {
     let mut user = app.users.lock().await;
-    if user
-        .battlepass
-        .iter()
-        .any(|santapass| santapass.toy.id == santapass.toy.id)
-    {
+    if user.battlepass.iter().any(|s| s.toy == santapass.toy) {
         return StatusCode::BAD_REQUEST;
     }
     user.battlepass.push(santapass);
@@ -65,11 +61,7 @@ pub async fn delete_santapass(
     Json(santapass): Json<SantPass>,
 ) -> impl IntoResponse {
     let mut user = app.users.lock().await;
-    if let Some(index) = user
-        .battlepass
-        .iter()
-        .position(|s| s.toy.id == santapass.toy.id)
-    {
+    if let Some(index) = user.battlepass.iter().position(|s| s.toy == santapass.toy) {
         user.battlepass.remove(index);
         return StatusCode::OK;
     }
