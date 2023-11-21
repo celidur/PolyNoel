@@ -38,11 +38,12 @@ RUN --mount=type=bind,source=package.json,target=package.json \
     --mount=type=cache,target=/root/.npm \
     npm ci
 
-RUN npm i -S serve
 # Copy the rest of the source files into the image.
 COPY . .
 # Run the build script.
 RUN npm run build
+
+RUN npm i -S serve
 
 ################################################################################
 # Create a new stage to run the application with minimal runtime dependencies
