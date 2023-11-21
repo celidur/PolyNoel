@@ -9,6 +9,8 @@
 # https://github.com/docker/awesome-compose
 services:
   server:
+    container_name: client
+    hostname: client
     build:
       context: .
     environment:
