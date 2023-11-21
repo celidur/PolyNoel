@@ -17,7 +17,7 @@ impl Toy {
     pub fn read_toy(path: &Path) -> Self {
         let file = fs::File::open(path).unwrap();
         let reader = BufReader::new(file);
-        let toy: Toy = serde_json::from_reader(reader).unwrap();
+        let toy: Toy = simd_json::from_reader(reader).unwrap();
         toy
     }
 }

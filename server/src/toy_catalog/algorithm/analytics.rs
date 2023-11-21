@@ -3,9 +3,11 @@ use super::category::Category;
 use crate::toy_catalog::toys::Toys;
 use rand::seq::SliceRandom;
 use rand::Rng;
+use serde::{Deserialize, Serialize};
 use std::collections::{HashMap, HashSet};
 use std::ops::Range;
 
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Analytics {
     pub categories: Categories,
     score: f32,
@@ -47,7 +49,7 @@ impl Analytics {
         return Ok(items.choose(&mut rng).unwrap().to_string());
     }
 
-    pub fn add_review(&mut self, item_id: &str, categories: &Vec<String>, liked: bool) -> bool {
+    pub fn add_review(&mut self, item_id: &str, categories: &[String], liked: bool) -> bool {
         let base_factor = if liked { 2.0 } else { 0.4 };
 
         if self.categories.iter().all(|c| !c.items.contains(item_id)) {
@@ -97,14 +99,9 @@ impl Analytics {
         let removed_items = category.items.clone();
         self.categories.retain_mut(|c| {
             if c.id != category_id {
-                return true;
+                true
             } else {
-                c.items = c
-                    .items
-                    .difference(&removed_items)
-                    .into_iter()
-                    .cloned()
-                    .collect();
+                c.items = c.items.difference(&removed_items).cloned().collect();
                 false
             }
         });

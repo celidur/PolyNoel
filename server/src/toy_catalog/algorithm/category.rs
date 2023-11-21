@@ -32,7 +32,7 @@ impl Category {
     pub fn read_category(path: &Path) -> Self {
         let file = fs::File::open(path).unwrap();
         let reader = BufReader::new(file);
-        serde_json::from_reader(reader).unwrap()
+        simd_json::from_reader(reader).unwrap()
     }
 
     pub fn depth(&self) -> usize {

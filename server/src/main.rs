@@ -51,10 +51,10 @@ async fn main() {
             }),
         )
         .layer(cors)
-        .with_state(state);
+        .with_state(state.clone());
 
-    axum::Server::bind(&"0.0.0.0:6969".parse().unwrap())
-        .serve(app.into_make_service())
-        .await
-        .unwrap();
+    let _ = tokio::join!(
+        axum::Server::bind(&"0.0.0.0:6969".parse().unwrap()).serve(app.into_make_service()),
+        state.dump_o_matic()
+    );
 }

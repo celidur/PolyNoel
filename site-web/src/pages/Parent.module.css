@@ -8,13 +8,24 @@
 }
 
 .feature {
-    padding: 10px;    
+    padding: 12px;    
     border-radius: 20px;
     background-color:#8A914A; /* TODO: change Color */
-    font-weight: bold;
-    font-size: 24px;
+    font-weight:bold;
+    font-size: 20px;
     color: white;
     text-decoration: none;        
     width:200px;
     text-align: center;
+}
+
+.feature:hover {
+    border:3px solid lightgray;  
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.pageTile {
+    font-weight: bold;
+    font-size: 24px;
 }

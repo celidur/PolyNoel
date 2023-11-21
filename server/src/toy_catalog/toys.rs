@@ -1,12 +1,11 @@
-use std::collections::HashMap;
-use std::ops::Deref;
-
 use super::toy::Toy;
-
+use serde::{Deserialize, Serialize};
+use std::collections::HashMap;
 use std::fs;
+use std::ops::Deref;
 use std::path::Path;
 
-#[derive(Default, Debug)]
+#[derive(Clone, Default, Debug, Serialize, Deserialize)]
 pub struct Toys {
     pub toys: HashMap<String, Toy>,
 }
@@ -25,12 +24,10 @@ impl Toys {
     pub fn new() -> Self {
         let mut toys = HashMap::new();
         let path = Path::new("data/items");
-        for dir in fs::read_dir(path).unwrap() {
-            if let Ok(dir) = dir {
-                let path = dir.path();
-                let toy = Toy::read_toy(&path);
-                toys.insert(toy.id.clone(), toy);
-            }
+        for dir in fs::read_dir(path).unwrap().flatten() {
+            let path = dir.path();
+            let toy = Toy::read_toy(&path);
+            toys.insert(toy.id.clone(), toy);
         }
 
         Self { toys }

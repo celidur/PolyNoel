@@ -1,11 +1,13 @@
 use super::category::Category;
 use super::category::SimpleCategory;
+use serde::Deserialize;
+use serde::Serialize;
 use std::fs;
 use std::ops::Deref;
 use std::ops::DerefMut;
 use std::path::Path;
 
-#[derive(Default, Debug, Clone)]
+#[derive(Default, Debug, Clone, Serialize, Deserialize)]
 pub struct Categories {
     pub categories: Vec<Category>,
 }
@@ -32,10 +34,7 @@ impl Categories {
             .map(|c| SimpleCategory {
                 id: c.id.to_string(),
                 name: c.name.to_string(),
-                is_selected: selected
-                    .iter()
-                    .find(|selected| selected.id == c.id)
-                    .is_some(),
+                is_selected: selected.iter().any(|selected| selected.id == c.id),
             })
             .collect()
     }
@@ -43,12 +42,10 @@ impl Categories {
     pub fn new() -> Self {
         let mut categories = Vec::new();
         let path = Path::new("data/categories");
-        for dir in fs::read_dir(path).unwrap() {
-            if let Ok(dir) = dir {
-                let path = dir.path();
-                let category = Category::read_category(&path);
-                categories.push(category);
-            }
+        for dir in fs::read_dir(path).unwrap().flatten() {
+            let path = dir.path();
+            let category = Category::read_category(&path);
+            categories.push(category);
         }
 
         Self { categories }

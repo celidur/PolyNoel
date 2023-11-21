@@ -40,7 +40,7 @@ use crate::toy_catalog;
                 toy_catalog::algorithm::category::Category,
                 toy_catalog::routes::NewPrice,
                 toy_catalog::routes::UpdateRank,
-                santapass::santapass::SantPass,
+                santapass::battlepass::SantaPass,
             )
         ),
         tags(
