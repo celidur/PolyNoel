@@ -1,3 +1,4 @@
+import { Http2ServerRequest } from "http2";
 import { SERVER_URL } from "./consts.js";
 
 export const HTTPInterface = {
@@ -114,6 +115,11 @@ export interface Category {
   score: number
   }
 
+  export interface UpdateRank {
+    item_id :	string
+    rank : number
+  }
+
 export default class HTTPManager {
     tasksURL : string;
     toysURL : string;
@@ -123,8 +129,10 @@ export default class HTTPManager {
     catalogCategoryURL : string;
     catalogSwipToysURL : string;
     catalogToyURL : string;
-    catalogToysURL : string
-    priceBornURL : string
+    catalogToysURL : string;
+    priceBornURL : string;
+    rankURL : string;
+
     constructor() {
         //Main Endpoints
         this.tasksURL = "child_labor";
@@ -138,6 +146,7 @@ export default class HTTPManager {
         this.catalogToyURL = "toy";
         this.catalogToysURL = "toys";
         this.priceBornURL = "price_born";
+        this.rankURL = "rank";
     }
 
     /* TASK ENDPOINTS */
@@ -213,6 +222,16 @@ export default class HTTPManager {
       return toys;
     }
 
+    /* Rank */
+
+    async getRankById(id : string) : Promise<number> {
+      return await HTTPInterface.GET<number>(`${this.toysURL}/${this.rankURL}/${id}`);
+    }
+
+    async updateRank(rankUpdate : UpdateRank) : Promise<void> {
+      await HTTPInterface.PATCH<UpdateRank>(`${this.toysURL}/${this.rankURL}`, rankUpdate);
+    } 
+
     /* Prices */
 
     async getPriceBorn() : Promise<NewPrice> {
@@ -222,5 +241,6 @@ export default class HTTPManager {
     async setPriceBorn(price : NewPrice) : Promise<void> {
       await HTTPInterface.PUT<NewPrice>(`${this.toysURL}/${this.priceBornURL}`, price);
     }
+
 
 }

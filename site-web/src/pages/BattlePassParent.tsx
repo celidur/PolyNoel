@@ -19,6 +19,7 @@ export default function BattlePassParent() : JSX.Element {
         httpManager.getToys().then((fetchedToys)=>{
             setToys(fetchedToys);
         });
+
             
     }, []);
 
@@ -40,12 +41,20 @@ export default function BattlePassParent() : JSX.Element {
         }
     }
 
+
+
     return (
         <div className={styles.container}  >
             <div className={styles.image_container}>
                 {toys.map((toy, i)=>{
-                    return <img key={i} className={`${styles.image} ${selectedIndex === -1? "" : styles.select_image}`} 
-                    src={toy.image} alt="image" onClick={()=>onClickSwipedImage(toy)}/>
+                    return <div className={styles.item}>
+                            <img key={i} className={`${styles.image} ${selectedIndex === -1? "" : styles.select_image}`} 
+                            src={toy.image} alt="image" onClick={()=>onClickSwipedImage(toy)}/>
+                            <div className={styles.bonus_info}>
+                                
+                                {toy.price/100}$
+                            </div>
+                        </div> 
                 })}
             </div>
 
