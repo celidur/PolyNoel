@@ -33,7 +33,8 @@ use crate::toy_catalog;
                 toy_catalog::routes::LikeToy,
                 toy_catalog::algorithm::category::SimpleCategory,
                 toy_catalog::algorithm::category::Category,
-                toy_catalog::routes::NewPrice
+                toy_catalog::routes::NewPrice,
+                toy_catalog::routes::UpdateRank,
             )
         ),
         tags(
