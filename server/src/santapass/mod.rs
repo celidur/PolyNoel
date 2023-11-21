@@ -1,2 +1,2 @@
+pub mod battlepass;
 pub mod routes;
-pub mod santapass;
