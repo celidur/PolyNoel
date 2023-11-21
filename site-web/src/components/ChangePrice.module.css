@@ -1,0 +1,23 @@
+.container{ 
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, max-content));  
+    justify-content: center;     
+    gap: 10px;
+}
+
+.input {
+    padding:10px;
+    text-align: center;
+    border-radius: 20px;
+    width:300px;
+    font-size:20px;
+}
+
+.subtitle{
+    font-size:30px;
+    font-weight: bold;
+    text-align: center;   
+    padding: 30px;  
+    padding-bottom: 20px; 
+    
+}

@@ -8,7 +8,7 @@ export default function Parent() : JSX.Element {
                 <NavLink className={styles.feature} to="/parent/tasks">
                     Tasks
                 </NavLink>
-                <NavLink className={styles.feature} to="#">
+                <NavLink className={styles.feature} to="/parent/battlepass">
                     BattlePass
                 </NavLink>
                 <NavLink className={styles.feature} to="#">
