@@ -16,11 +16,7 @@ services:
       target: final
     ports:
       - 6969:6969
-    volumes:
-      - dump:/dump
 
-volumes:
-  dump:
 
 # The commented out section below is an example of how to define a PostgreSQL
 # database that your application can use. `depends_on` tells Docker Compose to
