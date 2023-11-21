@@ -15,6 +15,7 @@ import crossLogo from "../assets/img/cross.svg";
 
 const MINIMUM_STACK_SIZE = 3;
 const parentPrice = 10000; //TODO implement parent price maximum
+
 const clamp = (num:number, min:number, max:number) => Math.min(Math.max(num, min), max);
 
 const httpManager = new HTTPManager();
@@ -30,7 +31,22 @@ async function loadToys(amount : number =1) : Promise<ToyCardProps[]> {
     const newToys : ToyCardProps[] = [];
     for(let i = 0; i < amount; i++) {
         const toy = await httpManager.getToyToSwipe();
-        const difficulty = Math.round(clamp((toy.price / parentPrice) * 5, 1, 5)); //TODO implement parent price maximum
+
+        // TO AJUST: once price range error is fixed
+        // const priceBorn = await httpManager.getPriceBorn();
+        // const priceMin = priceBorn.inferior;
+        // const priceMax = priceBorn.superior;
+
+        // let difficulty;
+        // if (toy.price <= priceMax) {
+        //     const range = priceMax - priceMin;
+        //     difficulty = 1 + ((toy.price - priceMin) / range) * 4;
+        // } else 
+        //     difficulty = 5;
+        // difficulty = Math.round(clamp(difficulty, 1, 5)); 
+
+        const difficulty = Math.round(clamp((toy.price / parentPrice) * 5, 1, 5)); //TO remove once lines above are implemented
+
         newToys.push({id:toy.id,title:toy.name, imgSrc:toy.image, difficulty:difficulty});
     }
     return newToys;
