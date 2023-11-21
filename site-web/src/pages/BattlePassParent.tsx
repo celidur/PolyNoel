@@ -38,6 +38,7 @@ export default function BattlePassParent() : JSX.Element {
             newTiers[selectedIndex].toy = toy;
             setTiers(newTiers);
             setSelectedIndex(-1);
+            
         }
     }
 
