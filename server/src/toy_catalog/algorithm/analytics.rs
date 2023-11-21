@@ -3,7 +3,7 @@ use super::category::Category;
 use crate::toy_catalog::toys::Toys;
 use rand::seq::SliceRandom;
 use rand::Rng;
-use std::collections::HashSet;
+use std::collections::{HashMap, HashSet};
 use std::ops::Range;
 
 pub struct Analytics {
@@ -116,6 +116,7 @@ impl Analytics {
         old_price_born: &Range<u32>,
         price_born: &Range<u32>,
         dislikes: &HashSet<String>,
+        likes: &HashMap<String, u32>,
         toys: &Toys,
     ) {
         if old_price_born.start <= price_born.start && old_price_born.end >= price_born.end {
@@ -138,6 +139,7 @@ impl Analytics {
                         price_born
                             .contains(&toys.get(toy_id.to_uppercase().as_str()).unwrap().price)
                             && !dislikes.contains(toy_id.to_uppercase().as_str())
+                            && !likes.contains_key(toy_id.to_uppercase().as_str())
                     })
                     .cloned()
                     .collect();

@@ -52,8 +52,12 @@ impl User {
             &self.price_born,
             &price_born,
             &self.disliked_item,
+            &self.selected_item,
             toys,
         );
+        self.selected_item.retain(|key, _| {
+            price_born.contains(&toys.get(key.to_uppercase().as_str()).unwrap().price)
+        });
 
         self.price_born = price_born;
     }
