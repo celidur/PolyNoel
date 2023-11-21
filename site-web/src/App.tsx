@@ -9,6 +9,7 @@ import RankToys from './pages/RankToys';
 import ParentTaskPage from './pages/ParentTaskPage';
 import ChooseCategories from './pages/ChooseCategories';
 import BattlePassParent from './pages/BattlePassParent';
+import GenericSettings from './pages/GenericSettings';
 
 type RouteData = {
   path: string;
@@ -24,6 +25,7 @@ function App() : JSX.Element {
     { path: "/parent/tasks", element: <ParentTaskPage /> },
     { path: "/parent/categories", element: <ChooseCategories /> },
     { path: "/parent/battlepass", element: <BattlePassParent /> },
+    { path: "/parent/settings", element: <GenericSettings /> },
     { path: "/", element: <Index /> },
   ];
   return (

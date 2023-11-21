@@ -42,7 +42,7 @@ impl Categories {
 
     pub fn new() -> Self {
         let mut categories = Vec::new();
-        let path = Path::new("src/toy_catalog/data/categories");
+        let path = Path::new("data/categories");
         for dir in fs::read_dir(path).unwrap() {
             if let Ok(dir) = dir {
                 let path = dir.path();

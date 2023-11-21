@@ -24,7 +24,7 @@ impl Toys {
 
     pub fn new() -> Self {
         let mut toys = HashMap::new();
-        let path = Path::new("src/toy_catalog/data/items");
+        let path = Path::new("data/items");
         for dir in fs::read_dir(path).unwrap() {
             if let Ok(dir) = dir {
                 let path = dir.path();
