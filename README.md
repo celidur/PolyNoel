@@ -13,7 +13,7 @@ services:
     environment:
       NODE_ENV: production
     ports:
-      - 3000:3000
+      - 4242:4242
   server-polynoel:
     container_name: server-polynoel
     hostname: server-polynoel

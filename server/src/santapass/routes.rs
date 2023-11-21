@@ -1,7 +1,7 @@
 use crate::common::state::App;
 use axum::{extract::{State, Path}, http::StatusCode, response::IntoResponse, routing::{get, delete}, Json, Router};
 
-use super::santapass::SantPass;
+use super::battlepass::SantaPass;
 
 pub fn routes() -> Router<App> {
     Router::new().route(
@@ -35,7 +35,7 @@ pub async fn get_santapass(State(app): State<App>) -> impl IntoResponse {
 )]
 pub async fn add_santapass(
     State(app): State<App>,
-    Json(santapass): Json<SantPass>,
+    Json(santapass): Json<SantaPass>,
 ) -> impl IntoResponse {
     let mut user = app.users.lock().await;
     if user.battlepass.iter().any(|s| s.toy == santapass.toy) {
