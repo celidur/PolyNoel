@@ -4,13 +4,14 @@ import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import { TouchBackend } from 'react-dnd-touch-backend';
 import { isMobile } from 'react-device-detect';
+import styles from '../assets/css/rankToys.module.css';
 import TierList from '../components/rank/TierList';
 import UncategorisedToys from '../components/rank/UncategorisedToys';
 import DraggableToy from '../components/rank/DraggableToy';
 
-const toysPlaceholder = [[],
+const toysPlaceholder = [[<DraggableToy id="A939517B"/>, <DraggableToy id="040FBBAB"/>],
                         [],
-                        [<DraggableToy id="A939517B"/>, <DraggableToy id="040FBBAB"/>],
+                        [],
                         [],
                         [],
                         [],
@@ -45,8 +46,10 @@ export default function RankToys() : JSX.Element {
 
     return(
         <DndProvider backend={isMobile ? TouchBackend : HTML5Backend}>
-            <TierList tierTable={toys.slice(1)} moveHandler={moveToys}/>
-            <UncategorisedToys toys={toys[0]}/>
+            <div className={styles.mainPage}>
+                <TierList tierTable={toys.slice(1)} moveHandler={moveToys}/>
+                <UncategorisedToys toys={toys[0]} moveHandler={moveToys}/>
+            </div>
         </DndProvider>
     );
 }
