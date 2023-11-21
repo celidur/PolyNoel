@@ -1,6 +1,7 @@
 use super::task::{CreateTask, Task, TaskStatus};
+use serde::{Deserialize, Serialize};
 
-#[derive(Debug, Default)]
+#[derive(Clone, Debug, Default, Serialize, Deserialize)]
 pub struct Tasks {
     pub tasks: Vec<Task>,
 }

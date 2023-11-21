@@ -5,6 +5,29 @@
     padding-top: 2.5%;
 }
 
+.returnButton {
+    display: flex;
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: lightgray;
+    width: 50px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    position: relative;
+    left: 50px;
+
+    border-radius: 5px;
+    border:1px solid darkgrey;
+}
+
+.returnButton:hover{
+    border:1px solid black;  
+    cursor: pointer;
+    transform: scale(1.02);
+   }
+
 .tinderGame h1{
     text-align: center;
     font-size: 3em;
@@ -19,7 +42,7 @@
     width: max(40vw, 300px);
     display: flex;
     flex-direction: column;
-    background-color: #8b0000;
+    background-color: #dadada;
     border-radius: 50px;
     align-items: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -27,7 +50,7 @@
 
 .toyCard h1 {
     font-size: max(2vw, 1.5em);
-    color:white;
+    color:black;
     text-align: center;
     container-name: toyName;
     margin-left: 15px;
@@ -120,7 +143,7 @@
 
 .buttonInterface button:active {
     transform: scale(0.98);
-    box-shadow: 5px 5px 8px 7px rgba(0,0,0,0.5) inset;
+    box-shadow: 4px 4px 6px 5px rgba(0,0,0,0.5) inset;
 }
 
 .acceptButton{
@@ -132,13 +155,13 @@
 }
 
 .buttonInterface .refuseButton img{
-    max-height: 90%;
+    max-height: 70%;
     margin-top: 3px;
 }
 
 .buttonInterface img{
     max-width: 100%;
-    max-height: 100%;
+    max-height: 80%;
     align-self: center;
     filter: invert(97%) sepia(92%) saturate(0%) hue-rotate(2deg) brightness(103%) contrast(101%);
 }

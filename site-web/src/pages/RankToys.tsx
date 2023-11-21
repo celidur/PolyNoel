@@ -7,6 +7,7 @@ import styles from '../assets/css/rankToys.module.css';
 import TierList from '../components/rank/TierList';
 import UncategorisedToys from '../components/rank/UncategorisedToys';
 import DraggableToy from '../components/rank/DraggableToy';
+import DeleteSquare from '../components/rank/DeleteSquare';
 import HTTPManager from '../assets/js/http_manager';
 
 const httpManager = new HTTPManager();
@@ -44,11 +45,25 @@ export default function RankToys() : JSX.Element {
     });
     }
 
+    const deleteToy = (id:string, origin:number) => {
+        setToys(prevToys=>{
+            const newToys = prevToys.map(row => [...row]); // to trigger a re-render
+            newToys[origin] = newToys[origin].filter((toy) => toy.props.id !== id);
+            httpManager.removeLikeToy(id);
+            return newToys;
+        });
+    }
+
     return(
         <DndProvider backend={isMobile ? TouchBackend : HTML5Backend}>
+            <a className={styles.returnButton} href="/">Retour</a>
             <div className={styles.mainPage}>
-                <TierList tierTable={toys.slice(1)} moveHandler={moveToys}/>
-                <UncategorisedToys toys={toys[0]} moveHandler={moveToys}/>
+                <h1 className={styles.title}>Rank your wishes</h1>
+                <div className={styles.content}>
+                    <TierList tierTable={toys.slice(1)} moveHandler={moveToys}/>
+                    <UncategorisedToys toys={toys[0]} moveHandler={moveToys}/>
+                    <DeleteSquare deleteHandler={deleteToy}/>
+                </div>
             </div>
         </DndProvider>
     );
