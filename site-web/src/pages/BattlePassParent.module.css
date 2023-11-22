@@ -8,7 +8,37 @@
     /* padding: 0% 5%; */
 }
 
+.returnButton {
+    
+    align-items: left;
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: lightgray;
+    width: 50px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    border-radius: 5px;
+    border:1px solid darkgrey;
+  }
+
+.createTitle {
+    left: 35%;
+    font-weight: bold;
+    color: rgb(118, 116, 116);
+    width: max-content;
+    font-size: 40px;
+    position: absolute;
+    text-align: center;
+    top: 100px;
+}
+
 .image_container {
+    margin-top: 120px;
     width:900px;
     display:grid;
     grid-template-columns: repeat(auto-fit, 140px);
@@ -26,6 +56,7 @@
 }
 
 .tier_container {
+    margin-top: 75px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,6 +74,15 @@
     font-size: 30px;
     font-weight: bold;
     text-align: center;
+}
+
+.toysTitle {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    top: 160px;
+    left: 20px;
+    position: absolute;
 }
 
 .grow_image:hover {
