@@ -1,14 +1,18 @@
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 3fr 2fr;
     justify-content: center;
     justify-items: center;
+    /* align-items: center;
+    align-content: center; */
+    /* padding: 0% 5%; */
 }
 
 .image_container {
-    width:550px;
+    width:900px;
     display:grid;
-    grid-template-columns: repeat(auto-fit, 120px);
+    grid-template-columns: repeat(auto-fit, 140px);
+    grid-template-rows: repeat(auto-fill, 170px);
     gap:10px;
 }
 
@@ -16,10 +20,23 @@
     width:100px;
     height:100px;
     border-radius: 30px;
+
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+
 }
 
 .tier_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+    padding: 0px 50px;
+}
 
+.tier_title {
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
 }
 
 .title {
@@ -32,7 +49,12 @@
 
 }
 .select_image:hover {
-    border: 2px solid yellow;
+    -webkit-filter: brightness(70%);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;  
 }
 
 .bonus_info {
@@ -45,4 +67,42 @@
     padding:10px;
     background-color: grey;
     border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.draggableToy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    margin-left: 10px;
+  }
+  
+  .draggableToy img{
+    border-radius: 10px;
+    align-self: center;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .add_button {
+    border-radius: 20px;
+    /* border: 2px solid #9EBB5E; */
+    font-weight: bold;
+    font-size: 24px;
+    padding: 7px;
+    cursor: pointer;
+    background-color: #C5C99F;
 }

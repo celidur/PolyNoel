@@ -28,6 +28,7 @@ impl App {
     }
     pub fn new() -> Self {
         let mut file_buffer = vec![];
+
         let Ok(mut file) = File::open("dump/dump.json.gz") else {
             return App::new_blank();
         };

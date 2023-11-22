@@ -14,8 +14,7 @@ export default function ParentTaskPage() : JSX.Element {
     const [generalInput, setGeneralInput] = useState<string>("");
     const httpManager = new HTTPManager();
 
-    const [countdownData, setCountdownData] = useState<{ month: number; day: number }>({ month: 0, day: 0 });
-    console.log(countdownData);
+
     
     useEffect(() => {        
         httpManager.fetchAllTasks()
@@ -93,6 +92,7 @@ export default function ParentTaskPage() : JSX.Element {
     return (        
             <div className={styles.task_container}>
                 <div className={styles.taskBlockContainer}>
+                    <a className={styles.returnButton} href="/parent">Retour</a>
 
                     <div className={styles.task_block}>
                         <TaskList tasks={dailyTasks} title="Daily Tasks" onTaskClick={removeDailyTask} taskType={"edit-task"}></TaskList>
@@ -128,9 +128,6 @@ export default function ParentTaskPage() : JSX.Element {
                     <div className={styles.task_block}>
                         <TaskList tasks={doneTasks} title="Completed Tasks" onTaskClick={approvePendingTask} taskType={"approve-task"}></TaskList>                    
                     </div>
-                    <div className={styles.task_block}>
-                    <MonthsLeft setCountdownData={setCountdownData} />
-                    </div>
                 </div>
                 <img className={styles.treePattern} src={TreePattern} alt="tree pattern"></img>
             </div>        
@@ -140,6 +137,7 @@ export default function ParentTaskPage() : JSX.Element {
 interface MonthsLeftProps {
     setCountdownData: React.Dispatch<React.SetStateAction<{ month: number; day: number }>>;
 }
+
 export function MonthsLeft({ setCountdownData }: MonthsLeftProps): JSX.Element {
     const [months, setMonths] = useState<string[]>([]);
     const [monthDays, setDaysInMonth] = useState<number[]>([]);

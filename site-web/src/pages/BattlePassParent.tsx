@@ -86,7 +86,26 @@ export default function BattlePassParent() : JSX.Element {
             case 1:
                 return "#98f9a2";
             default:
-                return "#000000";
+                return "#AAAAAA";
+        }
+    };
+
+    function getTier(score: number) :string{
+        switch(score){
+            case 6:
+                return "S";
+            case 5: 
+                return "A";
+            case 4:
+                return "B";
+            case 3:
+                return "C";
+            case 2:
+                return "D";
+            case 1:
+                return "E";
+            default:
+                return "F";
         }
     };
 
@@ -97,8 +116,11 @@ export default function BattlePassParent() : JSX.Element {
             <div className={styles.image_container}>
                 {toys.map((toy, i)=>{
                     return <div style={{"backgroundColor": getColor(toy.score)}} className={styles.item}>
-                            <img key={i} className={`${styles.image} ${selectedIndex === -1? "" : styles.select_image}`} 
+                            <div className={styles.tier_title}>{getTier(toy.score)} Tier</div>
+                            <div className={`${styles.draggableToy} ${selectedIndex === -1? "" : styles.select_image}`}>
+                            <img key={i} className={`${styles.image}`} 
                             src={toy.image} alt="image" onClick={()=>onClickSwipedImage(toy)}/>
+                                </div>
                             <div className={styles.bonus_info}>
                                 
                                 {toy.price/100}$
@@ -116,7 +138,7 @@ export default function BattlePassParent() : JSX.Element {
                         onDeleteClick={onTierDeleteClick} ></TierMaker>  
                     })
                 }
-                <button onClick={createTier}>Add new Tier</button>
+                <button className={styles.add_button} onClick={createTier}>Add new Tier</button>
             </div>
         </div>
         );
