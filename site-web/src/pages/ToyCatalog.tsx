@@ -12,6 +12,7 @@ import HTTPManager from "../assets/js/http_manager";
 
 import checkLogo from "../assets/img/check-mark.svg";
 import crossLogo from "../assets/img/cross.svg";
+import { NavLink } from "react-router-dom";
 
 const MINIMUM_STACK_SIZE = 3;
 const parentPrice = 10000; //TODO implement parent price maximum
@@ -70,10 +71,13 @@ function TinderGame() : JSX.Element {
     useEffect(()=>{initialLoad()},[])
     useEffect(() => {
         const load = async() => {
+            const callLimit = 10;
+            let callCount = 0;
             while(cards.length < MINIMUM_STACK_SIZE) {
                 const newToys = await loadToys();
                 cards.push(...newToys);
                 setCards(cards);
+                if (callCount++ >= callLimit) break;
             }
         };
         if(switchFlag && cards) {
@@ -89,7 +93,8 @@ function TinderGame() : JSX.Element {
     return (
         <>
             <div className={styles.tinderGame}>
-                <a className={styles.returnButton} href="/">Retour</a>
+            <NavLink className={styles.returnButton} to="/parent">Retour</NavLink>
+
                 
                 <h1>Do you want this?</h1>
                 <div className={styles.cardDragContainer}>
@@ -131,10 +136,10 @@ function AcceptSquare({callback, cards}: DecisionSquareProps) : JSX.Element {
     )
     return(
         <div ref={drop} className={styles.decisionSquare} style={
-            {backgroundImage: `linear-gradient(to right,rgba(0,255,0,1),
+            {backgroundImage: `linear-gradient(to right,rgba(0,128,0,1),
                 ${isOver?
-                'rgba(0,255,0,1)': 'rgba(0,255,0,0)'}, 
-                rgba(0,255,0,0)`}
+                'rgba(0,128,0,1)': 'rgba(0,128,0,0)'}, 
+                rgba(0,128,0,0)`}
         }/>
     )
 }

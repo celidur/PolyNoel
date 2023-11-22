@@ -7,6 +7,8 @@
     top: 0;
     left: 0;
     z-index: -2;
+    image-resolution: 150dpi;
+
 }
 
 .bloc {
@@ -20,7 +22,9 @@
     padding:10px;
     background-color: #F2F0EE;
     border-radius: 15px;
-    image-resolution: 150dpi;
+    background: none;
+    text-align: center;
+
 }
 
 .feature {

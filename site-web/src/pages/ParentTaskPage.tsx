@@ -4,6 +4,8 @@ import HTTPManager, { CreateTask, Task } from "../assets/js/http_manager";
 import { useEffect, useState } from "react";
 import { GroupTasksByCategories } from "../assets/js/utils";
 import TreePattern from '../assets/img/patternarbres.png'; 
+import { NavLink } from "react-router-dom";
+const httpManager = new HTTPManager();
 
 export default function ParentTaskPage() : JSX.Element {
     const [dailyTasks, setDailyTasks] = useState<Task[]>([]);
@@ -12,7 +14,6 @@ export default function ParentTaskPage() : JSX.Element {
 
     const [dailyInput, setDailyInput] = useState<string>("");
     const [generalInput, setGeneralInput] = useState<string>("");
-    const httpManager = new HTTPManager();
 
 
     
@@ -92,8 +93,7 @@ export default function ParentTaskPage() : JSX.Element {
     return (        
             <div className={styles.task_container}>
                 <div className={styles.taskBlockContainer}>
-                    <a className={styles.returnButton} href="/parent">Retour</a>
-
+                    <NavLink className={styles.returnButton} to="/parent">Retour</NavLink>
                     <div className={styles.task_block}>
                         <TaskList tasks={dailyTasks} title="Daily Tasks" onTaskClick={removeDailyTask} taskType={"edit-task"}></TaskList>
                         <div className={styles.add_task}>
@@ -134,6 +134,42 @@ export default function ParentTaskPage() : JSX.Element {
     );
 }
 
+
+function dayOfYearToMonthDay(dayOfYear: number): { month: number, day: number } {
+    if (dayOfYear < 0 || dayOfYear > 365) {
+        throw new Error('Invalid day of year. It should be between 0 and 365.');
+    }
+
+    const daysInMonth = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+    let month = 1;
+    while (dayOfYear > daysInMonth[month]) {
+        dayOfYear -= daysInMonth[month];
+        month++;
+    }
+
+    return { month, day: dayOfYear };
+}
+
+function monthDayToDayOfYear(month: number, day: number): number {
+    if (month < 1 || month > 12 || day < 1) {
+        throw new Error('Invalid month or day.');
+    }
+
+    const daysInMonth = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+    if (day > daysInMonth[month]) {
+        throw new Error(`Invalid day for month ${month}.`);
+    }
+
+    let dayOfYear = day;
+    for (let i = 1; i < month; i++) {
+        dayOfYear += daysInMonth[i];
+    }
+
+    return dayOfYear;
+}
+
 interface MonthsLeftProps {
     setCountdownData: React.Dispatch<React.SetStateAction<{ month: number; day: number }>>;
 }
@@ -141,24 +177,19 @@ interface MonthsLeftProps {
 export function MonthsLeft({ setCountdownData }: MonthsLeftProps): JSX.Element {
     const [months, setMonths] = useState<string[]>([]);
     const [monthDays, setDaysInMonth] = useState<number[]>([]);
-    const [selectedMonth, setSelectedMonth] = useState(() => {
-        const savedMonth = localStorage.getItem('selectedMonth');
-        return savedMonth ? parseInt(savedMonth, 10) : 0;
-    });
-    const [selectedDay, setSelectedDay] = useState(() => {
-        const savedDay = localStorage.getItem('selectedDay');
-        return savedDay ? parseInt(savedDay, 10) : 0;
-    });
+    const [selectedMonth, setSelectedMonth] = useState(1);
+    const [selectedDay, setSelectedDay] = useState(1);
     const [currentMonthIndex, setCurrentMonthIndex] = useState<number>(0);
 
-    useEffect(() => {
-        const savedMonth = localStorage.getItem('selectedMonth');
-        const savedDay = localStorage.getItem('selectedDay');
+    async function loadDeadline() : Promise<void> {
+        const days = await httpManager.getDeadline();
+        const { month, day } = dayOfYearToMonthDay(days);
+        setSelectedMonth(month);
+        setSelectedDay(day);
+    }
 
-        if (savedMonth && savedDay) {
-            setSelectedMonth(parseInt(savedMonth, 10));
-            setSelectedDay(parseInt(savedDay, 10));
-        }
+    useEffect(() => {
+        loadDeadline();
     }, []);
 
     useEffect(() => {
@@ -191,19 +222,19 @@ export function MonthsLeft({ setCountdownData }: MonthsLeftProps): JSX.Element {
     const changeMonth = (event: React.ChangeEvent<HTMLSelectElement>) => {
         const chosenMonth = parseInt(event.target.value, 10);
         setSelectedMonth(chosenMonth);
-        localStorage.setItem('selectedMonth', chosenMonth.toString());
     };
 
     const changeDay = (event: React.ChangeEvent<HTMLSelectElement>) => {
         const chosenDay = parseInt(event.target.value, 10);
         setSelectedDay(chosenDay);
-        localStorage.setItem('selectedDay', chosenDay.toString());
     };
 
     const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         if (selectedMonth !== 0 && selectedDay !== 0) {
             setCountdownData({ month: selectedMonth, day: selectedDay });
+            const dayOfYear = monthDayToDayOfYear(selectedMonth, selectedDay);
+            httpManager.setDeadline(dayOfYear);
         }
     };
 
@@ -245,18 +276,6 @@ interface childCountdownProps {
 }
 
 export function ChildCountdown({ countdownData }: childCountdownProps): JSX.Element {
-    const savedMonth = localStorage.getItem('selectedMonth');
-    const savedDay = localStorage.getItem('selectedDay');
-    let month: string;
-    let day: string;
-    if (savedDay && savedMonth) {
-        month = savedMonth;
-        console.log(month);
-        day = savedDay;
-        console.log(day);
-    }
-
-    
     const [days, setDays] = useState(0);
     const [hours, setHours] = useState(0);
     const [minutes, setMinutes] = useState(0);
@@ -264,7 +283,7 @@ export function ChildCountdown({ countdownData }: childCountdownProps): JSX.Elem
     const year = new Date().getFullYear();
 
     useEffect(() => {
-        const countdownDate = new Date(year, parseInt(month, 10) - 1, parseInt(day, 10));
+        const countdownDate = new Date(year, countdownData.month-1, countdownData.day);
 
         const timer = setInterval(() => {
             const time = countdownDate.getTime() - Date.now();

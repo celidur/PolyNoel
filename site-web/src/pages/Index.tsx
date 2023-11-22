@@ -1,10 +1,10 @@
 import './indexStyles.css'
 import styles from './Index.module.css';
 import CandyCane from '../assets/img/pattern.jpg'
-import CandyCaneProjected from '../assets/img/patterngris.jpg'
+import CandyCaneProjected from '../assets/img/temporary.jpg'
 
 import React, { useEffect, useState } from "react"
-import HTTPManager, { Task, TaskStatus } from '../assets/js/http_manager';
+import HTTPManager, { SantaPass, Task, TaskStatus, ToyWithScore } from '../assets/js/http_manager';
 import TaskList from '../components/TaskList';
 import { NavLink, useParams } from 'react-router-dom';
 import { ChildCountdown } from './ParentTaskPage';
@@ -12,12 +12,37 @@ import { delay } from 'q';
 import { count } from 'console';
 import WishlistImage from './WishlistImages';
 import userEvent from '@testing-library/user-event';
+const httpManager = new HTTPManager();
 
 export default function Index() : JSX.Element {
     const [tasks, setTasks] = useState<Task[]>([]);
     const [realPercentage, setReal] = useState(0);
     const [projectedPercentage, setProjected] = useState(0);
     const [countdownData, setCountdownData] = useState<{ month: number; day: number }>({ month: 0, day: 0 });
+    
+    async function loadDeadline() : Promise<void> {
+        const days = await httpManager.getDeadline();
+        setCountdownData(dayOfYearToMonthDay(days));
+    }
+
+    function dayOfYearToMonthDay(dayOfYear: number): { month: number, day: number } {
+        if (dayOfYear < 0 || dayOfYear > 365) {
+            throw new Error('Invalid day of year. It should be between 0 and 365.');
+        }
+    
+        const daysInMonth = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    
+        let month = 1;
+        while (dayOfYear > daysInMonth[month]) {
+            dayOfYear -= daysInMonth[month];
+            month++;
+        }
+    
+        return { month, day: dayOfYear };
+    }
+
+    const [santaPass, setSantaPass] = useState<SantaPass[]>([]);
+    const [step , setStep] = useState(0);
     console.log(countdownData);
     const httpManager = new HTTPManager();
     useEffect(()=> {
@@ -40,7 +65,14 @@ export default function Index() : JSX.Element {
             }
             setReal(realData);
             setProjected(projectedData);
+            setStep(700 / fetchedTasks.length)
         });  
+        loadDeadline();
+
+        httpManager.getSantaPass().then((santapassNew)=>{
+            setSantaPass(santapassNew);
+        })
+        
     }, []);
 
     const changeTaskState = (changeIndex : number) : void => {                
@@ -73,6 +105,8 @@ export default function Index() : JSX.Element {
                 }
                 setReal(realData);
                 setProjected(projectedData);
+            setStep(700 / fetchedTasks.length)
+
             });  
         })
     };
@@ -104,7 +138,7 @@ export default function Index() : JSX.Element {
             </div>
                 <div id="battleBarContainer">
                     <div className='battleBar'>
-                        <ProgressBar projectedProgress={projectedPercentage} realProgress={realPercentage} ></ProgressBar>
+                        <ProgressBar projectedProgress={projectedPercentage} realProgress={realPercentage} santaPass={santaPass} step={step } ></ProgressBar>
                     </div>
                     <div id="labelsContainer">
                         <p className="naughty">Naughty</p>
@@ -144,39 +178,62 @@ export default function Index() : JSX.Element {
 interface progressBarProps{
     projectedProgress: number;
     realProgress: number;
+    santaPass : SantaPass[];
+    step: number
 }
-function ProgressBar({projectedProgress, realProgress}:progressBarProps):JSX.Element {
+function ProgressBar({projectedProgress, realProgress, santaPass, step}:progressBarProps):JSX.Element {
+    // console.log(projectedProgress, realProgress)
     const barLength = 700;
     if (barLength === realProgress) {
         return (
-            <>
+            <div className={styles.progress_relative}>
+                { santaPass.filter((santa)=>{ return santa.points <= barLength / step }).map((santa)=>{
+                    return <img style={{"left" : step * santa.points -25}} className={styles.image_abs} src={santa.toy.image} alt="toy"/>
+                })
+
+                }
                 <img className={styles.patternDone} src={CandyCane} alt="candycane pattern" width={realProgress}></img>
-            </>
+            </div>
         );
     }
 
     else if (realProgress === 0 && projectedProgress === 0) {
         return (
-            <>
+            <div className={styles.progress_relative}>
+                { santaPass.filter((santa)=>{ return santa.points <= barLength / step }).map((santa)=>{
+                    return <img style={{"left" : step * santa.points -25}} className={styles.image_abs} src={santa.toy.image} alt="toy"/>
+                })
+
+                }
             <img className={styles.patternProjected} src={CandyCaneProjected} width={0} alt="candycane pattern projected"></img>
             <img className={styles.pattern} src={CandyCane} alt="candycane pattern" width={0}></img>
-            </>
+            </div>
         );
     }
 
     else if (barLength === projectedProgress) {
         return (
-            <>
+            <div className={styles.progress_relative}>
+                { santaPass.filter((santa)=>{ return santa.points <= barLength / step }).map((santa)=>{
+                    return <img style={{"left" : step * santa.points -25}} className={styles.image_abs} src={santa.toy.image} alt="toy"/>
+                })
+
+                }
                 <img className={styles.patternProjectedDone} src={CandyCaneProjected} width={projectedProgress} alt="candycane pattern projected"></img>
                 <img className={styles.pattern} src={CandyCane} alt="candycane pattern" width={realProgress}></img>
-            </>
+            </div>
         );
     }
     else {
         return (
-        <>
+            <div className={styles.progress_relative}>
+                { santaPass.filter((santa)=>{ return santa.points <= barLength / step }).map((santa)=>{
+                    return <img style={{"left" : step * santa.points -25}} className={styles.image_abs} src={santa.toy.image} alt="toy"/>
+                })
+
+                }
             <img className={styles.patternProjected} src={CandyCaneProjected} width={projectedProgress} alt="candycane pattern projected"></img>
             <img className={styles.pattern} src={CandyCane} alt="candycane pattern" width={realProgress}></img>
-        </>
+        </div>
     );}
 }
