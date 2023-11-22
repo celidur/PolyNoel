@@ -1,7 +1,7 @@
 import './indexStyles.css'
 import styles from './Index.module.css';
 import CandyCane from '../assets/img/pattern.jpg'
-import CandyCaneProjected from '../assets/img/patterngris.jpg'
+import CandyCaneProjected from '../assets/img/temporary.jpg'
 
 import React, { useEffect, useState } from "react"
 import HTTPManager, { Task, TaskStatus } from '../assets/js/http_manager';

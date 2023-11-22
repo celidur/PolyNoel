@@ -4,7 +4,8 @@
     color: #424429;
     display: inline-flex;
     background-color: #C5C99F;
-    padding: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
     border-radius: 15px;;
     width: auto;
 }
@@ -15,13 +16,16 @@
     color: #424429;
     background-color: #F2F0EE;
     width: 400px;
+    margin: 0px;
+    margin-bottom: 20px;
 }
 
 .battleBarContainer {
-    display: flex;
+    position: absolute;
+    display: inline-flex;
     flex-direction: column;
-    margin: 70px auto;
-    position: relative;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 .battleBar {
@@ -46,6 +50,8 @@
     font-weight: bold;
     max-width: 700px;
     margin: 15px 200px 0px 200px;
+    background-color: #F2F0EE;
+    border:15px;
 }
 
 #labelsContainer>p.naughty {
