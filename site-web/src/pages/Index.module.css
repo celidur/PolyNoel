@@ -15,12 +15,15 @@
 }
 
 .toys_container {
+    display: flex;
+    justify-content: center;
     width:300px;
+    padding: 10px;
     background-color: #8A914A;
-    border-radius: 20px;
+    border-radius: 10px;
     display: grid;
     grid-gap: 5px;
-    grid-template-columns: repeat(auto-fill, 50px);
+    grid-template-columns: repeat(auto-fill, 70px);
 }
 
 .title {
