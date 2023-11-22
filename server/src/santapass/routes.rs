@@ -4,13 +4,15 @@ use axum::{extract::{State, Path}, http::StatusCode, response::IntoResponse, rou
 use super::battlepass::SantaPass;
 
 pub fn routes() -> Router<App> {
-    Router::new().route(
+    Router::new()
+    .route(
         "/",
         get(get_santapass)
-            .post(add_santapass)
-
-    ).route("/:id", delete(delete_santapass))
+            .post(add_santapass))
+    .route("/:id", delete(delete_santapass))
     .route("/:id/:score", patch(modify_santapass))
+    .route("/deadline/", get(get_deadline))
+    .route("/deadline/:dayLeft", patch(set_deadline))
 }
 
 #[utoipa::path(
@@ -57,6 +59,7 @@ pub async fn add_santapass(
         ("id" = String, Path, description = "id of toy")
     ), 
 )]
+
 pub async fn delete_santapass(
     State(app): State<App>,
     Path(id): Path<String>,
@@ -100,4 +103,30 @@ pub async fn modify_santapass(
     }
     StatusCode::NOT_FOUND
 
+}
+#[utoipa::path(
+    get,
+    path = "/santapass/deadline/",
+    responses(
+        (status = 200, description = "Day of the year", body = u16),
+    ),
+)]
+pub async fn get_deadline(State(app): State<App>) -> impl IntoResponse {
+    let date = app.users.lock().await.deadline;
+    (StatusCode::OK, Json(date))
+}
+
+#[utoipa::path(
+    patch,
+    path = "/santapass/deadline/{dayLeft}",
+    responses(
+        (status = 200, description = "Edit day of the year"),
+    ),
+    params(
+        ("dayLeft" = String, Path, description = "day ")
+    ), 
+)]
+pub async fn set_deadline(State(app): State<App>, Path(day_left): Path<u16>) -> impl IntoResponse {
+    app.users.lock().await.deadline = day_left;
+    StatusCode::OK
 }

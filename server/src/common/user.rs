@@ -1,11 +1,10 @@
-use serde::{Deserialize, Serialize};
-
 use crate::child_labor::tasks::Tasks;
 use crate::santapass::battlepass::SantaPass;
 use crate::toy_catalog::algorithm::analytics::Analytics;
 use crate::toy_catalog::algorithm::categories::Categories;
 use crate::toy_catalog::algorithm::category::Category;
 use crate::toy_catalog::toys::Toys;
+use serde::{Deserialize, Serialize};
 use std::collections::{HashMap, HashSet};
 use std::ops::Range;
 
@@ -17,7 +16,11 @@ pub struct User {
     pub price_born: Range<u32>,
     pub analytics: Analytics,
     pub battlepass: Vec<SantaPass>,
+    /// Day of the year 0-365
+    pub deadline: u16,
 }
+
+const NOEL: u16 = 359;
 
 impl User {
     pub fn new(categories: &Categories) -> Self {
@@ -28,6 +31,7 @@ impl User {
             price_born: 0..u32::MAX,
             analytics: Analytics::new(categories),
             battlepass: Vec::new(),
+            deadline: NOEL,
         }
     }
 

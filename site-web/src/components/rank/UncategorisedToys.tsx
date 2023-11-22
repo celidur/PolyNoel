@@ -21,10 +21,13 @@ export default function UncategorisedToys({toys, moveHandler}: UncategorisedToys
         moveHandler(item.id, item.rank, 0);
     }
     return (
-        <div ref={drop} className={styles.noTierZone}>
-            {toys.map((toy) => {
-                return <DraggableToy key={toy.props.id} id={toy.props.id} rank={0}/>
-            })}
+        <div className={styles.wtfContainer}>
+            <div ref={drop} className={styles.noTierZone}>
+                {toys.map((toy) => {
+                    return <DraggableToy key={toy.props.id} id={toy.props.id} rank={0}/>
+                })}
+            </div>
         </div>
+
     )
 }
