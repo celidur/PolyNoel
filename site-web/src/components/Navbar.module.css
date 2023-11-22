@@ -30,7 +30,23 @@
     font-weight: 500;
     font-size:20px;    
     text-decoration: none;    
+    
+    background: linear-gradient(to left, white 50%, var(--nav-bar-color) 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
 }
+
+.parent_mode:hover {
+    background-position: left;
+    color:white;
+}
+
+.parent_mode:hover .switch_img {
+    filter: invert(100%) sepia(2%) saturate(0%) hue-rotate(86deg) brightness(105%) contrast(101%);
+}
+
+
+
 
 .title {
     cursor:pointer;
