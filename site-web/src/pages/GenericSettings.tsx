@@ -17,6 +17,7 @@ export default function GenericSettings() : JSX.Element {
     }
     return (
         <div className={styles.settings_container}>
+            <a className={styles.returnButton} href="/parent">Retour</a>
             <ChangePrice></ChangePrice>
             <div >
                     <MonthsLeft setCountdownData={setCountdownData} />
