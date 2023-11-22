@@ -1,13 +1,12 @@
-import { useState, useEffect } from "react";
-import HTTPManager from "../assets/js/http_manager";
-// import styles from "../../assets/css/rankToys.module.css";
+// import HTTPManager from "../assets/js/http_manager";
+import styles from "./WishlistImages.module.css";
 
-const httpManager = new HTTPManager();
+// const httpManager = new HTTPManager();
 
 export default function WishlistImage({image}: {image: string}) :  JSX.Element {
 
     return (
-        <div>
+        <div className = {styles.toy}>
             <img src={image}/>
         </div>
     )

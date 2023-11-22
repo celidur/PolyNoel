@@ -29,4 +29,5 @@
     font-size: var(--task-font-size);
     font-weight: var(--task-font-weight);
     text-align:center;
+    color: var(--unchecked-color);
 }
