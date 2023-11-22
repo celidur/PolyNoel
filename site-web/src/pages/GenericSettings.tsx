@@ -19,6 +19,7 @@ export default function GenericSettings() : JSX.Element {
         <>
         <div className={styles.bgstripes}></div>
         <div className={styles.settings_container}>
+            <a className={styles.returnButton} href="/parent">Retour</a>
             <ChangePrice></ChangePrice>
             <div className={styles.formContainer}>
                     <MonthsLeft setCountdownData={setCountdownData} />

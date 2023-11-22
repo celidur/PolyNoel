@@ -14,6 +14,7 @@ export default function ChooseCategories() : JSX.Element {
     }
     return (
         <div className={styles.container}>
+            <a className={styles.returnButton} href="/parent">Retour</a>
             <div className={styles.header_container}>
 
                 <div className={styles.title}>
