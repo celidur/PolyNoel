@@ -11,16 +11,6 @@
     grid-area : 1 / 1 / 2 / 3;
 }
 
-
-/* .toys_container {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(auto-fill, 150px);
-    min-height: 150px;
-    width: 100%;
-    padding: 10px;
-  } */
-
 .toys_container {
     display: flex;
     justify-content: center;

@@ -112,9 +112,12 @@ export default function BattlePassParent() : JSX.Element {
 
 
     return (
-        <div className={styles.container}  >
+        <div className={styles.container}>
             <div className={styles.image_container}>
-                {toys.map((toy, i)=>{
+                <a className={styles.returnButton} href="/parent">Retour</a>
+                <div className={styles.createTitle}>Create Battle Pass Tiers</div>
+                <div className={styles.toysTitle}>Toys from Wishlist</div>
+                    {toys.map((toy, i)=>{
                     return <div style={{"backgroundColor": getColor(toy.score)}} className={`${styles.item} ${selectedIndex === -1? "" : styles.grow_image}`}
                             onClick={()=>onClickSwipedImage(toy)}>
                             <div className={styles.tier_title}>{getTier(toy.score)} Tier</div>
@@ -128,10 +131,11 @@ export default function BattlePassParent() : JSX.Element {
                             </div>
                         </div> 
                 })}
+                
             </div>
 
             <div className={styles.tier_container}>
-                <div className={styles.title}>Battle Pass Tiers</div>
+                <div className={styles.title}>Current Tiers</div>
                 {
                     tiers.map((tier, index)=>{
                         return <TierMaker key={index} index={index} score={tier.score} toy={tier.toy} 
