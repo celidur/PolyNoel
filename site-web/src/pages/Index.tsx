@@ -134,7 +134,8 @@ function ProgressBar({projectedProgress, realProgress}:progressBarProps):JSX.Ele
     else if (realProgress === 0 && projectedProgress === 0) {
         return (
             <>
-            <div className={styles.noPattern}></div>
+            <img className={styles.patternProjected} src={CandyCaneProjected} width={0} alt="candycane pattern projected"></img>
+            <img className={styles.pattern} src={CandyCane} alt="candycane pattern" width={0}></img>
             </>
         );
     }

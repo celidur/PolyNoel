@@ -78,16 +78,6 @@
     transition: 0.8s ease;
 }
 
-.noPattern {
-    border-radius: 25px !important;
-    position: absolute;
-    height: 70px;
-    width: 700px;
-    margin: auto;
-    transition: 0.8s ease;
-    background-color: white;
-}
-
 .pattern {
     z-index: 2;
 }

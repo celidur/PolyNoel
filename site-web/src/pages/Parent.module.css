@@ -1,10 +1,26 @@
 .container {
-    display: flex;
+    background-image: url('../assets/img/houx.jpg');
+    background-size: contain;
+    height: 100%;
+    width:100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+.bloc {
+    display: inline-flex;
     flex-direction: column;
     justify-content: center;
+    align-content: center;
     align-items: center;
+    align-self: center;
+    flex-wrap: wrap;
+    padding-top: 100px;
     gap:5px;
-    padding-top: 20px;
+    background-color: #F2F0EE;
+    border-radius: 15px;
 }
 
 .feature {
@@ -28,4 +44,5 @@
 .pageTile {
     font-weight: bold;
     font-size: 24px;
+    color:#424429;
 }
