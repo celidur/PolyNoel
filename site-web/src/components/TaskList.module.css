@@ -10,7 +10,7 @@
     gap:10px;
     caret-color: transparent;
     overflow-y: scroll;
-    height:400px;
+    height:250px;
 }
 
 .tasklist_no_scroll {
