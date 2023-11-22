@@ -1,8 +1,9 @@
 .container{ 
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(360px, max-content));  
-    justify-content: center;     
-    gap: 10px;
+    position: absolute;
+    display: inline-flex;
+    flex-direction: column;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 .input {
@@ -11,6 +12,7 @@
     border-radius: 20px;
     width:300px;
     font-size:20px;
+    color: #424429;
 }
 
 .subtitle{
@@ -19,5 +21,5 @@
     text-align: center;   
     padding: 30px;  
     padding-bottom: 20px; 
-    
+    color: #424429;
 }

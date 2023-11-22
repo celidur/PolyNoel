@@ -16,13 +16,16 @@ export default function GenericSettings() : JSX.Element {
         httpManager.setPriceBorn({inferior:0, superior:4294967295});
     }
     return (
+        <>
+        <div className={styles.bgstripes}></div>
         <div className={styles.settings_container}>
             <a className={styles.returnButton} href="/parent">Retour</a>
             <ChangePrice></ChangePrice>
-            <div >
+            <div className={styles.formContainer}>
                     <MonthsLeft setCountdownData={setCountdownData} />
             </div>
             <button className={styles.button} onClick={resetSetings}>Reset Settings</button>
         </div>
+        </>
     );
 }
