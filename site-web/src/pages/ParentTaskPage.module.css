@@ -4,19 +4,14 @@
     padding: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
-    width: 50px;
     text-decoration: none;
     position: absolute;
     top: -80px;
     left: 0px;
-    width:auto;
-    color: #424429;
-
     border-radius: 5px;
-    font-weight: bold;
     font-size: 18px;
     padding: 7px;
-    cursor: pointer;
+    color: black;
     border:1px solid darkgrey;
     background-color: lightgray;
 }
