@@ -4,22 +4,15 @@
     background-image: url('../assets/img/feuillespin.jpg');
     background-size: contain;
     height: 100%;
+    width:100%;
     image-resolution: 50dpi;
+    overflow: hidden;
+    position: fixed;
 }
 
 .battlepass_container {
     grid-area : 1 / 1 / 2 / 3;
 }
-
-
-/* .toys_container {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(auto-fill, 150px);
-    min-height: 150px;
-    width: 100%;
-    padding: 10px;
-  } */
 
 .toys_container {
     display: flex;
@@ -58,7 +51,7 @@
 }
 
 .tasklistContainer, .wishlistContainer {
-    margin: 25px 10%;
+    margin: 0px 10%;
     padding: 10px;
     background-color: #F2F0EE;
     background: none;
@@ -101,6 +94,6 @@
 }
 
 .countdownContainer {
-    margin: 50px;
-    margin-left: 100px;
+    margin: 30px;
+    margin-left: 10%;
 }
