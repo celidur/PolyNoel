@@ -1,12 +1,25 @@
 .container {
     width: 360px;
     caret-color: transparent;
+    /* overflow-y: scroll;
+    height:400px; */
 }
 .tasklist {
     display:flex;
     flex-direction: column;
     gap:10px;
     caret-color: transparent;
+    overflow-y: scroll;
+    height:400px;
+}
+
+.tasklist_no_scroll {
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    caret-color: transparent;
+    /* overflow-y: scroll;
+    height:400px; */
 }
 
 .title {
