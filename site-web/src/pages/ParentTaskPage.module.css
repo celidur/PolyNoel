@@ -1,19 +1,20 @@
 
 
 .returnButton {
+    align-items: left;
     padding: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
+    background-color: #C5C99F;
+    width: 50px;
     text-decoration: none;
+    color: black;
+    font-size: 18px;
     position: absolute;
     top: -80px;
-    left: 0px;
+    left: 10px;
     border-radius: 5px;
-    font-size: 18px;
-    padding: 7px;
-    color: black;
-    border:1px solid darkgrey;
-    background-color: lightgray;
+    border: 1px solid #C5C99F;
 }
 
 .returnButton:hover{
