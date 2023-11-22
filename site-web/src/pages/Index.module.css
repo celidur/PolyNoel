@@ -4,6 +4,7 @@
     background-image: url('../assets/img/feuillespin.jpg');
     background-size: contain;
     height: 100%;
+    image-resolution: 50dpi;
 }
 
 .battlepass_container {
@@ -36,7 +37,6 @@
 
 .button {
     border-radius: 20px;
-    /* border: 2px solid #9EBB5E; */
     font-weight: bold;
     font-size: 24px;
     padding: 7px;
@@ -76,16 +76,6 @@
     margin: auto;
     object-fit: cover;
     transition: 0.8s ease;
-}
-
-.noPattern {
-    border-radius: 25px !important;
-    position: absolute;
-    height: 70px;
-    width: 700px;
-    margin: auto;
-    transition: 0.8s ease;
-    background-color: white;
 }
 
 .pattern {

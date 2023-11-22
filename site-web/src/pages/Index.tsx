@@ -10,6 +10,8 @@ import { NavLink, useParams } from 'react-router-dom';
 import { ChildCountdown } from './ParentTaskPage';
 import { delay } from 'q';
 import { count } from 'console';
+import WishlistImage from './WishlistImages';
+import userEvent from '@testing-library/user-event';
 
 export default function Index() : JSX.Element {
     const [tasks, setTasks] = useState<Task[]>([]);
@@ -74,6 +76,22 @@ export default function Index() : JSX.Element {
             });  
         })
     };
+    
+    const [toys, setToys] = useState<string[]>([]);
+    
+    useEffect(() => {
+        loadToys();
+    }, []);
+
+    async function loadToys() : Promise<void> {
+        const toys = await httpManager.getToys();
+        const toysArray = [];
+        for (const toy of toys) {
+            toysArray.push(toy.image);
+        }
+        setToys(toysArray);
+    }
+
 
     return (
         <div className={styles.container}>
@@ -98,7 +116,13 @@ export default function Index() : JSX.Element {
             <div className={styles.bottomContainer}>
                 <div className={styles.wishlistContainer}>
                     <div className={styles.title}>My wishlist</div>
-                    <div className={styles.toys_container}>Something</div>
+                    <div className={styles.toys_container}>
+                        {
+                            toys.map((toy) => {
+                                return <WishlistImage image={toy} key={toy}/>
+                            })
+                        }
+                    </div>
 
                     <div className={styles.button_container}>
                         <NavLink to="/toycatalog">
@@ -134,7 +158,8 @@ function ProgressBar({projectedProgress, realProgress}:progressBarProps):JSX.Ele
     else if (realProgress === 0 && projectedProgress === 0) {
         return (
             <>
-            <div className={styles.noPattern}></div>
+            <img className={styles.patternProjected} src={CandyCaneProjected} width={0} alt="candycane pattern projected"></img>
+            <img className={styles.pattern} src={CandyCane} alt="candycane pattern" width={0}></img>
             </>
         );
     }
