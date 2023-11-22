@@ -46,6 +46,12 @@ export const HTTPInterface = {
     });
     return response.status;
   },
+  PATCH_NO_CONTENT: async function (endpoint : string) : Promise<number> {
+    const response = await fetch(`${this.SERVER_URL}/${endpoint}`, {
+      method: "PATCH",
+    });
+    return response.status;
+  },
 
   PUT: async function <T>(endpoint : string, data : T) : Promise<number> {
     const response = await fetch(`${this.SERVER_URL}/${endpoint}`, {
@@ -278,5 +284,9 @@ export default class HTTPManager {
 
     async deleteInSantaPass(id : string) : Promise<void> {
       await HTTPInterface.DELETE(`${this.battlePassURL}/${id}`);
+    }
+
+    async patchSantapass(id : string, score : number) : Promise<void> {
+      await HTTPInterface.PATCH_NO_CONTENT(`${this.battlePassURL}/${id}/${score}`);
     }
 }
