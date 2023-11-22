@@ -59,14 +59,14 @@
   grid-template-columns: fit-content(100px) 8fr;
   grid-template-rows: fit-content(100px) 1fr;
   grid-gap: 10px;
-  max-height: calc(100vh - 250px);
+  max-height: calc(100vh - 200px);
 }
 
 .title {
   font-size: 2em;
   font-weight: 600;
   color: var(--color-black);
-  margin-top: 40px;
+  margin-top: 0px;
   text-align: center;
 }
 
@@ -75,7 +75,8 @@
   grid-area: table;
   border-radius: 15px;
   background-color: var(--color-white);
-  border: 1px solid var(--color-silver);
+  border: 2px solid var(--color-silver);
+  border-right: none;
   width: 100%;
 }
 
@@ -111,7 +112,7 @@
   border-radius: 20px;
   min-width: 100px;
   padding: 10px;
-  height: calc(100vh - 400px);
+  height: calc(100vh - 350px);
   display: grid;
   grid-gap: 10px;
   grid-template-columns: 1fr;
