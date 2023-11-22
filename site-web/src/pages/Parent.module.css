@@ -10,17 +10,17 @@
 }
 
 .bloc {
+    position: absolute;
     display: inline-flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    align-self: center;
-    flex-wrap: wrap;
-    padding-top: 100px;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 100px;
     gap:5px;
+    padding:10px;
     background-color: #F2F0EE;
     border-radius: 15px;
+    image-resolution: 150dpi;
 }
 
 .feature {

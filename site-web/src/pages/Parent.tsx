@@ -4,7 +4,7 @@ import styles from './Parent.module.css'
 export default function Parent() : JSX.Element {
     return (
         <>
-            <div className={styles.container}>
+            <div className={styles.container}></div>
                 <div className={styles.bloc}>
                     <div className={styles.pageTile}>
                         Settings
@@ -21,8 +21,7 @@ export default function Parent() : JSX.Element {
                     <NavLink className={styles.feature} to="/parent/settings">
                         Adjust Constraints
                     </NavLink>
-                </div>
-            </div>            
+                </div>            
         </>
     );
 }

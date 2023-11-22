@@ -4,6 +4,7 @@
     background-image: url('../assets/img/feuillespin.jpg');
     background-size: contain;
     height: 100%;
+    image-resolution: 50dpi;
 }
 
 .battlepass_container {
