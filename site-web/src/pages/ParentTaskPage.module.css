@@ -1,3 +1,29 @@
+
+
+.returnButton {
+    display: flex;
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: lightgray;
+    width: 50px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    position: absolute;
+    top: -80px;
+    left: 50px;
+
+    border-radius: 5px;
+    border:1px solid darkgrey;
+}
+
+.returnButton:hover{
+    border:1px solid black;  
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
 .task_container {        
     display: flex;
     flex-direction: column;
