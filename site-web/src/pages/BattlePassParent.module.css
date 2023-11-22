@@ -1,12 +1,15 @@
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 3fr 2fr;
     justify-content: center;
     justify-items: center;
+    /* align-items: center;
+    align-content: center; */
+    /* padding: 0% 5%; */
 }
 
 .image_container {
-    width:600px;
+    width:900px;
     display:grid;
     grid-template-columns: repeat(auto-fit, 140px);
     grid-template-rows: repeat(auto-fill, 170px);
@@ -27,6 +30,7 @@
     flex-direction: column;
     align-items: center;
     gap:10px;
+    padding: 0px 50px;
 }
 
 .tier_title {
@@ -39,6 +43,17 @@
     font-size: 30px;
     font-weight: bold;
     text-align: center;
+}
+
+.grow_image:hover {
+    transform: scale(1.1);
+    -webkit-transition: all 0.5s ease;
+    
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;  
+    cursor: pointer;
 }
 
 .select_image {

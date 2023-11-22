@@ -4,20 +4,30 @@
     background-image: url('../assets/img/feuillespin.jpg');
     background-size: contain;
     height: 100%;
+    image-resolution: 50dpi;
 }
 
 .battlepass_container {
     grid-area : 1 / 1 / 2 / 3;
 }
 
+
+/* .toys_container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, 150px);
+    min-height: 150px;
+    width: 100%;
+    padding: 10px;
+  } */
+
 .toys_container {
     width:300px;
-    height:300px;
     background-color: #8A914A;
     border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fill, 50px);
 }
 
 .title {
@@ -36,7 +46,6 @@
 
 .button {
     border-radius: 20px;
-    /* border: 2px solid #9EBB5E; */
     font-weight: bold;
     font-size: 24px;
     padding: 7px;
@@ -76,16 +85,6 @@
     margin: auto;
     object-fit: cover;
     transition: 0.8s ease;
-}
-
-.noPattern {
-    border-radius: 25px !important;
-    position: absolute;
-    height: 70px;
-    width: 700px;
-    margin: auto;
-    transition: 0.8s ease;
-    background-color: white;
 }
 
 .pattern {

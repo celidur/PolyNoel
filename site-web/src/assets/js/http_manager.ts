@@ -46,6 +46,12 @@ export const HTTPInterface = {
     });
     return response.status;
   },
+  PATCH_NO_CONTENT: async function (endpoint : string) : Promise<number> {
+    const response = await fetch(`${this.SERVER_URL}/${endpoint}`, {
+      method: "PATCH",
+    });
+    return response.status;
+  },
 
   PUT: async function <T>(endpoint : string, data : T) : Promise<number> {
     const response = await fetch(`${this.SERVER_URL}/${endpoint}`, {
@@ -142,7 +148,7 @@ export default class HTTPManager {
     catalogToysURL : string;
     priceBornURL : string;
     rankURL : string;
-
+    deadlineURL : string
     constructor() {
         //Main Endpoints
         this.tasksURL = "child_labor";
@@ -157,6 +163,7 @@ export default class HTTPManager {
         this.catalogToysURL = "toys";
         this.priceBornURL = "price_born";
         this.rankURL = "rank";
+        this.deadlineURL = "deadline"
     }
 
     /* TASK ENDPOINTS */
@@ -279,4 +286,18 @@ export default class HTTPManager {
     async deleteInSantaPass(id : string) : Promise<void> {
       await HTTPInterface.DELETE(`${this.battlePassURL}/${id}`);
     }
+
+    async patchSantapass(id : string, score : number) : Promise<void> {
+      await HTTPInterface.PATCH_NO_CONTENT(`${this.battlePassURL}/${id}/${score}`);
+    }
+
+    async getDeadline() : Promise<number> {
+      return await HTTPInterface.GET(`${this.battlePassURL}/${this.deadlineURL}`);
+    }
+
+    async setDeadline(daysLeft : number) : Promise<void> {
+      await HTTPInterface.PATCH_NO_CONTENT(`${this.battlePassURL}/${this.deadlineURL}/${daysLeft}`);
+    }
+
+
 }

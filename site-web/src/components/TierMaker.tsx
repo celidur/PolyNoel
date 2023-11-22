@@ -1,5 +1,5 @@
 import styles from "./TierMaker.module.css"
-import { Toy } from '../assets/js/http_manager';
+import HTTPManager, { Toy } from '../assets/js/http_manager';
 import { useState } from "react";
 
 type TierProps = {
@@ -12,8 +12,13 @@ type TierProps = {
 
 export default function TierMaker(props : TierProps) : JSX.Element {
     const [score, setScore] = useState<number>(props.score);
-    const changeScore = (score : number) => {
-        setScore(score)
+    const httpManager = new HTTPManager();
+    const changeScore = (newScore : number) => {
+        if(props.toy != undefined){
+            httpManager.patchSantapass(props.toy.id, newScore).then(()=>{
+                setScore(newScore);
+            }).catch(()=>{});
+        }
     }
     return (
     <div className={styles.container}>

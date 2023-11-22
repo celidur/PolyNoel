@@ -115,11 +115,12 @@ export default function BattlePassParent() : JSX.Element {
         <div className={styles.container}  >
             <div className={styles.image_container}>
                 {toys.map((toy, i)=>{
-                    return <div style={{"backgroundColor": getColor(toy.score)}} className={styles.item}>
+                    return <div style={{"backgroundColor": getColor(toy.score)}} className={`${styles.item} ${selectedIndex === -1? "" : styles.grow_image}`}
+                            onClick={()=>onClickSwipedImage(toy)}>
                             <div className={styles.tier_title}>{getTier(toy.score)} Tier</div>
-                            <div className={`${styles.draggableToy} ${selectedIndex === -1? "" : styles.select_image}`}>
+                            <div className={`${styles.draggableToy}`}>
                             <img key={i} className={`${styles.image}`} 
-                            src={toy.image} alt="image" onClick={()=>onClickSwipedImage(toy)}/>
+                            src={toy.image} alt="image"/>
                                 </div>
                             <div className={styles.bonus_info}>
                                 
