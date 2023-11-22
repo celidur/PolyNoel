@@ -38,6 +38,7 @@
     color: var(--unchecked-color);
     font-weight: bold;
     /* text-align: center; */
+    position: relative;
 
   }
   
