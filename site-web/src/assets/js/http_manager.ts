@@ -9,6 +9,11 @@ export const HTTPInterface = {
     return await response.json();
   },
 
+  GET_PLAIN_TEXT: async function<T>(endpoint : string) : Promise<string> {
+    const response = await fetch(`${this.SERVER_URL}/${endpoint}`);
+    return await response.text();
+  },
+
   POST: async function<T, U> (endpoint : string, data : T) : Promise<U> {
     const response = await fetch(`${this.SERVER_URL}/${endpoint}`, {
       method: "POST",
@@ -292,7 +297,7 @@ export default class HTTPManager {
     }
 
     async getDeadline() : Promise<number> {
-      return await HTTPInterface.GET(`${this.battlePassURL}/${this.deadlineURL}`);
+      return parseInt(await HTTPInterface.GET_PLAIN_TEXT(`${this.battlePassURL}/${this.deadlineURL}/`));
     }
 
     async setDeadline(daysLeft : number) : Promise<void> {

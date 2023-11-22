@@ -24,6 +24,7 @@
     display: grid;
     grid-gap: 5px;
     grid-template-columns: repeat(auto-fill, 70px);
+    background-color: none;
     max-height:190px;
     overflow: auto;
 }
@@ -55,6 +56,7 @@
     margin: 0px 10%;
     padding: 10px;
     background-color: #F2F0EE;
+    background: none;
 }
 
 .bottomContainer {

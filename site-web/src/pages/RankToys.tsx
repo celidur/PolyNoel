@@ -9,6 +9,7 @@ import UncategorisedToys from '../components/rank/UncategorisedToys';
 import DraggableToy from '../components/rank/DraggableToy';
 import DeleteSquare from '../components/rank/DeleteSquare';
 import HTTPManager from '../assets/js/http_manager';
+import { NavLink } from 'react-router-dom';
 
 const httpManager = new HTTPManager();
 
@@ -56,7 +57,8 @@ export default function RankToys() : JSX.Element {
 
     return(
         <DndProvider backend={isMobile ? TouchBackend : HTML5Backend}>
-            <a className={styles.returnButton} href="/">Retour</a>
+            <NavLink className={styles.returnButton} to="/">Return</NavLink>
+            
             <div className={styles.mainPage}>
                 <h1 className={styles.title}>Rank your wishes</h1>
                 <div className={styles.content}>
