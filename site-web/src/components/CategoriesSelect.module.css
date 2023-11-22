@@ -30,12 +30,15 @@
     font-weight: bold;
 }
 
+
+
 .selected {
     border: var(--border-width) solid var(--task-color);
 }
 
 .selected:hover, .not_selected:hover {
-    -webkit-filter: brightness(70%);
+    -webkit-filter: brightness(130%);
+    transform: scale(1.1);
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;

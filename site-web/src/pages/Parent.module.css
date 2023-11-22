@@ -1,10 +1,26 @@
 .container {
-    display: flex;
+    background-image: url('../assets/img/houx.jpg');
+    background-size: contain;
+    height: 100%;
+    width:100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+.bloc {
+    position: absolute;
+    display: inline-flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 100px;
     gap:5px;
-    padding-top: 20px;
+    padding:10px;
+    background-color: #F2F0EE;
+    border-radius: 15px;
+    image-resolution: 150dpi;
 }
 
 .feature {
@@ -14,6 +30,7 @@
     font-weight:bold;
     font-size: 20px;
     color: white;
+    /* color:black; */
     text-decoration: none;        
     width:200px;
     text-align: center;
@@ -22,10 +39,16 @@
 .feature:hover {
     border:3px solid lightgray;  
     cursor: pointer;
-    transform: scale(1.02);
+    transform: scale(1.1);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;  
 }
 
 .pageTile {
     font-weight: bold;
     font-size: 24px;
+    color:#424429;
 }

@@ -8,7 +8,7 @@
     --checked-color: #f1faee;
 
     --task-font-size: 24px;
-    --task-font-weight: 500;
+    --task-font-weight: 600;
     --task-border-radius: 20px;
 }
 
@@ -18,7 +18,7 @@
     display:flex;
     gap: 10px;
     
-    padding:10px;
+    padding:10px 20px;
     border-radius: var(--task-border-radius);
     background-color: var(--task-color);
 
@@ -30,11 +30,14 @@
   .task .task__label {
     display: flex;
     align-items: center;
+    /* justify-content: center; */
     margin: 0px 0;
     cursor: pointer;    
         
     font-size: var(--task-font-size);
     color: var(--unchecked-color);
+    font-weight: bold;
+    /* text-align: center; */
 
   }
   
@@ -95,7 +98,7 @@
     justify-content: space-between;    
     gap: 10px;
     
-    padding:10px;
+    padding:10px 20px;
     border-radius: var(--task-border-radius);
     margin: 0px 0;
     background-color: var(--task-color);
@@ -103,8 +106,9 @@
     /* cursor: pointer; */
     
     font-size: var(--task-font-size);
-    font-weight: var(--task-font-weight);
+    font-weight: bold;
     color: var(--unchecked-color);
+
 }
 
 .img {
