@@ -2,9 +2,9 @@
 
 .returnButton {
     display: flex;
-    padding: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     width: 50px;
     text-decoration: none;
     position: absolute;

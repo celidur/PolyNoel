@@ -133,10 +133,10 @@ function AcceptSquare({callback, cards}: DecisionSquareProps) : JSX.Element {
     )
     return(
         <div ref={drop} className={styles.decisionSquare} style={
-            {backgroundImage: `linear-gradient(to right,rgba(0,255,0,1),
+            {backgroundImage: `linear-gradient(to right,rgba(0,128,0,1),
                 ${isOver?
-                'rgba(0,255,0,1)': 'rgba(0,255,0,0)'}, 
-                rgba(0,255,0,0)`}
+                'rgba(0,128,0,1)': 'rgba(0,128,0,0)'}, 
+                rgba(0,128,0,0)`}
         }/>
     )
 }

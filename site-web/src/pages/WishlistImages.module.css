@@ -1,0 +1,22 @@
+
+.toy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: 0px;
+  }
+  
+  .toy img{
+    border-radius: 10px;
+    align-self: center;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+    object-fit: contain;
+  }

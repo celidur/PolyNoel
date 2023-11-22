@@ -11,14 +11,26 @@
     grid-area : 1 / 1 / 2 / 3;
 }
 
+
+/* .toys_container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, 150px);
+    min-height: 150px;
+    width: 100%;
+    padding: 10px;
+  } */
+
 .toys_container {
-    width:300px;
-    height:300px;
-    background-color: #8A914A;
-    border-radius: 20px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    width:300px;
+    padding: 10px;
+    background-color: #8A914A;
+    border-radius: 10px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fill, 70px);
 }
 
 .title {

@@ -56,17 +56,17 @@
   display: grid;
   grid-template: "delete table"
                  "uncatgorised table";
-  grid-template-columns: fit-content(150px) 8fr;
-  grid-template-rows: fit-content(150px) 1fr;
+  grid-template-columns: fit-content(100px) 8fr;
+  grid-template-rows: fit-content(100px) 1fr;
   grid-gap: 10px;
-  max-height: calc(100vh - 300px);
+  max-height: calc(100vh - 200px);
 }
 
 .title {
-  font-size: 3.5em;
+  font-size: 2em;
   font-weight: 600;
   color: var(--color-black);
-  margin-top: 40px;
+  margin-top: 0px;
   text-align: center;
 }
 
@@ -75,7 +75,8 @@
   grid-area: table;
   border-radius: 15px;
   background-color: var(--color-white);
-  border: 1px solid var(--color-silver);
+  border: 2px solid var(--color-silver);
+  border-right: none;
   width: 100%;
 }
 
@@ -89,7 +90,7 @@
     border-left: 1px solid var(--color-silver);
     box-sizing: border-box;
     width: 10%;
-    min-height: 150px;
+    min-height: 100px;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -98,8 +99,8 @@
 .dropZone {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(auto-fill, 150px);
-  min-height: 150px;
+  grid-template-columns: repeat(auto-fill, 80px);
+  min-height: 100;
   width: 100%;
   padding: 10px;
 }
@@ -109,12 +110,11 @@
   grid-area: uncatgorised;
   background-color: rgb(82, 82, 82);
   border-radius: 20px;
-  min-width: 150px;
+  min-width: 100px;
   padding: 10px;
-  height: calc(100vh - 500px);
+  height: calc(100vh - 350px);
   display: grid;
   grid-gap: 10px;
-  grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
   grid-template-columns: 1fr;
 }
 
@@ -122,12 +122,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 150px;
-  height: 150px;
+  width: 80px;
+  height: 80px;
   background-color: white;
   border: 1px solid black;
   border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(29, 25, 25, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-left: 0px;
 }
 
@@ -144,8 +144,8 @@
 .deleteSquare{
   background-color: darkred;
   grid-area: delete;
-  min-width: 150px;
-  min-height: 150px;
+  min-width: 100px;
+  min-height: 100px;
   display: flex;
   align-items:end;
   justify-content: center;
