@@ -71,10 +71,13 @@ function TinderGame() : JSX.Element {
     useEffect(()=>{initialLoad()},[])
     useEffect(() => {
         const load = async() => {
+            const callLimit = 10;
+            let callCount = 0;
             while(cards.length < MINIMUM_STACK_SIZE) {
                 const newToys = await loadToys();
                 cards.push(...newToys);
                 setCards(cards);
+                if (callCount++ >= callLimit) break;
             }
         };
         if(switchFlag && cards) {
