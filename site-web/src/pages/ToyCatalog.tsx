@@ -93,7 +93,7 @@ function TinderGame() : JSX.Element {
     return (
         <>
             <div className={styles.tinderGame}>
-            <NavLink className={styles.returnButton} to="/parent">Retour</NavLink>
+            <NavLink className={styles.returnButton} to="/">Retour</NavLink>
 
                 
                 <h1>Do you want this?</h1>
