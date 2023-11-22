@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 2.5%;
+    padding-top: 1%;
 }
 
 .returnButton {
@@ -30,7 +30,8 @@
 
 .tinderGame h1{
     text-align: center;
-    font-size: 3em;
+    font-size: 2em;
+    margin-top: 0px;
 }
 .cardStack {
     height: 50vh;
@@ -49,12 +50,13 @@
 }
 
 .toyCard h1 {
-    font-size: max(2vw, 1.5em);
+    font-size: max(1vw, 1.5em);
     color:black;
     text-align: center;
     container-name: toyName;
     margin-left: 15px;
     margin-right: 15px;
+    margin-top: 7px;
 }
 
 .toyCard img {
@@ -100,7 +102,7 @@
     flex-grow: 1;
     height: auto;
     width: 90%;
-    height: 100px;
+    height: 200px;
     background-color: white;
 }
 
