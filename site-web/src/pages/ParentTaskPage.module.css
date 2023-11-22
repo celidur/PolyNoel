@@ -103,7 +103,6 @@
     position: fixed;
     overflow: hidden;
     z-index: -1;
-    /* image-resolution: 1dpi; */
 }
 
 .countDownForm {
@@ -115,6 +114,7 @@
     background-color: #C5C99F;
     padding: 8px;
     border-radius: 15px;
+    bottom: 170px;
 }
 
 .day, .month {
