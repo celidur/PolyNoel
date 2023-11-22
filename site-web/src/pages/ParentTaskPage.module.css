@@ -1,24 +1,24 @@
 
 
 .returnButton {
-    display: flex;
-    padding: 25px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     width: 50px;
     text-decoration: none;
     position: absolute;
     top: -80px;
-    left: 50px;
+    left: 0px;
     width:auto;
     color: #424429;
 
-    border-radius: 20px;
+    border-radius: 5px;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 18px;
     padding: 7px;
     cursor: pointer;
-    background-color: #C5C99F;
+    border:1px solid darkgrey;
+    background-color: lightgray;
 }
 
 .returnButton:hover{
