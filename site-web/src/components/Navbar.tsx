@@ -9,7 +9,7 @@ export default function NavBar() : JSX.Element {
   const [isParentMode, setMode] = useState<Boolean>(false);
   return (
     <header className={styles.header}>        
-        <NavLink className={styles.title} to="/"
+        <NavLink className={styles.title} to={isParentMode ? "/parent" : "/"}
           onClick={()=> setMode(false)}>
           <img className={styles.logo} src={Logo} alt="logo" />        
           <span className={styles.nav_title}>PolyNoël</span>
