@@ -4,6 +4,7 @@ import HTTPManager, { CreateTask, Task } from "../assets/js/http_manager";
 import { useEffect, useState } from "react";
 import { GroupTasksByCategories } from "../assets/js/utils";
 import TreePattern from '../assets/img/patternarbres.png'; 
+import { NavLink } from "react-router-dom";
 
 export default function ParentTaskPage() : JSX.Element {
     const [dailyTasks, setDailyTasks] = useState<Task[]>([]);
@@ -92,8 +93,7 @@ export default function ParentTaskPage() : JSX.Element {
     return (        
             <div className={styles.task_container}>
                 <div className={styles.taskBlockContainer}>
-                    <a className={styles.returnButton} href="/parent">Retour</a>
-
+                    <NavLink className={styles.returnButton} to="/parent">Retour</NavLink>
                     <div className={styles.task_block}>
                         <TaskList tasks={dailyTasks} title="Daily Tasks" onTaskClick={removeDailyTask} taskType={"edit-task"}></TaskList>
                         <div className={styles.add_task}>

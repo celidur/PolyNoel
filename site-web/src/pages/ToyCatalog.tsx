@@ -12,6 +12,7 @@ import HTTPManager from "../assets/js/http_manager";
 
 import checkLogo from "../assets/img/check-mark.svg";
 import crossLogo from "../assets/img/cross.svg";
+import { NavLink } from "react-router-dom";
 
 const MINIMUM_STACK_SIZE = 3;
 const parentPrice = 10000; //TODO implement parent price maximum
@@ -89,7 +90,8 @@ function TinderGame() : JSX.Element {
     return (
         <>
             <div className={styles.tinderGame}>
-                <a className={styles.returnButton} href="/">Retour</a>
+            <NavLink className={styles.returnButton} to="/parent">Retour</NavLink>
+
                 
                 <h1>Do you want this?</h1>
                 <div className={styles.cardDragContainer}>
