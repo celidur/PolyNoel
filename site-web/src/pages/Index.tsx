@@ -12,12 +12,35 @@ import { delay } from 'q';
 import { count } from 'console';
 import WishlistImage from './WishlistImages';
 import userEvent from '@testing-library/user-event';
+const httpManager = new HTTPManager();
 
 export default function Index() : JSX.Element {
     const [tasks, setTasks] = useState<Task[]>([]);
     const [realPercentage, setReal] = useState(0);
     const [projectedPercentage, setProjected] = useState(0);
     const [countdownData, setCountdownData] = useState<{ month: number; day: number }>({ month: 0, day: 0 });
+    
+    async function loadDeadline() : Promise<void> {
+        const days = await httpManager.getDeadline();
+        setCountdownData(dayOfYearToMonthDay(days));
+    }
+
+    function dayOfYearToMonthDay(dayOfYear: number): { month: number, day: number } {
+        if (dayOfYear < 0 || dayOfYear > 365) {
+            throw new Error('Invalid day of year. It should be between 0 and 365.');
+        }
+    
+        const daysInMonth = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    
+        let month = 1;
+        while (dayOfYear > daysInMonth[month]) {
+            dayOfYear -= daysInMonth[month];
+            month++;
+        }
+    
+        return { month, day: dayOfYear };
+    }
+
     const [santaPass, setSantaPass] = useState<SantaPass[]>([]);
     const [step , setStep] = useState(0);
     console.log(countdownData);
@@ -44,6 +67,7 @@ export default function Index() : JSX.Element {
             setProjected(projectedData);
             setStep(700 / fetchedTasks.length)
         });  
+        loadDeadline();
 
         httpManager.getSantaPass().then((santapassNew)=>{
             setSantaPass(santapassNew);
