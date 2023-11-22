@@ -14,7 +14,7 @@ export default function TaskList(props : TaskListProps) : JSX.Element {
         <div className={styles.title}>
             {props.title}
         </div>
-        <div className={styles.tasklist}>
+        <div className={props.taskType === "view-task" ? styles.tasklist : styles.tasklist_no_scroll}>
             { 
               props.tasks.length === 0 ?
                 <div className={styles.no_task}>
