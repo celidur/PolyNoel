@@ -17,7 +17,7 @@
 .toys_container {
     display: flex;
     justify-content: center;
-    width:300px;
+    width:400px;
     padding: 10px;
     background-color: #8A914A;
     border-radius: 10px;
@@ -25,6 +25,8 @@
     grid-gap: 5px;
     grid-template-columns: repeat(auto-fill, 70px);
     background-color: none;
+    max-height:190px;
+    overflow: auto;
 }
 
 .title {
