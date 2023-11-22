@@ -41,6 +41,9 @@ export default function Index() : JSX.Element {
             setReal(realData);
             setProjected(projectedData);
         });  
+        httpManager.getDeadline().then((deadline)=>{
+            console.log(deadline)
+        }).catch(()=>{console.log("no work")});
     }, []);
 
     const changeTaskState = (changeIndex : number) : void => {                
@@ -146,6 +149,7 @@ interface progressBarProps{
     realProgress: number;
 }
 function ProgressBar({projectedProgress, realProgress}:progressBarProps):JSX.Element {
+    // console.log(projectedProgress, realProgress)
     const barLength = 700;
     if (barLength === realProgress) {
         return (

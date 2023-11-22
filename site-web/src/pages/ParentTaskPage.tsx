@@ -251,9 +251,9 @@ export function ChildCountdown({ countdownData }: childCountdownProps): JSX.Elem
     let day: string;
     if (savedDay && savedMonth) {
         month = savedMonth;
-        console.log(month);
+        // console.log(month);  
         day = savedDay;
-        console.log(day);
+        // console.log(day);
     }
 
     
