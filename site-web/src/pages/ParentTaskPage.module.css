@@ -105,3 +105,41 @@
     z-index: -1;
     /* image-resolution: 1dpi; */
 }
+
+.countDownForm {
+    position: absolute;
+    display: inline-flex;
+    flex-direction: column;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #C5C99F;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+.day, .month {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    font-weight: medium;
+    font-size: 24px;
+    color: #424429;
+}
+
+.countDownForm>button {
+    border-radius: 20px;
+    font-weight: medium;
+    font-size: 24px;
+    padding: 7px;
+    cursor: pointer;
+    color: #424429;
+}
+
+.formTitle {
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 24px;
+    color: #424429;
+}

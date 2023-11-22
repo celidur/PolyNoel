@@ -3,15 +3,30 @@
     flex-direction: column;
     align-items: center;
     gap : 50px;
-    /* background-color: none; */
 }
 
 .button {
     border-radius: 20px;
-    /* border: 2px solid #9EBB5E; */
-    font-weight: bold;
+    font-weight: medium;
     font-size: 24px;
     padding: 7px;
     cursor: pointer;
-    /* background-color: #C5C99F; */
+    color: #424429;
+    margin-top: 12%;
+}
+
+.formContainer {
+    margin-top: 300px;
+}
+
+.bgstripes {
+    background-image: url('../assets/img/bg.jpg');
+    background-size: contain;
+    height: 100%;
+    width:100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    image-resolution: 150dpi;
 }

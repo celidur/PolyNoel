@@ -210,25 +210,30 @@ export function MonthsLeft({ setCountdownData }: MonthsLeftProps): JSX.Element {
     return (
         <div className={styles.dateInpute}>
             <form className={styles.countDownForm} onSubmit={handleFormSubmit}>
-                <label htmlFor="monthInput">Month: </label>
-                <select id="monthInput" onChange={changeMonth}>
-                    <option value="0">Select a month</option>
-                    {months.map((month, index) => (
-                            <option key={index + 1} value={index + 1 + currentMonthIndex}>
-                                {month}
-                            </option>
-                        ))}
-                </select>
-
-                <label htmlFor="dayInput">Day: </label>
-                <select id="dayInput" onChange={changeDay}>
-                    <option value="">Select a day</option>
-                    {monthDays.map((day, index) => (
-                            <option key={index + 1} value={index + 1}>
-                                {day}
-                            </option>
-                        ))}
-                </select>
+                <p className={styles.formTitle}>Change the deadline:&nbsp;</p>
+                <div className={styles.month}>
+                    <label htmlFor="monthInput">Month:&nbsp;</label>
+                    <select id="monthInput" onChange={changeMonth}>
+                        <option value="0">Select a month</option>
+                        {months.map((month, index) => (
+                                <option key={index + 1} value={index + 1 + currentMonthIndex}>
+                                    {month}
+                                </option>
+                            ))}
+                    </select>
+                </div>
+                
+                <div className={styles.day}>
+                    <label htmlFor="dayInput">Day:&nbsp;</label>
+                    <select id="dayInput" onChange={changeDay}>
+                        <option value="">Select a day</option>
+                        {monthDays.map((day, index) => (
+                                <option key={index + 1} value={index + 1}>
+                                    {day}
+                                </option>
+                            ))}
+                    </select>
+                </div>
                 <button type="submit">Submit</button>
             </form>
         </div>
@@ -250,10 +255,8 @@ export function ChildCountdown({ countdownData }: childCountdownProps): JSX.Elem
     let month: string;
     let day: string;
     if (savedDay && savedMonth) {
-        month = savedMonth;
-        // console.log(month);  
+        month = savedMonth;  
         day = savedDay;
-        // console.log(day);
     }
 
     
